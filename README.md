@@ -1,4 +1,4 @@
-# Zixflow iOS SDK - SPM Distribution
+# Zixflow iOS SDK
 
 This repository contains the pre-built XCFrameworks for the Zixflow iOS SDK, distributed via Swift Package Manager.
 
