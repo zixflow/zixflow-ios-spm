@@ -1,0 +1,86 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name LDSwiftEventSource
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+public class EventSource {
+  public init(config: LDSwiftEventSource.EventSource.Config)
+  public func start()
+  public func stop()
+  public func getLastEventId() -> Swift.String?
+  public struct Config {
+    public let handler: any LDSwiftEventSource.EventHandler
+    public let url: Foundation.URL
+    public var method: Swift.String
+    public var body: Foundation.Data?
+    public var headers: [Swift.String : Swift.String]
+    public var headerTransform: ([Swift.String : Swift.String]) -> [Swift.String : Swift.String]
+    public var lastEventId: Swift.String
+    public var logger: os.OSLog
+    public var reconnectTime: Swift.Double
+    public var maxReconnectTime: Swift.Double
+    public var backoffResetThreshold: Swift.Double
+    public var idleTimeout: Swift.Double
+    public var urlSessionConfiguration: Foundation.URLSessionConfiguration {
+      get
+      set
+    }
+    public var connectionErrorHandler: (_ error: any Swift.Error) -> LDSwiftEventSource.ConnectionErrorAction
+    public init(handler: any LDSwiftEventSource.EventHandler, url: Foundation.URL)
+  }
+  @objc deinit
+}
+public typealias ConnectionErrorHandler = (any Swift.Error) -> LDSwiftEventSource.ConnectionErrorAction
+public typealias HeaderTransform = ([Swift.String : Swift.String]) -> [Swift.String : Swift.String]
+public enum ConnectionErrorAction {
+  case proceed
+  case shutdown
+  public static func == (a: LDSwiftEventSource.ConnectionErrorAction, b: LDSwiftEventSource.ConnectionErrorAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct MessageEvent : Swift.Equatable, Swift.Hashable {
+  public let data: Swift.String
+  public let lastEventId: Swift.String
+  public init(data: Swift.String, lastEventId: Swift.String = "")
+  public static func == (a: LDSwiftEventSource.MessageEvent, b: LDSwiftEventSource.MessageEvent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol EventHandler {
+  func onOpened()
+  func onClosed()
+  func onMessage(eventType: Swift.String, messageEvent: LDSwiftEventSource.MessageEvent)
+  func onComment(comment: Swift.String)
+  func onError(error: any Swift.Error)
+}
+public enum ReadyState : Swift.String, Swift.Equatable {
+  case raw
+  case connecting
+  case open
+  case closed
+  case shutdown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class UnsuccessfulResponseError : Swift.Error {
+  final public let responseCode: Swift.Int
+  public init(responseCode: Swift.Int)
+  @objc deinit
+}
+extension LDSwiftEventSource.ConnectionErrorAction : Swift.Equatable {}
+extension LDSwiftEventSource.ConnectionErrorAction : Swift.Hashable {}
+extension LDSwiftEventSource.ReadyState : Swift.Hashable {}
+extension LDSwiftEventSource.ReadyState : Swift.RawRepresentable {}

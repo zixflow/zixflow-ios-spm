@@ -1,0 +1,2812 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LDSwiftEventSource"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LDSwiftEventSource"
+      },
+      {
+        "kind": "Import",
+        "name": "os.log",
+        "printedName": "os.log",
+        "declKind": "Import",
+        "moduleName": "LDSwiftEventSource",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EventSource",
+        "printedName": "EventSource",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(config:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EventSource",
+                "printedName": "LDSwiftEventSource.EventSource",
+                "usr": "s:18LDSwiftEventSource0bC0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Config",
+                "printedName": "LDSwiftEventSource.EventSource.Config",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18LDSwiftEventSource0bC0C6configA2C6ConfigV_tcfc",
+            "mangledName": "$s18LDSwiftEventSource0bC0C6configA2C6ConfigV_tcfc",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource0bC0C5startyyF",
+            "mangledName": "$s18LDSwiftEventSource0bC0C5startyyF",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource0bC0C4stopyyF",
+            "mangledName": "$s18LDSwiftEventSource0bC0C4stopyyF",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getLastEventId",
+            "printedName": "getLastEventId()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource0bC0C07getLastB2IdSSSgyF",
+            "mangledName": "$s18LDSwiftEventSource0bC0C07getLastB2IdSSSgyF",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Config",
+            "printedName": "Config",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "handler",
+                "printedName": "handler",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventHandler",
+                    "printedName": "any LDSwiftEventSource.EventHandler",
+                    "usr": "s:18LDSwiftEventSource0B7HandlerP"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV7handlerAA0B7Handler_pvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV7handlerAA0B7Handler_pvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventHandler",
+                        "printedName": "any LDSwiftEventSource.EventHandler",
+                        "usr": "s:18LDSwiftEventSource0B7HandlerP"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV7handlerAA0B7Handler_pvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV7handlerAA0B7Handler_pvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "url",
+                "printedName": "url",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV3url10Foundation3URLVvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV3url10Foundation3URLVvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV3url10Foundation3URLVvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV3url10Foundation3URLVvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "method",
+                "printedName": "method",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV6methodSSvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV6methodSSvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV6methodSSvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV6methodSSvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV6methodSSvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV6methodSSvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV6methodSSvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV6methodSSvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "body",
+                "printedName": "body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV4body10Foundation4DataVSgvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV4body10Foundation4DataVSgvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV4body10Foundation4DataVSgvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV4body10Foundation4DataVSgvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV4body10Foundation4DataVSgvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV4body10Foundation4DataVSgvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV4body10Foundation4DataVSgvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV4body10Foundation4DataVSgvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "headers",
+                "printedName": "headers",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV7headersSDyS2SGvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV7headersSDyS2SGvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV7headersSDyS2SGvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV7headersSDyS2SGvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV7headersSDyS2SGvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV7headersSDyS2SGvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV7headersSDyS2SGvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV7headersSDyS2SGvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "headerTransform",
+                "printedName": "headerTransform",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([Swift.String : Swift.String]) -> [Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV15headerTransformySDyS2SGAGcvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV15headerTransformySDyS2SGAGcvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([Swift.String : Swift.String]) -> [Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Swift.String]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Swift.String]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ]
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV15headerTransformySDyS2SGAGcvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV15headerTransformySDyS2SGAGcvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([Swift.String : Swift.String]) -> [Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Swift.String]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Swift.String]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ]
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV15headerTransformySDyS2SGAGcvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV15headerTransformySDyS2SGAGcvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV15headerTransformySDyS2SGAGcvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV15headerTransformySDyS2SGAGcvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "lastEventId",
+                "printedName": "lastEventId",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV04lastB2IdSSvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV04lastB2IdSSvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV04lastB2IdSSvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV04lastB2IdSSvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV04lastB2IdSSvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV04lastB2IdSSvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV04lastB2IdSSvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV04lastB2IdSSvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "logger",
+                "printedName": "logger",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSLog",
+                    "printedName": "os.OSLog",
+                    "usr": "c:objc(cs)OS_os_log"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV6loggerSo9OS_os_logCvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV6loggerSo9OS_os_logCvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSLog",
+                        "printedName": "os.OSLog",
+                        "usr": "c:objc(cs)OS_os_log"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV6loggerSo9OS_os_logCvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV6loggerSo9OS_os_logCvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSLog",
+                        "printedName": "os.OSLog",
+                        "usr": "c:objc(cs)OS_os_log"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV6loggerSo9OS_os_logCvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV6loggerSo9OS_os_logCvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV6loggerSo9OS_os_logCvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV6loggerSo9OS_os_logCvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "reconnectTime",
+                "printedName": "reconnectTime",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV13reconnectTimeSdvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV13reconnectTimeSdvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV13reconnectTimeSdvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV13reconnectTimeSdvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV13reconnectTimeSdvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV13reconnectTimeSdvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV13reconnectTimeSdvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV13reconnectTimeSdvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "maxReconnectTime",
+                "printedName": "maxReconnectTime",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV16maxReconnectTimeSdvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV16maxReconnectTimeSdvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV16maxReconnectTimeSdvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV16maxReconnectTimeSdvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV16maxReconnectTimeSdvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV16maxReconnectTimeSdvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV16maxReconnectTimeSdvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV16maxReconnectTimeSdvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "backoffResetThreshold",
+                "printedName": "backoffResetThreshold",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV21backoffResetThresholdSdvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV21backoffResetThresholdSdvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV21backoffResetThresholdSdvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV21backoffResetThresholdSdvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV21backoffResetThresholdSdvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV21backoffResetThresholdSdvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV21backoffResetThresholdSdvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV21backoffResetThresholdSdvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "idleTimeout",
+                "printedName": "idleTimeout",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV11idleTimeoutSdvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV11idleTimeoutSdvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV11idleTimeoutSdvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV11idleTimeoutSdvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV11idleTimeoutSdvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV11idleTimeoutSdvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV11idleTimeoutSdvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV11idleTimeoutSdvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "urlSessionConfiguration",
+                "printedName": "urlSessionConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URLSessionConfiguration",
+                    "printedName": "Foundation.URLSessionConfiguration",
+                    "usr": "c:objc(cs)NSURLSessionConfiguration"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV23urlSessionConfigurationSo012NSURLSessionG0Cvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV23urlSessionConfigurationSo012NSURLSessionG0Cvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URLSessionConfiguration",
+                        "printedName": "Foundation.URLSessionConfiguration",
+                        "usr": "c:objc(cs)NSURLSessionConfiguration"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV23urlSessionConfigurationSo012NSURLSessionG0Cvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV23urlSessionConfigurationSo012NSURLSessionG0Cvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URLSessionConfiguration",
+                        "printedName": "Foundation.URLSessionConfiguration",
+                        "usr": "c:objc(cs)NSURLSessionConfiguration"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV23urlSessionConfigurationSo012NSURLSessionG0Cvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV23urlSessionConfigurationSo012NSURLSessionG0Cvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV23urlSessionConfigurationSo012NSURLSessionG0CvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV23urlSessionConfigurationSo012NSURLSessionG0CvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "connectionErrorHandler",
+                "printedName": "connectionErrorHandler",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> LDSwiftEventSource.ConnectionErrorAction",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionErrorAction",
+                        "printedName": "LDSwiftEventSource.ConnectionErrorAction",
+                        "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV22connectionErrorHandleryAA010ConnectionF6ActionOs0F0_pcvp",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV22connectionErrorHandleryAA010ConnectionF6ActionOs0F0_pcvp",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(any Swift.Error) -> LDSwiftEventSource.ConnectionErrorAction",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionErrorAction",
+                            "printedName": "LDSwiftEventSource.ConnectionErrorAction",
+                            "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ]
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV22connectionErrorHandleryAA010ConnectionF6ActionOs0F0_pcvg",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV22connectionErrorHandleryAA010ConnectionF6ActionOs0F0_pcvg",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(any Swift.Error) -> LDSwiftEventSource.ConnectionErrorAction",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionErrorAction",
+                            "printedName": "LDSwiftEventSource.ConnectionErrorAction",
+                            "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ]
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV22connectionErrorHandleryAA010ConnectionF6ActionOs0F0_pcvs",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV22connectionErrorHandleryAA010ConnectionF6ActionOs0F0_pcvs",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV22connectionErrorHandleryAA010ConnectionF6ActionOs0F0_pcvM",
+                    "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV22connectionErrorHandleryAA010ConnectionF6ActionOs0F0_pcvM",
+                    "moduleName": "LDSwiftEventSource",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(handler:url:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Config",
+                    "printedName": "LDSwiftEventSource.EventSource.Config",
+                    "usr": "s:18LDSwiftEventSource0bC0C6ConfigV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventHandler",
+                    "printedName": "any LDSwiftEventSource.EventHandler",
+                    "usr": "s:18LDSwiftEventSource0B7HandlerP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:18LDSwiftEventSource0bC0C6ConfigV7handler3urlAeA0B7Handler_p_10Foundation3URLVtcfc",
+                "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV7handler3urlAeA0B7Handler_p_10Foundation3URLVtcfc",
+                "moduleName": "LDSwiftEventSource",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:18LDSwiftEventSource0bC0C6ConfigV",
+            "mangledName": "$s18LDSwiftEventSource0bC0C6ConfigV",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:18LDSwiftEventSource0bC0C",
+        "mangledName": "$s18LDSwiftEventSource0bC0C",
+        "moduleName": "LDSwiftEventSource",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LDSwiftEventSource"
+      },
+      {
+        "kind": "Import",
+        "name": "os.log",
+        "printedName": "os.log",
+        "declKind": "Import",
+        "moduleName": "LDSwiftEventSource"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LDSwiftEventSource"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConnectionErrorAction",
+        "printedName": "ConnectionErrorAction",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "proceed",
+            "printedName": "proceed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LDSwiftEventSource.ConnectionErrorAction.Type) -> LDSwiftEventSource.ConnectionErrorAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionErrorAction",
+                    "printedName": "LDSwiftEventSource.ConnectionErrorAction",
+                    "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LDSwiftEventSource.ConnectionErrorAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionErrorAction",
+                        "printedName": "LDSwiftEventSource.ConnectionErrorAction",
+                        "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO7proceedyA2CmF",
+            "mangledName": "$s18LDSwiftEventSource21ConnectionErrorActionO7proceedyA2CmF",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shutdown",
+            "printedName": "shutdown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LDSwiftEventSource.ConnectionErrorAction.Type) -> LDSwiftEventSource.ConnectionErrorAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionErrorAction",
+                    "printedName": "LDSwiftEventSource.ConnectionErrorAction",
+                    "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LDSwiftEventSource.ConnectionErrorAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionErrorAction",
+                        "printedName": "LDSwiftEventSource.ConnectionErrorAction",
+                        "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO8shutdownyA2CmF",
+            "mangledName": "$s18LDSwiftEventSource21ConnectionErrorActionO8shutdownyA2CmF",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectionErrorAction",
+                "printedName": "LDSwiftEventSource.ConnectionErrorAction",
+                "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectionErrorAction",
+                "printedName": "LDSwiftEventSource.ConnectionErrorAction",
+                "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s18LDSwiftEventSource21ConnectionErrorActionO2eeoiySbAC_ACtFZ",
+            "moduleName": "LDSwiftEventSource",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO9hashValueSivp",
+            "mangledName": "$s18LDSwiftEventSource21ConnectionErrorActionO9hashValueSivp",
+            "moduleName": "LDSwiftEventSource",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO9hashValueSivg",
+                "mangledName": "$s18LDSwiftEventSource21ConnectionErrorActionO9hashValueSivg",
+                "moduleName": "LDSwiftEventSource",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s18LDSwiftEventSource21ConnectionErrorActionO4hash4intoys6HasherVz_tF",
+            "moduleName": "LDSwiftEventSource",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:18LDSwiftEventSource21ConnectionErrorActionO",
+        "mangledName": "$s18LDSwiftEventSource21ConnectionErrorActionO",
+        "moduleName": "LDSwiftEventSource",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageEvent",
+        "printedName": "MessageEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18LDSwiftEventSource07MessageB0V4dataSSvp",
+            "mangledName": "$s18LDSwiftEventSource07MessageB0V4dataSSvp",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18LDSwiftEventSource07MessageB0V4dataSSvg",
+                "mangledName": "$s18LDSwiftEventSource07MessageB0V4dataSSvg",
+                "moduleName": "LDSwiftEventSource",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lastEventId",
+            "printedName": "lastEventId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18LDSwiftEventSource07MessageB0V04lastB2IdSSvp",
+            "mangledName": "$s18LDSwiftEventSource07MessageB0V04lastB2IdSSvp",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18LDSwiftEventSource07MessageB0V04lastB2IdSSvg",
+                "mangledName": "$s18LDSwiftEventSource07MessageB0V04lastB2IdSSvg",
+                "moduleName": "LDSwiftEventSource",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(data:lastEventId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MessageEvent",
+                "printedName": "LDSwiftEventSource.MessageEvent",
+                "usr": "s:18LDSwiftEventSource07MessageB0V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18LDSwiftEventSource07MessageB0V4data04lastB2IdACSS_SStcfc",
+            "mangledName": "$s18LDSwiftEventSource07MessageB0V4data04lastB2IdACSS_SStcfc",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessageEvent",
+                "printedName": "LDSwiftEventSource.MessageEvent",
+                "usr": "s:18LDSwiftEventSource07MessageB0V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessageEvent",
+                "printedName": "LDSwiftEventSource.MessageEvent",
+                "usr": "s:18LDSwiftEventSource07MessageB0V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource07MessageB0V2eeoiySbAC_ACtFZ",
+            "mangledName": "$s18LDSwiftEventSource07MessageB0V2eeoiySbAC_ACtFZ",
+            "moduleName": "LDSwiftEventSource",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18LDSwiftEventSource07MessageB0V9hashValueSivp",
+            "mangledName": "$s18LDSwiftEventSource07MessageB0V9hashValueSivp",
+            "moduleName": "LDSwiftEventSource",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18LDSwiftEventSource07MessageB0V9hashValueSivg",
+                "mangledName": "$s18LDSwiftEventSource07MessageB0V9hashValueSivg",
+                "moduleName": "LDSwiftEventSource",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource07MessageB0V4hash4intoys6HasherVz_tF",
+            "mangledName": "$s18LDSwiftEventSource07MessageB0V4hash4intoys6HasherVz_tF",
+            "moduleName": "LDSwiftEventSource",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18LDSwiftEventSource07MessageB0V",
+        "mangledName": "$s18LDSwiftEventSource07MessageB0V",
+        "moduleName": "LDSwiftEventSource",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EventHandler",
+        "printedName": "EventHandler",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onOpened",
+            "printedName": "onOpened()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource0B7HandlerP8onOpenedyyF",
+            "mangledName": "$s18LDSwiftEventSource0B7HandlerP8onOpenedyyF",
+            "moduleName": "LDSwiftEventSource",
+            "genericSig": "<τ_0_0 where τ_0_0 : LDSwiftEventSource.EventHandler>",
+            "sugared_genericSig": "<Self where Self : LDSwiftEventSource.EventHandler>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onClosed",
+            "printedName": "onClosed()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource0B7HandlerP8onClosedyyF",
+            "mangledName": "$s18LDSwiftEventSource0B7HandlerP8onClosedyyF",
+            "moduleName": "LDSwiftEventSource",
+            "genericSig": "<τ_0_0 where τ_0_0 : LDSwiftEventSource.EventHandler>",
+            "sugared_genericSig": "<Self where Self : LDSwiftEventSource.EventHandler>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onMessage",
+            "printedName": "onMessage(eventType:messageEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessageEvent",
+                "printedName": "LDSwiftEventSource.MessageEvent",
+                "usr": "s:18LDSwiftEventSource07MessageB0V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource0B7HandlerP9onMessage9eventType07messageB0ySS_AA0fB0VtF",
+            "mangledName": "$s18LDSwiftEventSource0B7HandlerP9onMessage9eventType07messageB0ySS_AA0fB0VtF",
+            "moduleName": "LDSwiftEventSource",
+            "genericSig": "<τ_0_0 where τ_0_0 : LDSwiftEventSource.EventHandler>",
+            "sugared_genericSig": "<Self where Self : LDSwiftEventSource.EventHandler>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onComment",
+            "printedName": "onComment(comment:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource0B7HandlerP9onComment7commentySS_tF",
+            "mangledName": "$s18LDSwiftEventSource0B7HandlerP9onComment7commentySS_tF",
+            "moduleName": "LDSwiftEventSource",
+            "genericSig": "<τ_0_0 where τ_0_0 : LDSwiftEventSource.EventHandler>",
+            "sugared_genericSig": "<Self where Self : LDSwiftEventSource.EventHandler>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onError",
+            "printedName": "onError(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18LDSwiftEventSource0B7HandlerP7onError5errorys0F0_p_tF",
+            "mangledName": "$s18LDSwiftEventSource0B7HandlerP7onError5errorys0F0_p_tF",
+            "moduleName": "LDSwiftEventSource",
+            "genericSig": "<τ_0_0 where τ_0_0 : LDSwiftEventSource.EventHandler>",
+            "sugared_genericSig": "<Self where Self : LDSwiftEventSource.EventHandler>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:18LDSwiftEventSource0B7HandlerP",
+        "mangledName": "$s18LDSwiftEventSource0B7HandlerP",
+        "moduleName": "LDSwiftEventSource",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ReadyState",
+        "printedName": "ReadyState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "raw",
+            "printedName": "raw",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LDSwiftEventSource.ReadyState.Type) -> LDSwiftEventSource.ReadyState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadyState",
+                    "printedName": "LDSwiftEventSource.ReadyState",
+                    "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LDSwiftEventSource.ReadyState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReadyState",
+                        "printedName": "LDSwiftEventSource.ReadyState",
+                        "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18LDSwiftEventSource10ReadyStateO3rawyA2CmF",
+            "mangledName": "$s18LDSwiftEventSource10ReadyStateO3rawyA2CmF",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "connecting",
+            "printedName": "connecting",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LDSwiftEventSource.ReadyState.Type) -> LDSwiftEventSource.ReadyState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadyState",
+                    "printedName": "LDSwiftEventSource.ReadyState",
+                    "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LDSwiftEventSource.ReadyState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReadyState",
+                        "printedName": "LDSwiftEventSource.ReadyState",
+                        "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18LDSwiftEventSource10ReadyStateO10connectingyA2CmF",
+            "mangledName": "$s18LDSwiftEventSource10ReadyStateO10connectingyA2CmF",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "open",
+            "printedName": "open",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LDSwiftEventSource.ReadyState.Type) -> LDSwiftEventSource.ReadyState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadyState",
+                    "printedName": "LDSwiftEventSource.ReadyState",
+                    "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LDSwiftEventSource.ReadyState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReadyState",
+                        "printedName": "LDSwiftEventSource.ReadyState",
+                        "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18LDSwiftEventSource10ReadyStateO4openyA2CmF",
+            "mangledName": "$s18LDSwiftEventSource10ReadyStateO4openyA2CmF",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "closed",
+            "printedName": "closed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LDSwiftEventSource.ReadyState.Type) -> LDSwiftEventSource.ReadyState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadyState",
+                    "printedName": "LDSwiftEventSource.ReadyState",
+                    "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LDSwiftEventSource.ReadyState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReadyState",
+                        "printedName": "LDSwiftEventSource.ReadyState",
+                        "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18LDSwiftEventSource10ReadyStateO6closedyA2CmF",
+            "mangledName": "$s18LDSwiftEventSource10ReadyStateO6closedyA2CmF",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shutdown",
+            "printedName": "shutdown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LDSwiftEventSource.ReadyState.Type) -> LDSwiftEventSource.ReadyState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadyState",
+                    "printedName": "LDSwiftEventSource.ReadyState",
+                    "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LDSwiftEventSource.ReadyState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReadyState",
+                        "printedName": "LDSwiftEventSource.ReadyState",
+                        "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18LDSwiftEventSource10ReadyStateO8shutdownyA2CmF",
+            "mangledName": "$s18LDSwiftEventSource10ReadyStateO8shutdownyA2CmF",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18LDSwiftEventSource10ReadyStateO8rawValueSSvp",
+            "mangledName": "$s18LDSwiftEventSource10ReadyStateO8rawValueSSvp",
+            "moduleName": "LDSwiftEventSource",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18LDSwiftEventSource10ReadyStateO8rawValueSSvg",
+                "mangledName": "$s18LDSwiftEventSource10ReadyStateO8rawValueSSvg",
+                "moduleName": "LDSwiftEventSource",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LDSwiftEventSource.ReadyState?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadyState",
+                    "printedName": "LDSwiftEventSource.ReadyState",
+                    "usr": "s:18LDSwiftEventSource10ReadyStateO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18LDSwiftEventSource10ReadyStateO8rawValueACSgSS_tcfc",
+            "mangledName": "$s18LDSwiftEventSource10ReadyStateO8rawValueACSgSS_tcfc",
+            "moduleName": "LDSwiftEventSource",
+            "implicit": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:18LDSwiftEventSource10ReadyStateO",
+        "mangledName": "$s18LDSwiftEventSource10ReadyStateO",
+        "moduleName": "LDSwiftEventSource",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UnsuccessfulResponseError",
+        "printedName": "UnsuccessfulResponseError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "responseCode",
+            "printedName": "responseCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18LDSwiftEventSource25UnsuccessfulResponseErrorC12responseCodeSivp",
+            "mangledName": "$s18LDSwiftEventSource25UnsuccessfulResponseErrorC12responseCodeSivp",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18LDSwiftEventSource25UnsuccessfulResponseErrorC12responseCodeSivg",
+                "mangledName": "$s18LDSwiftEventSource25UnsuccessfulResponseErrorC12responseCodeSivg",
+                "moduleName": "LDSwiftEventSource",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(responseCode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnsuccessfulResponseError",
+                "printedName": "LDSwiftEventSource.UnsuccessfulResponseError",
+                "usr": "s:18LDSwiftEventSource25UnsuccessfulResponseErrorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18LDSwiftEventSource25UnsuccessfulResponseErrorC12responseCodeACSi_tcfc",
+            "mangledName": "$s18LDSwiftEventSource25UnsuccessfulResponseErrorC12responseCodeACSi_tcfc",
+            "moduleName": "LDSwiftEventSource",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:18LDSwiftEventSource25UnsuccessfulResponseErrorC",
+        "mangledName": "$s18LDSwiftEventSource25UnsuccessfulResponseErrorC",
+        "moduleName": "LDSwiftEventSource",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LDSwiftEventSource"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "kind": "StringLiteral",
+      "offset": 112,
+      "length": 6,
+      "value": "\"data\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "kind": "StringLiteral",
+      "offset": 159,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "kind": "StringLiteral",
+      "offset": 207,
+      "length": 7,
+      "value": "\"event\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "kind": "StringLiteral",
+      "offset": 258,
+      "length": 7,
+      "value": "\"retry\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "kind": "StringLiteral",
+      "offset": 343,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "kind": "StringLiteral",
+      "offset": 382,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "StringLiteral",
+      "offset": 1872,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "Dictionary",
+      "offset": 2083,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "StringLiteral",
+      "offset": 2378,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "StringLiteral",
+      "offset": 2512,
+      "length": 36,
+      "value": "\"com.launchdarkly.swift-eventsource\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "StringLiteral",
+      "offset": 2560,
+      "length": 15,
+      "value": "\"LDEventSource\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "FloatLiteral",
+      "offset": 2725,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "FloatLiteral",
+      "offset": 2864,
+      "length": 4,
+      "value": "30.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "FloatLiteral",
+      "offset": 3073,
+      "length": 4,
+      "value": "60.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "FloatLiteral",
+      "offset": 3244,
+      "length": 5,
+      "value": "300.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5509,
+      "length": 3,
+      "value": "204"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5965,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "StringLiteral",
+      "offset": 6731,
+      "length": 17,
+      "value": "\"ESDelegateQueue\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "StringLiteral",
+      "offset": 6939,
+      "length": 17,
+      "value": "\"State: %@ -> %@\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "kind": "StringLiteral",
+      "offset": 6607,
+      "length": 19,
+      "value": "\"LDSwiftEventSource.EventSourceDelegate\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/Types.swift",
+      "kind": "StringLiteral",
+      "offset": 1691,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
+      "kind": "IntegerLiteral",
+      "offset": 253,
+      "length": 4,
+      "value": "0x0A"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
+      "kind": "IntegerLiteral",
+      "offset": 295,
+      "length": 4,
+      "value": "0x0D"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
+      "kind": "StringLiteral",
+      "offset": 517,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
+      "kind": "BooleanLiteral",
+      "offset": 537,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}
