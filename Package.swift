@@ -14,25 +14,104 @@ let package = Package(
         .library(name: "Location", targets: ["Location"])
     ],
     targets: [
-        .binaryTarget(
+        // Wrapper targets (with dependencies)
+        .target(
             name: "DataPipelines",
-            path: "DataPipelines.xcframework"
+            dependencies: [
+                "ZixflowDataPipelines",
+                "ZixflowInternalCommon",
+                "ZixflowTrackingMigration",
+                "ZixflowAnalytics",
+                "JSONSafeEncoding",
+                "Sovran",
+                "LDSwiftEventSource"
+            ],
+            path: "Sources/DataPipelines"
         ),
-        .binaryTarget(
+        .target(
             name: "MessagingPushAPN",
-            path: "MessagingPushAPN.xcframework"
+            dependencies: [
+                "ZixflowMessagingPushAPN",
+                "ZixflowMessagingPush",
+                "ZixflowInternalCommon"
+            ],
+            path: "Sources/MessagingPushAPN"
         ),
-        .binaryTarget(
+        .target(
             name: "MessagingPushFCM",
-            path: "MessagingPushFCM.xcframework"
+            dependencies: [
+                "ZixflowMessagingPushFCM",
+                "ZixflowMessagingPush",
+                "ZixflowInternalCommon"
+            ],
+            path: "Sources/MessagingPushFCM"
         ),
-        .binaryTarget(
+        .target(
             name: "MessagingInApp",
-            path: "MessagingInApp.xcframework"
+            dependencies: [
+                "ZixflowMessagingInApp",
+                "ZixflowInternalCommon",
+                "ZixflowAnalytics"
+            ],
+            path: "Sources/MessagingInApp"
+        ),
+        .target(
+            name: "Location",
+            dependencies: [
+                "ZixflowLocation",
+                "ZixflowInternalCommon"
+            ],
+            path: "Sources/Location"
+        ),
+
+        // Binary XCFrameworks
+        .binaryTarget(
+            name: "ZixflowDataPipelines",
+            path: "ZixflowDataPipelines.xcframework"
         ),
         .binaryTarget(
-            name: "Location",
-            path: "Location.xcframework"
+            name: "ZixflowMessagingPushAPN",
+            path: "ZixflowMessagingPushAPN.xcframework"
+        ),
+        .binaryTarget(
+            name: "ZixflowMessagingPushFCM",
+            path: "ZixflowMessagingPushFCM.xcframework"
+        ),
+        .binaryTarget(
+            name: "ZixflowMessagingInApp",
+            path: "ZixflowMessagingInApp.xcframework"
+        ),
+        .binaryTarget(
+            name: "ZixflowLocation",
+            path: "ZixflowLocation.xcframework"
+        ),
+        .binaryTarget(
+            name: "ZixflowInternalCommon",
+            path: "ZixflowInternalCommon.xcframework"
+        ),
+        .binaryTarget(
+            name: "ZixflowTrackingMigration",
+            path: "ZixflowTrackingMigration.xcframework"
+        ),
+        .binaryTarget(
+            name: "ZixflowAnalytics",
+            path: "ZixflowAnalytics.xcframework"
+        ),
+        .binaryTarget(
+            name: "ZixflowMessagingPush",
+            path: "ZixflowMessagingPush.xcframework"
+        ),
+        .binaryTarget(
+            name: "LDSwiftEventSource",
+            path: "LDSwiftEventSource.xcframework"
+        ),
+        .binaryTarget(
+            name: "Sovran",
+            path: "Sovran.xcframework"
+        ),
+        .binaryTarget(
+            name: "JSONSafeEncoding",
+            path: "JSONSafeEncoding.xcframework"
         )
     ]
 )
