@@ -1,0 +1,4736 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingPush",
+        "printedName": "ZixflowMessagingPush",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingPush",
+        "printedName": "ZixflowMessagingPush",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZixflowAppDelegate",
+        "printedName": "ZixflowAppDelegate",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZixflowAppDelegate",
+                "printedName": "ZixflowMessagingPushAPN.ZixflowAppDelegate",
+                "usr": "c:@M@ZixflowMessagingPushAPN@objc(cs)ZixflowAppDelegate"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZixflowMessagingPushAPN@objc(cs)ZixflowAppDelegate(im)init",
+            "mangledName": "$s23ZixflowMessagingPushAPN0A11AppDelegateCACycfc",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Convenience",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(messagingPush:userNotificationCenter:appDelegate:config:logger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZixflowAppDelegate",
+                "printedName": "ZixflowMessagingPushAPN.ZixflowAppDelegate",
+                "usr": "c:@M@ZixflowMessagingPushAPN@objc(cs)ZixflowAppDelegate"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessagingPushInstance",
+                "printedName": "any ZixflowMessagingPush.MessagingPushInstance",
+                "usr": "s:20ZixflowMessagingPush0bC8InstanceP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> any ZixflowMessagingPush.UserNotificationCenterIntegration)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any ZixflowMessagingPush.UserNotificationCenterIntegration",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserNotificationCenterIntegration",
+                        "printedName": "any ZixflowMessagingPush.UserNotificationCenterIntegration",
+                        "usr": "s:20ZixflowMessagingPush33UserNotificationCenterIntegrationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any ObjectiveC.NSObject & UIKit.UIApplicationDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "any ObjectiveC.NSObject & UIKit.UIApplicationDelegate"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ZixflowMessagingPush.MessagingPushConfigOptions)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ZixflowMessagingPush.MessagingPushConfigOptions",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessagingPushConfigOptions",
+                        "printedName": "ZixflowMessagingPush.MessagingPushConfigOptions",
+                        "usr": "s:20ZixflowMessagingPush0bC13ConfigOptionsV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Logger",
+                "printedName": "any ZixflowInternalCommon.Logger",
+                "usr": "s:21ZixflowInternalCommon6LoggerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23ZixflowMessagingPushAPN0A11AppDelegateC09messagingC022userNotificationCenter03appF06config6loggerAC0abC00bC8Instance_p_AI04UseriJ11Integration_pycSgSo013UIApplicationF0_So8NSObjectCXcSgAI0bC13ConfigOptionsVycSg0A14InternalCommon6Logger_ptcfc",
+            "mangledName": "$s23ZixflowMessagingPushAPN0A11AppDelegateC09messagingC022userNotificationCenter03appF06config6loggerAC0abC00bC8Instance_p_AI04UseriJ11Integration_pycSgSo013UIApplicationF0_So8NSObjectCXcSgAI0bC13ConfigOptionsVycSg0A14InternalCommon6Logger_ptcfc",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "overriding": true,
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "application",
+            "printedName": "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIApplication",
+                "printedName": "UIKit.UIApplication",
+                "usr": "c:objc(cs)UIApplication"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZixflowMessagingPushAPN@objc(cs)ZixflowAppDelegate(im)application:didRegisterForRemoteNotificationsWithDeviceToken:",
+            "mangledName": "$s23ZixflowMessagingPushAPN0A11AppDelegateC11application_48didRegisterForRemoteNotificationsWithDeviceTokenySo13UIApplicationC_10Foundation4DataVtF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "overriding": true,
+            "objc_name": "application:didRegisterForRemoteNotificationsWithDeviceToken:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZixflowMessagingPushAPN@objc(cs)ZixflowAppDelegate",
+        "mangledName": "$s23ZixflowMessagingPushAPN0A11AppDelegateC",
+        "moduleName": "ZixflowMessagingPushAPN",
+        "isOpen": true,
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "Available",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@ZixflowMessagingPush@objc(cs)ZixflowProviderAgnosticAppDelegate",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ZixflowMessagingPush.ZixflowProviderAgnosticAppDelegate",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZixflowAppDelegateWrapper",
+        "printedName": "ZixflowAppDelegateWrapper",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZixflowAppDelegateWrapper",
+                "printedName": "ZixflowMessagingPushAPN.ZixflowAppDelegateWrapper<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:23ZixflowMessagingPushAPN0A18AppDelegateWrapperC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23ZixflowMessagingPushAPN0A18AppDelegateWrapperCACyxGycfc",
+            "mangledName": "$s23ZixflowMessagingPushAPN0A18AppDelegateWrapperCACyxGycfc",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "genericSig": "<τ_0_0 where τ_0_0 : ObjectiveC.NSObject, τ_0_0 : UIKit.UIApplicationDelegate>",
+            "sugared_genericSig": "<UserAppDelegate where UserAppDelegate : ObjectiveC.NSObject, UserAppDelegate : UIKit.UIApplicationDelegate>",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(messagingPush:userNotificationCenter:appDelegate:config:logger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZixflowAppDelegateWrapper",
+                "printedName": "ZixflowMessagingPushAPN.ZixflowAppDelegateWrapper<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:23ZixflowMessagingPushAPN0A18AppDelegateWrapperC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessagingPushInstance",
+                "printedName": "any ZixflowMessagingPush.MessagingPushInstance",
+                "usr": "s:20ZixflowMessagingPush0bC8InstanceP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> any ZixflowMessagingPush.UserNotificationCenterIntegration)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any ZixflowMessagingPush.UserNotificationCenterIntegration",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UserNotificationCenterIntegration",
+                        "printedName": "any ZixflowMessagingPush.UserNotificationCenterIntegration",
+                        "usr": "s:20ZixflowMessagingPush33UserNotificationCenterIntegrationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any ObjectiveC.NSObject & UIKit.UIApplicationDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "any ObjectiveC.NSObject & UIKit.UIApplicationDelegate"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ZixflowMessagingPush.MessagingPushConfigOptions)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ZixflowMessagingPush.MessagingPushConfigOptions",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessagingPushConfigOptions",
+                        "printedName": "ZixflowMessagingPush.MessagingPushConfigOptions",
+                        "usr": "s:20ZixflowMessagingPush0bC13ConfigOptionsV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Logger",
+                "printedName": "any ZixflowInternalCommon.Logger",
+                "usr": "s:21ZixflowInternalCommon6LoggerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23ZixflowMessagingPushAPN0A18AppDelegateWrapperC09messagingC022userNotificationCenter03appF06config6loggerACyxG0abC00bC8Instance_p_AJ04UserjK11Integration_pycSgSo013UIApplicationF0_So8NSObjectCXcSgAJ0bC13ConfigOptionsVycSg0A14InternalCommon6Logger_ptcfc",
+            "mangledName": "$s23ZixflowMessagingPushAPN0A18AppDelegateWrapperC09messagingC022userNotificationCenter03appF06config6loggerACyxG0abC00bC8Instance_p_AJ04UserjK11Integration_pycSgSo013UIApplicationF0_So8NSObjectCXcSgAJ0bC13ConfigOptionsVycSg0A14InternalCommon6Logger_ptcfc",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "genericSig": "<τ_0_0 where τ_0_0 : ObjectiveC.NSObject, τ_0_0 : UIKit.UIApplicationDelegate>",
+            "sugared_genericSig": "<UserAppDelegate where UserAppDelegate : ObjectiveC.NSObject, UserAppDelegate : UIKit.UIApplicationDelegate>",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:23ZixflowMessagingPushAPN0A18AppDelegateWrapperC",
+        "mangledName": "$s23ZixflowMessagingPushAPN0A18AppDelegateWrapperC",
+        "moduleName": "ZixflowMessagingPushAPN",
+        "genericSig": "<τ_0_0 where τ_0_0 : ObjectiveC.NSObject, τ_0_0 : UIKit.UIApplicationDelegate>",
+        "sugared_genericSig": "<UserAppDelegate where UserAppDelegate : ObjectiveC.NSObject, UserAppDelegate : UIKit.UIApplicationDelegate>",
+        "isOpen": true,
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "Available"
+        ],
+        "superclassUsr": "c:@M@ZixflowMessagingPushAPN@objc(cs)ZixflowAppDelegate",
+        "superclassNames": [
+          "ZixflowMessagingPushAPN.ZixflowAppDelegate",
+          "ZixflowMessagingPush.ZixflowProviderAgnosticAppDelegate",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingPush",
+        "printedName": "ZixflowMessagingPush",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingPush",
+        "printedName": "ZixflowMessagingPush",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessagingPushAPNInstance",
+        "printedName": "MessagingPushAPNInstance",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "registerDeviceToken",
+            "printedName": "registerDeviceToken(apnDeviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP19registerDeviceToken03apngH0y10Foundation4DataV_tF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP19registerDeviceToken03apngH0y10Foundation4DataV_tF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "sugared_genericSig": "<Self where Self : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "application",
+            "printedName": "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP11application_48didRegisterForRemoteNotificationsWithDeviceTokenyyp_10Foundation4DataVtF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP11application_48didRegisterForRemoteNotificationsWithDeviceTokenyyp_10Foundation4DataVtF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "sugared_genericSig": "<Self where Self : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "application",
+            "printedName": "application(_:didFailToRegisterForRemoteNotificationsWithError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP11application_48didFailToRegisterForRemoteNotificationsWithErroryyp_s0O0_ptF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP11application_48didFailToRegisterForRemoteNotificationsWithErroryyp_s0O0_ptF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "sugared_genericSig": "<Self where Self : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteDeviceToken",
+            "printedName": "deleteDeviceToken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP17deleteDeviceTokenyyF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP17deleteDeviceTokenyyF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "sugared_genericSig": "<Self where Self : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackMetric",
+            "printedName": "trackMetric(deliveryID:event:deviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metric",
+                "printedName": "ZixflowInternalCommon.Metric",
+                "usr": "s:21ZixflowInternalCommon6MetricO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP11trackMetric10deliveryID5event11deviceTokenySS_0A14InternalCommon0G0OSStF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP11trackMetric10deliveryID5event11deviceTokenySS_0A14InternalCommon0G0OSStF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "sugared_genericSig": "<Self where Self : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didReceive",
+            "printedName": "didReceive(_:withContentHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotificationRequest",
+                "printedName": "UserNotifications.UNNotificationRequest",
+                "usr": "c:objc(cs)UNNotificationRequest"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNNotificationContent",
+                    "printedName": "UserNotifications.UNNotificationContent",
+                    "usr": "c:objc(cs)UNNotificationContent"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP10didReceive_18withContentHandlerSbSo21UNNotificationRequestC_ySo0kI0CctF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP10didReceive_18withContentHandlerSbSo21UNNotificationRequestC_ySo0kI0CctF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "sugared_genericSig": "<Self where Self : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "serviceExtensionTimeWillExpire",
+            "printedName": "serviceExtensionTimeWillExpire()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP30serviceExtensionTimeWillExpireyyF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP30serviceExtensionTimeWillExpireyyF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "sugared_genericSig": "<Self where Self : ZixflowMessagingPushAPN.MessagingPushAPNInstance>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP",
+        "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP",
+        "moduleName": "ZixflowMessagingPushAPN",
+        "genericSig": "<τ_0_0 : ZixflowInternalCommon.AutoMockable>",
+        "sugared_genericSig": "<Self : ZixflowInternalCommon.AutoMockable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AutoMockable",
+            "printedName": "AutoMockable",
+            "usr": "s:21ZixflowInternalCommon12AutoMockableP",
+            "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessagingPushAPN",
+        "printedName": "MessagingPushAPN",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "registerDeviceToken",
+            "printedName": "registerDeviceToken(apnDeviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bcD0C19registerDeviceToken03apnfG0y10Foundation4DataV_tF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C19registerDeviceToken03apnfG0y10Foundation4DataV_tF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "application",
+            "printedName": "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bcD0C11application_48didRegisterForRemoteNotificationsWithDeviceTokenyyp_10Foundation4DataVtF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C11application_48didRegisterForRemoteNotificationsWithDeviceTokenyyp_10Foundation4DataVtF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "application",
+            "printedName": "application(_:didFailToRegisterForRemoteNotificationsWithError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bcD0C11application_48didFailToRegisterForRemoteNotificationsWithErroryyp_s0N0_ptF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C11application_48didFailToRegisterForRemoteNotificationsWithErroryyp_s0N0_ptF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteDeviceToken",
+            "printedName": "deleteDeviceToken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bcD0C17deleteDeviceTokenyyF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C17deleteDeviceTokenyyF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackMetric",
+            "printedName": "trackMetric(deliveryID:event:deviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metric",
+                "printedName": "ZixflowInternalCommon.Metric",
+                "usr": "s:21ZixflowInternalCommon6MetricO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bcD0C11trackMetric10deliveryID5event11deviceTokenySS_0A14InternalCommon0F0OSStF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C11trackMetric10deliveryID5event11deviceTokenySS_0A14InternalCommon0F0OSStF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize(withConfig:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MessagingPushInstance",
+                "printedName": "any ZixflowMessagingPush.MessagingPushInstance",
+                "usr": "s:20ZixflowMessagingPush0bC8InstanceP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessagingPushConfigOptions",
+                "printedName": "ZixflowMessagingPush.MessagingPushConfigOptions",
+                "hasDefaultArg": true,
+                "usr": "s:20ZixflowMessagingPush0bC13ConfigOptionsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bcD0C10initialize10withConfig0abC00bC8Instance_pAF0bcG7OptionsV_tFZ",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C10initialize10withConfig0abC00bC8Instance_pAF0bcG7OptionsV_tFZ",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Available",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didReceive",
+            "printedName": "didReceive(_:withContentHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotificationRequest",
+                "printedName": "UserNotifications.UNNotificationRequest",
+                "usr": "c:objc(cs)UNNotificationRequest"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNNotificationContent",
+                    "printedName": "UserNotifications.UNNotificationContent",
+                    "usr": "c:objc(cs)UNNotificationContent"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bcD0C10didReceive_18withContentHandlerSbSo21UNNotificationRequestC_ySo0jH0CctF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C10didReceive_18withContentHandlerSbSo21UNNotificationRequestC_ySo0jH0CctF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "serviceExtensionTimeWillExpire",
+            "printedName": "serviceExtensionTimeWillExpire()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bcD0C30serviceExtensionTimeWillExpireyyF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C30serviceExtensionTimeWillExpireyyF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "userNotificationCenter",
+            "printedName": "userNotificationCenter(_:didReceive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZixflowMessagingPush.UNNotificationWrapper?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNNotificationWrapper",
+                    "printedName": "ZixflowMessagingPush.UNNotificationWrapper",
+                    "usr": "s:20ZixflowMessagingPush21UNNotificationWrapperV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNUserNotificationCenter",
+                "printedName": "UserNotifications.UNUserNotificationCenter",
+                "usr": "c:objc(cs)UNUserNotificationCenter"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotificationResponse",
+                "printedName": "UserNotifications.UNNotificationResponse",
+                "usr": "c:objc(cs)UNNotificationResponse"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bcD0C22userNotificationCenter_10didReceive0abC021UNNotificationWrapperVSgSo06UNUserfG0C_So0J8ResponseCtF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C22userNotificationCenter_10didReceive0abC021UNNotificationWrapperVSgSo06UNUserfG0C_So0J8ResponseCtF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "userNotificationCenter",
+            "printedName": "userNotificationCenter(_:didReceive:withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNUserNotificationCenter",
+                "printedName": "UserNotifications.UNUserNotificationCenter",
+                "usr": "c:objc(cs)UNUserNotificationCenter"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotificationResponse",
+                "printedName": "UserNotifications.UNNotificationResponse",
+                "usr": "c:objc(cs)UNNotificationResponse"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bcD0C22userNotificationCenter_10didReceive21withCompletionHandlerSbSo06UNUserfG0C_So22UNNotificationResponseCyyctF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C22userNotificationCenter_10didReceive21withCompletionHandlerSbSo06UNUserfG0C_So22UNNotificationResponseCyyctF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:23ZixflowMessagingPushAPN0bcD0C",
+        "mangledName": "$s23ZixflowMessagingPushAPN0bcD0C",
+        "moduleName": "ZixflowMessagingPushAPN",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "MessagingPushAPNInstance",
+            "printedName": "MessagingPushAPNInstance",
+            "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AutoMockable",
+            "printedName": "AutoMockable",
+            "usr": "s:21ZixflowInternalCommon12AutoMockableP",
+            "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingPush",
+        "printedName": "ZixflowMessagingPush",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingPush",
+        "printedName": "ZixflowMessagingPush",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPushAPN"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessagingPushAPNInstanceMock",
+        "printedName": "MessagingPushAPNInstanceMock",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "mockCalled",
+            "printedName": "mockCalled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC10mockCalledSbvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC10mockCalledSbvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC10mockCalledSbvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC10mockCalledSbvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC10mockCalledSbvs",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC10mockCalledSbvs",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC10mockCalledSbvM",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC10mockCalledSbvM",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MessagingPushAPNInstanceMock",
+                "printedName": "ZixflowMessagingPushAPN.MessagingPushAPNInstanceMock",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockCACycfc",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockCACycfc",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "resetMock",
+            "printedName": "resetMock()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC05resetF0yyF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC05resetF0yyF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "registerDeviceTokenCallsCount",
+            "printedName": "registerDeviceTokenCallsCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC29registerDeviceTokenCallsCountSivp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC29registerDeviceTokenCallsCountSivp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC29registerDeviceTokenCallsCountSivg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC29registerDeviceTokenCallsCountSivg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "registerDeviceTokenCalled",
+            "printedName": "registerDeviceTokenCalled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC25registerDeviceTokenCalledSbvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC25registerDeviceTokenCalledSbvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC25registerDeviceTokenCalledSbvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC25registerDeviceTokenCalledSbvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "registerDeviceTokenReceivedArguments",
+            "printedName": "registerDeviceTokenReceivedArguments",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC36registerDeviceTokenReceivedArguments10Foundation4DataVSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC36registerDeviceTokenReceivedArguments10Foundation4DataVSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC36registerDeviceTokenReceivedArguments10Foundation4DataVSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC36registerDeviceTokenReceivedArguments10Foundation4DataVSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "registerDeviceTokenReceivedInvocations",
+            "printedName": "registerDeviceTokenReceivedInvocations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.Data]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC38registerDeviceTokenReceivedInvocationsSay10Foundation4DataVGvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC38registerDeviceTokenReceivedInvocationsSay10Foundation4DataVGvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.Data]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC38registerDeviceTokenReceivedInvocationsSay10Foundation4DataVGvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC38registerDeviceTokenReceivedInvocationsSay10Foundation4DataVGvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "registerDeviceTokenClosure",
+            "printedName": "registerDeviceTokenClosure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Foundation.Data) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Data) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC26registerDeviceTokenClosurey10Foundation4DataVcSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC26registerDeviceTokenClosurey10Foundation4DataVcSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Foundation.Data) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Foundation.Data) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC26registerDeviceTokenClosurey10Foundation4DataVcSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC26registerDeviceTokenClosurey10Foundation4DataVcSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Foundation.Data) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Foundation.Data) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC26registerDeviceTokenClosurey10Foundation4DataVcSgvs",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC26registerDeviceTokenClosurey10Foundation4DataVcSgvs",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC26registerDeviceTokenClosurey10Foundation4DataVcSgvM",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC26registerDeviceTokenClosurey10Foundation4DataVcSgvM",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "registerDeviceToken",
+            "printedName": "registerDeviceToken(apnDeviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC19registerDeviceToken03apnhI0y10Foundation4DataV_tF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC19registerDeviceToken03apnhI0y10Foundation4DataV_tF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "didRegisterForRemoteNotificationsCallsCount",
+            "printedName": "didRegisterForRemoteNotificationsCallsCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC43didRegisterForRemoteNotificationsCallsCountSivp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC43didRegisterForRemoteNotificationsCallsCountSivp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC43didRegisterForRemoteNotificationsCallsCountSivg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC43didRegisterForRemoteNotificationsCallsCountSivg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didRegisterForRemoteNotificationsCalled",
+            "printedName": "didRegisterForRemoteNotificationsCalled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC39didRegisterForRemoteNotificationsCalledSbvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC39didRegisterForRemoteNotificationsCalledSbvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC39didRegisterForRemoteNotificationsCalledSbvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC39didRegisterForRemoteNotificationsCalledSbvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didRegisterForRemoteNotificationsReceivedArguments",
+            "printedName": "didRegisterForRemoteNotificationsReceivedArguments",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(application: Any, deviceToken: Foundation.Data)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(application: Any, deviceToken: Foundation.Data)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC50didRegisterForRemoteNotificationsReceivedArgumentsyp11application_10Foundation4DataV11deviceTokentSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC50didRegisterForRemoteNotificationsReceivedArgumentsyp11application_10Foundation4DataV11deviceTokentSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(application: Any, deviceToken: Foundation.Data)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(application: Any, deviceToken: Foundation.Data)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC50didRegisterForRemoteNotificationsReceivedArgumentsyp11application_10Foundation4DataV11deviceTokentSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC50didRegisterForRemoteNotificationsReceivedArgumentsyp11application_10Foundation4DataV11deviceTokentSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didRegisterForRemoteNotificationsReceivedInvocations",
+            "printedName": "didRegisterForRemoteNotificationsReceivedInvocations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(application: Any, deviceToken: Foundation.Data)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(application: Any, deviceToken: Foundation.Data)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC52didRegisterForRemoteNotificationsReceivedInvocationsSayyp11application_10Foundation4DataV11deviceTokentGvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC52didRegisterForRemoteNotificationsReceivedInvocationsSayyp11application_10Foundation4DataV11deviceTokentGvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[(application: Any, deviceToken: Foundation.Data)]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(application: Any, deviceToken: Foundation.Data)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC52didRegisterForRemoteNotificationsReceivedInvocationsSayyp11application_10Foundation4DataV11deviceTokentGvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC52didRegisterForRemoteNotificationsReceivedInvocationsSayyp11application_10Foundation4DataV11deviceTokentGvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didRegisterForRemoteNotificationsClosure",
+            "printedName": "didRegisterForRemoteNotificationsClosure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Any, Foundation.Data) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Any, Foundation.Data) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Any, Foundation.Data)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didRegisterForRemoteNotificationsClosureyyp_10Foundation4DataVtcSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didRegisterForRemoteNotificationsClosureyyp_10Foundation4DataVtcSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Any, Foundation.Data) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Any, Foundation.Data) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Any, Foundation.Data)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Data",
+                                "printedName": "Foundation.Data",
+                                "usr": "s:10Foundation4DataV"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didRegisterForRemoteNotificationsClosureyyp_10Foundation4DataVtcSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didRegisterForRemoteNotificationsClosureyyp_10Foundation4DataVtcSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Any, Foundation.Data) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Any, Foundation.Data) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Any, Foundation.Data)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Data",
+                                "printedName": "Foundation.Data",
+                                "usr": "s:10Foundation4DataV"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didRegisterForRemoteNotificationsClosureyyp_10Foundation4DataVtcSgvs",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didRegisterForRemoteNotificationsClosureyyp_10Foundation4DataVtcSgvs",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didRegisterForRemoteNotificationsClosureyyp_10Foundation4DataVtcSgvM",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didRegisterForRemoteNotificationsClosureyyp_10Foundation4DataVtcSgvM",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "application",
+            "printedName": "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC11application_48didRegisterForRemoteNotificationsWithDeviceTokenyyp_10Foundation4DataVtF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC11application_48didRegisterForRemoteNotificationsWithDeviceTokenyyp_10Foundation4DataVtF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "didFailToRegisterForRemoteNotificationsCallsCount",
+            "printedName": "didFailToRegisterForRemoteNotificationsCallsCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC49didFailToRegisterForRemoteNotificationsCallsCountSivp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC49didFailToRegisterForRemoteNotificationsCallsCountSivp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC49didFailToRegisterForRemoteNotificationsCallsCountSivg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC49didFailToRegisterForRemoteNotificationsCallsCountSivg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didFailToRegisterForRemoteNotificationsCalled",
+            "printedName": "didFailToRegisterForRemoteNotificationsCalled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC45didFailToRegisterForRemoteNotificationsCalledSbvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC45didFailToRegisterForRemoteNotificationsCalledSbvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC45didFailToRegisterForRemoteNotificationsCalledSbvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC45didFailToRegisterForRemoteNotificationsCalledSbvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didFailToRegisterForRemoteNotificationsReceivedArguments",
+            "printedName": "didFailToRegisterForRemoteNotificationsReceivedArguments",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(application: Any, error: any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(application: Any, error: any Swift.Error)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC56didFailToRegisterForRemoteNotificationsReceivedArgumentsyp11application_s5Error_p5errortSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC56didFailToRegisterForRemoteNotificationsReceivedArgumentsyp11application_s5Error_p5errortSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(application: Any, error: any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(application: Any, error: any Swift.Error)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC56didFailToRegisterForRemoteNotificationsReceivedArgumentsyp11application_s5Error_p5errortSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC56didFailToRegisterForRemoteNotificationsReceivedArgumentsyp11application_s5Error_p5errortSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didFailToRegisterForRemoteNotificationsReceivedInvocations",
+            "printedName": "didFailToRegisterForRemoteNotificationsReceivedInvocations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(application: Any, error: any Swift.Error)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(application: Any, error: any Swift.Error)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC58didFailToRegisterForRemoteNotificationsReceivedInvocationsSayyp11application_s5Error_p5errortGvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC58didFailToRegisterForRemoteNotificationsReceivedInvocationsSayyp11application_s5Error_p5errortGvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[(application: Any, error: any Swift.Error)]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(application: Any, error: any Swift.Error)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC58didFailToRegisterForRemoteNotificationsReceivedInvocationsSayyp11application_s5Error_p5errortGvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC58didFailToRegisterForRemoteNotificationsReceivedInvocationsSayyp11application_s5Error_p5errortGvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didFailToRegisterForRemoteNotificationsClosure",
+            "printedName": "didFailToRegisterForRemoteNotificationsClosure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Any, any Swift.Error) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Any, any Swift.Error) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Any, any Swift.Error)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didFailToRegisterForRemoteNotificationsClosureyyp_s5Error_ptcSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didFailToRegisterForRemoteNotificationsClosureyyp_s5Error_ptcSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Any, any Swift.Error) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Any, any Swift.Error) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Any, any Swift.Error)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didFailToRegisterForRemoteNotificationsClosureyyp_s5Error_ptcSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didFailToRegisterForRemoteNotificationsClosureyyp_s5Error_ptcSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Any, any Swift.Error) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Any, any Swift.Error) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Any, any Swift.Error)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didFailToRegisterForRemoteNotificationsClosureyyp_s5Error_ptcSgvs",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didFailToRegisterForRemoteNotificationsClosureyyp_s5Error_ptcSgvs",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didFailToRegisterForRemoteNotificationsClosureyyp_s5Error_ptcSgvM",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didFailToRegisterForRemoteNotificationsClosureyyp_s5Error_ptcSgvM",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "application",
+            "printedName": "application(_:didFailToRegisterForRemoteNotificationsWithError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC11application_48didFailToRegisterForRemoteNotificationsWithErroryyp_s0P0_ptF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC11application_48didFailToRegisterForRemoteNotificationsWithErroryyp_s0P0_ptF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "deleteDeviceTokenCallsCount",
+            "printedName": "deleteDeviceTokenCallsCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC27deleteDeviceTokenCallsCountSivp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC27deleteDeviceTokenCallsCountSivp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC27deleteDeviceTokenCallsCountSivg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC27deleteDeviceTokenCallsCountSivg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "deleteDeviceTokenCalled",
+            "printedName": "deleteDeviceTokenCalled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC23deleteDeviceTokenCalledSbvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC23deleteDeviceTokenCalledSbvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC23deleteDeviceTokenCalledSbvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC23deleteDeviceTokenCalledSbvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "deleteDeviceTokenClosure",
+            "printedName": "deleteDeviceTokenClosure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC24deleteDeviceTokenClosureyycSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC24deleteDeviceTokenClosureyycSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC24deleteDeviceTokenClosureyycSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC24deleteDeviceTokenClosureyycSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC24deleteDeviceTokenClosureyycSgvs",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC24deleteDeviceTokenClosureyycSgvs",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC24deleteDeviceTokenClosureyycSgvM",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC24deleteDeviceTokenClosureyycSgvM",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "deleteDeviceToken",
+            "printedName": "deleteDeviceToken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC17deleteDeviceTokenyyF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC17deleteDeviceTokenyyF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "trackMetricCallsCount",
+            "printedName": "trackMetricCallsCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC21trackMetricCallsCountSivp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC21trackMetricCallsCountSivp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC21trackMetricCallsCountSivg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC21trackMetricCallsCountSivg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "trackMetricCalled",
+            "printedName": "trackMetricCalled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC17trackMetricCalledSbvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC17trackMetricCalledSbvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC17trackMetricCalledSbvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC17trackMetricCalledSbvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "trackMetricReceivedArguments",
+            "printedName": "trackMetricReceivedArguments",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metric",
+                        "printedName": "ZixflowInternalCommon.Metric",
+                        "usr": "s:21ZixflowInternalCommon6MetricO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC28trackMetricReceivedArgumentsSS10deliveryID_0A14InternalCommon0H0O5eventSS11deviceTokentSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC28trackMetricReceivedArgumentsSS10deliveryID_0A14InternalCommon0H0O5eventSS11deviceTokentSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Metric",
+                            "printedName": "ZixflowInternalCommon.Metric",
+                            "usr": "s:21ZixflowInternalCommon6MetricO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC28trackMetricReceivedArgumentsSS10deliveryID_0A14InternalCommon0H0O5eventSS11deviceTokentSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC28trackMetricReceivedArgumentsSS10deliveryID_0A14InternalCommon0H0O5eventSS11deviceTokentSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "trackMetricReceivedInvocations",
+            "printedName": "trackMetricReceivedInvocations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metric",
+                        "printedName": "ZixflowInternalCommon.Metric",
+                        "usr": "s:21ZixflowInternalCommon6MetricO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC30trackMetricReceivedInvocationsSaySS10deliveryID_0A14InternalCommon0H0O5eventSS11deviceTokentGvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC30trackMetricReceivedInvocationsSaySS10deliveryID_0A14InternalCommon0H0O5eventSS11deviceTokentGvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Metric",
+                            "printedName": "ZixflowInternalCommon.Metric",
+                            "usr": "s:21ZixflowInternalCommon6MetricO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC30trackMetricReceivedInvocationsSaySS10deliveryID_0A14InternalCommon0H0O5eventSS11deviceTokentGvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC30trackMetricReceivedInvocationsSaySS10deliveryID_0A14InternalCommon0H0O5eventSS11deviceTokentGvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "trackMetricClosure",
+            "printedName": "trackMetricClosure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Metric",
+                            "printedName": "ZixflowInternalCommon.Metric",
+                            "usr": "s:21ZixflowInternalCommon6MetricO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC18trackMetricClosureySS_0A14InternalCommon0H0OSStcSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC18trackMetricClosureySS_0A14InternalCommon0H0OSStcSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Metric",
+                                "printedName": "ZixflowInternalCommon.Metric",
+                                "usr": "s:21ZixflowInternalCommon6MetricO"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC18trackMetricClosureySS_0A14InternalCommon0H0OSStcSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC18trackMetricClosureySS_0A14InternalCommon0H0OSStcSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Metric",
+                                "printedName": "ZixflowInternalCommon.Metric",
+                                "usr": "s:21ZixflowInternalCommon6MetricO"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC18trackMetricClosureySS_0A14InternalCommon0H0OSStcSgvs",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC18trackMetricClosureySS_0A14InternalCommon0H0OSStcSgvs",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC18trackMetricClosureySS_0A14InternalCommon0H0OSStcSgvM",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC18trackMetricClosureySS_0A14InternalCommon0H0OSStcSgvM",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "trackMetric",
+            "printedName": "trackMetric(deliveryID:event:deviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metric",
+                "printedName": "ZixflowInternalCommon.Metric",
+                "usr": "s:21ZixflowInternalCommon6MetricO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC11trackMetric10deliveryID5event11deviceTokenySS_0A14InternalCommon0H0OSStF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC11trackMetric10deliveryID5event11deviceTokenySS_0A14InternalCommon0H0OSStF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "didReceiveNotificationRequestCallsCount",
+            "printedName": "didReceiveNotificationRequestCallsCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC39didReceiveNotificationRequestCallsCountSivp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC39didReceiveNotificationRequestCallsCountSivp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC39didReceiveNotificationRequestCallsCountSivg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC39didReceiveNotificationRequestCallsCountSivg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didReceiveNotificationRequestCalled",
+            "printedName": "didReceiveNotificationRequestCalled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC35didReceiveNotificationRequestCalledSbvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC35didReceiveNotificationRequestCalledSbvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC35didReceiveNotificationRequestCalledSbvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC35didReceiveNotificationRequestCalledSbvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didReceiveNotificationRequestReceivedArguments",
+            "printedName": "didReceiveNotificationRequestReceivedArguments",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNNotificationRequest",
+                        "printedName": "UserNotifications.UNNotificationRequest",
+                        "usr": "c:objc(cs)UNNotificationRequest"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNNotificationContent",
+                            "printedName": "UserNotifications.UNNotificationContent",
+                            "usr": "c:objc(cs)UNNotificationContent"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didReceiveNotificationRequestReceivedArgumentsSo014UNNotificationJ0C7request_ySo0M7ContentCc14contentHandlertSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didReceiveNotificationRequestReceivedArgumentsSo014UNNotificationJ0C7request_ySo0M7ContentCc14contentHandlertSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNNotificationRequest",
+                            "printedName": "UserNotifications.UNNotificationRequest",
+                            "usr": "c:objc(cs)UNNotificationRequest"
+                          },
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UNNotificationContent",
+                                "printedName": "UserNotifications.UNNotificationContent",
+                                "usr": "c:objc(cs)UNNotificationContent"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didReceiveNotificationRequestReceivedArgumentsSo014UNNotificationJ0C7request_ySo0M7ContentCc14contentHandlertSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC46didReceiveNotificationRequestReceivedArgumentsSo014UNNotificationJ0C7request_ySo0M7ContentCc14contentHandlertSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didReceiveNotificationRequestReceivedInvocations",
+            "printedName": "didReceiveNotificationRequestReceivedInvocations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNNotificationRequest",
+                        "printedName": "UserNotifications.UNNotificationRequest",
+                        "usr": "c:objc(cs)UNNotificationRequest"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNNotificationContent",
+                            "printedName": "UserNotifications.UNNotificationContent",
+                            "usr": "c:objc(cs)UNNotificationContent"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC48didReceiveNotificationRequestReceivedInvocationsSaySo014UNNotificationJ0C7request_ySo0M7ContentCc14contentHandlertGvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC48didReceiveNotificationRequestReceivedInvocationsSaySo014UNNotificationJ0C7request_ySo0M7ContentCc14contentHandlertGvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNNotificationRequest",
+                            "printedName": "UserNotifications.UNNotificationRequest",
+                            "usr": "c:objc(cs)UNNotificationRequest"
+                          },
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UNNotificationContent",
+                                "printedName": "UserNotifications.UNNotificationContent",
+                                "usr": "c:objc(cs)UNNotificationContent"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC48didReceiveNotificationRequestReceivedInvocationsSaySo014UNNotificationJ0C7request_ySo0M7ContentCc14contentHandlertGvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC48didReceiveNotificationRequestReceivedInvocationsSaySo014UNNotificationJ0C7request_ySo0M7ContentCc14contentHandlertGvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didReceiveNotificationRequestReturnValue",
+            "printedName": "didReceiveNotificationRequestReturnValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didReceiveNotificationRequestReturnValueSbSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didReceiveNotificationRequestReturnValueSbSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didReceiveNotificationRequestReturnValueSbSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didReceiveNotificationRequestReturnValueSbSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didReceiveNotificationRequestReturnValueSbSgvs",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didReceiveNotificationRequestReturnValueSbSgvs",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didReceiveNotificationRequestReturnValueSbSgvM",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC40didReceiveNotificationRequestReturnValueSbSgvM",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didReceiveNotificationRequestClosure",
+            "printedName": "didReceiveNotificationRequestClosure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(UserNotifications.UNNotificationRequest, (UserNotifications.UNNotificationContent) -> ())",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNNotificationRequest",
+                            "printedName": "UserNotifications.UNNotificationRequest",
+                            "usr": "c:objc(cs)UNNotificationRequest"
+                          },
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UNNotificationContent",
+                                "printedName": "UserNotifications.UNNotificationContent",
+                                "usr": "c:objc(cs)UNNotificationContent"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationJ0C_ySo0L7ContentCctcSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationJ0C_ySo0L7ContentCctcSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(UserNotifications.UNNotificationRequest, (UserNotifications.UNNotificationContent) -> ())",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UNNotificationRequest",
+                                "printedName": "UserNotifications.UNNotificationRequest",
+                                "usr": "c:objc(cs)UNNotificationRequest"
+                              },
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Void",
+                                    "printedName": "()"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "UNNotificationContent",
+                                    "printedName": "UserNotifications.UNNotificationContent",
+                                    "usr": "c:objc(cs)UNNotificationContent"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationJ0C_ySo0L7ContentCctcSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationJ0C_ySo0L7ContentCctcSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(UserNotifications.UNNotificationRequest, (UserNotifications.UNNotificationContent) -> ())",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UNNotificationRequest",
+                                "printedName": "UserNotifications.UNNotificationRequest",
+                                "usr": "c:objc(cs)UNNotificationRequest"
+                              },
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Void",
+                                    "printedName": "()"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "UNNotificationContent",
+                                    "printedName": "UserNotifications.UNNotificationContent",
+                                    "usr": "c:objc(cs)UNNotificationContent"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationJ0C_ySo0L7ContentCctcSgvs",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationJ0C_ySo0L7ContentCctcSgvs",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationJ0C_ySo0L7ContentCctcSgvM",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationJ0C_ySo0L7ContentCctcSgvM",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "didReceive",
+            "printedName": "didReceive(_:withContentHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotificationRequest",
+                "printedName": "UserNotifications.UNNotificationRequest",
+                "usr": "c:objc(cs)UNNotificationRequest"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNNotificationContent",
+                    "printedName": "UserNotifications.UNNotificationContent",
+                    "usr": "c:objc(cs)UNNotificationContent"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC10didReceive_18withContentHandlerSbSo21UNNotificationRequestC_ySo0lJ0CctF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC10didReceive_18withContentHandlerSbSo21UNNotificationRequestC_ySo0lJ0CctF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "serviceExtensionTimeWillExpireCallsCount",
+            "printedName": "serviceExtensionTimeWillExpireCallsCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC40serviceExtensionTimeWillExpireCallsCountSivp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC40serviceExtensionTimeWillExpireCallsCountSivp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "SetterAccess",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC40serviceExtensionTimeWillExpireCallsCountSivg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC40serviceExtensionTimeWillExpireCallsCountSivg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "serviceExtensionTimeWillExpireCalled",
+            "printedName": "serviceExtensionTimeWillExpireCalled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC36serviceExtensionTimeWillExpireCalledSbvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC36serviceExtensionTimeWillExpireCalledSbvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC36serviceExtensionTimeWillExpireCalledSbvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC36serviceExtensionTimeWillExpireCalledSbvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "serviceExtensionTimeWillExpireClosure",
+            "printedName": "serviceExtensionTimeWillExpireClosure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvp",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvp",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvg",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvg",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvs",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvs",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvM",
+                "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvM",
+                "moduleName": "ZixflowMessagingPushAPN",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "serviceExtensionTimeWillExpire",
+            "printedName": "serviceExtensionTimeWillExpire()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC30serviceExtensionTimeWillExpireyyF",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC30serviceExtensionTimeWillExpireyyF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:23ZixflowMessagingPushAPN0bC15APNInstanceMockC",
+        "mangledName": "$s23ZixflowMessagingPushAPN0bC15APNInstanceMockC",
+        "moduleName": "ZixflowMessagingPushAPN",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "MessagingPushAPNInstance",
+            "printedName": "MessagingPushAPNInstance",
+            "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Mock",
+            "printedName": "Mock",
+            "usr": "s:21ZixflowInternalCommon4MockP",
+            "mangledName": "$s21ZixflowInternalCommon4MockP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AutoMockable",
+            "printedName": "AutoMockable",
+            "usr": "s:21ZixflowInternalCommon12AutoMockableP",
+            "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessagingPush",
+        "printedName": "MessagingPush",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "registerDeviceToken",
+            "printedName": "registerDeviceToken(apnDeviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20ZixflowMessagingPush0bC0C0abC3APNE19registerDeviceToken03apnfG0y10Foundation4DataV_tF",
+            "mangledName": "$s20ZixflowMessagingPush0bC0C0abC3APNE19registerDeviceToken03apnfG0y10Foundation4DataV_tF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "application",
+            "printedName": "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20ZixflowMessagingPush0bC0C0abC3APNE11application_48didRegisterForRemoteNotificationsWithDeviceTokenyyp_10Foundation4DataVtF",
+            "mangledName": "$s20ZixflowMessagingPush0bC0C0abC3APNE11application_48didRegisterForRemoteNotificationsWithDeviceTokenyyp_10Foundation4DataVtF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "application",
+            "printedName": "application(_:didFailToRegisterForRemoteNotificationsWithError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20ZixflowMessagingPush0bC0C0abC3APNE11application_48didFailToRegisterForRemoteNotificationsWithErroryyp_s0N0_ptF",
+            "mangledName": "$s20ZixflowMessagingPush0bC0C0abC3APNE11application_48didFailToRegisterForRemoteNotificationsWithErroryyp_s0N0_ptF",
+            "moduleName": "ZixflowMessagingPushAPN",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20ZixflowMessagingPush0bC0C",
+        "mangledName": "$s20ZixflowMessagingPush0bC0C",
+        "moduleName": "ZixflowMessagingPush",
+        "superclassUsr": "s:21ZixflowInternalCommon20ModuleTopLevelObjectC",
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ZixflowInternalCommon.ModuleTopLevelObject<any ZixflowMessagingPush.MessagingPushInstance>"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "MessagingPushInstance",
+            "printedName": "MessagingPushInstance",
+            "usr": "s:20ZixflowMessagingPush0bC8InstanceP",
+            "mangledName": "$s20ZixflowMessagingPush0bC8InstanceP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AutoMockable",
+            "printedName": "AutoMockable",
+            "usr": "s:21ZixflowInternalCommon12AutoMockableP",
+            "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "MessagingPushAPNInstance",
+            "printedName": "MessagingPushAPNInstance",
+            "usr": "s:23ZixflowMessagingPushAPN0bC11APNInstanceP",
+            "mangledName": "$s23ZixflowMessagingPushAPN0bC11APNInstanceP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushAPN.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 295,
+      "length": 33,
+      "value": "\"Zixflow_ZixflowMessagingPushAPN\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushAPN.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "Array",
+      "offset": 975,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushAPN.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1502,
+      "length": 9,
+      "value": "\".bundle\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushAPN.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1654,
+      "length": 61,
+      "value": "\"unable to find bundle named Zixflow_ZixflowMessagingPushAPN\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/Integration\/CioAppDelegateAPN.swift",
+      "kind": "StringLiteral",
+      "offset": 1809,
+      "length": 25,
+      "value": "\"ZixflowMessagingPushAPN.ZixflowAppDelegateWrapper\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3075,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4951,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "Array",
+      "offset": 5404,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6236,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "Array",
+      "offset": 6811,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7926,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "Array",
+      "offset": 8515,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9605,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10356,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "Array",
+      "offset": 10881,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11891,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "Array",
+      "offset": 12538,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPushAPN\/autogenerated\/AutoMockable.generated.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14200,
+      "length": 1,
+      "value": "0"
+    }
+  ]
+}

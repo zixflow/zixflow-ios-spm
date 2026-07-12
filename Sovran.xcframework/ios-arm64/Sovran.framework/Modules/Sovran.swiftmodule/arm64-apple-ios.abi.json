@@ -1,0 +1,620 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Sovran",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Action",
+        "printedName": "Action",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "StateType",
+            "printedName": "StateType",
+            "declKind": "AssociatedType",
+            "usr": "s:6Sovran6ActionP9StateTypeQa",
+            "mangledName": "$s6Sovran6ActionP9StateTypeQa",
+            "moduleName": "Sovran",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "reduce",
+            "printedName": "reduce(state:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.StateType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.StateType"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Sovran6ActionP6reduce5state9StateTypeQzAG_tF",
+            "mangledName": "$s6Sovran6ActionP6reduce5state9StateTypeQzAG_tF",
+            "moduleName": "Sovran",
+            "genericSig": "<τ_0_0 where τ_0_0 : Sovran.Action>",
+            "sugared_genericSig": "<Self where Self : Sovran.Action>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:6Sovran6ActionP",
+        "mangledName": "$s6Sovran6ActionP",
+        "moduleName": "Sovran",
+        "genericSig": "<τ_0_0.StateType : Sovran.State>",
+        "sugared_genericSig": "<Self.StateType : Sovran.State>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AsyncAction",
+        "printedName": "AsyncAction",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "StateType",
+            "printedName": "StateType",
+            "declKind": "AssociatedType",
+            "usr": "s:6Sovran11AsyncActionP9StateTypeQa",
+            "mangledName": "$s6Sovran11AsyncActionP9StateTypeQa",
+            "moduleName": "Sovran",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "AssociatedType",
+            "name": "ResultType",
+            "printedName": "ResultType",
+            "declKind": "AssociatedType",
+            "usr": "s:6Sovran11AsyncActionP10ResultTypeQa",
+            "mangledName": "$s6Sovran11AsyncActionP10ResultTypeQa",
+            "moduleName": "Sovran",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "operation",
+            "printedName": "operation(state:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.StateType"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.ResultType?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_0.ResultType?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DependentMember",
+                        "printedName": "τ_0_0.ResultType"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Sovran11AsyncActionP9operation5state10completiony9StateTypeQz_y06ResultH0QzSgctF",
+            "mangledName": "$s6Sovran11AsyncActionP9operation5state10completiony9StateTypeQz_y06ResultH0QzSgctF",
+            "moduleName": "Sovran",
+            "genericSig": "<τ_0_0 where τ_0_0 : Sovran.AsyncAction>",
+            "sugared_genericSig": "<Self where Self : Sovran.AsyncAction>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reduce",
+            "printedName": "reduce(state:operationResult:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.StateType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.StateType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.ResultType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.ResultType"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Sovran11AsyncActionP6reduce5state15operationResult9StateTypeQzAH_0gI0QzSgtF",
+            "mangledName": "$s6Sovran11AsyncActionP6reduce5state15operationResult9StateTypeQzAH_0gI0QzSgtF",
+            "moduleName": "Sovran",
+            "genericSig": "<τ_0_0 where τ_0_0 : Sovran.AsyncAction>",
+            "sugared_genericSig": "<Self where Self : Sovran.AsyncAction>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:6Sovran11AsyncActionP",
+        "mangledName": "$s6Sovran11AsyncActionP",
+        "moduleName": "Sovran",
+        "genericSig": "<τ_0_0.StateType : Sovran.State>",
+        "sugared_genericSig": "<Self.StateType : Sovran.State>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Sovran",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "State",
+        "printedName": "State",
+        "declKind": "Protocol",
+        "usr": "s:6Sovran5StateP",
+        "mangledName": "$s6Sovran5StateP",
+        "moduleName": "Sovran",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Sovran",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Store",
+        "printedName": "Store",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Store",
+                "printedName": "Sovran.Store",
+                "usr": "s:6Sovran5StoreC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Sovran5StoreC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s6Sovran5StoreC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Sovran",
+            "declAttributes": [
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Sovran5StoreC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s6Sovran5StoreC6encode2toys7Encoder_p_tKF",
+            "moduleName": "Sovran",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Store",
+                "printedName": "Sovran.Store",
+                "usr": "s:6Sovran5StoreC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Sovran5StoreCACycfc",
+            "mangledName": "$s6Sovran5StoreCACycfc",
+            "moduleName": "Sovran",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "subscribe",
+            "printedName": "subscribe(_:initialState:queue:handler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Subscriber",
+                "printedName": "any Sovran.Subscriber",
+                "usr": "s:6Sovran10SubscriberP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchQueue",
+                "printedName": "Dispatch.DispatchQueue",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)OS_dispatch_queue"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Sovran5StoreC9subscribe_12initialState5queue7handlerSiAA10Subscriber_p_SbSo012OS_dispatch_F0CyxctAA0E0RzlF",
+            "mangledName": "$s6Sovran5StoreC9subscribe_12initialState5queue7handlerSiAA10Subscriber_p_SbSo012OS_dispatch_F0CyxctAA0E0RzlF",
+            "moduleName": "Sovran",
+            "genericSig": "<τ_0_0 where τ_0_0 : Sovran.State>",
+            "sugared_genericSig": "<T where T : Sovran.State>",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unsubscribe",
+            "printedName": "unsubscribe(identifier:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Sovran5StoreC11unsubscribe10identifierySi_tF",
+            "mangledName": "$s6Sovran5StoreC11unsubscribe10identifierySi_tF",
+            "moduleName": "Sovran",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "provide",
+            "printedName": "provide(state:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Sovran5StoreC7provide5stateyx_tAA5StateRzlF",
+            "mangledName": "$s6Sovran5StoreC7provide5stateyx_tAA5StateRzlF",
+            "moduleName": "Sovran",
+            "genericSig": "<τ_0_0 where τ_0_0 : Sovran.State>",
+            "sugared_genericSig": "<T where T : Sovran.State>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dispatch",
+            "printedName": "dispatch(action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Sovran5StoreC8dispatch6actionyx_tAA6ActionRzlF",
+            "mangledName": "$s6Sovran5StoreC8dispatch6actionyx_tAA6ActionRzlF",
+            "moduleName": "Sovran",
+            "genericSig": "<τ_0_0 where τ_0_0 : Sovran.Action>",
+            "sugared_genericSig": "<T where T : Sovran.Action>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dispatch",
+            "printedName": "dispatch(action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Sovran5StoreC8dispatch6actionyx_tAA11AsyncActionRzlF",
+            "mangledName": "$s6Sovran5StoreC8dispatch6actionyx_tAA11AsyncActionRzlF",
+            "moduleName": "Sovran",
+            "genericSig": "<τ_0_0 where τ_0_0 : Sovran.AsyncAction>",
+            "sugared_genericSig": "<T where T : Sovran.AsyncAction>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "currentState",
+            "printedName": "currentState()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Sovran5StoreC12currentStatexSgyAA0D0RzlF",
+            "mangledName": "$s6Sovran5StoreC12currentStatexSgyAA0D0RzlF",
+            "moduleName": "Sovran",
+            "genericSig": "<τ_0_0 where τ_0_0 : Sovran.State>",
+            "sugared_genericSig": "<T where T : Sovran.State>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6Sovran5StoreC",
+        "mangledName": "$s6Sovran5StoreC",
+        "moduleName": "Sovran",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Sovran",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Subscriber",
+        "printedName": "Subscriber",
+        "declKind": "Protocol",
+        "usr": "s:6Sovran10SubscriberP",
+        "mangledName": "$s6Sovran10SubscriberP",
+        "moduleName": "Sovran",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Sovran",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
+      "kind": "StringLiteral",
+      "offset": 269,
+      "length": 26,
+      "value": "\"state.update.segment.com\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
+      "kind": "StringLiteral",
+      "offset": 402,
+      "length": 24,
+      "value": "\"state.sync.segment.com\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1778,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7150,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Version.swift",
+      "kind": "StringLiteral",
+      "offset": 320,
+      "length": 7,
+      "value": "\"1.1.2\""
+    }
+  ]
+}
