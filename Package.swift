@@ -7,6 +7,7 @@ let package = Package(
         .iOS(.v13)
     ],
     products: [
+        .library(name: "Jist", targets: ["Jist"]),
         .library(name: "DataPipelines", targets: ["DataPipelines"]),
         .library(name: "MessagingPushAPN", targets: ["MessagingPushAPN"]),
         .library(name: "MessagingPushFCM", targets: ["MessagingPushFCM"]),
@@ -76,6 +77,7 @@ let package = Package(
         .binaryTarget(name: "ZixflowMessagingPush", path: "ZixflowMessagingPush.xcframework"),
         .binaryTarget(name: "LDSwiftEventSource", path: "LDSwiftEventSource.xcframework"),
         .binaryTarget(name: "Sovran", path: "Sovran.xcframework"),
-        .binaryTarget(name: "JSONSafeEncoding", path: "JSONSafeEncoding.xcframework")
+        .binaryTarget(name: "JSONSafeEncoding", path: "JSONSafeEncoding.xcframework"),
+        .binaryTarget(name: "Jist", path: "Jist.xcframework")
     ]
 )
