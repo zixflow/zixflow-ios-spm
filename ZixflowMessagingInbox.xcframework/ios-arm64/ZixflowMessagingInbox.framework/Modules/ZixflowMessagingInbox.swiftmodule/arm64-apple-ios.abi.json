@@ -1,0 +1,1105 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ZixflowMessagingInbox",
+    "printedName": "ZixflowMessagingInbox",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingInApp",
+        "printedName": "ZixflowMessagingInApp",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingInApp",
+        "printedName": "ZixflowMessagingInApp",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NotificationInboxBell",
+        "printedName": "NotificationInboxBell",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(onTap:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NotificationInboxBell",
+                "printedName": "ZixflowMessagingInbox.NotificationInboxBell",
+                "usr": "s:21ZixflowMessagingInbox012NotificationC4BellV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21ZixflowMessagingInbox012NotificationC4BellV5onTapACyyc_tcfc",
+            "mangledName": "$s21ZixflowMessagingInbox012NotificationC4BellV5onTapACyyc_tcfc",
+            "moduleName": "ZixflowMessagingInbox",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ZixflowMessagingInbox012NotificationC4BellV4bodyQrvp",
+            "mangledName": "$s21ZixflowMessagingInbox012NotificationC4BellV4bodyQrvp",
+            "moduleName": "ZixflowMessagingInbox",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ZixflowMessagingInbox012NotificationC4BellV4bodyQrvg",
+                "mangledName": "$s21ZixflowMessagingInbox012NotificationC4BellV4bodyQrvg",
+                "moduleName": "ZixflowMessagingInbox",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:21ZixflowMessagingInbox012NotificationC4BellV",
+        "mangledName": "$s21ZixflowMessagingInbox012NotificationC4BellV",
+        "moduleName": "ZixflowMessagingInbox",
+        "intro_iOS": "13.0",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingInApp",
+        "printedName": "ZixflowMessagingInApp",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NotificationInboxOverlay",
+        "printedName": "NotificationInboxOverlay",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NotificationInboxOverlay",
+                "printedName": "ZixflowMessagingInbox.NotificationInboxOverlay",
+                "usr": "s:21ZixflowMessagingInbox012NotificationC7OverlayV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21ZixflowMessagingInbox012NotificationC7OverlayVACycfc",
+            "mangledName": "$s21ZixflowMessagingInbox012NotificationC7OverlayVACycfc",
+            "moduleName": "ZixflowMessagingInbox",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ZixflowMessagingInbox012NotificationC7OverlayV4bodyQrvp",
+            "mangledName": "$s21ZixflowMessagingInbox012NotificationC7OverlayV4bodyQrvp",
+            "moduleName": "ZixflowMessagingInbox",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ZixflowMessagingInbox012NotificationC7OverlayV4bodyQrvg",
+                "mangledName": "$s21ZixflowMessagingInbox012NotificationC7OverlayV4bodyQrvg",
+                "moduleName": "ZixflowMessagingInbox",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:21ZixflowMessagingInbox012NotificationC7OverlayV",
+        "mangledName": "$s21ZixflowMessagingInbox012NotificationC7OverlayV",
+        "moduleName": "ZixflowMessagingInbox",
+        "intro_iOS": "16.0",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingInApp",
+        "printedName": "ZixflowMessagingInApp",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Jist",
+        "printedName": "Jist",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NotificationInboxView",
+        "printedName": "NotificationInboxView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NotificationInboxView",
+                "printedName": "ZixflowMessagingInbox.NotificationInboxView",
+                "usr": "s:21ZixflowMessagingInbox012NotificationC4ViewV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21ZixflowMessagingInbox012NotificationC4ViewVACycfc",
+            "mangledName": "$s21ZixflowMessagingInbox012NotificationC4ViewVACycfc",
+            "moduleName": "ZixflowMessagingInbox",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ZixflowMessagingInbox012NotificationC4ViewV4bodyQrvp",
+            "mangledName": "$s21ZixflowMessagingInbox012NotificationC4ViewV4bodyQrvp",
+            "moduleName": "ZixflowMessagingInbox",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ZixflowMessagingInbox012NotificationC4ViewV4bodyQrvg",
+                "mangledName": "$s21ZixflowMessagingInbox012NotificationC4ViewV4bodyQrvg",
+                "moduleName": "ZixflowMessagingInbox",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:21ZixflowMessagingInbox012NotificationC4ViewV",
+        "mangledName": "$s21ZixflowMessagingInbox012NotificationC4ViewV",
+        "moduleName": "ZixflowMessagingInbox",
+        "intro_iOS": "13.0",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Jist",
+        "printedName": "Jist",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingInApp",
+        "printedName": "ZixflowMessagingInApp",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Jist",
+        "printedName": "Jist",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowMessagingInApp",
+        "printedName": "ZixflowMessagingInApp",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox",
+        "declAttributes": [
+          "SPIAccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Jist",
+        "printedName": "Jist",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingInbox"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 307,
+      "length": 31,
+      "value": "\"Zixflow_ZixflowMessagingInbox\""
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "Array",
+      "offset": 985,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1512,
+      "length": 9,
+      "value": "\".bundle\""
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1664,
+      "length": 59,
+      "value": "\"unable to find bundle named Zixflow_ZixflowMessagingInbox\""
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/InboxBellPosition.swift",
+      "kind": "StringLiteral",
+      "offset": 574,
+      "length": 14,
+      "value": "\"bottom-right\""
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/InboxBellPosition.swift",
+      "kind": "StringLiteral",
+      "offset": 611,
+      "length": 13,
+      "value": "\"bottom-left\""
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/InboxBellPosition.swift",
+      "kind": "StringLiteral",
+      "offset": 645,
+      "length": 11,
+      "value": "\"top-right\""
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/InboxBellPosition.swift",
+      "kind": "StringLiteral",
+      "offset": 676,
+      "length": 10,
+      "value": "\"top-left\""
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxBell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2627,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxOverlay.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1485,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxOverlay.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1771,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2482,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4004,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4047,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8816,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8973,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "kind": "FloatLiteral",
+      "offset": 9032,
+      "length": 4,
+      "value": "0.22"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2408,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10778,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10827,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19857,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19863,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "kind": "Array",
+      "offset": 1201,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1332,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "kind": "Dictionary",
+      "offset": 1573,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "kind": "Dictionary",
+      "offset": 1719,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "kind": "Dictionary",
+      "offset": 2995,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "kind": "Array",
+      "offset": 3870,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "kind": "Array",
+      "offset": 5837,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6189,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "kind": "Array",
+      "offset": 6443,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "kind": "Array",
+      "offset": 6687,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingInbox.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 747,
+      "length": 20,
+      "value": "\"zixflow-inbox-bell\""
+    }
+  ]
+}

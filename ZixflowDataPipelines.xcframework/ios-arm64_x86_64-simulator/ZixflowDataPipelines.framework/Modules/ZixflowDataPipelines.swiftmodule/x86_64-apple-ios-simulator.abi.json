@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "ZixflowDataPipelines",
+    "printedName": "ZixflowDataPipelines",
     "children": [
       {
         "kind": "Import",
@@ -573,6 +573,51 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "allowBackgroundDelivery",
+            "printedName": "allowBackgroundDelivery",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20ZixflowDataPipelines0B21PipelineConfigOptionsV23allowBackgroundDeliverySbvp",
+            "mangledName": "$s20ZixflowDataPipelines0B21PipelineConfigOptionsV23allowBackgroundDeliverySbvp",
+            "moduleName": "ZixflowDataPipelines",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20ZixflowDataPipelines0B21PipelineConfigOptionsV23allowBackgroundDeliverySbvg",
+                "mangledName": "$s20ZixflowDataPipelines0B21PipelineConfigOptionsV23allowBackgroundDeliverySbvg",
+                "moduleName": "ZixflowDataPipelines",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Struct",
@@ -582,6 +627,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -1064,6 +1125,35 @@
           },
           {
             "kind": "Function",
+            "name": "allowBackgroundDelivery",
+            "printedName": "allowBackgroundDelivery(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SDKConfigBuilder",
+                "printedName": "ZixflowDataPipelines.SDKConfigBuilder",
+                "usr": "s:20ZixflowDataPipelines16SDKConfigBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20ZixflowDataPipelines16SDKConfigBuilderC23allowBackgroundDeliveryyACSbF",
+            "mangledName": "$s20ZixflowDataPipelines16SDKConfigBuilderC23allowBackgroundDeliveryyACSbF",
+            "moduleName": "ZixflowDataPipelines",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "deepLinkCallback",
             "printedName": "deepLinkCallback(_:)",
             "children": [
@@ -1100,7 +1190,8 @@
             "declAttributes": [
               "AccessControl",
               "Available",
-              "DiscardableResult"
+              "DiscardableResult",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1480,6 +1571,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "SDKConfigBuilderResult",
                 "printedName": "SDKConfigBuilderResult",
                 "usr": "s:20ZixflowDataPipelines22SDKConfigBuilderResultP",
@@ -1495,6 +1600,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -1739,6 +1860,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -1820,6 +1957,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "DataPipelineMigrationAction",
@@ -3245,6 +3396,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "DataPipelineInstance",
             "printedName": "DataPipelineInstance",
             "usr": "s:20ZixflowDataPipelines0B16PipelineInstanceP",
@@ -3272,6 +3437,20 @@
             "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowAnalytics",
+        "printedName": "ZixflowAnalytics",
+        "declKind": "Import",
+        "moduleName": "ZixflowDataPipelines"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowDataPipelines"
       },
       {
         "kind": "Import",
@@ -3980,6 +4159,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "UtilityPlugin",
             "printedName": "UtilityPlugin",
             "usr": "s:16ZixflowAnalytics13UtilityPluginP",
@@ -4111,7 +4304,11 @@
         "name": "ZixflowInternalCommon",
         "printedName": "ZixflowInternalCommon",
         "declKind": "Import",
-        "moduleName": "ZixflowDataPipelines"
+        "moduleName": "ZixflowDataPipelines",
+        "declAttributes": [
+          "Exported",
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -4251,23 +4448,6 @@
       },
       {
         "kind": "Import",
-        "name": "ZixflowInternalCommon",
-        "printedName": "ZixflowInternalCommon",
-        "declKind": "Import",
-        "moduleName": "ZixflowDataPipelines",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ZixflowDataPipelines"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -4275,13 +4455,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UserNotifications",
-        "printedName": "UserNotifications",
-        "declKind": "Import",
-        "moduleName": "ZixflowDataPipelines"
       },
       {
         "kind": "Import",
@@ -5251,10 +5424,17 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "ZixflowInstance",
-            "printedName": "ZixflowInstance",
-            "usr": "s:21ZixflowInternalCommon0A8InstanceP",
-            "mangledName": "$s21ZixflowInternalCommon0A8InstanceP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -5262,6 +5442,13 @@
             "printedName": "AutoMockable",
             "usr": "s:21ZixflowInternalCommon12AutoMockableP",
             "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ZixflowInstance",
+            "printedName": "ZixflowInstance",
+            "usr": "s:21ZixflowInternalCommon0A8InstanceP",
+            "mangledName": "$s21ZixflowInternalCommon0A8InstanceP"
           }
         ]
       }
@@ -5270,256 +5457,165 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 295,
+      "offset": 307,
       "length": 30,
       "value": "\"Zixflow_ZixflowDataPipelines\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "Array",
-      "offset": 972,
+      "offset": 984,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 1499,
+      "offset": 1511,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 1651,
+      "offset": 1663,
       "length": 58,
       "value": "\"unable to find bundle named Zixflow_ZixflowDataPipelines\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 919,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 1377,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 1421,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1474,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1636,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1691,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1825,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "Array",
-      "offset": 1941,
+      "offset": 1995,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 3704,
+      "offset": 3758,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "Array",
-      "offset": 8997,
+      "offset": 10379,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/DataPipeline.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/DataPipeline.swift",
       "kind": "StringLiteral",
       "offset": 1658,
       "length": 14,
       "value": "\"DataPipeline\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/DataPipeline.swift",
-      "kind": "StringLiteral",
-      "offset": 224,
-      "length": 12,
-      "value": "\"ZixflowDataPipelines.DataPipeline\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/DataPipeline.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/DataPipeline.swift",
       "kind": "Dictionary",
       "offset": 7442,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
       "kind": "Dictionary",
-      "offset": 9655,
+      "offset": 13970,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
+      "kind": "BooleanLiteral",
+      "offset": 13999,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
       "kind": "Dictionary",
-      "offset": 12738,
+      "offset": 18664,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Plugins\/AutoTrackingScreenViews.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Plugins\/AutoTrackingScreenViews.swift",
       "kind": "StringLiteral",
       "offset": 689,
       "length": 37,
       "value": "\"AutoTrackingScreenViewsNotification\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Plugins\/AutoTrackingScreenViews.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Plugins\/AutoTrackingScreenViews.swift",
       "kind": "StringLiteral",
       "offset": 759,
       "length": 6,
       "value": "\"name\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Plugins\/Context.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Plugins\/Context.swift",
       "kind": "Dictionary",
       "offset": 315,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/Util\/DataPipelinesLogger.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Util\/DataPipelinesLogger.swift",
       "kind": "StringLiteral",
       "offset": 618,
       "length": 6,
       "value": "\"Push\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3018,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4606,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 5118,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6037,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6833,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 7337,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8236,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9043,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 9609,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10665,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11652,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 13015,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13491,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/DataPipeline\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 13991,
-      "length": 2,
-      "value": "[]"
     }
   ]
 }

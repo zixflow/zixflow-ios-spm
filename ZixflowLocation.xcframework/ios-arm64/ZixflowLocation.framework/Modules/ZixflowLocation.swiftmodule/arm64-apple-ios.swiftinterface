@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZixflowLocation
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowLocation
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import CoreLocation
 import Foundation
 import Foundation/*.Bundle*/
@@ -8,7 +9,6 @@ import Foundation/*.ProcessInfo*/
 import Foundation/*.URL*/
 import Swift
 import UIKit
-import UserNotifications
 import ZixflowInternalCommon
 import _Concurrency
 import _StringProcessing
@@ -34,8 +34,9 @@ final public class LocationModule : ZixflowInternalCommon.ZixflowModule {
   @objc deinit
 }
 public protocol LocationServices : AnyObject {
-  func setLastKnownLocation(_ location: CoreLocation.CLLocation)
+  func setLastKnownLocation(_ location: _LocationEssentials.CLLocation)
   func requestLocationUpdate()
+  func getLastKnownLocation() async -> ZixflowInternalCommon.LocationData?
 }
 extension ZixflowInternalCommon.Zixflow {
   public static var location: any ZixflowLocation.LocationServices {

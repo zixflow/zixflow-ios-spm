@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZixflowInternalCommon
-import Combine
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowInternalCommon
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+import Dispatch
 import Foundation
 import Swift
 import UIKit
@@ -95,8 +96,8 @@ public struct QueueTaskMetadata : Swift.Codable, Swift.Equatable, Swift.Hashable
   public var groupMember: [Swift.String]?
   public var createdAt: Foundation.Date
   public static func == (a: ZixflowInternalCommon.QueueTaskMetadata, b: ZixflowInternalCommon.QueueTaskMetadata) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -121,13 +122,15 @@ public enum QueueTaskType : Swift.String {
     get
   }
 }
-public struct LocationData : Swift.Codable, Swift.Sendable, Swift.Equatable {
-  public let latitude: Swift.Double
-  public let longitude: Swift.Double
-  public init(latitude: Swift.Double, longitude: Swift.Double)
-  public static func == (a: ZixflowInternalCommon.LocationData, b: ZixflowInternalCommon.LocationData) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public class CombinedCacheEventBusHandler : ZixflowInternalCommon.EventBusHandler {
+  public init(eventStorage: any ZixflowInternalCommon.EventStorage, logger: any ZixflowInternalCommon.Logger)
+  @objc deinit
+  public func loadEventsFromStorage() async
+  public func addObserver<E>(_ eventType: E.Type, action: @escaping (E) -> Swift.Void) where E : ZixflowInternalCommon.EventRepresentable
+  public func removeObserver<E>(for eventType: E.Type) where E : ZixflowInternalCommon.EventRepresentable
+  public func postEvent<E>(_ event: E) where E : ZixflowInternalCommon.EventRepresentable
+  public func postEventAndWait<E>(_ event: E) async where E : ZixflowInternalCommon.EventRepresentable
+  public func removeFromStorage<E>(_ event: E) async where E : ZixflowInternalCommon.EventRepresentable
 }
 public typealias AnyEventRepresentable = any ZixflowInternalCommon.EventRepresentable
 public protocol EventRepresentable : Swift.Decodable, Swift.Encodable, Swift.Equatable {
@@ -135,12 +138,16 @@ public protocol EventRepresentable : Swift.Decodable, Swift.Encodable, Swift.Equ
   var storageId: Swift.String { get }
   var params: [Swift.String : Swift.String] { get }
   var timestamp: Foundation.Date { get }
+  var isPersistent: Swift.Bool { get }
 }
 extension ZixflowInternalCommon.EventRepresentable {
   public static var key: Swift.String {
     get
   }
   public var key: Swift.String {
+    get
+  }
+  public var isPersistent: Swift.Bool {
     get
   }
 }
@@ -208,6 +215,22 @@ public struct TrackInAppMetricEvent : ZixflowInternalCommon.EventRepresentable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct TrackGeofenceMetricEvent : ZixflowInternalCommon.EventRepresentable, ZixflowInternalCommon.GeofenceMetric {
+  public let storageId: Swift.String
+  public let params: [Swift.String : Swift.String]
+  public let geofenceId: Swift.String
+  public let transition: ZixflowInternalCommon.GeofenceTransition
+  public let timestamp: Foundation.Date
+  public let name: Swift.String?
+  public let transitionId: Swift.String
+  public let userId: Swift.String
+  public let geosetId: Swift.String?
+  public let metadata: [Swift.String : ZixflowInternalCommon.GeofenceMetadataValue]?
+  public init(storageId: Swift.String = UUID().uuidString, geofenceId: Swift.String, transition: ZixflowInternalCommon.GeofenceTransition, timestamp: Foundation.Date = Date(), name: Swift.String?, transitionId: Swift.String, userId: Swift.String, geosetId: Swift.String? = nil, metadata: [Swift.String : ZixflowInternalCommon.GeofenceMetadataValue]? = nil, params: [Swift.String : Swift.String] = [:])
+  public static func == (a: ZixflowInternalCommon.TrackGeofenceMetricEvent, b: ZixflowInternalCommon.TrackGeofenceMetricEvent) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct RegisterDeviceTokenEvent : ZixflowInternalCommon.EventRepresentable {
   public let storageId: Swift.String
   public let params: [Swift.String : Swift.String]
@@ -236,78 +259,39 @@ public struct NewSubscriptionEvent : ZixflowInternalCommon.EventRepresentable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public protocol EventBus : ZixflowInternalCommon.AutoMockable {
-  #if compiler(>=5.3) && $AsyncAwait
-  @discardableResult
-  func post(_ event: ZixflowInternalCommon.AnyEventRepresentable) async -> Swift.Bool
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
-  func addObserver(_ eventType: Swift.String, action: @escaping (ZixflowInternalCommon.AnyEventRepresentable) -> Swift.Void) async
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
-  func removeObserver(for eventType: Swift.String) async
-  #endif
+public struct LocationAcquiredEvent : ZixflowInternalCommon.EventRepresentable {
+  public let storageId: Swift.String
+  public let params: [Swift.String : Swift.String]
+  public let location: ZixflowInternalCommon.LocationData
+  public let timestamp: Foundation.Date
+  public var isPersistent: Swift.Bool {
+    get
+  }
+  public init(storageId: Swift.String = UUID().uuidString, location: ZixflowInternalCommon.LocationData, timestamp: Foundation.Date = Date(), params: [Swift.String : Swift.String] = [:])
+  public static func == (a: ZixflowInternalCommon.LocationAcquiredEvent, b: ZixflowInternalCommon.LocationAcquiredEvent) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public protocol EventBusHandler {
-  #if compiler(>=5.3) && $AsyncAwait
   func loadEventsFromStorage() async
-  #endif
   func addObserver<E>(_ eventType: E.Type, action: @escaping (E) -> Swift.Void) where E : ZixflowInternalCommon.EventRepresentable
   func removeObserver<E>(for eventType: E.Type) where E : ZixflowInternalCommon.EventRepresentable
   func postEvent<E>(_ event: E) where E : ZixflowInternalCommon.EventRepresentable
-  #if compiler(>=5.3) && $AsyncAwait
   func postEventAndWait<E>(_ event: E) async where E : ZixflowInternalCommon.EventRepresentable
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   func removeFromStorage<E>(_ event: E) async where E : ZixflowInternalCommon.EventRepresentable
-  #endif
-}
-public class ZixflowEventBusHandler : ZixflowInternalCommon.EventBusHandler {
-  public init(eventBus: any ZixflowInternalCommon.EventBus, eventCache: any ZixflowInternalCommon.EventCache, eventStorage: any ZixflowInternalCommon.EventStorage, logger: any ZixflowInternalCommon.Logger)
-  @objc deinit
-  #if compiler(>=5.3) && $AsyncAwait
-  public func loadEventsFromStorage() async
-  #endif
-  public func addObserver<E>(_ eventType: E.Type, action: @escaping (E) -> Swift.Void) where E : ZixflowInternalCommon.EventRepresentable
-  public func removeObserver<E>(for eventType: E.Type) where E : ZixflowInternalCommon.EventRepresentable
-  public func postEvent<E>(_ event: E) where E : ZixflowInternalCommon.EventRepresentable
-  #if compiler(>=5.3) && $AsyncAwait
-  public func postEventAndWait<E>(_ event: E) async where E : ZixflowInternalCommon.EventRepresentable
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
-  public func removeFromStorage<E>(_ event: E) async where E : ZixflowInternalCommon.EventRepresentable
-  #endif
 }
 public protocol EventCache : ZixflowInternalCommon.AutoMockable {
-  #if compiler(>=5.3) && $AsyncAwait
   func addEvent(event: ZixflowInternalCommon.AnyEventRepresentable) async
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   func storeEvents(_ events: [ZixflowInternalCommon.AnyEventRepresentable], forKey key: Swift.String) async
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   func getEvent(_ key: Swift.String) async -> [ZixflowInternalCommon.AnyEventRepresentable]
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   func removeAllEventsForKey(_ key: Swift.String) async
-  #endif
 }
 public protocol EventStorage : ZixflowInternalCommon.AutoMockable {
-  #if compiler(>=5.3) && $AsyncAwait
   func store(event: ZixflowInternalCommon.AnyEventRepresentable) async throws
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   func retrieve(eventType: Swift.String, storageId: Swift.String) async throws -> ZixflowInternalCommon.AnyEventRepresentable?
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   func loadEvents(ofType type: Swift.String) async throws -> [ZixflowInternalCommon.AnyEventRepresentable]
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   func remove(ofType eventType: Swift.String, withStorageId storageId: Swift.String) async
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   func removeAll() async
-  #endif
 }
 extension ZixflowInternalCommon.DIGraphShared {
   @discardableResult
@@ -327,27 +311,27 @@ extension ZixflowInternalCommon.DIGraphShared {
   @objc deinit
 }
 extension ZixflowInternalCommon.ZixflowInstance {
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'identify(userId:traits:)' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'identify(userId:traits:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func identify(identifier: Swift.String)
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'identify(userId:traits:)' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'identify(userId:traits:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func identify(userId: Swift.String, body: [Swift.String : Any])
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'identify(userId:traits:)' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'identify(userId:traits:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func identify<RequestBody>(identifier: Swift.String, body: RequestBody) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'identify(userId:traits:)' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'identify(userId:traits:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func identify(body: any Swift.Decodable & Swift.Encodable)
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'clearIdentify' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'clearIdentify' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func clearIdentify()
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'track(name:properties:)' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'track(name:properties:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func track(name: Swift.String)
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'track(name:properties:)' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'track(name:properties:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func track(name: Swift.String, data: [Swift.String : Any])
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'track(name:properties:)' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'track(name:properties:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func track<RequestBody>(name: Swift.String, data: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'screen(title:)' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'screen(title:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func screen(name: Swift.String)
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'screen(title:properties:)' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'screen(title:properties:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func screen(name: Swift.String, data: [Swift.String : Any])
-  @available(*, unavailable, message: "CioTracking module is no longer supported. Use 'screen(title:properties:)' from 'CioDataPipelines' for improved features. See documentation for migration details.")
+  @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'screen(title:properties:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func screen<RequestBody>(name: Swift.String, data: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
 }
 extension Swift.Array {
@@ -379,7 +363,7 @@ extension Foundation.Date {
   public func addingMilliseconds(_ milliseconds: Swift.Double) -> Foundation.Date
 }
 extension UIKit.UIDevice {
-  @_Concurrency.MainActor(unsafe) public static let deviceModelCode: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static let deviceModelCode: Swift.String
 }
 extension Swift.Dictionary where Key == Swift.String, Value == Any {
   public func mergeWith(_ other: [Swift.String : Any]) -> [Swift.String : Any]
@@ -417,10 +401,10 @@ extension Swift.String {
 }
 extension UIKit.UIApplication {
   @available(iOSApplicationExtension, unavailable)
-  @_Concurrency.MainActor(unsafe) public func open(url: Foundation.URL)
+  @_Concurrency.MainActor @preconcurrency public func open(url: Foundation.URL)
 }
 extension UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public var bundleIdOfView: Swift.String? {
+  @_Concurrency.MainActor @preconcurrency public var bundleIdOfView: Swift.String? {
     get
   }
 }
@@ -428,7 +412,7 @@ open class ModuleTopLevelObject<ImplementationClass> {
   public var hasBeenInitialized: Swift.Bool {
     get
   }
-  @ZixflowInternalCommon.Atomic public var _implementation: ImplementationClass? {
+  @ZixflowInternalCommon.Atomic<ImplementationClass?> public var _implementation: ImplementationClass? {
     get
     set
     _modify
@@ -472,17 +456,44 @@ final public class ProfileEnrichmentRegistryImpl : ZixflowInternalCommon.Profile
   final public func getAll() -> [any ZixflowInternalCommon.ProfileEnrichmentProvider]
   @objc deinit
 }
-public enum CIOApiEndpoint {
-  case trackPushMetricsCdp
-  public static func == (a: ZixflowInternalCommon.CIOApiEndpoint, b: ZixflowInternalCommon.CIOApiEndpoint) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
+public enum BackgroundDeliveryHttpError : Swift.Error, Swift.Equatable {
+  case missingApiHost
+  case missingCdpApiKey
+  case invalidRequest
+  case http(statusCode: Swift.Int)
+  case transport
+  public static func == (a: ZixflowInternalCommon.BackgroundDeliveryHttpError, b: ZixflowInternalCommon.BackgroundDeliveryHttpError) -> Swift.Bool
 }
-extension ZixflowInternalCommon.CIOApiEndpoint {
-  public func getUrl(baseUrl: Swift.String) -> Foundation.URL?
-  public func getUrlString(baseUrl: Swift.String) -> Swift.String
+public struct BackgroundTrackRequest {
+  public let eventName: Swift.String
+  public let userId: Swift.String
+  public let properties: [Swift.String : Any]
+  public let timestamp: Foundation.Date?
+  public init(eventName: Swift.String, userId: Swift.String, properties: [Swift.String : Any] = [:], timestamp: Foundation.Date? = nil)
+}
+public protocol BackgroundDeliveryHttpClient : Swift.Sendable, ZixflowInternalCommon.AutoMockable {
+  func sendTrackEvent(_ request: ZixflowInternalCommon.BackgroundTrackRequest, completion: @escaping (Swift.Result<Swift.Void, ZixflowInternalCommon.BackgroundDeliveryHttpError>) -> Swift.Void)
+}
+@_hasMissingDesignatedInitializers final public class BackgroundDeliveryHttpClientImpl : ZixflowInternalCommon.BackgroundDeliveryHttpClient, @unchecked Swift.Sendable {
+  convenience public init(contextStore: ZixflowInternalCommon.BackgroundDeliveryContextStore, requestRunner: any ZixflowInternalCommon.HttpRequestRunner, logger: any ZixflowInternalCommon.Logger, requestTimeout: Foundation.TimeInterval = 15, resourceTimeout: Foundation.TimeInterval = 20)
+  final public func sendTrackEvent(_ request: ZixflowInternalCommon.BackgroundTrackRequest, completion: @escaping (Swift.Result<Swift.Void, ZixflowInternalCommon.BackgroundDeliveryHttpError>) -> Swift.Void)
+  @objc deinit
+}
+public enum BackgroundDeliveryHttp {
+  public static func absoluteHost(_ host: Swift.String) -> Swift.String
+  public static func basicAuthValue(cdpApiKey: Swift.String) -> Swift.String
+}
+public protocol BackgroundTaskRunner : Swift.Sendable {
+  func withBackgroundTime(_ work: @Sendable () async -> Swift.Void) async
+}
+public struct NoBackgroundTaskRunner : ZixflowInternalCommon.BackgroundTaskRunner {
+  public init()
+  public func withBackgroundTime(_ work: @Sendable () async -> Swift.Void) async
+}
+@available(iOSApplicationExtension, unavailable)
+public struct UIKitBackgroundTaskRunner : ZixflowInternalCommon.BackgroundTaskRunner {
+  public init(name: Swift.String)
+  public func withBackgroundTime(_ work: @Sendable () async -> Swift.Void) async
 }
 public enum DownloadFileType {
   case richPushImage
@@ -518,7 +529,7 @@ public struct HttpRequestParams {
   public let url: Foundation.URL
   public let headers: ZixflowInternalCommon.HttpHeaders?
   public let body: Foundation.Data?
-  public init?(endpoint: ZixflowInternalCommon.CIOApiEndpoint, baseUrl: Swift.String, headers: ZixflowInternalCommon.HttpHeaders?, body: Foundation.Data?)
+  public init?(endpoint: ZixflowInternalCommon.ZixflowApiEndpoint, baseUrl: Swift.String, headers: ZixflowInternalCommon.HttpHeaders?, body: Foundation.Data?)
   public init(method: Swift.String, url: Foundation.URL, headers: ZixflowInternalCommon.HttpHeaders?, body: Foundation.Data?)
 }
 public protocol HttpRequestRunner : ZixflowInternalCommon.AutoMockable {
@@ -546,10 +557,16 @@ public struct PendingPushDeliveryMetric : Swift.Codable, Swift.Equatable, Swift.
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public enum PendingPushDeliveryQueueRead : Swift.Equatable {
+  case rows([ZixflowInternalCommon.PendingPushDeliveryMetric])
+  case unreadable
+  public static func == (a: ZixflowInternalCommon.PendingPushDeliveryQueueRead, b: ZixflowInternalCommon.PendingPushDeliveryQueueRead) -> Swift.Bool
+}
 public protocol PendingPushDeliveryStore : ZixflowInternalCommon.AutoMockable {
   var appGroupSuiteName: Swift.String? { get }
   func append(_ metric: ZixflowInternalCommon.PendingPushDeliveryMetric) -> Swift.Bool
   func loadAll() -> [ZixflowInternalCommon.PendingPushDeliveryMetric]
+  func read() -> ZixflowInternalCommon.PendingPushDeliveryQueueRead
   func remove(id: Foundation.UUID) -> Swift.Bool
   func removeAll(ids: Swift.Set<Foundation.UUID>) -> Swift.Bool
 }
@@ -557,6 +574,7 @@ public protocol PendingPushDeliveryStore : ZixflowInternalCommon.AutoMockable {
   final public let appGroupSuiteName: Swift.String?
   final public func append(_ metric: ZixflowInternalCommon.PendingPushDeliveryMetric) -> Swift.Bool
   final public func loadAll() -> [ZixflowInternalCommon.PendingPushDeliveryMetric]
+  final public func read() -> ZixflowInternalCommon.PendingPushDeliveryQueueRead
   final public func remove(id: Foundation.UUID) -> Swift.Bool
   final public func removeAll(ids: Swift.Set<Foundation.UUID>) -> Swift.Bool
   @objc deinit
@@ -643,12 +661,63 @@ public protocol UserAgentUtil : ZixflowInternalCommon.AutoMockable {
   public func getNSEUserAgentHeaderValue() -> Swift.String
   @objc deinit
 }
+public enum ZixflowApiEndpoint {
+  case trackPushMetricsCdp
+  public static func == (a: ZixflowInternalCommon.ZixflowApiEndpoint, b: ZixflowInternalCommon.ZixflowApiEndpoint) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ZixflowInternalCommon.ZixflowApiEndpoint {
+  public func getUrl(baseUrl: Swift.String) -> Foundation.URL?
+  public func getUrlString(baseUrl: Swift.String) -> Swift.String
+}
+public struct BackgroundDeliveryContext : Swift.Codable, Swift.Equatable, Swift.Sendable {
+  public var userId: Swift.String?
+  public var apiHost: Swift.String?
+  public var cdpApiKey: Swift.String?
+  public init(userId: Swift.String? = nil, apiHost: Swift.String? = nil, cdpApiKey: Swift.String? = nil)
+  public static func == (a: ZixflowInternalCommon.BackgroundDeliveryContext, b: ZixflowInternalCommon.BackgroundDeliveryContext) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol BackgroundDeliveryCdpApiKeyProvider : AnyObject {
+  var cdpApiKey: Swift.String? { get }
+}
+@_hasMissingDesignatedInitializers final public class BackgroundDeliveryContextStore : @unchecked Swift.Sendable {
+  convenience public init()
+  final public var currentUserId: Swift.String? {
+    get
+  }
+  final public var currentApiHost: Swift.String? {
+    get
+  }
+  final public var currentCdpApiKey: Swift.String? {
+    get
+  }
+  final public var hasLiveCdpApiKeyProvider: Swift.Bool {
+    get
+  }
+  final public func setCdpApiKeyProvider(_ provider: (any ZixflowInternalCommon.BackgroundDeliveryCdpApiKeyProvider)?)
+  final public func setUserId(_ userId: Swift.String?)
+  final public func setApiHost(_ apiHost: Swift.String?)
+  final public func setCdpApiKey(_ key: Swift.String?)
+  final public func clearUserId()
+  final public func reset()
+  @objc deinit
+}
 public protocol GlobalDataStore : ZixflowInternalCommon.AutoMockable {
   var pushDeviceToken: Swift.String? { get set }
+  var lastTrackedDeviceFingerprint: Swift.String? { get set }
   func deleteAll()
 }
 public class ZixflowSharedDataStore : ZixflowInternalCommon.GlobalDataStore {
   public var pushDeviceToken: Swift.String? {
+    get
+    set
+  }
+  public var lastTrackedDeviceFingerprint: Swift.String? {
     get
     set
   }
@@ -680,7 +749,132 @@ public struct SdkConfig {
   }
   public let logLevel: ZixflowInternalCommon.ZixflowLogLevel
 }
+extension ZixflowInternalCommon.Synchronized where T : Swift.AdditiveArithmetic {
+  public static func + (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T) -> T
+  public static func - (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T) -> T
+  public static func += (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T)
+  public static func -= (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T)
+}
+extension ZixflowInternalCommon.Synchronized where T == Swift.Bool {
+  final public func toggle()
+}
+extension ZixflowInternalCommon.Synchronized where T : Swift.Collection {
+  final public var count: Swift.Int {
+    get
+  }
+  final public var isEmpty: Swift.Bool {
+    get
+  }
+}
+extension ZixflowInternalCommon.Synchronized where T : Swift.MutableCollection {
+  final public subscript(position: T.Index) -> T.Element {
+    get
+    set
+  }
+}
+extension ZixflowInternalCommon.Synchronized where T : Swift.RangeReplaceableCollection {
+  public static func += <S>(lhs: ZixflowInternalCommon.Synchronized<T>, rhs: S) where S : Swift.Sequence, T.Element == S.Element
+  public static func += (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T.Element)
+  final public func append(_ newElement: T.Element)
+  final public func append<S>(contentsOf newElements: S) where S : Swift.Sequence, T.Element == S.Element
+  final public func insert(_ newElement: T.Element, at i: T.Index)
+  final public func insert<S>(contentsOf newElements: S, at i: T.Index) where S : Swift.Collection, T.Element == S.Element
+  final public func removeAll(keepingCapacity keepCapacity: Swift.Bool = false)
+  final public func removeAll(where matching: (T.Element) throws -> Swift.Bool) rethrows
+}
+extension ZixflowInternalCommon.Synchronized where T : Swift.Comparable {
+  public static func < (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T) -> Swift.Bool
+  public static func <= (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T) -> Swift.Bool
+  public static func > (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T) -> Swift.Bool
+  public static func >= (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T) -> Swift.Bool
+}
+public protocol DictionaryProtocol {
+  associatedtype Key : Swift.Hashable
+  associatedtype Value
+  subscript(key: Self.Key) -> Self.Value? { get set }
+  mutating func removeValue(forKey key: Self.Key) -> Self.Value?
+}
+extension Swift.Dictionary : ZixflowInternalCommon.DictionaryProtocol {
+}
+extension ZixflowInternalCommon.Synchronized : ZixflowInternalCommon.DictionaryProtocol where T : ZixflowInternalCommon.DictionaryProtocol {
+  public typealias Key = T.Key
+  public typealias Value = T.Value
+  final public subscript(key: ZixflowInternalCommon.Synchronized<T>.Key) -> ZixflowInternalCommon.Synchronized<T>.Value? {
+    get
+    set
+  }
+  @discardableResult
+  final public func removeValue(forKey key: ZixflowInternalCommon.Synchronized<T>.Key) -> ZixflowInternalCommon.Synchronized<T>.Value?
+}
+extension ZixflowInternalCommon.Synchronized : Swift.Equatable where T : Swift.Equatable {
+  public static func == (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: ZixflowInternalCommon.Synchronized<T>) -> Swift.Bool
+  public static func == (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T) -> Swift.Bool
+  public static func != (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: T) -> Swift.Bool
+}
+extension ZixflowInternalCommon.Synchronized : Swift.Hashable where T : Swift.Hashable {
+  final public func hash(into hasher: inout Swift.Hasher)
+  final public var hashValue: Swift.Int {
+    get
+  }
+}
+final public class Synchronized<T> : @unchecked Swift.Sendable {
+  final public var wrappedValue: T {
+    get
+    set
+  }
+  public init(_ initial: T)
+  final public func mutating<Result>(_ body: (inout T) throws -> Result) rethrows -> Result
+  final public func using<Result>(_ body: (T) throws -> Result) rethrows -> Result
+  final public func atomicSetAndFetch(_ newValue: T) -> T
+  @objc deinit
+}
 public protocol DoNotTrackScreenViewEvent {
+}
+public enum GeofenceMetadataValue : Swift.Codable, Swift.Equatable, Swift.Sendable {
+  case string(Swift.String)
+  case int(Swift.Int64)
+  case double(Swift.Double)
+  case bool(Swift.Bool)
+  public var anyValue: Any {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: ZixflowInternalCommon.GeofenceMetadataValue, b: ZixflowInternalCommon.GeofenceMetadataValue) -> Swift.Bool
+}
+public protocol GeofenceMetric {
+  var geofenceId: Swift.String { get }
+  var transition: ZixflowInternalCommon.GeofenceTransition { get }
+  var timestamp: Foundation.Date { get }
+  var name: Swift.String? { get }
+  var transitionId: Swift.String { get }
+  var geosetId: Swift.String? { get }
+  var metadata: [Swift.String : ZixflowInternalCommon.GeofenceMetadataValue]? { get }
+}
+extension ZixflowInternalCommon.GeofenceMetric {
+  public var trackEventName: Swift.String {
+    get
+  }
+  public var trackEventProperties: [Swift.String : Any] {
+    get
+  }
+}
+public enum GeofenceTransition : Swift.String, Swift.Codable, Swift.Sendable {
+  case enter
+  case exit
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct LocationData : Swift.Codable, Swift.Sendable, Swift.Equatable {
+  public let latitude: Swift.Double
+  public let longitude: Swift.Double
+  public init(latitude: Swift.Double, longitude: Swift.Double)
+  public static func == (a: ZixflowInternalCommon.LocationData, b: ZixflowInternalCommon.LocationData) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum Region : Swift.String, Swift.Equatable {
   case US
@@ -710,15 +904,11 @@ public struct AnyEncodable : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 extension Foundation.OperationQueue {
-  #if compiler(>=5.3) && $AsyncAwait
   public func addAsyncOperation(asyncBlock: @escaping () async -> Swift.Void)
-  #endif
 }
 @objc final public class AsyncOperation : Foundation.Operation, @unchecked Swift.Sendable {
   final public let asyncBlock: () async -> Swift.Void
-  #if compiler(>=5.3) && $AsyncAwait
   public init(asyncBlock: @escaping () async -> Swift.Void)
-  #endif
   @objc override final public var isAsynchronous: Swift.Bool {
     @objc get
   }
@@ -769,7 +959,7 @@ public protocol DeviceInfo : ZixflowInternalCommon.AutoMockable {
   var deviceLocale: Swift.String { get }
   func isPushSubscribed(completion: @escaping (Swift.Bool) -> Swift.Void)
 }
-@_hasMissingDesignatedInitializers public class CIODeviceInfo : ZixflowInternalCommon.DeviceInfo {
+@_hasMissingDesignatedInitializers public class ZixflowDeviceInfo : ZixflowInternalCommon.DeviceInfo {
   public var deviceManufacturer: Swift.String
   public var deviceModel: Swift.String? {
     get
@@ -871,6 +1061,12 @@ public enum KeyValueStorageKey : Swift.String {
   case broadcastMessagesExpiry
   case broadcastMessagesTracking
   case inboxMessagesOpenedStatus
+  case lastTrackedDeviceFingerprint
+  case inboxTemplatesCache
+  case inboxBrandingCache
+  case inboxEnabledFlag
+  case liveActivityRegistrations
+  case liveActivityDeliveries
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -918,7 +1114,7 @@ public enum ZixflowLogLevel : Swift.String, Swift.CaseIterable {
   public init?(rawValue: Swift.String)
   public typealias AllCases = [ZixflowInternalCommon.ZixflowLogLevel]
   public typealias RawValue = Swift.String
-  public static var allCases: [ZixflowInternalCommon.ZixflowLogLevel] {
+  nonisolated public static var allCases: [ZixflowInternalCommon.ZixflowLogLevel] {
     get
   }
   public var rawValue: Swift.String {
@@ -1000,11 +1196,19 @@ public protocol SystemLogger : ZixflowInternalCommon.AutoMockable {
 }
 public protocol ThreadUtil {
   func runBackground(_ block: @escaping () -> Swift.Void)
+  func runUtility(_ block: @escaping () -> Swift.Void)
   func runMain(_ block: @escaping () -> Swift.Void)
+  func runMainActor(_ block: @escaping @_Concurrency.MainActor () -> Swift.Void)
+}
+extension ZixflowInternalCommon.ThreadUtil {
+  public func runUtility(_ block: @escaping () -> Swift.Void)
+  public func runMainActor(_ block: @escaping @_Concurrency.MainActor () -> Swift.Void)
 }
 @_hasMissingDesignatedInitializers public class ZixflowThreadUtil : ZixflowInternalCommon.ThreadUtil {
   public func runMain(_ block: @escaping () -> Swift.Void)
+  public func runMainActor(_ block: @escaping @_Concurrency.MainActor () -> Swift.Void)
   public func runBackground(_ block: @escaping () -> Swift.Void)
+  public func runUtility(_ block: @escaping () -> Swift.Void)
   @objc deinit
 }
 public typealias Seconds = Foundation.TimeInterval
@@ -1051,7 +1255,7 @@ public protocol ZixflowInstance : ZixflowInternalCommon.AutoMockable {
   public static var version: Swift.String {
     get
   }
-  @ZixflowInternalCommon.Atomic public static var shared: ZixflowInternalCommon.Zixflow {
+  @ZixflowInternalCommon.Atomic<ZixflowInternalCommon.Zixflow> public static var shared: ZixflowInternalCommon.Zixflow {
     get
   }
   public var implementation: (any ZixflowInternalCommon.ZixflowInstance)?
@@ -1086,10 +1290,13 @@ public protocol ZixflowInstance : ZixflowInternalCommon.AutoMockable {
   @objc deinit
 }
 extension ZixflowInternalCommon.DIGraphShared {
-  final public var deviceInfo: any ZixflowInternalCommon.DeviceInfo {
+  final public var backgroundDeliveryContextStore: ZixflowInternalCommon.BackgroundDeliveryContextStore {
     get
   }
-  final public var eventBusHandler: any ZixflowInternalCommon.EventBusHandler {
+  final public var backgroundDeliveryHttpClient: any ZixflowInternalCommon.BackgroundDeliveryHttpClient {
+    get
+  }
+  final public var deviceInfo: any ZixflowInternalCommon.DeviceInfo {
     get
   }
   final public var profileStore: any ZixflowInternalCommon.ProfileStore {
@@ -1102,6 +1309,9 @@ extension ZixflowInternalCommon.DIGraphShared {
     get
   }
   final public var threadUtil: any ZixflowInternalCommon.ThreadUtil {
+    get
+  }
+  final public var eventBusHandler: any ZixflowInternalCommon.EventBusHandler {
     get
   }
   final public var sdkClient: any ZixflowInternalCommon.SdkClient {
@@ -1155,1248 +1365,6 @@ extension ZixflowInternalCommon.DIGraphShared {
     get
   }
 }
-public class ZixflowInstanceMock : ZixflowInternalCommon.ZixflowInstance, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public var underlyingProfileAttributes: [Swift.String : Any]
-  public var profileAttributesCalled: Swift.Bool {
-    get
-  }
-  public var profileAttributesGetCalled: Swift.Bool {
-    get
-  }
-  public var profileAttributesGetCallsCount: Swift.Int
-  public var profileAttributesSetCalled: Swift.Bool {
-    get
-  }
-  public var profileAttributesSetCallsCount: Swift.Int
-  public var profileAttributes: [Swift.String : Any] {
-    get
-    set(value)
-  }
-  public var underlyingDeviceAttributes: [Swift.String : Any]
-  public var deviceAttributesCalled: Swift.Bool {
-    get
-  }
-  public var deviceAttributesGetCalled: Swift.Bool {
-    get
-  }
-  public var deviceAttributesGetCallsCount: Swift.Int
-  public var deviceAttributesSetCalled: Swift.Bool {
-    get
-  }
-  public var deviceAttributesSetCallsCount: Swift.Int
-  public var deviceAttributes: [Swift.String : Any] {
-    get
-    set(value)
-  }
-  public var underlyingRegisteredDeviceToken: Swift.String?
-  public var registeredDeviceTokenCalled: Swift.Bool {
-    get
-  }
-  public var registeredDeviceTokenGetCalled: Swift.Bool {
-    get
-  }
-  public var registeredDeviceTokenGetCallsCount: Swift.Int
-  public var registeredDeviceTokenSetCalled: Swift.Bool {
-    get
-  }
-  public var registeredDeviceTokenSetCallsCount: Swift.Int
-  public var registeredDeviceToken: Swift.String? {
-    get
-    set(value)
-  }
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var setProfileAttributesCallsCount: Swift.Int {
-    get
-  }
-  public var setProfileAttributesCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setProfileAttributesReceivedArguments: [Swift.String : Any]? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setProfileAttributesReceivedInvocations: [[Swift.String : Any]] {
-    get
-  }
-  public var setProfileAttributesClosure: (([Swift.String : Any]) -> Swift.Void)?
-  public func setProfileAttributes(_ attributes: [Swift.String : Any])
-  @ZixflowInternalCommon.Atomic public var identifyCallsCount: Swift.Int {
-    get
-  }
-  public var identifyCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var identifyReceivedArguments: (userId: Swift.String, traits: [Swift.String : Any]?)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var identifyReceivedInvocations: [(userId: Swift.String, traits: [Swift.String : Any]?)] {
-    get
-  }
-  public var identifyClosure: ((Swift.String, [Swift.String : Any]?) -> Swift.Void)?
-  public func identify(userId: Swift.String, traits: [Swift.String : Any]?)
-  @ZixflowInternalCommon.Atomic public var identifyEncodableReceivedArguments: (userId: Swift.String, traits: ZixflowInternalCommon.AnyEncodable)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var identifyEncodableReceivedInvocations: [(userId: Swift.String, traits: ZixflowInternalCommon.AnyEncodable)] {
-    get
-  }
-  public var identifyEncodableClosure: ((Swift.String, ZixflowInternalCommon.AnyEncodable) -> Swift.Void)?
-  @available(*, deprecated, message: "Use 'identify(userId:traits:)' with [String: Any] traits parameter instead. Support for Codable traits will be removed in a future version.")
-  public func identify<RequestBody>(userId: Swift.String, traits: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  @ZixflowInternalCommon.Atomic public var clearIdentifyCallsCount: Swift.Int {
-    get
-  }
-  public var clearIdentifyCalled: Swift.Bool {
-    get
-  }
-  public var clearIdentifyClosure: (() -> Swift.Void)?
-  public func clearIdentify()
-  @ZixflowInternalCommon.Atomic public var setDeviceAttributesCallsCount: Swift.Int {
-    get
-  }
-  public var setDeviceAttributesCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setDeviceAttributesReceivedArguments: [Swift.String : Any]? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setDeviceAttributesReceivedInvocations: [[Swift.String : Any]] {
-    get
-  }
-  public var setDeviceAttributesClosure: (([Swift.String : Any]) -> Swift.Void)?
-  public func setDeviceAttributes(_ attributes: [Swift.String : Any])
-  @ZixflowInternalCommon.Atomic public var registerDeviceTokenCallsCount: Swift.Int {
-    get
-  }
-  public var registerDeviceTokenCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var registerDeviceTokenReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var registerDeviceTokenReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var registerDeviceTokenClosure: ((Swift.String) -> Swift.Void)?
-  public func registerDeviceToken(_ deviceToken: Swift.String)
-  @ZixflowInternalCommon.Atomic public var deleteDeviceTokenCallsCount: Swift.Int {
-    get
-  }
-  public var deleteDeviceTokenCalled: Swift.Bool {
-    get
-  }
-  public var deleteDeviceTokenClosure: (() -> Swift.Void)?
-  public func deleteDeviceToken()
-  @ZixflowInternalCommon.Atomic public var trackCallsCount: Swift.Int {
-    get
-  }
-  public var trackCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var trackReceivedArguments: (name: Swift.String, properties: [Swift.String : Any]?)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var trackReceivedInvocations: [(name: Swift.String, properties: [Swift.String : Any]?)] {
-    get
-  }
-  public var trackClosure: ((Swift.String, [Swift.String : Any]?) -> Swift.Void)?
-  public func track(name: Swift.String, properties: [Swift.String : Any]?)
-  @ZixflowInternalCommon.Atomic public var trackEncodableReceivedArguments: (name: Swift.String, properties: ZixflowInternalCommon.AnyEncodable)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var trackEncodableReceivedInvocations: [(name: Swift.String, properties: ZixflowInternalCommon.AnyEncodable)] {
-    get
-  }
-  public var trackEncodableClosure: ((Swift.String, ZixflowInternalCommon.AnyEncodable) -> Swift.Void)?
-  @available(*, deprecated, message: "Use 'track(name:properties:)' with [String: Any] properties parameter instead. Support for Codable properties will be removed in a future version.")
-  public func track<RequestBody>(name: Swift.String, properties: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  @ZixflowInternalCommon.Atomic public var screenCallsCount: Swift.Int {
-    get
-  }
-  public var screenCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var screenReceivedArguments: (title: Swift.String, properties: [Swift.String : Any]?)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var screenReceivedInvocations: [(title: Swift.String, properties: [Swift.String : Any]?)] {
-    get
-  }
-  public var screenClosure: ((Swift.String, [Swift.String : Any]?) -> Swift.Void)?
-  public func screen(title: Swift.String, properties: [Swift.String : Any]?)
-  @ZixflowInternalCommon.Atomic public var screenEncodableReceivedArguments: (title: Swift.String, properties: ZixflowInternalCommon.AnyEncodable)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var screenEncodableReceivedInvocations: [(title: Swift.String, properties: ZixflowInternalCommon.AnyEncodable)] {
-    get
-  }
-  public var screenEncodableClosure: ((Swift.String, ZixflowInternalCommon.AnyEncodable) -> Swift.Void)?
-  @available(*, deprecated, message: "Use 'screen(title:properties:)' with [String: Any] properties parameter instead. Support for Codable properties will be removed in a future version.")
-  public func screen<RequestBody>(title: Swift.String, properties: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  @ZixflowInternalCommon.Atomic public var trackMetricCallsCount: Swift.Int {
-    get
-  }
-  public var trackMetricCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var trackMetricReceivedArguments: (deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var trackMetricReceivedInvocations: [(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)] {
-    get
-  }
-  public var trackMetricClosure: ((Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> Swift.Void)?
-  public func trackMetric(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)
-  @objc deinit
-}
-public class DeepLinkUtilMock : ZixflowInternalCommon.DeepLinkUtil, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var setDeepLinkCallbackCallsCount: Swift.Int {
-    get
-  }
-  public var setDeepLinkCallbackCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setDeepLinkCallbackReceivedArguments: ZixflowInternalCommon.DeepLinkCallback? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setDeepLinkCallbackReceivedInvocations: [ZixflowInternalCommon.DeepLinkCallback] {
-    get
-  }
-  public var setDeepLinkCallbackClosure: ((@escaping ZixflowInternalCommon.DeepLinkCallback) -> Swift.Void)?
-  @ZixflowInternalCommon.Atomic public var handleDeepLinkCallsCount: Swift.Int {
-    get
-  }
-  public var handleDeepLinkCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var handleDeepLinkReceivedArguments: Foundation.URL? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var handleDeepLinkReceivedInvocations: [Foundation.URL] {
-    get
-  }
-  public var handleDeepLinkClosure: ((Foundation.URL) -> Swift.Void)?
-  public func handleDeepLink(_ deepLinkUrl: Foundation.URL)
-  @objc deinit
-}
-public class DeviceInfoMock : ZixflowInternalCommon.DeviceInfo, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public var underlyingDeviceManufacturer: Swift.String!
-  public var deviceManufacturerCalled: Swift.Bool {
-    get
-  }
-  public var deviceManufacturerGetCalled: Swift.Bool {
-    get
-  }
-  public var deviceManufacturerGetCallsCount: Swift.Int
-  public var deviceManufacturerSetCalled: Swift.Bool {
-    get
-  }
-  public var deviceManufacturerSetCallsCount: Swift.Int
-  public var deviceManufacturer: Swift.String {
-    get
-    set(value)
-  }
-  public var underlyingDeviceModel: Swift.String?
-  public var deviceModelCalled: Swift.Bool {
-    get
-  }
-  public var deviceModelGetCalled: Swift.Bool {
-    get
-  }
-  public var deviceModelGetCallsCount: Swift.Int
-  public var deviceModelSetCalled: Swift.Bool {
-    get
-  }
-  public var deviceModelSetCallsCount: Swift.Int
-  public var deviceModel: Swift.String? {
-    get
-    set(value)
-  }
-  public var underlyingOsVersion: Swift.String?
-  public var osVersionCalled: Swift.Bool {
-    get
-  }
-  public var osVersionGetCalled: Swift.Bool {
-    get
-  }
-  public var osVersionGetCallsCount: Swift.Int
-  public var osVersionSetCalled: Swift.Bool {
-    get
-  }
-  public var osVersionSetCallsCount: Swift.Int
-  public var osVersion: Swift.String? {
-    get
-    set(value)
-  }
-  public var underlyingOsName: Swift.String?
-  public var osNameCalled: Swift.Bool {
-    get
-  }
-  public var osNameGetCalled: Swift.Bool {
-    get
-  }
-  public var osNameGetCallsCount: Swift.Int
-  public var osNameSetCalled: Swift.Bool {
-    get
-  }
-  public var osNameSetCallsCount: Swift.Int
-  public var osName: Swift.String? {
-    get
-    set(value)
-  }
-  public var underlyingCustomerAppName: Swift.String!
-  public var customerAppNameCalled: Swift.Bool {
-    get
-  }
-  public var customerAppNameGetCalled: Swift.Bool {
-    get
-  }
-  public var customerAppNameGetCallsCount: Swift.Int
-  public var customerAppNameSetCalled: Swift.Bool {
-    get
-  }
-  public var customerAppNameSetCallsCount: Swift.Int
-  public var customerAppName: Swift.String {
-    get
-    set(value)
-  }
-  public var underlyingCustomerAppVersion: Swift.String!
-  public var customerAppVersionCalled: Swift.Bool {
-    get
-  }
-  public var customerAppVersionGetCalled: Swift.Bool {
-    get
-  }
-  public var customerAppVersionGetCallsCount: Swift.Int
-  public var customerAppVersionSetCalled: Swift.Bool {
-    get
-  }
-  public var customerAppVersionSetCallsCount: Swift.Int
-  public var customerAppVersion: Swift.String {
-    get
-    set(value)
-  }
-  public var underlyingCustomerBundleId: Swift.String!
-  public var customerBundleIdCalled: Swift.Bool {
-    get
-  }
-  public var customerBundleIdGetCalled: Swift.Bool {
-    get
-  }
-  public var customerBundleIdGetCallsCount: Swift.Int
-  public var customerBundleIdSetCalled: Swift.Bool {
-    get
-  }
-  public var customerBundleIdSetCallsCount: Swift.Int
-  public var customerBundleId: Swift.String {
-    get
-    set(value)
-  }
-  public var underlyingDeviceLocale: Swift.String!
-  public var deviceLocaleCalled: Swift.Bool {
-    get
-  }
-  public var deviceLocaleGetCalled: Swift.Bool {
-    get
-  }
-  public var deviceLocaleGetCallsCount: Swift.Int
-  public var deviceLocaleSetCalled: Swift.Bool {
-    get
-  }
-  public var deviceLocaleSetCallsCount: Swift.Int
-  public var deviceLocale: Swift.String {
-    get
-    set(value)
-  }
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var isPushSubscribedCallsCount: Swift.Int {
-    get
-  }
-  public var isPushSubscribedCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var isPushSubscribedReceivedArguments: ((Swift.Bool) -> Swift.Void)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var isPushSubscribedReceivedInvocations: [(Swift.Bool) -> Swift.Void] {
-    get
-  }
-  public var isPushSubscribedClosure: ((@escaping (Swift.Bool) -> Swift.Void) -> Swift.Void)?
-  public func isPushSubscribed(completion: @escaping (Swift.Bool) -> Swift.Void)
-  @objc deinit
-}
-public class EventBusMock : ZixflowInternalCommon.EventBus, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var postCallsCount: Swift.Int {
-    get
-  }
-  public var postCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var postReceivedArguments: ZixflowInternalCommon.AnyEventRepresentable? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var postReceivedInvocations: [ZixflowInternalCommon.AnyEventRepresentable] {
-    get
-  }
-  public var postReturnValue: Swift.Bool!
-  public var postClosure: ((ZixflowInternalCommon.AnyEventRepresentable) -> Swift.Bool)?
-  @discardableResult
-  public func post(_ event: ZixflowInternalCommon.AnyEventRepresentable) -> Swift.Bool
-  @ZixflowInternalCommon.Atomic public var addObserverCallsCount: Swift.Int {
-    get
-  }
-  public var addObserverCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var addObserverReceivedArguments: (eventType: Swift.String, action: (ZixflowInternalCommon.AnyEventRepresentable) -> Swift.Void)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var addObserverReceivedInvocations: [(eventType: Swift.String, action: (ZixflowInternalCommon.AnyEventRepresentable) -> Swift.Void)] {
-    get
-  }
-  public var addObserverClosure: ((Swift.String, @escaping (ZixflowInternalCommon.AnyEventRepresentable) -> Swift.Void) -> Swift.Void)?
-  public func addObserver(_ eventType: Swift.String, action: @escaping (ZixflowInternalCommon.AnyEventRepresentable) -> Swift.Void)
-  @ZixflowInternalCommon.Atomic public var removeObserverCallsCount: Swift.Int {
-    get
-  }
-  public var removeObserverCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var removeObserverReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var removeObserverReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var removeObserverClosure: ((Swift.String) -> Swift.Void)?
-  public func removeObserver(for eventType: Swift.String)
-  @objc deinit
-}
-public class EventCacheMock : ZixflowInternalCommon.EventCache, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var addEventCallsCount: Swift.Int {
-    get
-  }
-  public var addEventCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var addEventReceivedArguments: ZixflowInternalCommon.AnyEventRepresentable? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var addEventReceivedInvocations: [ZixflowInternalCommon.AnyEventRepresentable] {
-    get
-  }
-  public var addEventClosure: ((ZixflowInternalCommon.AnyEventRepresentable) -> Swift.Void)?
-  public func addEvent(event: ZixflowInternalCommon.AnyEventRepresentable)
-  @ZixflowInternalCommon.Atomic public var storeEventsCallsCount: Swift.Int {
-    get
-  }
-  public var storeEventsCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var storeEventsReceivedArguments: (events: [ZixflowInternalCommon.AnyEventRepresentable], key: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var storeEventsReceivedInvocations: [(events: [ZixflowInternalCommon.AnyEventRepresentable], key: Swift.String)] {
-    get
-  }
-  public var storeEventsClosure: (([ZixflowInternalCommon.AnyEventRepresentable], Swift.String) -> Swift.Void)?
-  public func storeEvents(_ events: [ZixflowInternalCommon.AnyEventRepresentable], forKey key: Swift.String)
-  @ZixflowInternalCommon.Atomic public var getEventCallsCount: Swift.Int {
-    get
-  }
-  public var getEventCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getEventReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getEventReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var getEventReturnValue: [ZixflowInternalCommon.AnyEventRepresentable]!
-  public var getEventClosure: ((Swift.String) -> [ZixflowInternalCommon.AnyEventRepresentable])?
-  public func getEvent(_ key: Swift.String) -> [ZixflowInternalCommon.AnyEventRepresentable]
-  @ZixflowInternalCommon.Atomic public var removeAllEventsForKeyCallsCount: Swift.Int {
-    get
-  }
-  public var removeAllEventsForKeyCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var removeAllEventsForKeyReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var removeAllEventsForKeyReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var removeAllEventsForKeyClosure: ((Swift.String) -> Swift.Void)?
-  public func removeAllEventsForKey(_ key: Swift.String)
-  @objc deinit
-}
-public class EventStorageMock : ZixflowInternalCommon.EventStorage, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var storeCallsCount: Swift.Int {
-    get
-  }
-  public var storeCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var storeReceivedArguments: ZixflowInternalCommon.AnyEventRepresentable? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var storeReceivedInvocations: [ZixflowInternalCommon.AnyEventRepresentable] {
-    get
-  }
-  public var storeClosure: ((ZixflowInternalCommon.AnyEventRepresentable) throws -> Swift.Void)?
-  public func store(event: ZixflowInternalCommon.AnyEventRepresentable) throws
-  @ZixflowInternalCommon.Atomic public var retrieveCallsCount: Swift.Int {
-    get
-  }
-  public var retrieveCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var retrieveReceivedArguments: (eventType: Swift.String, storageId: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var retrieveReceivedInvocations: [(eventType: Swift.String, storageId: Swift.String)] {
-    get
-  }
-  public var retrieveReturnValue: ZixflowInternalCommon.AnyEventRepresentable?
-  public var retrieveClosure: ((Swift.String, Swift.String) throws -> ZixflowInternalCommon.AnyEventRepresentable?)?
-  public func retrieve(eventType: Swift.String, storageId: Swift.String) throws -> ZixflowInternalCommon.AnyEventRepresentable?
-  @ZixflowInternalCommon.Atomic public var loadEventsCallsCount: Swift.Int {
-    get
-  }
-  public var loadEventsCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var loadEventsReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var loadEventsReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var loadEventsReturnValue: [ZixflowInternalCommon.AnyEventRepresentable]!
-  public var loadEventsClosure: ((Swift.String) throws -> [ZixflowInternalCommon.AnyEventRepresentable])?
-  public func loadEvents(ofType type: Swift.String) throws -> [ZixflowInternalCommon.AnyEventRepresentable]
-  @ZixflowInternalCommon.Atomic public var removeCallsCount: Swift.Int {
-    get
-  }
-  public var removeCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var removeReceivedArguments: (eventType: Swift.String, storageId: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var removeReceivedInvocations: [(eventType: Swift.String, storageId: Swift.String)] {
-    get
-  }
-  public var removeClosure: ((Swift.String, Swift.String) -> Swift.Void)?
-  public func remove(ofType eventType: Swift.String, withStorageId storageId: Swift.String)
-  @ZixflowInternalCommon.Atomic public var removeAllCallsCount: Swift.Int {
-    get
-  }
-  public var removeAllCalled: Swift.Bool {
-    get
-  }
-  public var removeAllClosure: (() -> Swift.Void)?
-  public func removeAll()
-  @objc deinit
-}
-public class FileStorageMock : ZixflowInternalCommon.FileStorage, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var saveCallsCount: Swift.Int {
-    get
-  }
-  public var saveCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var saveReceivedArguments: (siteId: Swift.String, type: ZixflowInternalCommon.FileType, contents: Foundation.Data, fileId: Swift.String?)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var saveReceivedInvocations: [(siteId: Swift.String, type: ZixflowInternalCommon.FileType, contents: Foundation.Data, fileId: Swift.String?)] {
-    get
-  }
-  public var saveReturnValue: Swift.Bool!
-  public var saveClosure: ((Swift.String, ZixflowInternalCommon.FileType, Foundation.Data, Swift.String?) -> Swift.Bool)?
-  public func save(siteId: Swift.String, type: ZixflowInternalCommon.FileType, contents: Foundation.Data, fileId: Swift.String?) -> Swift.Bool
-  @ZixflowInternalCommon.Atomic public var getCallsCount: Swift.Int {
-    get
-  }
-  public var getCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getReceivedArguments: (siteId: Swift.String, type: ZixflowInternalCommon.FileType, fileId: Swift.String?)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getReceivedInvocations: [(siteId: Swift.String, type: ZixflowInternalCommon.FileType, fileId: Swift.String?)] {
-    get
-  }
-  public var getReturnValue: Foundation.Data?
-  public var getClosure: ((Swift.String, ZixflowInternalCommon.FileType, Swift.String?) -> Foundation.Data?)?
-  public func get(siteId: Swift.String, type: ZixflowInternalCommon.FileType, fileId: Swift.String?) -> Foundation.Data?
-  @ZixflowInternalCommon.Atomic public var deleteCallsCount: Swift.Int {
-    get
-  }
-  public var deleteCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var deleteReceivedArguments: (siteId: Swift.String, type: ZixflowInternalCommon.FileType, fileId: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var deleteReceivedInvocations: [(siteId: Swift.String, type: ZixflowInternalCommon.FileType, fileId: Swift.String)] {
-    get
-  }
-  public var deleteReturnValue: Swift.Bool!
-  public var deleteClosure: ((Swift.String, ZixflowInternalCommon.FileType, Swift.String) -> Swift.Bool)?
-  public func delete(siteId: Swift.String, type: ZixflowInternalCommon.FileType, fileId: Swift.String) -> Swift.Bool
-  @objc deinit
-}
-public class GlobalDataStoreMock : ZixflowInternalCommon.GlobalDataStore, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public var underlyingPushDeviceToken: Swift.String?
-  public var pushDeviceTokenCalled: Swift.Bool {
-    get
-  }
-  public var pushDeviceTokenGetCalled: Swift.Bool {
-    get
-  }
-  public var pushDeviceTokenGetCallsCount: Swift.Int
-  public var pushDeviceTokenSetCalled: Swift.Bool {
-    get
-  }
-  public var pushDeviceTokenSetCallsCount: Swift.Int
-  public var pushDeviceToken: Swift.String? {
-    get
-    set(value)
-  }
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var deleteAllCallsCount: Swift.Int {
-    get
-  }
-  public var deleteAllCalled: Swift.Bool {
-    get
-  }
-  public var deleteAllClosure: (() -> Swift.Void)?
-  public func deleteAll()
-  @objc deinit
-}
-public class HttpClientMock : ZixflowInternalCommon.HttpClient, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var requestCallsCount: Swift.Int {
-    get
-  }
-  public var requestCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var requestReceivedArguments: (params: ZixflowInternalCommon.HttpRequestParams, onComplete: (Swift.Result<Foundation.Data, ZixflowInternalCommon.HttpRequestError>) -> Swift.Void)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var requestReceivedInvocations: [(params: ZixflowInternalCommon.HttpRequestParams, onComplete: (Swift.Result<Foundation.Data, ZixflowInternalCommon.HttpRequestError>) -> Swift.Void)] {
-    get
-  }
-  public var requestClosure: ((ZixflowInternalCommon.HttpRequestParams, @escaping (Swift.Result<Foundation.Data, ZixflowInternalCommon.HttpRequestError>) -> Swift.Void) -> Swift.Void)?
-  public func request(_ params: ZixflowInternalCommon.HttpRequestParams, onComplete: @escaping (Swift.Result<Foundation.Data, ZixflowInternalCommon.HttpRequestError>) -> Swift.Void)
-  @ZixflowInternalCommon.Atomic public var downloadFileCallsCount: Swift.Int {
-    get
-  }
-  public var downloadFileCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var downloadFileReceivedArguments: (url: Foundation.URL, fileType: ZixflowInternalCommon.DownloadFileType, onComplete: (Foundation.URL?) -> Swift.Void)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var downloadFileReceivedInvocations: [(url: Foundation.URL, fileType: ZixflowInternalCommon.DownloadFileType, onComplete: (Foundation.URL?) -> Swift.Void)] {
-    get
-  }
-  public var downloadFileClosure: ((Foundation.URL, ZixflowInternalCommon.DownloadFileType, @escaping (Foundation.URL?) -> Swift.Void) -> Swift.Void)?
-  public func downloadFile(url: Foundation.URL, fileType: ZixflowInternalCommon.DownloadFileType, onComplete: @escaping (Foundation.URL?) -> Swift.Void)
-  @ZixflowInternalCommon.Atomic public var cancelCallsCount: Swift.Int {
-    get
-  }
-  public var cancelCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var cancelReceivedArguments: Swift.Bool? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var cancelReceivedInvocations: [Swift.Bool] {
-    get
-  }
-  public var cancelClosure: ((Swift.Bool) -> Swift.Void)?
-  public func cancel(finishTasks: Swift.Bool)
-  @objc deinit
-}
-public class HttpRequestRunnerMock : ZixflowInternalCommon.HttpRequestRunner, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var requestCallsCount: Swift.Int {
-    get
-  }
-  public var requestCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var requestReceivedArguments: (params: ZixflowInternalCommon.HttpRequestParams, session: Foundation.URLSession, onComplete: (Foundation.Data?, Foundation.HTTPURLResponse?, (any Swift.Error)?) -> Swift.Void)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var requestReceivedInvocations: [(params: ZixflowInternalCommon.HttpRequestParams, session: Foundation.URLSession, onComplete: (Foundation.Data?, Foundation.HTTPURLResponse?, (any Swift.Error)?) -> Swift.Void)] {
-    get
-  }
-  public var requestClosure: ((ZixflowInternalCommon.HttpRequestParams, Foundation.URLSession, @escaping (Foundation.Data?, Foundation.HTTPURLResponse?, (any Swift.Error)?) -> Swift.Void) -> Swift.Void)?
-  public func request(params: ZixflowInternalCommon.HttpRequestParams, session: Foundation.URLSession, onComplete: @escaping (Foundation.Data?, Foundation.HTTPURLResponse?, (any Swift.Error)?) -> Swift.Void)
-  @ZixflowInternalCommon.Atomic public var downloadFileCallsCount: Swift.Int {
-    get
-  }
-  public var downloadFileCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var downloadFileReceivedArguments: (url: Foundation.URL, fileType: ZixflowInternalCommon.DownloadFileType, session: Foundation.URLSession, onComplete: (Foundation.URL?) -> Swift.Void)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var downloadFileReceivedInvocations: [(url: Foundation.URL, fileType: ZixflowInternalCommon.DownloadFileType, session: Foundation.URLSession, onComplete: (Foundation.URL?) -> Swift.Void)] {
-    get
-  }
-  public var downloadFileClosure: ((Foundation.URL, ZixflowInternalCommon.DownloadFileType, Foundation.URLSession, @escaping (Foundation.URL?) -> Swift.Void) -> Swift.Void)?
-  public func downloadFile(url: Foundation.URL, fileType: ZixflowInternalCommon.DownloadFileType, session: Foundation.URLSession, onComplete: @escaping (Foundation.URL?) -> Swift.Void)
-  @objc deinit
-}
-public class LoggerMock : ZixflowInternalCommon.Logger, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public var underlyingLogLevel: ZixflowInternalCommon.ZixflowLogLevel!
-  public var logLevelCalled: Swift.Bool {
-    get
-  }
-  public var logLevelGetCalled: Swift.Bool {
-    get
-  }
-  public var logLevelGetCallsCount: Swift.Int
-  public var logLevelSetCalled: Swift.Bool {
-    get
-  }
-  public var logLevelSetCallsCount: Swift.Int
-  public var logLevel: ZixflowInternalCommon.ZixflowLogLevel {
-    get
-    set(value)
-  }
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var setLogDispatcherCallsCount: Swift.Int {
-    get
-  }
-  public var setLogDispatcherCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setLogDispatcherReceivedArguments: ((ZixflowInternalCommon.ZixflowLogLevel, Swift.String) -> Swift.Void)?? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setLogDispatcherReceivedInvocations: [((ZixflowInternalCommon.ZixflowLogLevel, Swift.String) -> Swift.Void)?] {
-    get
-  }
-  public var setLogDispatcherClosure: ((((ZixflowInternalCommon.ZixflowLogLevel, Swift.String) -> Swift.Void)?) -> Swift.Void)?
-  public func setLogDispatcher(_ dispatcher: ((ZixflowInternalCommon.ZixflowLogLevel, Swift.String) -> Swift.Void)?)
-  @ZixflowInternalCommon.Atomic public var setLogLevelCallsCount: Swift.Int {
-    get
-  }
-  public var setLogLevelCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setLogLevelReceivedArguments: ZixflowInternalCommon.ZixflowLogLevel? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setLogLevelReceivedInvocations: [ZixflowInternalCommon.ZixflowLogLevel] {
-    get
-  }
-  public var setLogLevelClosure: ((ZixflowInternalCommon.ZixflowLogLevel) -> Swift.Void)?
-  public func setLogLevel(_ level: ZixflowInternalCommon.ZixflowLogLevel)
-  @ZixflowInternalCommon.Atomic public var debugCallsCount: Swift.Int {
-    get
-  }
-  public var debugCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var debugReceivedArguments: (message: Swift.String, tag: Swift.String?)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var debugReceivedInvocations: [(message: Swift.String, tag: Swift.String?)] {
-    get
-  }
-  public var debugClosure: ((Swift.String, Swift.String?) -> Swift.Void)?
-  public func debug(_ message: Swift.String, _ tag: Swift.String?)
-  @ZixflowInternalCommon.Atomic public var infoCallsCount: Swift.Int {
-    get
-  }
-  public var infoCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var infoReceivedArguments: (message: Swift.String, tag: Swift.String?)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var infoReceivedInvocations: [(message: Swift.String, tag: Swift.String?)] {
-    get
-  }
-  public var infoClosure: ((Swift.String, Swift.String?) -> Swift.Void)?
-  public func info(_ message: Swift.String, _ tag: Swift.String?)
-  @ZixflowInternalCommon.Atomic public var errorCallsCount: Swift.Int {
-    get
-  }
-  public var errorCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var errorReceivedArguments: (message: Swift.String, tag: Swift.String?, throwable: (any Swift.Error)?)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var errorReceivedInvocations: [(message: Swift.String, tag: Swift.String?, throwable: (any Swift.Error)?)] {
-    get
-  }
-  public var errorClosure: ((Swift.String, Swift.String?, (any Swift.Error)?) -> Swift.Void)?
-  public func error(_ message: Swift.String, _ tag: Swift.String?, _ throwable: (any Swift.Error)?)
-  @objc deinit
-}
-public class PendingPushDeliveryStoreMock : ZixflowInternalCommon.PendingPushDeliveryStore, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public var underlyingAppGroupSuiteName: Swift.String?
-  public var appGroupSuiteNameCalled: Swift.Bool {
-    get
-  }
-  public var appGroupSuiteNameGetCalled: Swift.Bool {
-    get
-  }
-  public var appGroupSuiteNameGetCallsCount: Swift.Int
-  public var appGroupSuiteNameSetCalled: Swift.Bool {
-    get
-  }
-  public var appGroupSuiteNameSetCallsCount: Swift.Int
-  public var appGroupSuiteName: Swift.String? {
-    get
-    set(value)
-  }
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var appendCallsCount: Swift.Int {
-    get
-  }
-  public var appendCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var appendReceivedArguments: ZixflowInternalCommon.PendingPushDeliveryMetric? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var appendReceivedInvocations: [ZixflowInternalCommon.PendingPushDeliveryMetric] {
-    get
-  }
-  public var appendReturnValue: Swift.Bool!
-  public var appendClosure: ((ZixflowInternalCommon.PendingPushDeliveryMetric) -> Swift.Bool)?
-  public func append(_ metric: ZixflowInternalCommon.PendingPushDeliveryMetric) -> Swift.Bool
-  @ZixflowInternalCommon.Atomic public var loadAllCallsCount: Swift.Int {
-    get
-  }
-  public var loadAllCalled: Swift.Bool {
-    get
-  }
-  public var loadAllReturnValue: [ZixflowInternalCommon.PendingPushDeliveryMetric]!
-  public var loadAllClosure: (() -> [ZixflowInternalCommon.PendingPushDeliveryMetric])?
-  public func loadAll() -> [ZixflowInternalCommon.PendingPushDeliveryMetric]
-  @ZixflowInternalCommon.Atomic public var removeCallsCount: Swift.Int {
-    get
-  }
-  public var removeCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var removeReceivedArguments: Foundation.UUID? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var removeReceivedInvocations: [Foundation.UUID] {
-    get
-  }
-  public var removeReturnValue: Swift.Bool!
-  public var removeClosure: ((Foundation.UUID) -> Swift.Bool)?
-  public func remove(id: Foundation.UUID) -> Swift.Bool
-  @ZixflowInternalCommon.Atomic public var removeAllCallsCount: Swift.Int {
-    get
-  }
-  public var removeAllCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var removeAllReceivedArguments: Swift.Set<Foundation.UUID>? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var removeAllReceivedInvocations: [Swift.Set<Foundation.UUID>] {
-    get
-  }
-  public var removeAllReturnValue: Swift.Bool!
-  public var removeAllClosure: ((Swift.Set<Foundation.UUID>) -> Swift.Bool)?
-  public func removeAll(ids: Swift.Set<Foundation.UUID>) -> Swift.Bool
-  @objc deinit
-}
-public class ProfileStoreMock : ZixflowInternalCommon.ProfileStore, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var getProfileIdCallsCount: Swift.Int {
-    get
-  }
-  public var getProfileIdCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getProfileIdReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getProfileIdReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var getProfileIdReturnValue: Swift.String?
-  public var getProfileIdClosure: ((Swift.String) -> Swift.String?)?
-  public func getProfileId(siteId: Swift.String) -> Swift.String?
-  @ZixflowInternalCommon.Atomic public var deleteProfileIdCallsCount: Swift.Int {
-    get
-  }
-  public var deleteProfileIdCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var deleteProfileIdReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var deleteProfileIdReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var deleteProfileIdClosure: ((Swift.String) -> Swift.Void)?
-  public func deleteProfileId(siteId: Swift.String)
-  @objc deinit
-}
-public class QueueMock : ZixflowInternalCommon.Queue, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var getAllStoredTasksCallsCount: Swift.Int {
-    get
-  }
-  public var getAllStoredTasksCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getAllStoredTasksReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getAllStoredTasksReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var getAllStoredTasksReturnValue: [ZixflowInternalCommon.QueueTaskMetadata]!
-  public var getAllStoredTasksClosure: ((Swift.String) -> [ZixflowInternalCommon.QueueTaskMetadata])?
-  public func getAllStoredTasks(siteId: Swift.String) -> [ZixflowInternalCommon.QueueTaskMetadata]
-  @ZixflowInternalCommon.Atomic public var getTaskDetailCallsCount: Swift.Int {
-    get
-  }
-  public var getTaskDetailCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getTaskDetailReceivedArguments: (task: ZixflowInternalCommon.QueueTaskMetadata, siteId: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getTaskDetailReceivedInvocations: [(task: ZixflowInternalCommon.QueueTaskMetadata, siteId: Swift.String)] {
-    get
-  }
-  public var getTaskDetailReturnValue: ZixflowInternalCommon.TaskDetail?
-  public var getTaskDetailClosure: ((ZixflowInternalCommon.QueueTaskMetadata, Swift.String) -> ZixflowInternalCommon.TaskDetail?)?
-  public func getTaskDetail(_ task: ZixflowInternalCommon.QueueTaskMetadata, siteId: Swift.String) -> ZixflowInternalCommon.TaskDetail?
-  @ZixflowInternalCommon.Atomic public var deleteProcessedTaskCallsCount: Swift.Int {
-    get
-  }
-  public var deleteProcessedTaskCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var deleteProcessedTaskReceivedArguments: (task: ZixflowInternalCommon.QueueTaskMetadata, siteId: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var deleteProcessedTaskReceivedInvocations: [(task: ZixflowInternalCommon.QueueTaskMetadata, siteId: Swift.String)] {
-    get
-  }
-  public var deleteProcessedTaskClosure: ((ZixflowInternalCommon.QueueTaskMetadata, Swift.String) -> Swift.Void)?
-  public func deleteProcessedTask(_ task: ZixflowInternalCommon.QueueTaskMetadata, siteId: Swift.String)
-  @objc deinit
-}
-public class QueueStorageMock : ZixflowInternalCommon.QueueStorage, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var getInventoryCallsCount: Swift.Int {
-    get
-  }
-  public var getInventoryCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getInventoryReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getInventoryReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var getInventoryReturnValue: [ZixflowInternalCommon.QueueTaskMetadata]!
-  public var getInventoryClosure: ((Swift.String) -> [ZixflowInternalCommon.QueueTaskMetadata])?
-  public func getInventory(siteId: Swift.String) -> [ZixflowInternalCommon.QueueTaskMetadata]
-  @ZixflowInternalCommon.Atomic public var getCallsCount: Swift.Int {
-    get
-  }
-  public var getCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getReceivedArguments: (storageId: Swift.String, siteId: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var getReceivedInvocations: [(storageId: Swift.String, siteId: Swift.String)] {
-    get
-  }
-  public var getReturnValue: ZixflowInternalCommon.QueueTask?
-  public var getClosure: ((Swift.String, Swift.String) -> ZixflowInternalCommon.QueueTask?)?
-  public func get(storageId: Swift.String, siteId: Swift.String) -> ZixflowInternalCommon.QueueTask?
-  @ZixflowInternalCommon.Atomic public var deleteCallsCount: Swift.Int {
-    get
-  }
-  public var deleteCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var deleteReceivedArguments: (storageId: Swift.String, siteId: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var deleteReceivedInvocations: [(storageId: Swift.String, siteId: Swift.String)] {
-    get
-  }
-  public var deleteReturnValue: Swift.Bool!
-  public var deleteClosure: ((Swift.String, Swift.String) -> Swift.Bool)?
-  public func delete(storageId: Swift.String, siteId: Swift.String) -> Swift.Bool
-  @objc deinit
-}
-public class SdkClientMock : ZixflowInternalCommon.SdkClient, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public var underlyingSource: Swift.String!
-  public var sourceCalled: Swift.Bool {
-    get
-  }
-  public var sourceGetCalled: Swift.Bool {
-    get
-  }
-  public var sourceGetCallsCount: Swift.Int
-  public var sourceSetCalled: Swift.Bool {
-    get
-  }
-  public var sourceSetCallsCount: Swift.Int
-  public var source: Swift.String {
-    get
-    set(value)
-  }
-  public var underlyingSdkVersion: Swift.String!
-  public var sdkVersionCalled: Swift.Bool {
-    get
-  }
-  public var sdkVersionGetCalled: Swift.Bool {
-    get
-  }
-  public var sdkVersionGetCallsCount: Swift.Int
-  public var sdkVersionSetCalled: Swift.Bool {
-    get
-  }
-  public var sdkVersionSetCallsCount: Swift.Int
-  public var sdkVersion: Swift.String {
-    get
-    set(value)
-  }
-  public func resetMock()
-  @objc deinit
-}
-public class SdkCommonLoggerMock : ZixflowInternalCommon.SdkCommonLogger, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var coreSdkInitStartCallsCount: Swift.Int {
-    get
-  }
-  public var coreSdkInitStartCalled: Swift.Bool {
-    get
-  }
-  public var coreSdkInitStartClosure: (() -> Swift.Void)?
-  public func coreSdkInitStart()
-  @ZixflowInternalCommon.Atomic public var coreSdkInitSuccessCallsCount: Swift.Int {
-    get
-  }
-  public var coreSdkInitSuccessCalled: Swift.Bool {
-    get
-  }
-  public var coreSdkInitSuccessClosure: (() -> Swift.Void)?
-  public func coreSdkInitSuccess()
-  @ZixflowInternalCommon.Atomic public var moduleInitStartCallsCount: Swift.Int {
-    get
-  }
-  public var moduleInitStartCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var moduleInitStartReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var moduleInitStartReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var moduleInitStartClosure: ((Swift.String) -> Swift.Void)?
-  public func moduleInitStart(_ moduleName: Swift.String)
-  @ZixflowInternalCommon.Atomic public var moduleInitSuccessCallsCount: Swift.Int {
-    get
-  }
-  public var moduleInitSuccessCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var moduleInitSuccessReceivedArguments: Swift.String? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var moduleInitSuccessReceivedInvocations: [Swift.String] {
-    get
-  }
-  public var moduleInitSuccessClosure: ((Swift.String) -> Swift.Void)?
-  public func moduleInitSuccess(_ moduleName: Swift.String)
-  @ZixflowInternalCommon.Atomic public var logHandlingNotificationDeepLinkCallsCount: Swift.Int {
-    get
-  }
-  public var logHandlingNotificationDeepLinkCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var logHandlingNotificationDeepLinkReceivedArguments: Foundation.URL? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var logHandlingNotificationDeepLinkReceivedInvocations: [Foundation.URL] {
-    get
-  }
-  public var logHandlingNotificationDeepLinkClosure: ((Foundation.URL) -> Swift.Void)?
-  public func logHandlingNotificationDeepLink(url: Foundation.URL)
-  @ZixflowInternalCommon.Atomic public var logDeepLinkHandledByCallbackCallsCount: Swift.Int {
-    get
-  }
-  public var logDeepLinkHandledByCallbackCalled: Swift.Bool {
-    get
-  }
-  public var logDeepLinkHandledByCallbackClosure: (() -> Swift.Void)?
-  public func logDeepLinkHandledByCallback()
-  @ZixflowInternalCommon.Atomic public var logDeepLinkHandledByHostAppCallsCount: Swift.Int {
-    get
-  }
-  public var logDeepLinkHandledByHostAppCalled: Swift.Bool {
-    get
-  }
-  public var logDeepLinkHandledByHostAppClosure: (() -> Swift.Void)?
-  public func logDeepLinkHandledByHostApp()
-  @ZixflowInternalCommon.Atomic public var logDeepLinkHandledExternallyCallsCount: Swift.Int {
-    get
-  }
-  public var logDeepLinkHandledExternallyCalled: Swift.Bool {
-    get
-  }
-  public var logDeepLinkHandledExternallyClosure: (() -> Swift.Void)?
-  public func logDeepLinkHandledExternally()
-  @ZixflowInternalCommon.Atomic public var logDeepLinkWasNotHandledCallsCount: Swift.Int {
-    get
-  }
-  public var logDeepLinkWasNotHandledCalled: Swift.Bool {
-    get
-  }
-  public var logDeepLinkWasNotHandledClosure: (() -> Swift.Void)?
-  public func logDeepLinkWasNotHandled()
-  @objc deinit
-}
-public class SystemLoggerMock : ZixflowInternalCommon.SystemLogger, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var logCallsCount: Swift.Int {
-    get
-  }
-  public var logCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var logReceivedArguments: (message: Swift.String, level: ZixflowInternalCommon.ZixflowLogLevel)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var logReceivedInvocations: [(message: Swift.String, level: ZixflowInternalCommon.ZixflowLogLevel)] {
-    get
-  }
-  public var logClosure: ((Swift.String, ZixflowInternalCommon.ZixflowLogLevel) -> Swift.Void)?
-  public func log(_ message: Swift.String, _ level: ZixflowInternalCommon.ZixflowLogLevel)
-  @objc deinit
-}
-@available(iOSApplicationExtension, unavailable)
-public class UIKitWrapperMock : ZixflowInternalCommon.UIKitWrapper, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var openCallsCount: Swift.Int {
-    get
-  }
-  public var openCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var openReceivedArguments: Foundation.URL? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var openReceivedInvocations: [Foundation.URL] {
-    get
-  }
-  public var openClosure: ((Foundation.URL) -> Swift.Void)?
-  public func open(url: Foundation.URL)
-  @ZixflowInternalCommon.Atomic public var continueNSUserActivityCallsCount: Swift.Int {
-    get
-  }
-  public var continueNSUserActivityCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var continueNSUserActivityReceivedArguments: Foundation.URL? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var continueNSUserActivityReceivedInvocations: [Foundation.URL] {
-    get
-  }
-  public var continueNSUserActivityReturnValue: Swift.Bool!
-  public var continueNSUserActivityClosure: ((Foundation.URL) -> Swift.Bool)?
-  public func continueNSUserActivity(webpageURL: Foundation.URL) -> Swift.Bool
-  @objc deinit
-}
-public class UserAgentUtilMock : ZixflowInternalCommon.UserAgentUtil, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var getUserAgentHeaderValueCallsCount: Swift.Int {
-    get
-  }
-  public var getUserAgentHeaderValueCalled: Swift.Bool {
-    get
-  }
-  public var getUserAgentHeaderValueReturnValue: Swift.String!
-  public var getUserAgentHeaderValueClosure: (() -> Swift.String)?
-  public func getUserAgentHeaderValue() -> Swift.String
-  @ZixflowInternalCommon.Atomic public var getNSEUserAgentHeaderValueCallsCount: Swift.Int {
-    get
-  }
-  public var getNSEUserAgentHeaderValueCalled: Swift.Bool {
-    get
-  }
-  public var getNSEUserAgentHeaderValueReturnValue: Swift.String!
-  public var getNSEUserAgentHeaderValueClosure: (() -> Swift.String)?
-  public func getNSEUserAgentHeaderValue() -> Swift.String
-  @objc deinit
-}
 public protocol AutoMockable {
 }
 extension ZixflowInternalCommon.QueueTaskType : Swift.Equatable {}
@@ -2405,8 +1373,6 @@ extension ZixflowInternalCommon.QueueTaskType : Swift.RawRepresentable {}
 extension ZixflowInternalCommon.DateFormat : Swift.Equatable {}
 extension ZixflowInternalCommon.DateFormat : Swift.Hashable {}
 extension ZixflowInternalCommon.DateFormat : Swift.RawRepresentable {}
-extension ZixflowInternalCommon.CIOApiEndpoint : Swift.Equatable {}
-extension ZixflowInternalCommon.CIOApiEndpoint : Swift.Hashable {}
 extension ZixflowInternalCommon.DownloadFileType : Swift.Equatable {}
 extension ZixflowInternalCommon.DownloadFileType : Swift.Hashable {}
 extension ZixflowInternalCommon.InAppMetric : Swift.Equatable {}
@@ -2415,9 +1381,14 @@ extension ZixflowInternalCommon.InAppMetric : Swift.RawRepresentable {}
 extension ZixflowInternalCommon.Metric : Swift.Equatable {}
 extension ZixflowInternalCommon.Metric : Swift.Hashable {}
 extension ZixflowInternalCommon.Metric : Swift.RawRepresentable {}
+extension ZixflowInternalCommon.ZixflowApiEndpoint : Swift.Equatable {}
+extension ZixflowInternalCommon.ZixflowApiEndpoint : Swift.Hashable {}
 extension ZixflowInternalCommon.SdkConfig.Keys : Swift.Equatable {}
 extension ZixflowInternalCommon.SdkConfig.Keys : Swift.Hashable {}
 extension ZixflowInternalCommon.SdkConfig.Keys : Swift.RawRepresentable {}
+extension ZixflowInternalCommon.GeofenceTransition : Swift.Equatable {}
+extension ZixflowInternalCommon.GeofenceTransition : Swift.Hashable {}
+extension ZixflowInternalCommon.GeofenceTransition : Swift.RawRepresentable {}
 extension ZixflowInternalCommon.Region : Swift.Hashable {}
 extension ZixflowInternalCommon.Region : Swift.RawRepresentable {}
 extension ZixflowInternalCommon.ScreenView : Swift.Equatable {}

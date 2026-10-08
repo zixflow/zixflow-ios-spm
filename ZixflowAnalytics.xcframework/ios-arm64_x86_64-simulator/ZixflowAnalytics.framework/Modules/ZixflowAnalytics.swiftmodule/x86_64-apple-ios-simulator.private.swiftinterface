@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name cdp_analytics_swift -module-name ZixflowAnalytics
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowAnalytics -package-name cdp_analytics_swift
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import Darwin.C
 import Darwin
 import Foundation
@@ -522,7 +523,7 @@ public enum PluginType : Swift.Int, Swift.CaseIterable {
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [ZixflowAnalytics.PluginType]
   public typealias RawValue = Swift.Int
-  public static var allCases: [ZixflowAnalytics.PluginType] {
+  nonisolated public static var allCases: [ZixflowAnalytics.PluginType] {
     get
   }
   public var rawValue: Swift.Int {
@@ -688,7 +689,7 @@ extension ZixflowAnalytics.IntervalBasedFlushPolicy : ZixflowAnalytics.iOSLifecy
   public func applicationDidEnterBackground(application: UIKit.UIApplication?)
 }
 @_hasMissingDesignatedInitializers public class StartupQueue : ZixflowAnalytics.Plugin, Sovran.Subscriber {
-  @ZixflowAnalytics.Atomic public var running: Swift.Bool {
+  @ZixflowAnalytics.Atomic<Swift.Bool> public var running: Swift.Bool {
     get
   }
   final public let type: ZixflowAnalytics.PluginType
@@ -786,7 +787,7 @@ public protocol RawEvent : Swift.Decodable, Swift.Encodable {
   var _metadata: ZixflowAnalytics.DestinationMetadata? { get set }
 }
 public struct TrackEvent : ZixflowAnalytics.RawEvent {
-  @ZixflowAnalytics.Noncodable public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
+  @ZixflowAnalytics.Noncodable<[ZixflowAnalytics.EnrichmentClosure]> public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
     get
     set
     _modify
@@ -808,7 +809,7 @@ public struct TrackEvent : ZixflowAnalytics.RawEvent {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct IdentifyEvent : ZixflowAnalytics.RawEvent {
-  @ZixflowAnalytics.Noncodable public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
+  @ZixflowAnalytics.Noncodable<[ZixflowAnalytics.EnrichmentClosure]> public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
     get
     set
     _modify
@@ -829,7 +830,7 @@ public struct IdentifyEvent : ZixflowAnalytics.RawEvent {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct ScreenEvent : ZixflowAnalytics.RawEvent {
-  @ZixflowAnalytics.Noncodable public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
+  @ZixflowAnalytics.Noncodable<[ZixflowAnalytics.EnrichmentClosure]> public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
     get
     set
     _modify
@@ -852,7 +853,7 @@ public struct ScreenEvent : ZixflowAnalytics.RawEvent {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct GroupEvent : ZixflowAnalytics.RawEvent {
-  @ZixflowAnalytics.Noncodable public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
+  @ZixflowAnalytics.Noncodable<[ZixflowAnalytics.EnrichmentClosure]> public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
     get
     set
     _modify
@@ -874,7 +875,7 @@ public struct GroupEvent : ZixflowAnalytics.RawEvent {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct AliasEvent : ZixflowAnalytics.RawEvent {
-  @ZixflowAnalytics.Noncodable public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
+  @ZixflowAnalytics.Noncodable<[ZixflowAnalytics.EnrichmentClosure]> public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
     get
     set
     _modify
@@ -1023,7 +1024,9 @@ extension Foundation.URLSessionDataTask : ZixflowAnalytics.DataTask {
 extension Foundation.URLSessionUploadTask : ZixflowAnalytics.UploadTask {
 }
 extension Foundation.URLSession : ZixflowAnalytics.HTTPSession {
+  @available(iOS 7.0, *)
   public typealias DataTaskType = Foundation.URLSessionDataTask
+  @available(iOS 7.0, *)
   public typealias UploadTaskType = Foundation.URLSessionUploadTask
 }
 public protocol DataTask {
@@ -1038,15 +1041,9 @@ public enum HTTPSessions {
 public protocol HTTPSession {
   associatedtype DataTaskType : ZixflowAnalytics.DataTask
   associatedtype UploadTaskType : ZixflowAnalytics.UploadTask
-  #if compiler(>=5.3) && $Sendable
   func uploadTask(with request: Foundation.URLRequest, fromFile file: Foundation.URL, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void) -> Self.UploadTaskType
-  #endif
-  #if compiler(>=5.3) && $Sendable
   func uploadTask(with request: Foundation.URLRequest, from bodyData: Foundation.Data?, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void) -> Self.UploadTaskType
-  #endif
-  #if compiler(>=5.3) && $Sendable
   func dataTask(with request: Foundation.URLRequest, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void) -> Self.DataTaskType
-  #endif
   func finishTasksAndInvalidate()
 }
 @propertyWrapper public struct Noncodable<T> : Swift.Codable {

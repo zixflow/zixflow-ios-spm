@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "ZixflowMessagingPush",
+    "printedName": "ZixflowMessagingPush",
     "children": [
       {
         "kind": "Import",
@@ -458,10 +458,24 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
                 "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
               },
               {
                 "kind": "Conformance",
@@ -546,6 +560,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -893,6 +923,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -908,6 +954,457 @@
         "printedName": "UserNotifications",
         "declKind": "Import",
         "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "ZixflowInternalCommon",
+        "printedName": "ZixflowInternalCommon",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZixflowNotificationCenterDelegate",
+        "printedName": "ZixflowNotificationCenterDelegate",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(messagingPush:config:wrappedDelegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZixflowNotificationCenterDelegate",
+                "printedName": "ZixflowMessagingPush.ZixflowNotificationCenterDelegate",
+                "usr": "c:@M@ZixflowMessagingPush@objc(cs)ZixflowNotificationCenterDelegate"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessagingPushInstance",
+                "printedName": "any ZixflowMessagingPush.MessagingPushInstance",
+                "usr": "s:20ZixflowMessagingPush0bC8InstanceP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ZixflowMessagingPush.MessagingPushConfigOptions)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ZixflowMessagingPush.MessagingPushConfigOptions",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessagingPushConfigOptions",
+                        "printedName": "ZixflowMessagingPush.MessagingPushConfigOptions",
+                        "usr": "s:20ZixflowMessagingPush0bC13ConfigOptionsV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any UserNotifications.UNUserNotificationCenterDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNUserNotificationCenterDelegate",
+                    "printedName": "any UserNotifications.UNUserNotificationCenterDelegate",
+                    "usr": "c:objc(pl)UNUserNotificationCenterDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20ZixflowMessagingPush0A26NotificationCenterDelegateC09messagingC06config07wrappedF0AcA0bC8Instance_p_AA0bC13ConfigOptionsVycSgSo06UNUserdeF0_pSgtcfc",
+            "mangledName": "$s20ZixflowMessagingPush0A26NotificationCenterDelegateC09messagingC06config07wrappedF0AcA0bC8Instance_p_AA0bC13ConfigOptionsVycSgSo06UNUserdeF0_pSgtcfc",
+            "moduleName": "ZixflowMessagingPush",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "userNotificationCenter",
+            "printedName": "userNotificationCenter(_:willPresent:withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNUserNotificationCenter",
+                "printedName": "UserNotifications.UNUserNotificationCenter",
+                "usr": "c:objc(cs)UNUserNotificationCenter"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotification",
+                "printedName": "UserNotifications.UNNotification",
+                "usr": "c:objc(cs)UNNotification"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UserNotifications.UNNotificationPresentationOptions) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNNotificationPresentationOptions",
+                    "printedName": "UserNotifications.UNNotificationPresentationOptions",
+                    "usr": "c:@E@UNNotificationPresentationOptions"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZixflowMessagingPush@objc(cs)ZixflowNotificationCenterDelegate(im)userNotificationCenter:willPresentNotification:withCompletionHandler:",
+            "mangledName": "$s20ZixflowMessagingPush0A26NotificationCenterDelegateC04userdE0_11willPresent21withCompletionHandlerySo06UNUserdE0C_So14UNNotificationCySo0N19PresentationOptionsVctF",
+            "moduleName": "ZixflowMessagingPush",
+            "isOpen": true,
+            "objc_name": "userNotificationCenter:willPresentNotification:withCompletionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "userNotificationCenter",
+            "printedName": "userNotificationCenter(_:didReceive:withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNUserNotificationCenter",
+                "printedName": "UserNotifications.UNUserNotificationCenter",
+                "usr": "c:objc(cs)UNUserNotificationCenter"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotificationResponse",
+                "printedName": "UserNotifications.UNNotificationResponse",
+                "usr": "c:objc(cs)UNNotificationResponse"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZixflowMessagingPush@objc(cs)ZixflowNotificationCenterDelegate(im)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:",
+            "mangledName": "$s20ZixflowMessagingPush0A26NotificationCenterDelegateC04userdE0_10didReceive21withCompletionHandlerySo06UNUserdE0C_So22UNNotificationResponseCyyctF",
+            "moduleName": "ZixflowMessagingPush",
+            "isOpen": true,
+            "objc_name": "userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "userNotificationCenter",
+            "printedName": "userNotificationCenter(_:openSettingsFor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNUserNotificationCenter",
+                "printedName": "UserNotifications.UNUserNotificationCenter",
+                "usr": "c:objc(cs)UNUserNotificationCenter"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UserNotifications.UNNotification?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNNotification",
+                    "printedName": "UserNotifications.UNNotification",
+                    "usr": "c:objc(cs)UNNotification"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZixflowMessagingPush@objc(cs)ZixflowNotificationCenterDelegate(im)userNotificationCenter:openSettingsForNotification:",
+            "mangledName": "$s20ZixflowMessagingPush0A26NotificationCenterDelegateC04userdE0_15openSettingsForySo06UNUserdE0C_So14UNNotificationCSgtF",
+            "moduleName": "ZixflowMessagingPush",
+            "isOpen": true,
+            "objc_name": "userNotificationCenter:openSettingsForNotification:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZixflowNotificationCenterDelegate",
+                "printedName": "ZixflowMessagingPush.ZixflowNotificationCenterDelegate",
+                "usr": "c:@M@ZixflowMessagingPush@objc(cs)ZixflowNotificationCenterDelegate"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZixflowMessagingPush@objc(cs)ZixflowNotificationCenterDelegate(im)init",
+            "mangledName": "$s20ZixflowMessagingPush0A26NotificationCenterDelegateCACycfc",
+            "moduleName": "ZixflowMessagingPush",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZixflowMessagingPush@objc(cs)ZixflowNotificationCenterDelegate",
+        "mangledName": "$s20ZixflowMessagingPush0A26NotificationCenterDelegateC",
+        "moduleName": "ZixflowMessagingPush",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "Available",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -1051,6 +1548,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -1076,8 +1589,9 @@
             "moduleName": "ZixflowMessagingPush",
             "declAttributes": [
               "Final",
-              "HasStorage",
+              "Preconcurrency",
               "Custom",
+              "HasStorage",
               "AccessControl",
               "SPIAccessControl"
             ],
@@ -1107,6 +1621,9 @@
                 "declAttributes": [
                   "Final"
                 ],
+                "spi_group_names": [
+                  "Internal"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -1129,8 +1646,9 @@
             "moduleName": "ZixflowMessagingPush",
             "declAttributes": [
               "Final",
-              "HasStorage",
+              "Preconcurrency",
               "Custom",
+              "HasStorage",
               "AccessControl",
               "SPIAccessControl"
             ],
@@ -1159,6 +1677,9 @@
                 "implicit": true,
                 "declAttributes": [
                   "Final"
+                ],
+                "spi_group_names": [
+                  "Internal"
                 ],
                 "accessorKind": "get"
               }
@@ -1190,8 +1711,9 @@
             "moduleName": "ZixflowMessagingPush",
             "declAttributes": [
               "HasInitialValue",
-              "HasStorage",
+              "Preconcurrency",
               "Custom",
+              "HasStorage",
               "AccessControl",
               "SPIAccessControl"
             ],
@@ -1225,6 +1747,9 @@
                 "mangledName": "$s20ZixflowMessagingPush0A27ProviderAgnosticAppDelegateC26implementedOptionalMethodsShy10ObjectiveC8SelectorVGvg",
                 "moduleName": "ZixflowMessagingPush",
                 "implicit": true,
+                "spi_group_names": [
+                  "Internal"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -1257,6 +1782,9 @@
                 "mangledName": "$s20ZixflowMessagingPush0A27ProviderAgnosticAppDelegateC26implementedOptionalMethodsShy10ObjectiveC8SelectorVGvs",
                 "moduleName": "ZixflowMessagingPush",
                 "implicit": true,
+                "spi_group_names": [
+                  "Internal"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -1277,6 +1805,9 @@
                 "implicit": true,
                 "declAttributes": [
                   "Available"
+                ],
+                "spi_group_names": [
+                  "Internal"
                 ],
                 "accessorKind": "_modify"
               }
@@ -1320,8 +1851,9 @@
             "moduleName": "ZixflowMessagingPush",
             "declAttributes": [
               "HasInitialValue",
-              "HasStorage",
+              "Preconcurrency",
               "Custom",
+              "HasStorage",
               "AccessControl",
               "SPIAccessControl"
             ],
@@ -1367,6 +1899,9 @@
                 "mangledName": "$s20ZixflowMessagingPush0A27ProviderAgnosticAppDelegateC6configAA0bC13ConfigOptionsVycSgvg",
                 "moduleName": "ZixflowMessagingPush",
                 "implicit": true,
+                "spi_group_names": [
+                  "Internal"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -1411,6 +1946,9 @@
                 "mangledName": "$s20ZixflowMessagingPush0A27ProviderAgnosticAppDelegateC6configAA0bC13ConfigOptionsVycSgvs",
                 "moduleName": "ZixflowMessagingPush",
                 "implicit": true,
+                "spi_group_names": [
+                  "Internal"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -1431,6 +1969,9 @@
                 "implicit": true,
                 "declAttributes": [
                   "Available"
+                ],
+                "spi_group_names": [
+                  "Internal"
                 ],
                 "accessorKind": "_modify"
               }
@@ -1457,6 +1998,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Convenience",
               "AccessControl",
@@ -1560,6 +2102,7 @@
             "mangledName": "$s20ZixflowMessagingPush0A27ProviderAgnosticAppDelegateC09messagingC022userNotificationCenter03appG06config6loggerAcA0bC8Instance_p_AA04UserjK11Integration_pycSgSo013UIApplicationG0_So8NSObjectCXcSgAA0bC13ConfigOptionsVycSg0A14InternalCommon6Logger_ptcfc",
             "moduleName": "ZixflowMessagingPush",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1618,6 +2161,7 @@
             "objc_name": "application:didFinishLaunchingWithOptions:",
             "declAttributes": [
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1654,6 +2198,7 @@
             "objc_name": "application:didRegisterForRemoteNotificationsWithDeviceToken:",
             "declAttributes": [
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1690,6 +2235,7 @@
             "objc_name": "application:didFailToRegisterForRemoteNotificationsWithError:",
             "declAttributes": [
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -1744,6 +2290,7 @@
             "objc_name": "userNotificationCenter:willPresentNotification:withCompletionHandler:",
             "declAttributes": [
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "RawDocComment"
@@ -1798,8 +2345,44 @@
             "objc_name": "userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:",
             "declAttributes": [
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "conforms",
+            "printedName": "conforms(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Protocol",
+                "printedName": "ObjectiveC.`Protocol`",
+                "usr": "c:objc(cs)Protocol"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZixflowMessagingPush@objc(cs)ZixflowProviderAgnosticAppDelegate(im)conformsToProtocol:",
+            "mangledName": "$s20ZixflowMessagingPush0A27ProviderAgnosticAppDelegateC8conforms2toSbSo8ProtocolC_tF",
+            "moduleName": "ZixflowMessagingPush",
+            "overriding": true,
+            "objc_name": "conformsToProtocol:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -1839,10 +2422,10 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
-              "Override",
-              "RawDocComment"
+              "Override"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1888,6 +2471,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "Override"
@@ -1934,6 +2518,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2007,6 +2592,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2066,6 +2652,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -2079,6 +2666,7 @@
         "moduleName": "ZixflowMessagingPush",
         "isOpen": true,
         "declAttributes": [
+          "Preconcurrency",
           "Custom",
           "AccessControl",
           "Available",
@@ -2092,24 +2680,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -2120,10 +2694,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -2134,10 +2722,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -2217,6 +2826,9 @@
                 "declAttributes": [
                   "Final"
                 ],
+                "spi_group_names": [
+                  "Internal"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -2245,6 +2857,9 @@
                 "declAttributes": [
                   "Final"
                 ],
+                "spi_group_names": [
+                  "Internal"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -2266,6 +2881,9 @@
                 "implicit": true,
                 "declAttributes": [
                   "Final"
+                ],
+                "spi_group_names": [
+                  "Internal"
                 ],
                 "accessorKind": "_modify"
               }
@@ -2708,6 +3326,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "MessagingPushInstance",
             "printedName": "MessagingPushInstance",
             "usr": "s:20ZixflowMessagingPush0bC8InstanceP",
@@ -2944,6 +3576,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "AutoMockable",
             "printedName": "AutoMockable",
             "usr": "s:21ZixflowInternalCommon12AutoMockableP",
@@ -2967,20 +3613,6 @@
       },
       {
         "kind": "Import",
-        "name": "ZixflowInternalCommon",
-        "printedName": "ZixflowInternalCommon",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
         "name": "UserNotifications",
         "printedName": "UserNotifications",
         "declKind": "Import",
@@ -3072,50 +3704,8 @@
       },
       {
         "kind": "Import",
-        "name": "ZixflowInternalCommon",
-        "printedName": "ZixflowInternalCommon",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "ZixflowInternalCommon",
-        "printedName": "ZixflowInternalCommon",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
         "name": "UserNotifications",
         "printedName": "UserNotifications",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "ZixflowInternalCommon",
-        "printedName": "ZixflowInternalCommon",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "ZixflowMessagingPush"
       },
@@ -3307,6 +3897,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "HttpClient",
             "printedName": "HttpClient",
             "usr": "s:21ZixflowInternalCommon10HttpClientP",
@@ -3367,20 +3971,6 @@
         "kind": "Import",
         "name": "UserNotifications",
         "printedName": "UserNotifications",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "ZixflowInternalCommon",
-        "printedName": "ZixflowInternalCommon",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "ZixflowMessagingPush"
       },
@@ -4559,6 +5149,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -4661,112 +5267,22 @@
         "moduleName": "ZixflowMessagingPush",
         "declAttributes": [
           "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "PushNotificationAction",
-        "printedName": "PushNotificationAction",
-        "children": [
+        ],
+        "conformances": [
           {
-            "kind": "Var",
-            "name": "push",
-            "printedName": "push",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PushNotification",
-                "printedName": "any ZixflowMessagingPush.PushNotification",
-                "usr": "s:20ZixflowMessagingPush0C12NotificationP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0C18NotificationActionP4pushAA0cD0_pvp",
-            "mangledName": "$s20ZixflowMessagingPush0C18NotificationActionP4pushAA0cD0_pvp",
-            "moduleName": "ZixflowMessagingPush",
-            "protocolReq": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PushNotification",
-                    "printedName": "any ZixflowMessagingPush.PushNotification",
-                    "usr": "s:20ZixflowMessagingPush0C12NotificationP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0C18NotificationActionP4pushAA0cD0_pvg",
-                "mangledName": "$s20ZixflowMessagingPush0C18NotificationActionP4pushAA0cD0_pvg",
-                "moduleName": "ZixflowMessagingPush",
-                "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPush.PushNotificationAction>",
-                "sugared_genericSig": "<Self where Self : ZixflowMessagingPush.PushNotificationAction>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
-            "kind": "Var",
-            "name": "didClickOnPush",
-            "printedName": "didClickOnPush",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0C18NotificationActionP010didClickOnC0Sbvp",
-            "mangledName": "$s20ZixflowMessagingPush0C18NotificationActionP010didClickOnC0Sbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "protocolReq": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0C18NotificationActionP010didClickOnC0Sbvg",
-                "mangledName": "$s20ZixflowMessagingPush0C18NotificationActionP010didClickOnC0Sbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPush.PushNotificationAction>",
-                "sugared_genericSig": "<Self where Self : ZixflowMessagingPush.PushNotificationAction>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:20ZixflowMessagingPush0C18NotificationActionP",
-        "mangledName": "$s20ZixflowMessagingPush0C18NotificationActionP",
-        "moduleName": "ZixflowMessagingPush",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
         ]
       },
       {
@@ -5672,9 +6188,24 @@
         "mangledName": "$s20ZixflowMessagingPush21UNNotificationWrapperV",
         "moduleName": "ZixflowMessagingPush",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "PushNotification",
@@ -5693,46 +6224,8 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
         "name": "UserNotifications",
         "printedName": "UserNotifications",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "ZixflowInternalCommon",
-        "printedName": "ZixflowInternalCommon",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "UserNotifications",
-        "printedName": "UserNotifications",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
-        "name": "ZixflowInternalCommon",
-        "printedName": "ZixflowInternalCommon",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "ZixflowMessagingPush"
       },
@@ -5748,2947 +6241,10 @@
       },
       {
         "kind": "Import",
-        "name": "UserNotifications",
-        "printedName": "UserNotifications",
-        "declKind": "Import",
-        "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "Import",
         "name": "ZixflowInternalCommon",
         "printedName": "ZixflowInternalCommon",
         "declKind": "Import",
         "moduleName": "ZixflowMessagingPush"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "MessagingPushInstanceMock",
-        "printedName": "MessagingPushInstanceMock",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "mockCalled",
-            "printedName": "mockCalled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC10mockCalledSbvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC10mockCalledSbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC10mockCalledSbvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC10mockCalledSbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC10mockCalledSbvs",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC10mockCalledSbvs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC10mockCalledSbvM",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC10mockCalledSbvM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MessagingPushInstanceMock",
-                "printedName": "ZixflowMessagingPush.MessagingPushInstanceMock",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockCACycfc",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockCACycfc",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "resetMock",
-            "printedName": "resetMock()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC05resetE0yyF",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC05resetE0yyF",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "registerDeviceTokenCallsCount",
-            "printedName": "registerDeviceTokenCallsCount",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC29registerDeviceTokenCallsCountSivp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC29registerDeviceTokenCallsCountSivp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC29registerDeviceTokenCallsCountSivg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC29registerDeviceTokenCallsCountSivg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "registerDeviceTokenCalled",
-            "printedName": "registerDeviceTokenCalled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC25registerDeviceTokenCalledSbvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC25registerDeviceTokenCalledSbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC25registerDeviceTokenCalledSbvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC25registerDeviceTokenCalledSbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "registerDeviceTokenReceivedArguments",
-            "printedName": "registerDeviceTokenReceivedArguments",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC36registerDeviceTokenReceivedArgumentsSSSgvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC36registerDeviceTokenReceivedArgumentsSSSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC36registerDeviceTokenReceivedArgumentsSSSgvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC36registerDeviceTokenReceivedArgumentsSSSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "registerDeviceTokenReceivedInvocations",
-            "printedName": "registerDeviceTokenReceivedInvocations",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC38registerDeviceTokenReceivedInvocationsSaySSGvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC38registerDeviceTokenReceivedInvocationsSaySSGvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC38registerDeviceTokenReceivedInvocationsSaySSGvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC38registerDeviceTokenReceivedInvocationsSaySSGvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "registerDeviceTokenClosure",
-            "printedName": "registerDeviceTokenClosure",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.String) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC26registerDeviceTokenClosureySScSgvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC26registerDeviceTokenClosureySScSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "((Swift.String) -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(Swift.String) -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC26registerDeviceTokenClosureySScSgvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC26registerDeviceTokenClosureySScSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "((Swift.String) -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(Swift.String) -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC26registerDeviceTokenClosureySScSgvs",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC26registerDeviceTokenClosureySScSgvs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC26registerDeviceTokenClosureySScSgvM",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC26registerDeviceTokenClosureySScSgvM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "registerDeviceToken",
-            "printedName": "registerDeviceToken(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC19registerDeviceTokenyySSF",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC19registerDeviceTokenyySSF",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "deleteDeviceTokenCallsCount",
-            "printedName": "deleteDeviceTokenCallsCount",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC27deleteDeviceTokenCallsCountSivp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC27deleteDeviceTokenCallsCountSivp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC27deleteDeviceTokenCallsCountSivg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC27deleteDeviceTokenCallsCountSivg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "deleteDeviceTokenCalled",
-            "printedName": "deleteDeviceTokenCalled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC23deleteDeviceTokenCalledSbvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC23deleteDeviceTokenCalledSbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC23deleteDeviceTokenCalledSbvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC23deleteDeviceTokenCalledSbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "deleteDeviceTokenClosure",
-            "printedName": "deleteDeviceTokenClosure",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(() -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "() -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC24deleteDeviceTokenClosureyycSgvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC24deleteDeviceTokenClosureyycSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(() -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "() -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC24deleteDeviceTokenClosureyycSgvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC24deleteDeviceTokenClosureyycSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(() -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "() -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC24deleteDeviceTokenClosureyycSgvs",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC24deleteDeviceTokenClosureyycSgvs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC24deleteDeviceTokenClosureyycSgvM",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC24deleteDeviceTokenClosureyycSgvM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "deleteDeviceToken",
-            "printedName": "deleteDeviceToken()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC17deleteDeviceTokenyyF",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC17deleteDeviceTokenyyF",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "trackMetricCallsCount",
-            "printedName": "trackMetricCallsCount",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC21trackMetricCallsCountSivp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC21trackMetricCallsCountSivp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC21trackMetricCallsCountSivg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC21trackMetricCallsCountSivg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "trackMetricCalled",
-            "printedName": "trackMetricCalled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC17trackMetricCalledSbvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC17trackMetricCalledSbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC17trackMetricCalledSbvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC17trackMetricCalledSbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "trackMetricReceivedArguments",
-            "printedName": "trackMetricReceivedArguments",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metric",
-                        "printedName": "ZixflowInternalCommon.Metric",
-                        "usr": "s:21ZixflowInternalCommon6MetricO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC28trackMetricReceivedArgumentsSS10deliveryID_0A14InternalCommon0G0O5eventSS11deviceTokentSgvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC28trackMetricReceivedArgumentsSS10deliveryID_0A14InternalCommon0G0O5eventSS11deviceTokentSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Metric",
-                            "printedName": "ZixflowInternalCommon.Metric",
-                            "usr": "s:21ZixflowInternalCommon6MetricO"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC28trackMetricReceivedArgumentsSS10deliveryID_0A14InternalCommon0G0O5eventSS11deviceTokentSgvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC28trackMetricReceivedArgumentsSS10deliveryID_0A14InternalCommon0G0O5eventSS11deviceTokentSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "trackMetricReceivedInvocations",
-            "printedName": "trackMetricReceivedInvocations",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metric",
-                        "printedName": "ZixflowInternalCommon.Metric",
-                        "usr": "s:21ZixflowInternalCommon6MetricO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC30trackMetricReceivedInvocationsSaySS10deliveryID_0A14InternalCommon0G0O5eventSS11deviceTokentGvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC30trackMetricReceivedInvocationsSaySS10deliveryID_0A14InternalCommon0G0O5eventSS11deviceTokentGvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Metric",
-                            "printedName": "ZixflowInternalCommon.Metric",
-                            "usr": "s:21ZixflowInternalCommon6MetricO"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC30trackMetricReceivedInvocationsSaySS10deliveryID_0A14InternalCommon0G0O5eventSS11deviceTokentGvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC30trackMetricReceivedInvocationsSaySS10deliveryID_0A14InternalCommon0G0O5eventSS11deviceTokentGvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "trackMetricClosure",
-            "printedName": "trackMetricClosure",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Metric",
-                            "printedName": "ZixflowInternalCommon.Metric",
-                            "usr": "s:21ZixflowInternalCommon6MetricO"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC18trackMetricClosureySS_0A14InternalCommon0G0OSStcSgvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC18trackMetricClosureySS_0A14InternalCommon0G0OSStcSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "((Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Tuple",
-                            "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String)",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "String",
-                                "printedName": "Swift.String",
-                                "usr": "s:SS"
-                              },
-                              {
-                                "kind": "TypeNominal",
-                                "name": "Metric",
-                                "printedName": "ZixflowInternalCommon.Metric",
-                                "usr": "s:21ZixflowInternalCommon6MetricO"
-                              },
-                              {
-                                "kind": "TypeNominal",
-                                "name": "String",
-                                "printedName": "Swift.String",
-                                "usr": "s:SS"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC18trackMetricClosureySS_0A14InternalCommon0G0OSStcSgvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC18trackMetricClosureySS_0A14InternalCommon0G0OSStcSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "((Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Tuple",
-                            "printedName": "(Swift.String, ZixflowInternalCommon.Metric, Swift.String)",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "String",
-                                "printedName": "Swift.String",
-                                "usr": "s:SS"
-                              },
-                              {
-                                "kind": "TypeNominal",
-                                "name": "Metric",
-                                "printedName": "ZixflowInternalCommon.Metric",
-                                "usr": "s:21ZixflowInternalCommon6MetricO"
-                              },
-                              {
-                                "kind": "TypeNominal",
-                                "name": "String",
-                                "printedName": "Swift.String",
-                                "usr": "s:SS"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC18trackMetricClosureySS_0A14InternalCommon0G0OSStcSgvs",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC18trackMetricClosureySS_0A14InternalCommon0G0OSStcSgvs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC18trackMetricClosureySS_0A14InternalCommon0G0OSStcSgvM",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC18trackMetricClosureySS_0A14InternalCommon0G0OSStcSgvM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "trackMetric",
-            "printedName": "trackMetric(deliveryID:event:deviceToken:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Metric",
-                "printedName": "ZixflowInternalCommon.Metric",
-                "usr": "s:21ZixflowInternalCommon6MetricO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC11trackMetric10deliveryID5event11deviceTokenySS_0A14InternalCommon0G0OSStF",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC11trackMetric10deliveryID5event11deviceTokenySS_0A14InternalCommon0G0OSStF",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "didReceiveNotificationRequestCallsCount",
-            "printedName": "didReceiveNotificationRequestCallsCount",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC39didReceiveNotificationRequestCallsCountSivp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC39didReceiveNotificationRequestCallsCountSivp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC39didReceiveNotificationRequestCallsCountSivg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC39didReceiveNotificationRequestCallsCountSivg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "didReceiveNotificationRequestCalled",
-            "printedName": "didReceiveNotificationRequestCalled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC35didReceiveNotificationRequestCalledSbvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC35didReceiveNotificationRequestCalledSbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC35didReceiveNotificationRequestCalledSbvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC35didReceiveNotificationRequestCalledSbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "didReceiveNotificationRequestReceivedArguments",
-            "printedName": "didReceiveNotificationRequestReceivedArguments",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UNNotificationRequest",
-                        "printedName": "UserNotifications.UNNotificationRequest",
-                        "usr": "c:objc(cs)UNNotificationRequest"
-                      },
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(UserNotifications.UNNotificationContent) -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UNNotificationContent",
-                            "printedName": "UserNotifications.UNNotificationContent",
-                            "usr": "c:objc(cs)UNNotificationContent"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC46didReceiveNotificationRequestReceivedArgumentsSo014UNNotificationI0C7request_ySo0L7ContentCc14contentHandlertSgvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC46didReceiveNotificationRequestReceivedArgumentsSo014UNNotificationI0C7request_ySo0L7ContentCc14contentHandlertSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UNNotificationRequest",
-                            "printedName": "UserNotifications.UNNotificationRequest",
-                            "usr": "c:objc(cs)UNNotificationRequest"
-                          },
-                          {
-                            "kind": "TypeFunc",
-                            "name": "Function",
-                            "printedName": "(UserNotifications.UNNotificationContent) -> ()",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "Void",
-                                "printedName": "()"
-                              },
-                              {
-                                "kind": "TypeNominal",
-                                "name": "UNNotificationContent",
-                                "printedName": "UserNotifications.UNNotificationContent",
-                                "usr": "c:objc(cs)UNNotificationContent"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC46didReceiveNotificationRequestReceivedArgumentsSo014UNNotificationI0C7request_ySo0L7ContentCc14contentHandlertSgvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC46didReceiveNotificationRequestReceivedArgumentsSo014UNNotificationI0C7request_ySo0L7ContentCc14contentHandlertSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "didReceiveNotificationRequestReceivedInvocations",
-            "printedName": "didReceiveNotificationRequestReceivedInvocations",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UNNotificationRequest",
-                        "printedName": "UserNotifications.UNNotificationRequest",
-                        "usr": "c:objc(cs)UNNotificationRequest"
-                      },
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(UserNotifications.UNNotificationContent) -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UNNotificationContent",
-                            "printedName": "UserNotifications.UNNotificationContent",
-                            "usr": "c:objc(cs)UNNotificationContent"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC48didReceiveNotificationRequestReceivedInvocationsSaySo014UNNotificationI0C7request_ySo0L7ContentCc14contentHandlertGvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC48didReceiveNotificationRequestReceivedInvocationsSaySo014UNNotificationI0C7request_ySo0L7ContentCc14contentHandlertGvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> ())",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UNNotificationRequest",
-                            "printedName": "UserNotifications.UNNotificationRequest",
-                            "usr": "c:objc(cs)UNNotificationRequest"
-                          },
-                          {
-                            "kind": "TypeFunc",
-                            "name": "Function",
-                            "printedName": "(UserNotifications.UNNotificationContent) -> ()",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "Void",
-                                "printedName": "()"
-                              },
-                              {
-                                "kind": "TypeNominal",
-                                "name": "UNNotificationContent",
-                                "printedName": "UserNotifications.UNNotificationContent",
-                                "usr": "c:objc(cs)UNNotificationContent"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC48didReceiveNotificationRequestReceivedInvocationsSaySo014UNNotificationI0C7request_ySo0L7ContentCc14contentHandlertGvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC48didReceiveNotificationRequestReceivedInvocationsSaySo014UNNotificationI0C7request_ySo0L7ContentCc14contentHandlertGvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "didReceiveNotificationRequestReturnValue",
-            "printedName": "didReceiveNotificationRequestReturnValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "Swift.Bool?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC40didReceiveNotificationRequestReturnValueSbSgvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC40didReceiveNotificationRequestReturnValueSbSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "Swift.Bool?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC40didReceiveNotificationRequestReturnValueSbSgvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC40didReceiveNotificationRequestReturnValueSbSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "Swift.Bool?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC40didReceiveNotificationRequestReturnValueSbSgvs",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC40didReceiveNotificationRequestReturnValueSbSgvs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC40didReceiveNotificationRequestReturnValueSbSgvM",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC40didReceiveNotificationRequestReturnValueSbSgvM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "didReceiveNotificationRequestClosure",
-            "printedName": "didReceiveNotificationRequestClosure",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool)?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(UserNotifications.UNNotificationRequest, (UserNotifications.UNNotificationContent) -> ())",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UNNotificationRequest",
-                            "printedName": "UserNotifications.UNNotificationRequest",
-                            "usr": "c:objc(cs)UNNotificationRequest"
-                          },
-                          {
-                            "kind": "TypeFunc",
-                            "name": "Function",
-                            "printedName": "(UserNotifications.UNNotificationContent) -> ()",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "Void",
-                                "printedName": "()"
-                              },
-                              {
-                                "kind": "TypeNominal",
-                                "name": "UNNotificationContent",
-                                "printedName": "UserNotifications.UNNotificationContent",
-                                "usr": "c:objc(cs)UNNotificationContent"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationI0C_ySo0K7ContentCctcSgvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationI0C_ySo0K7ContentCctcSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "((UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool)?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Bool",
-                            "printedName": "Swift.Bool",
-                            "usr": "s:Sb"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Tuple",
-                            "printedName": "(UserNotifications.UNNotificationRequest, (UserNotifications.UNNotificationContent) -> ())",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "UNNotificationRequest",
-                                "printedName": "UserNotifications.UNNotificationRequest",
-                                "usr": "c:objc(cs)UNNotificationRequest"
-                              },
-                              {
-                                "kind": "TypeFunc",
-                                "name": "Function",
-                                "printedName": "(UserNotifications.UNNotificationContent) -> ()",
-                                "children": [
-                                  {
-                                    "kind": "TypeNominal",
-                                    "name": "Void",
-                                    "printedName": "()"
-                                  },
-                                  {
-                                    "kind": "TypeNominal",
-                                    "name": "UNNotificationContent",
-                                    "printedName": "UserNotifications.UNNotificationContent",
-                                    "usr": "c:objc(cs)UNNotificationContent"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationI0C_ySo0K7ContentCctcSgvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationI0C_ySo0K7ContentCctcSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "((UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool)?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> ()) -> Swift.Bool",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Bool",
-                            "printedName": "Swift.Bool",
-                            "usr": "s:Sb"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Tuple",
-                            "printedName": "(UserNotifications.UNNotificationRequest, (UserNotifications.UNNotificationContent) -> ())",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "UNNotificationRequest",
-                                "printedName": "UserNotifications.UNNotificationRequest",
-                                "usr": "c:objc(cs)UNNotificationRequest"
-                              },
-                              {
-                                "kind": "TypeFunc",
-                                "name": "Function",
-                                "printedName": "(UserNotifications.UNNotificationContent) -> ()",
-                                "children": [
-                                  {
-                                    "kind": "TypeNominal",
-                                    "name": "Void",
-                                    "printedName": "()"
-                                  },
-                                  {
-                                    "kind": "TypeNominal",
-                                    "name": "UNNotificationContent",
-                                    "printedName": "UserNotifications.UNNotificationContent",
-                                    "usr": "c:objc(cs)UNNotificationContent"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationI0C_ySo0K7ContentCctcSgvs",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationI0C_ySo0K7ContentCctcSgvs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationI0C_ySo0K7ContentCctcSgvM",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC36didReceiveNotificationRequestClosureSbSo014UNNotificationI0C_ySo0K7ContentCctcSgvM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "didReceive",
-            "printedName": "didReceive(_:withContentHandler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UNNotificationRequest",
-                "printedName": "UserNotifications.UNNotificationRequest",
-                "usr": "c:objc(cs)UNNotificationRequest"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UserNotifications.UNNotificationContent) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UNNotificationContent",
-                    "printedName": "UserNotifications.UNNotificationContent",
-                    "usr": "c:objc(cs)UNNotificationContent"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC10didReceive_18withContentHandlerSbSo21UNNotificationRequestC_ySo0kI0CctF",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC10didReceive_18withContentHandlerSbSo21UNNotificationRequestC_ySo0kI0CctF",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "DiscardableResult",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "serviceExtensionTimeWillExpireCallsCount",
-            "printedName": "serviceExtensionTimeWillExpireCallsCount",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC40serviceExtensionTimeWillExpireCallsCountSivp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC40serviceExtensionTimeWillExpireCallsCountSivp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "SetterAccess",
-              "AccessControl",
-              "Custom",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC40serviceExtensionTimeWillExpireCallsCountSivg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC40serviceExtensionTimeWillExpireCallsCountSivg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "serviceExtensionTimeWillExpireCalled",
-            "printedName": "serviceExtensionTimeWillExpireCalled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC36serviceExtensionTimeWillExpireCalledSbvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC36serviceExtensionTimeWillExpireCalledSbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC36serviceExtensionTimeWillExpireCalledSbvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC36serviceExtensionTimeWillExpireCalledSbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "serviceExtensionTimeWillExpireClosure",
-            "printedName": "serviceExtensionTimeWillExpireClosure",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(() -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "() -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvp",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(() -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "() -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvg",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(() -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "() -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvs",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvM",
-                "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC37serviceExtensionTimeWillExpireClosureyycSgvM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "serviceExtensionTimeWillExpire",
-            "printedName": "serviceExtensionTimeWillExpire()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC30serviceExtensionTimeWillExpireyyF",
-            "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC30serviceExtensionTimeWillExpireyyF",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:20ZixflowMessagingPush0bC12InstanceMockC",
-        "mangledName": "$s20ZixflowMessagingPush0bC12InstanceMockC",
-        "moduleName": "ZixflowMessagingPush",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "MessagingPushInstance",
-            "printedName": "MessagingPushInstance",
-            "usr": "s:20ZixflowMessagingPush0bC8InstanceP",
-            "mangledName": "$s20ZixflowMessagingPush0bC8InstanceP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Mock",
-            "printedName": "Mock",
-            "usr": "s:21ZixflowInternalCommon4MockP",
-            "mangledName": "$s21ZixflowInternalCommon4MockP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "AutoMockable",
-            "printedName": "AutoMockable",
-            "usr": "s:21ZixflowInternalCommon12AutoMockableP",
-            "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "UserNotificationCenterIntegrationMock",
-        "printedName": "UserNotificationCenterIntegrationMock",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "mockCalled",
-            "printedName": "mockCalled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC10mockCalledSbvp",
-            "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC10mockCalledSbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC10mockCalledSbvg",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC10mockCalledSbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC10mockCalledSbvs",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC10mockCalledSbvs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC10mockCalledSbvM",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC10mockCalledSbvM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UserNotificationCenterIntegrationMock",
-                "printedName": "ZixflowMessagingPush.UserNotificationCenterIntegrationMock",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockCACycfc",
-            "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockCACycfc",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "underlyingDelegate",
-            "printedName": "underlyingDelegate",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any UserNotifications.UNUserNotificationCenterDelegate)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UNUserNotificationCenterDelegate",
-                    "printedName": "any UserNotifications.UNUserNotificationCenterDelegate",
-                    "usr": "c:objc(pl)UNUserNotificationCenterDelegate"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC18underlyingDelegateSo06UNUserefJ0_pSgvp",
-            "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC18underlyingDelegateSo06UNUserefJ0_pSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any UserNotifications.UNUserNotificationCenterDelegate)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UNUserNotificationCenterDelegate",
-                        "printedName": "any UserNotifications.UNUserNotificationCenterDelegate",
-                        "usr": "c:objc(pl)UNUserNotificationCenterDelegate"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC18underlyingDelegateSo06UNUserefJ0_pSgvg",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC18underlyingDelegateSo06UNUserefJ0_pSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any UserNotifications.UNUserNotificationCenterDelegate)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UNUserNotificationCenterDelegate",
-                        "printedName": "any UserNotifications.UNUserNotificationCenterDelegate",
-                        "usr": "c:objc(pl)UNUserNotificationCenterDelegate"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC18underlyingDelegateSo06UNUserefJ0_pSgvs",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC18underlyingDelegateSo06UNUserefJ0_pSgvs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC18underlyingDelegateSo06UNUserefJ0_pSgvM",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC18underlyingDelegateSo06UNUserefJ0_pSgvM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "delegateCalled",
-            "printedName": "delegateCalled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC14delegateCalledSbvp",
-            "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC14delegateCalledSbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC14delegateCalledSbvg",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC14delegateCalledSbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "delegateGetCalled",
-            "printedName": "delegateGetCalled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC17delegateGetCalledSbvp",
-            "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC17delegateGetCalledSbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC17delegateGetCalledSbvg",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC17delegateGetCalledSbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "delegateGetCallsCount",
-            "printedName": "delegateGetCallsCount",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateGetCallsCountSivp",
-            "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateGetCallsCountSivp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateGetCallsCountSivg",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateGetCallsCountSivg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateGetCallsCountSivs",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateGetCallsCountSivs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateGetCallsCountSivM",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateGetCallsCountSivM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "delegateSetCalled",
-            "printedName": "delegateSetCalled",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC17delegateSetCalledSbvp",
-            "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC17delegateSetCalledSbvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC17delegateSetCalledSbvg",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC17delegateSetCalledSbvg",
-                "moduleName": "ZixflowMessagingPush",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "delegateSetCallsCount",
-            "printedName": "delegateSetCallsCount",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateSetCallsCountSivp",
-            "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateSetCallsCountSivp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateSetCallsCountSivg",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateSetCallsCountSivg",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateSetCallsCountSivs",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateSetCallsCountSivs",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateSetCallsCountSivM",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC21delegateSetCallsCountSivM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "delegate",
-            "printedName": "delegate",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any UserNotifications.UNUserNotificationCenterDelegate)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UNUserNotificationCenterDelegate",
-                    "printedName": "any UserNotifications.UNUserNotificationCenterDelegate",
-                    "usr": "c:objc(pl)UNUserNotificationCenterDelegate"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC8delegateSo06UNUsereF8Delegate_pSgvp",
-            "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC8delegateSo06UNUsereF8Delegate_pSgvp",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any UserNotifications.UNUserNotificationCenterDelegate)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UNUserNotificationCenterDelegate",
-                        "printedName": "any UserNotifications.UNUserNotificationCenterDelegate",
-                        "usr": "c:objc(pl)UNUserNotificationCenterDelegate"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC8delegateSo06UNUsereF8Delegate_pSgvg",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC8delegateSo06UNUsereF8Delegate_pSgvg",
-                "moduleName": "ZixflowMessagingPush",
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any UserNotifications.UNUserNotificationCenterDelegate)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UNUserNotificationCenterDelegate",
-                        "printedName": "any UserNotifications.UNUserNotificationCenterDelegate",
-                        "usr": "c:objc(pl)UNUserNotificationCenterDelegate"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC8delegateSo06UNUsereF8Delegate_pSgvs",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC8delegateSo06UNUsereF8Delegate_pSgvs",
-                "moduleName": "ZixflowMessagingPush",
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC8delegateSo06UNUsereF8Delegate_pSgvM",
-                "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC8delegateSo06UNUsereF8Delegate_pSgvM",
-                "moduleName": "ZixflowMessagingPush",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "resetMock",
-            "printedName": "resetMock()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC05resetH0yyF",
-            "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC05resetH0yyF",
-            "moduleName": "ZixflowMessagingPush",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC",
-        "mangledName": "$s20ZixflowMessagingPush37UserNotificationCenterIntegrationMockC",
-        "moduleName": "ZixflowMessagingPush",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "UserNotificationCenterIntegration",
-            "printedName": "UserNotificationCenterIntegration",
-            "usr": "s:20ZixflowMessagingPush33UserNotificationCenterIntegrationP",
-            "mangledName": "$s20ZixflowMessagingPush33UserNotificationCenterIntegrationP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Mock",
-            "printedName": "Mock",
-            "usr": "s:21ZixflowInternalCommon4MockP",
-            "mangledName": "$s21ZixflowInternalCommon4MockP"
-          }
-        ]
       },
       {
         "kind": "TypeDecl",
@@ -8800,10 +6356,31 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -8831,24 +6408,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -8859,10 +6422,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -8873,10 +6450,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -8892,578 +6483,186 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1282,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1331,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1384,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/Integration\/CioProviderAgnosticAppDelegate.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationCenterDelegatePeerRegistry.swift",
+      "kind": "Array",
+      "offset": 5219,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationDeliveryGuard.swift",
+      "kind": "Array",
+      "offset": 779,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationDeliveryGuard.swift",
+      "kind": "Array",
+      "offset": 836,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationPeerDeliveryCoordinator.swift",
       "kind": "Dictionary",
-      "offset": 10072,
+      "offset": 1846,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationPeerDeliveryGuard.swift",
+      "kind": "Array",
+      "offset": 1584,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationPeerDeliveryGuard.swift",
+      "kind": "Array",
+      "offset": 1649,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/PeerDeliveryCompletionAggregate.swift",
       "kind": "BooleanLiteral",
-      "offset": 476,
+      "offset": 2540,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/WillPresentDeliveryContextStore.swift",
+      "kind": "Dictionary",
+      "offset": 669,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/ZixflowNotificationCenterDelegate.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4645,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/ZixflowProviderAgnosticAppDelegate.swift",
+      "kind": "Dictionary",
+      "offset": 10250,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "kind": "BooleanLiteral",
+      "offset": 475,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
       "kind": "StringLiteral",
-      "offset": 711,
+      "offset": 718,
       "length": 15,
       "value": "\"MessagingPush\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
-      "kind": "StringLiteral",
-      "offset": 314,
-      "length": 13,
-      "value": "\"ZixflowMessagingPush.MessagingPush\""
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1780,
+      "length": 5,
+      "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/MessagingPushImplementation.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2288,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "kind": "StringLiteral",
+      "offset": 3475,
+      "length": 59,
+      "value": "\"io.customer.notification-center-delegate.installing-proxy\""
+    },
+    {
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPushImplementation.swift",
       "kind": "Array",
       "offset": 503,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEDeliveryContinuationBox.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEDeliveryContinuationBox.swift",
       "kind": "BooleanLiteral",
       "offset": 1116,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinator.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinator.swift",
       "kind": "StringLiteral",
       "offset": 1530,
       "length": 6,
       "value": "\"Push\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinatorState.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinatorState.swift",
       "kind": "StringLiteral",
       "offset": 616,
       "length": 6,
       "value": "\"Push\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinatorState.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinatorState.swift",
       "kind": "BooleanLiteral",
       "offset": 846,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/PushEventHandlerProxy.swift",
-      "kind": "Dictionary",
-      "offset": 1314,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/RichPush\/RichPushRequest.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/RichPush\/RichPushRequest.swift",
       "kind": "BooleanLiteral",
       "offset": 836,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/RichPush\/RichPushRequestHandler.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/RichPush\/RichPushRequestHandler.swift",
       "kind": "Dictionary",
       "offset": 329,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/Store\/PushHistory.swift",
-      "kind": "Dictionary",
-      "offset": 1264,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/UserNotificationsFramework\/UserNotificationsFrameworkAdapter.swift",
-      "kind": "StringLiteral",
-      "offset": 1517,
-      "length": 37,
-      "value": "\"ZixflowMessagingPush.UserNotificationsFrameworkAdapterImpl\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/Util\/PushNotificationLogger.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Util\/PushNotificationLogger.swift",
       "kind": "StringLiteral",
       "offset": 1021,
       "length": 6,
       "value": "\"Push\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3088,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3384,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4472,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5780,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 6237,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7054,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7805,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 8330,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9340,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 9987,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11649,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12964,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13902,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 14402,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 15272,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 15716,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 16484,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 16920,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 18088,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 18710,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 18892,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 19987,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 20517,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 21564,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 22158,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 23739,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 24664,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 25120,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 25931,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 26461,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 27508,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 28102,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 29604,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 30020,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 30562,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 32353,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 35066,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 35534,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 36398,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 37211,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 38071,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 39002,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 39486,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 40391,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 41251,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 41749,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 42664,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 43218,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 44240,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 44704,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 45559,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 46363,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 47214,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 48132,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 48604,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 49883,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 50284,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "Array",
-      "offset": 50924,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 52599,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 53288,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 53485,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "BooleanLiteral",
-      "offset": 54671,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 55346,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/Sources\/MessagingPush\/autogenerated\/AutoMockable.generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 55536,
-      "length": 1,
-      "value": "0"
     }
   ]
 }

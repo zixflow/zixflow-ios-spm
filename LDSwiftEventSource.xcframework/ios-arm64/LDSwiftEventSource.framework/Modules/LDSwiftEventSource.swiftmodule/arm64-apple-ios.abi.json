@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "LDSwiftEventSource",
+    "printedName": "LDSwiftEventSource",
     "children": [
       {
         "kind": "Import",
@@ -1537,6 +1537,22 @@
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
             ]
           }
         ],
@@ -1547,6 +1563,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -1763,10 +1795,24 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -2015,10 +2061,24 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -2186,6 +2246,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -2478,6 +2554,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
@@ -2608,6 +2698,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -2615,10 +2712,24 @@
           },
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -2634,175 +2745,168 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
       "kind": "StringLiteral",
       "offset": 112,
       "length": 6,
       "value": "\"data\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
       "kind": "StringLiteral",
       "offset": 159,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
       "kind": "StringLiteral",
       "offset": 207,
       "length": 7,
       "value": "\"event\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
       "kind": "StringLiteral",
       "offset": 258,
       "length": 7,
       "value": "\"retry\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
       "kind": "StringLiteral",
       "offset": 343,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/EventParser.swift",
       "kind": "StringLiteral",
       "offset": 382,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "StringLiteral",
       "offset": 1872,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "Dictionary",
       "offset": 2083,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "StringLiteral",
       "offset": 2378,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "StringLiteral",
       "offset": 2512,
       "length": 36,
       "value": "\"com.launchdarkly.swift-eventsource\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "StringLiteral",
       "offset": 2560,
       "length": 15,
       "value": "\"LDEventSource\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "FloatLiteral",
       "offset": 2725,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "FloatLiteral",
       "offset": 2864,
       "length": 4,
       "value": "30.0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "FloatLiteral",
       "offset": 3073,
       "length": 4,
       "value": "60.0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "FloatLiteral",
       "offset": 3244,
       "length": 5,
       "value": "300.0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "IntegerLiteral",
       "offset": 5509,
       "length": 3,
       "value": "204"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "IntegerLiteral",
       "offset": 5965,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "StringLiteral",
       "offset": 6731,
       "length": 17,
       "value": "\"ESDelegateQueue\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
       "kind": "StringLiteral",
       "offset": 6939,
       "length": 17,
       "value": "\"State: %@ -> %@\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/LDSwiftEventSource.swift",
-      "kind": "StringLiteral",
-      "offset": 6607,
-      "length": 19,
-      "value": "\"LDSwiftEventSource.EventSourceDelegate\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/Types.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/Types.swift",
       "kind": "StringLiteral",
       "offset": 1691,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
       "kind": "IntegerLiteral",
       "offset": 253,
       "length": 4,
       "value": "0x0A"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
       "kind": "IntegerLiteral",
       "offset": 295,
       "length": 4,
       "value": "0x0D"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
       "kind": "StringLiteral",
       "offset": 517,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/swift-eventsource\/Source\/UTF8LineParser.swift",
       "kind": "BooleanLiteral",
       "offset": 537,
       "length": 5,

@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "Sovran",
+    "printedName": "Sovran",
     "children": [
       {
         "kind": "Import",
@@ -71,6 +71,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -210,6 +226,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -233,6 +265,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -540,6 +588,22 @@
         "moduleName": "Sovran",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -565,6 +629,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -582,35 +662,35 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
       "kind": "StringLiteral",
       "offset": 269,
       "length": 26,
       "value": "\"state.update.segment.com\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 24,
       "value": "\"state.sync.segment.com\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
       "kind": "BooleanLiteral",
       "offset": 1778,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Store.swift",
       "kind": "IntegerLiteral",
       "offset": 7150,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Version.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/sovran-swift\/Sources\/Sovran\/Version.swift",
       "kind": "StringLiteral",
       "offset": 320,
       "length": 7,

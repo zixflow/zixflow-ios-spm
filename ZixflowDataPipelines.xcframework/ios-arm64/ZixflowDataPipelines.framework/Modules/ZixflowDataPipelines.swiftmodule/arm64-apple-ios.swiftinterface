@@ -1,15 +1,15 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZixflowDataPipelines
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowDataPipelines
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import Foundation
 import Foundation/*.Bundle*/
 import Foundation/*.ProcessInfo*/
 import Foundation/*.URL*/
 import Swift
 import UIKit
-import UserNotifications
 import ZixflowAnalytics
-import ZixflowInternalCommon
+@_exported import ZixflowInternalCommon
 import ZixflowTrackingMigration
 import _Concurrency
 import _StringProcessing
@@ -26,6 +26,7 @@ public struct DataPipelineConfigOptions {
   public let autoTrackDeviceAttributes: Swift.Bool
   public let siteId: Swift.String?
   public let screenViewUse: ZixflowDataPipelines.ScreenView
+  public let allowBackgroundDelivery: Swift.Bool
 }
 public class SDKConfigBuilder {
   public init(apiKey: Swift.String)
@@ -53,6 +54,8 @@ public class SDKConfigBuilder {
   public func siteId(_ siteId: Swift.String) -> ZixflowDataPipelines.SDKConfigBuilder
   @discardableResult
   public func screenViewUse(screenView: ZixflowDataPipelines.ScreenView) -> ZixflowDataPipelines.SDKConfigBuilder
+  @discardableResult
+  public func allowBackgroundDelivery(_ enabled: Swift.Bool) -> ZixflowDataPipelines.SDKConfigBuilder
   @discardableResult
   @available(iOSApplicationExtension, unavailable)
   public func deepLinkCallback(_ callback: @escaping ZixflowInternalCommon.DeepLinkCallback) -> ZixflowDataPipelines.SDKConfigBuilder
@@ -82,10 +85,10 @@ public protocol DataPipelineInstance : ZixflowInternalCommon.ZixflowInstance, Zi
   public var analytics: ZixflowAnalytics.Analytics {
     get
   }
-  @ZixflowInternalCommon.Atomic public static var shared: ZixflowDataPipelines.DataPipeline {
+  @ZixflowInternalCommon.Atomic<ZixflowDataPipelines.DataPipeline> public static var shared: ZixflowDataPipelines.DataPipeline {
     get
   }
-  @ZixflowInternalCommon.Atomic public static var moduleConfig: ZixflowDataPipelines.DataPipelineConfigOptions! {
+  @ZixflowInternalCommon.Atomic<ZixflowDataPipelines.DataPipelineConfigOptions?> public static var moduleConfig: ZixflowDataPipelines.DataPipelineConfigOptions! {
     get
   }
   @discardableResult

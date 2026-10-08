@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZixflowMessagingInApp
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowMessagingInApp
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import Foundation
 import Foundation/*.Bundle*/
 import Foundation/*.ProcessInfo*/
@@ -9,7 +10,6 @@ import LDSwiftEventSource
 import Swift
 import SwiftUI
 import UIKit
-import UserNotifications
 import WebKit
 import ZixflowInternalCommon
 import _Concurrency
@@ -17,6 +17,10 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 public class MessagingInAppConfigBuilder {
   public init()
+  @discardableResult
+  public func setColorScheme(_ colorScheme: ZixflowMessagingInApp.ColorScheme) -> ZixflowMessagingInApp.MessagingInAppConfigBuilder
+  @discardableResult
+  public func setNotificationInboxAccessibilityLabels(_ labels: ZixflowMessagingInApp.NotificationInboxAccessibilityLabels) -> ZixflowMessagingInApp.MessagingInAppConfigBuilder
   public func build() -> ZixflowMessagingInApp.MessagingInAppConfigOptions
   @objc deinit
 }
@@ -33,6 +37,15 @@ extension ZixflowMessagingInApp.MessagingInAppConfigBuilder {
   public static func build(from sdkConfig: [Swift.String : Any?]) throws -> ZixflowMessagingInApp.MessagingInAppConfigOptions?
 }
 public struct MessagingInAppConfigOptions {
+  public let colorScheme: ZixflowMessagingInApp.ColorScheme
+  public let notificationInboxAccessibilityLabels: ZixflowMessagingInApp.NotificationInboxAccessibilityLabels
+}
+public struct NotificationInboxAccessibilityLabels {
+  public let bell: Swift.String?
+  public let bellWithUnreadCount: ((Swift.Int) -> Swift.String)?
+  public let loadingIndicator: Swift.String?
+  public let emptyState: Swift.String?
+  public init(bell: Swift.String? = nil, bellWithUnreadCount: ((Swift.Int) -> Swift.String)? = nil, loadingIndicator: Swift.String? = nil, emptyState: Swift.String? = nil)
 }
 extension ZixflowMessagingInApp.Message : Swift.CustomStringConvertible {
   public var description: Swift.String {
@@ -115,34 +128,46 @@ public protocol EngineWebDelegate : AnyObject {
   func routeLoaded(route: Swift.String)
   func sizeChanged(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
   func error()
+  func error(_ error: ZixflowMessagingInApp.InAppMessageError)
+}
+extension ZixflowMessagingInApp.EngineWebDelegate {
+  public func error(_ error: ZixflowMessagingInApp.InAppMessageError)
 }
 @objc @_hasMissingDesignatedInitializers public class EngineWeb : ObjectiveC.NSObject {
-  weak public var delegate: (any ZixflowMessagingInApp.EngineWebDelegate)?
+  weak public var delegate: (any ZixflowMessagingInApp.EngineWebDelegate)? {
+    get
+    set
+  }
   public var view: UIKit.UIView {
     get
   }
   public var currentRoute: Swift.String {
     get
   }
+  public func updateColorScheme(_ scheme: Swift.String)
   public func cleanEngineWeb()
   @objc deinit
 }
 extension ZixflowMessagingInApp.EngineWeb : WebKit.WKScriptMessageHandler {
-  @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
 }
 extension ZixflowMessagingInApp.EngineWeb : WebKit.WKNavigationDelegate {
-  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
-  @objc dynamic public func webViewWebContentProcessDidTerminate(_ webView: WebKit.WKWebView)
-  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
-  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webViewWebContentProcessDidTerminate(_ webView: WebKit.WKWebView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
 }
 public protocol GistDelegate : AnyObject {
   func embedMessage(message: ZixflowMessagingInApp.Message, elementId: Swift.String)
   func messageShown(message: ZixflowMessagingInApp.Message)
   func messageDismissed(message: ZixflowMessagingInApp.Message)
   func messageError(message: ZixflowMessagingInApp.Message)
+  func messageError(message: ZixflowMessagingInApp.Message, error: ZixflowMessagingInApp.InAppMessageError)
   func action(message: ZixflowMessagingInApp.Message, currentRoute: Swift.String, action: Swift.String, name: Swift.String)
   func setEventListener(_ eventListener: (any ZixflowMessagingInApp.InAppEventListener)?)
+}
+extension ZixflowMessagingInApp.GistDelegate {
+  public func messageError(message: ZixflowMessagingInApp.Message, error: ZixflowMessagingInApp.InAppMessageError)
 }
 @_hasMissingDesignatedInitializers open class BaseMessageManager {
   @objc deinit
@@ -157,6 +182,7 @@ extension ZixflowMessagingInApp.BaseMessageManager : ZixflowMessagingInApp.Engin
   public func sizeChanged(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
   public func routeError(route: Swift.String)
   public func error()
+  public func error(_ error: ZixflowMessagingInApp.InAppMessageError)
   public func routeLoaded(route: Swift.String)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ModalMessageManager : ZixflowMessagingInApp.BaseMessageManager {
@@ -236,32 +262,37 @@ public protocol GistViewDelegate : AnyObject {
 public protocol GistViewLifecycleDelegate : AnyObject {
   func gistViewWillRemoveFromSuperview(_ gistView: ZixflowMessagingInApp.GistView)
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class GistView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ZixflowMessagingInApp.GistViewDelegate)?
-  @_Concurrency.MainActor(unsafe) weak public var lifecycleDelegate: (any ZixflowMessagingInApp.GistViewLifecycleDelegate)?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func removeFromSuperview()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class GistView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any ZixflowMessagingInApp.GistViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency weak public var lifecycleDelegate: (any ZixflowMessagingInApp.GistViewLifecycleDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func removeFromSuperview()
   @objc deinit
 }
 public protocol NotificationInbox : Swift.Sendable {
-  #if compiler(>=5.3) && $AsyncAwait
   func getMessages(topic: Swift.String?) async -> [ZixflowMessagingInApp.InboxMessage]
-  #endif
   @_Concurrency.MainActor func addChangeListener(_ listener: any ZixflowMessagingInApp.NotificationInboxChangeListener, topic: Swift.String?)
   func removeChangeListener(_ listener: any ZixflowMessagingInApp.NotificationInboxChangeListener)
   func markMessageOpened(message: ZixflowMessagingInApp.InboxMessage)
   func markMessageUnopened(message: ZixflowMessagingInApp.InboxMessage)
   func markMessageDeleted(message: ZixflowMessagingInApp.InboxMessage)
   func trackMessageClicked(message: ZixflowMessagingInApp.InboxMessage, actionName: Swift.String?)
+  func trackMessageClicked(message: ZixflowMessagingInApp.InboxMessage, actionName: Swift.String?, actionValue: Swift.String?)
+  func setInboxEventListener(_ listener: (any ZixflowMessagingInApp.InboxEventListener)?)
+  func notifyMessageActionTaken(message: ZixflowMessagingInApp.InboxMessage, actionValue: Swift.String, actionName: Swift.String) -> Swift.Bool
+  func notifyMessageShown(message: ZixflowMessagingInApp.InboxMessage)
   func messages(topic: Swift.String?) -> _Concurrency.AsyncStream<[ZixflowMessagingInApp.InboxMessage]>
 }
 extension ZixflowMessagingInApp.NotificationInbox {
-  #if compiler(>=5.3) && $AsyncAwait
+  public func setInboxEventListener(_: (any ZixflowMessagingInApp.InboxEventListener)?)
+  public func notifyMessageActionTaken(message _: ZixflowMessagingInApp.InboxMessage, actionValue _: Swift.String, actionName _: Swift.String) -> Swift.Bool
+  public func notifyMessageShown(message _: ZixflowMessagingInApp.InboxMessage)
   public func getMessages() async -> [ZixflowMessagingInApp.InboxMessage]
-  #endif
   @_Concurrency.MainActor public func addChangeListener(_ listener: any ZixflowMessagingInApp.NotificationInboxChangeListener)
   public func trackMessageClicked(message: ZixflowMessagingInApp.InboxMessage)
+  public func trackMessageClicked(message: ZixflowMessagingInApp.InboxMessage, actionName: Swift.String?, actionValue: Swift.String?)
   public func messages() -> _Concurrency.AsyncStream<[ZixflowMessagingInApp.InboxMessage]>
 }
 public struct InboxMessage : Swift.Equatable, Swift.CustomStringConvertible, @unchecked Swift.Sendable {
@@ -284,15 +315,20 @@ public enum InboxMessageFactory {
   public static func fromDictionary(_ dictionary: [Swift.String : Any]) -> ZixflowMessagingInApp.InboxMessage?
 }
 @_Concurrency.MainActor public protocol NotificationInboxChangeListener : AnyObject {
-  func onMessagesChanged(messages: [ZixflowMessagingInApp.InboxMessage])
+  @_Concurrency.MainActor func onMessagesChanged(messages: [ZixflowMessagingInApp.InboxMessage])
 }
 public protocol MessagingInAppInstance : ZixflowInternalCommon.AutoMockable {
   var inbox: any ZixflowMessagingInApp.NotificationInbox { get }
   func setEventListener(_ eventListener: (any ZixflowMessagingInApp.InAppEventListener)?)
+  func setInboxEventListener(_ inboxEventListener: (any ZixflowMessagingInApp.InboxEventListener)?)
   func dismissMessage()
+  func setColorScheme(_ colorScheme: ZixflowMessagingInApp.ColorScheme)
+}
+extension ZixflowMessagingInApp.MessagingInAppInstance {
+  public func setInboxEventListener(_: (any ZixflowMessagingInApp.InboxEventListener)?)
 }
 @_hasMissingDesignatedInitializers public class MessagingInApp : ZixflowInternalCommon.ModuleTopLevelObject<any ZixflowMessagingInApp.MessagingInAppInstance>, ZixflowMessagingInApp.MessagingInAppInstance {
-  @ZixflowInternalCommon.Atomic public static var shared: ZixflowMessagingInApp.MessagingInApp {
+  @ZixflowInternalCommon.Atomic<ZixflowMessagingInApp.MessagingInApp> public static var shared: ZixflowMessagingInApp.MessagingInApp {
     get
   }
   @available(iOSApplicationExtension, unavailable)
@@ -302,7 +338,9 @@ public protocol MessagingInAppInstance : ZixflowInternalCommon.AutoMockable {
     get
   }
   public func setEventListener(_ eventListener: (any ZixflowMessagingInApp.InAppEventListener)?)
+  public func setInboxEventListener(_ inboxEventListener: (any ZixflowMessagingInApp.InboxEventListener)?)
   public func dismissMessage()
+  public func setColorScheme(_ colorScheme: ZixflowMessagingInApp.ColorScheme)
   @objc deinit
 }
 public protocol AnyStoreSubscriber : AnyObject {
@@ -327,17 +365,61 @@ extension ZixflowMessagingInApp.Subscription where State : Swift.Equatable {
 extension ZixflowMessagingInApp.Subscription {
   public func skip(when: @escaping (_ oldState: State, _ newState: State) -> Swift.Bool) -> ZixflowMessagingInApp.Subscription<State>
 }
+public enum ColorScheme : Swift.Equatable {
+  case light
+  case dark
+  case auto
+  public static func == (a: ZixflowMessagingInApp.ColorScheme, b: ZixflowMessagingInApp.ColorScheme) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public protocol InAppEventListener : ZixflowInternalCommon.AutoMockable {
   func messageShown(message: ZixflowMessagingInApp.InAppMessage)
   func messageDismissed(message: ZixflowMessagingInApp.InAppMessage)
   func errorWithMessage(message: ZixflowMessagingInApp.InAppMessage)
+  func errorWithMessage(message: ZixflowMessagingInApp.InAppMessage, error: ZixflowMessagingInApp.InAppMessageError)
   func messageActionTaken(message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String)
+}
+extension ZixflowMessagingInApp.InAppEventListener {
+  public func errorWithMessage(message: ZixflowMessagingInApp.InAppMessage, error: ZixflowMessagingInApp.InAppMessageError)
 }
 public struct InAppMessage : Swift.Equatable {
   public let messageId: Swift.String
   public let deliveryId: Swift.String?
   public let elementId: Swift.String?
   public static func == (a: ZixflowMessagingInApp.InAppMessage, b: ZixflowMessagingInApp.InAppMessage) -> Swift.Bool
+}
+public enum InAppMessageErrorReason : Swift.String {
+  case network
+  case timeout
+  case renderFailed
+  case webViewCrashed
+  case internalError
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct InAppMessageError : Swift.Error, Swift.Equatable {
+  public let reason: ZixflowMessagingInApp.InAppMessageErrorReason
+  public let detail: Swift.String?
+  public let code: Swift.Int?
+  public init(reason: ZixflowMessagingInApp.InAppMessageErrorReason, detail: Swift.String? = nil, code: Swift.Int? = nil)
+  public static func == (a: ZixflowMessagingInApp.InAppMessageError, b: ZixflowMessagingInApp.InAppMessageError) -> Swift.Bool
+}
+public protocol InboxEventListener : ZixflowInternalCommon.AutoMockable {
+  func messageActionTaken(message: ZixflowMessagingInApp.InboxMessage, actionName: Swift.String, actionValue: Swift.String) -> Swift.Bool
+  func messageShown(message: ZixflowMessagingInApp.InboxMessage)
+  func messageOpened(message: ZixflowMessagingInApp.InboxMessage)
+  func messageDismissed(message: ZixflowMessagingInApp.InboxMessage)
+}
+extension ZixflowMessagingInApp.InboxEventListener {
+  public func messageShown(message: ZixflowMessagingInApp.InboxMessage)
+  public func messageOpened(message: ZixflowMessagingInApp.InboxMessage)
+  public func messageDismissed(message: ZixflowMessagingInApp.InboxMessage)
 }
 public protocol InlineMessageBridgeViewDelegate : AnyObject, ZixflowInternalCommon.AutoMockable {
   func onActionClick(message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String) -> Swift.Bool
@@ -346,25 +428,25 @@ public protocol InlineMessageBridgeViewDelegate : AnyObject, ZixflowInternalComm
   func onStartLoading(onComplete: @escaping () -> Swift.Void)
   func onFinishLoading()
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class InlineMessageBridgeView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public var elementId: Swift.String? {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class InlineMessageBridgeView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var elementId: Swift.String? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ZixflowMessagingInApp.InlineMessageBridgeViewDelegate)?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any ZixflowMessagingInApp.InlineMessageBridgeViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
   @objc deinit
-  @_Concurrency.MainActor(unsafe) public func attachToParent(parent: UIKit.UIView, delegate: any ZixflowMessagingInApp.InlineMessageBridgeViewDelegate)
-  @_Concurrency.MainActor(unsafe) public func onViewAttached()
-  @_Concurrency.MainActor(unsafe) public func onViewDetached()
-  @_Concurrency.MainActor(unsafe) public func onMessageRendered(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public func onNoMessageToDisplay()
-  @_Concurrency.MainActor(unsafe) public func onInlineButtonAction(message: ZixflowMessagingInApp.Message, currentRoute: Swift.String, action: Swift.String, name: Swift.String) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) public func willChangeMessage(newTemplateId: Swift.String, onComplete: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func attachToParent(parent: UIKit.UIView, delegate: any ZixflowMessagingInApp.InlineMessageBridgeViewDelegate)
+  @_Concurrency.MainActor @preconcurrency public func onViewAttached()
+  @_Concurrency.MainActor @preconcurrency public func onViewDetached()
+  @_Concurrency.MainActor @preconcurrency public func onMessageRendered(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func onNoMessageToDisplay()
+  @_Concurrency.MainActor @preconcurrency public func onInlineButtonAction(message: ZixflowMessagingInApp.Message, currentRoute: Swift.String, action: Swift.String, name: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func willChangeMessage(newTemplateId: Swift.String, onComplete: @escaping () -> Swift.Void)
 }
-public struct InlineMessage : SwiftUI.View {
-  public init(elementId: Swift.String, onActionClick: ((ZixflowMessagingInApp.InAppMessage, Swift.String, Swift.String) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+@_Concurrency.MainActor @preconcurrency public struct InlineMessage : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(elementId: Swift.String, onActionClick: ((ZixflowMessagingInApp.InAppMessage, Swift.String, Swift.String) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s21ZixflowMessagingInApp13InlineMessageV4bodyQrvp", 0) __
@@ -372,209 +454,18 @@ public struct InlineMessage : SwiftUI.View {
 public protocol InlineMessageUIViewDelegate : AnyObject, ZixflowInternalCommon.AutoMockable {
   func onActionClick(message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class InlineMessageUIView : UIKit.UIView {
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var elementId: Swift.String? {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class InlineMessageUIView : UIKit.UIView {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var elementId: Swift.String? {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) weak public var onActionDelegate: (any ZixflowMessagingInApp.InlineMessageUIViewDelegate)?
-  @_Concurrency.MainActor(unsafe) public init(elementId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency weak public var onActionDelegate: (any ZixflowMessagingInApp.InlineMessageUIViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency public init(elementId: Swift.String)
   @objc deinit
-  @_Concurrency.MainActor(unsafe) public func onMessageRendered(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public func onNoMessageToDisplay()
-  @_Concurrency.MainActor(unsafe) public func onInlineButtonAction(message: ZixflowMessagingInApp.Message, currentRoute: Swift.String, action: Swift.String, name: Swift.String) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) public func willChangeMessage(newTemplateId: Swift.String, onComplete: @escaping () -> Swift.Void)
-}
-public class InAppEventListenerMock : ZixflowMessagingInApp.InAppEventListener, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var messageShownCallsCount: Swift.Int {
-    get
-  }
-  public var messageShownCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var messageShownReceivedArguments: ZixflowMessagingInApp.InAppMessage? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var messageShownReceivedInvocations: [ZixflowMessagingInApp.InAppMessage] {
-    get
-  }
-  public var messageShownClosure: ((ZixflowMessagingInApp.InAppMessage) -> Swift.Void)?
-  public func messageShown(message: ZixflowMessagingInApp.InAppMessage)
-  @ZixflowInternalCommon.Atomic public var messageDismissedCallsCount: Swift.Int {
-    get
-  }
-  public var messageDismissedCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var messageDismissedReceivedArguments: ZixflowMessagingInApp.InAppMessage? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var messageDismissedReceivedInvocations: [ZixflowMessagingInApp.InAppMessage] {
-    get
-  }
-  public var messageDismissedClosure: ((ZixflowMessagingInApp.InAppMessage) -> Swift.Void)?
-  public func messageDismissed(message: ZixflowMessagingInApp.InAppMessage)
-  @ZixflowInternalCommon.Atomic public var errorWithMessageCallsCount: Swift.Int {
-    get
-  }
-  public var errorWithMessageCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var errorWithMessageReceivedArguments: ZixflowMessagingInApp.InAppMessage? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var errorWithMessageReceivedInvocations: [ZixflowMessagingInApp.InAppMessage] {
-    get
-  }
-  public var errorWithMessageClosure: ((ZixflowMessagingInApp.InAppMessage) -> Swift.Void)?
-  public func errorWithMessage(message: ZixflowMessagingInApp.InAppMessage)
-  @ZixflowInternalCommon.Atomic public var messageActionTakenCallsCount: Swift.Int {
-    get
-  }
-  public var messageActionTakenCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var messageActionTakenReceivedArguments: (message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var messageActionTakenReceivedInvocations: [(message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String)] {
-    get
-  }
-  public var messageActionTakenClosure: ((ZixflowMessagingInApp.InAppMessage, Swift.String, Swift.String) -> Swift.Void)?
-  public func messageActionTaken(message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String)
-  @objc deinit
-}
-public class InlineMessageBridgeViewDelegateMock : ZixflowMessagingInApp.InlineMessageBridgeViewDelegate, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var onActionClickCallsCount: Swift.Int {
-    get
-  }
-  public var onActionClickCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var onActionClickReceivedArguments: (message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var onActionClickReceivedInvocations: [(message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String)] {
-    get
-  }
-  public var onActionClickReturnValue: Swift.Bool!
-  public var onActionClickClosure: ((ZixflowMessagingInApp.InAppMessage, Swift.String, Swift.String) -> Swift.Bool)?
-  public func onActionClick(message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String) -> Swift.Bool
-  @ZixflowInternalCommon.Atomic public var onMessageSizeChangedCallsCount: Swift.Int {
-    get
-  }
-  public var onMessageSizeChangedCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var onMessageSizeChangedReceivedArguments: (width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var onMessageSizeChangedReceivedInvocations: [(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)] {
-    get
-  }
-  public var onMessageSizeChangedClosure: ((CoreFoundation.CGFloat, CoreFoundation.CGFloat) -> Swift.Void)?
-  public func onMessageSizeChanged(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
-  @ZixflowInternalCommon.Atomic public var onNoMessageToDisplayCallsCount: Swift.Int {
-    get
-  }
-  public var onNoMessageToDisplayCalled: Swift.Bool {
-    get
-  }
-  public var onNoMessageToDisplayClosure: (() -> Swift.Void)?
-  public func onNoMessageToDisplay()
-  @ZixflowInternalCommon.Atomic public var onStartLoadingCallsCount: Swift.Int {
-    get
-  }
-  public var onStartLoadingCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var onStartLoadingReceivedArguments: (() -> Swift.Void)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var onStartLoadingReceivedInvocations: [() -> Swift.Void] {
-    get
-  }
-  public var onStartLoadingClosure: ((@escaping () -> Swift.Void) -> Swift.Void)?
-  public func onStartLoading(onComplete: @escaping () -> Swift.Void)
-  @ZixflowInternalCommon.Atomic public var onFinishLoadingCallsCount: Swift.Int {
-    get
-  }
-  public var onFinishLoadingCalled: Swift.Bool {
-    get
-  }
-  public var onFinishLoadingClosure: (() -> Swift.Void)?
-  public func onFinishLoading()
-  @objc deinit
-}
-public class InlineMessageUIViewDelegateMock : ZixflowMessagingInApp.InlineMessageUIViewDelegate, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var onActionClickCallsCount: Swift.Int {
-    get
-  }
-  public var onActionClickCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var onActionClickReceivedArguments: (message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var onActionClickReceivedInvocations: [(message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String)] {
-    get
-  }
-  public var onActionClickClosure: ((ZixflowMessagingInApp.InAppMessage, Swift.String, Swift.String) -> Swift.Void)?
-  public func onActionClick(message: ZixflowMessagingInApp.InAppMessage, actionValue: Swift.String, actionName: Swift.String)
-  @objc deinit
-}
-public class MessagingInAppInstanceMock : ZixflowMessagingInApp.MessagingInAppInstance, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public var underlyingInbox: (any ZixflowMessagingInApp.NotificationInbox)!
-  public var inboxCalled: Swift.Bool {
-    get
-  }
-  public var inboxGetCalled: Swift.Bool {
-    get
-  }
-  public var inboxGetCallsCount: Swift.Int
-  public var inboxSetCalled: Swift.Bool {
-    get
-  }
-  public var inboxSetCallsCount: Swift.Int
-  public var inbox: any ZixflowMessagingInApp.NotificationInbox {
-    get
-    set(value)
-  }
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var setEventListenerCallsCount: Swift.Int {
-    get
-  }
-  public var setEventListenerCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setEventListenerReceivedArguments: (any ZixflowMessagingInApp.InAppEventListener)?? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var setEventListenerReceivedInvocations: [(any ZixflowMessagingInApp.InAppEventListener)?] {
-    get
-  }
-  public var setEventListenerClosure: (((any ZixflowMessagingInApp.InAppEventListener)?) -> Swift.Void)?
-  public func setEventListener(_ eventListener: (any ZixflowMessagingInApp.InAppEventListener)?)
-  @ZixflowInternalCommon.Atomic public var dismissMessageCallsCount: Swift.Int {
-    get
-  }
-  public var dismissMessageCalled: Swift.Bool {
-    get
-  }
-  public var dismissMessageClosure: (() -> Swift.Void)?
-  public func dismissMessage()
-  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public func onMessageRendered(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func onNoMessageToDisplay()
+  @_Concurrency.MainActor @preconcurrency public func onInlineButtonAction(message: ZixflowMessagingInApp.Message, currentRoute: Swift.String, action: Swift.String, name: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func willChangeMessage(newTemplateId: Swift.String, onComplete: @escaping () -> Swift.Void)
 }
 extension ZixflowMessagingInApp.MessagingInAppConfigBuilderError : Swift.Equatable {}
 extension ZixflowMessagingInApp.MessagingInAppConfigBuilderError : Swift.Hashable {}
@@ -584,3 +475,8 @@ extension ZixflowMessagingInApp.MessagePosition : Swift.Hashable {}
 extension ZixflowMessagingInApp.MessagePosition : Swift.RawRepresentable {}
 extension ZixflowMessagingInApp.GistEnvironment : Swift.Equatable {}
 extension ZixflowMessagingInApp.GistEnvironment : Swift.Hashable {}
+extension ZixflowMessagingInApp.ColorScheme : Swift.Hashable {}
+extension ZixflowMessagingInApp.InAppMessageErrorReason : Swift.Equatable {}
+extension ZixflowMessagingInApp.InAppMessageErrorReason : Swift.Hashable {}
+extension ZixflowMessagingInApp.InAppMessageErrorReason : Swift.RawRepresentable {}
+extension ZixflowMessagingInApp.InlineMessage : Swift.Sendable {}

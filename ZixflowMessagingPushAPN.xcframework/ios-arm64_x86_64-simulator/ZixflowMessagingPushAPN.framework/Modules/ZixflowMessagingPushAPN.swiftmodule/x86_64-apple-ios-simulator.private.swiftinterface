@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZixflowMessagingPushAPN
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowMessagingPushAPN
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import Foundation
 import Foundation/*.Bundle*/
 import Foundation/*.ProcessInfo*/
@@ -18,15 +19,15 @@ public typealias MessagingPushConfigBuilder = ZixflowMessagingPush.MessagingPush
 public typealias MessagingPushConfigOptions = ZixflowMessagingPush.MessagingPushConfigOptions
 public typealias ZixflowParsedPushPayload = ZixflowMessagingPush.ZixflowParsedPushPayload
 @objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
-@_Concurrency.MainActor(unsafe) open class ZixflowAppDelegate : ZixflowMessagingPush.ZixflowProviderAgnosticAppDelegate {
-  @_Concurrency.MainActor(unsafe) @objc convenience dynamic public init()
-  @_Concurrency.MainActor(unsafe) override public init(messagingPush: any ZixflowMessagingPush.MessagingPushInstance, userNotificationCenter: ZixflowMessagingPush.UserNotificationCenterInstance?, appDelegate: (any ObjectiveC.NSObject & UIKit.UIApplicationDelegate)? = nil, config: ZixflowMessagingPush.ConfigInstance? = nil, logger: any ZixflowInternalCommon.Logger)
-  @_Concurrency.MainActor(unsafe) @objc override public func application(_ application: UIKit.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Foundation.Data)
+@_Concurrency.MainActor @preconcurrency open class ZixflowAppDelegate : ZixflowMessagingPush.ZixflowProviderAgnosticAppDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc convenience dynamic public init()
+  @_Concurrency.MainActor @preconcurrency override public init(messagingPush: any ZixflowMessagingPush.MessagingPushInstance, userNotificationCenter: ZixflowMessagingPush.UserNotificationCenterInstance?, appDelegate: (any ObjectiveC.NSObject & UIKit.UIApplicationDelegate)? = nil, config: ZixflowMessagingPush.ConfigInstance? = nil, logger: any ZixflowInternalCommon.Logger)
+  @_Concurrency.MainActor @preconcurrency @objc override public func application(_ application: UIKit.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Foundation.Data)
   @objc deinit
 }
 @available(iOSApplicationExtension, unavailable)
-@_Concurrency.MainActor(unsafe) open class ZixflowAppDelegateWrapper<UserAppDelegate> : ZixflowMessagingPushAPN.ZixflowAppDelegate where UserAppDelegate : ObjectiveC.NSObject, UserAppDelegate : UIKit.UIApplicationDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+@_Concurrency.MainActor @preconcurrency open class ZixflowAppDelegateWrapper<UserAppDelegate> : ZixflowMessagingPushAPN.ZixflowAppDelegate where UserAppDelegate : ObjectiveC.NSObject, UserAppDelegate : UIKit.UIApplicationDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
   @objc deinit
 }
 extension ZixflowMessagingPush.MessagingPush : ZixflowMessagingPushAPN.MessagingPushAPNInstance {
@@ -65,99 +66,5 @@ public protocol MessagingPushAPNInstance : ZixflowInternalCommon.AutoMockable {
   public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse) -> ZixflowMessagingPushAPN.ZixflowParsedPushPayload?
   @available(iOSApplicationExtension, unavailable)
   public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void) -> Swift.Bool
-  @objc deinit
-}
-public class MessagingPushAPNInstanceMock : ZixflowMessagingPushAPN.MessagingPushAPNInstance, ZixflowInternalCommon.Mock {
-  public var mockCalled: Swift.Bool
-  public init()
-  public func resetMock()
-  @ZixflowInternalCommon.Atomic public var registerDeviceTokenCallsCount: Swift.Int {
-    get
-  }
-  public var registerDeviceTokenCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var registerDeviceTokenReceivedArguments: Foundation.Data? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var registerDeviceTokenReceivedInvocations: [Foundation.Data] {
-    get
-  }
-  public var registerDeviceTokenClosure: ((Foundation.Data) -> Swift.Void)?
-  public func registerDeviceToken(apnDeviceToken: Foundation.Data)
-  @ZixflowInternalCommon.Atomic public var didRegisterForRemoteNotificationsCallsCount: Swift.Int {
-    get
-  }
-  public var didRegisterForRemoteNotificationsCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var didRegisterForRemoteNotificationsReceivedArguments: (application: Any, deviceToken: Foundation.Data)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var didRegisterForRemoteNotificationsReceivedInvocations: [(application: Any, deviceToken: Foundation.Data)] {
-    get
-  }
-  public var didRegisterForRemoteNotificationsClosure: ((Any, Foundation.Data) -> Swift.Void)?
-  public func application(_ application: Any, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Foundation.Data)
-  @ZixflowInternalCommon.Atomic public var didFailToRegisterForRemoteNotificationsCallsCount: Swift.Int {
-    get
-  }
-  public var didFailToRegisterForRemoteNotificationsCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var didFailToRegisterForRemoteNotificationsReceivedArguments: (application: Any, error: any Swift.Error)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var didFailToRegisterForRemoteNotificationsReceivedInvocations: [(application: Any, error: any Swift.Error)] {
-    get
-  }
-  public var didFailToRegisterForRemoteNotificationsClosure: ((Any, any Swift.Error) -> Swift.Void)?
-  public func application(_ application: Any, didFailToRegisterForRemoteNotificationsWithError error: any Swift.Error)
-  @ZixflowInternalCommon.Atomic public var deleteDeviceTokenCallsCount: Swift.Int {
-    get
-  }
-  public var deleteDeviceTokenCalled: Swift.Bool {
-    get
-  }
-  public var deleteDeviceTokenClosure: (() -> Swift.Void)?
-  public func deleteDeviceToken()
-  @ZixflowInternalCommon.Atomic public var trackMetricCallsCount: Swift.Int {
-    get
-  }
-  public var trackMetricCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var trackMetricReceivedArguments: (deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var trackMetricReceivedInvocations: [(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)] {
-    get
-  }
-  public var trackMetricClosure: ((Swift.String, ZixflowInternalCommon.Metric, Swift.String) -> Swift.Void)?
-  public func trackMetric(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)
-  @ZixflowInternalCommon.Atomic public var didReceiveNotificationRequestCallsCount: Swift.Int {
-    get
-  }
-  public var didReceiveNotificationRequestCalled: Swift.Bool {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var didReceiveNotificationRequestReceivedArguments: (request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> Swift.Void)? {
-    get
-  }
-  @ZixflowInternalCommon.Atomic public var didReceiveNotificationRequestReceivedInvocations: [(request: UserNotifications.UNNotificationRequest, contentHandler: (UserNotifications.UNNotificationContent) -> Swift.Void)] {
-    get
-  }
-  public var didReceiveNotificationRequestReturnValue: Swift.Bool!
-  public var didReceiveNotificationRequestClosure: ((UserNotifications.UNNotificationRequest, @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) -> Swift.Bool)?
-  @discardableResult
-  public func didReceive(_ request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void) -> Swift.Bool
-  @ZixflowInternalCommon.Atomic public var serviceExtensionTimeWillExpireCallsCount: Swift.Int {
-    get
-  }
-  public var serviceExtensionTimeWillExpireCalled: Swift.Bool {
-    get
-  }
-  public var serviceExtensionTimeWillExpireClosure: (() -> Swift.Void)?
-  public func serviceExtensionTimeWillExpire()
   @objc deinit
 }

@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "ZixflowAnalytics",
+    "printedName": "ZixflowAnalytics",
     "children": [
       {
         "kind": "Import",
@@ -4065,6 +4065,20 @@
             "printedName": "Subscriber",
             "usr": "s:6Sovran10SubscriberP",
             "mangledName": "$s6Sovran10SubscriberP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -4127,6 +4141,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "Encodable",
@@ -4336,10 +4364,24 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -4562,6 +4604,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -5186,6 +5244,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -6246,6 +6320,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -6253,10 +6334,24 @@
           },
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -7293,24 +7388,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -7321,10 +7402,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -7335,10 +7430,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -8358,24 +8467,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -8386,10 +8481,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -8400,10 +8509,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -8778,24 +8901,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -8806,10 +8915,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -8820,10 +8943,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -9623,6 +9760,22 @@
         "declAttributes": [
           "AccessControl",
           "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -10811,31 +10964,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "ObjCRawEvent",
-            "printedName": "ObjCRawEvent",
-            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIORawEvent",
-            "mangledName": "$s16ZixflowAnalytics12ObjCRawEventP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -10846,10 +10978,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -10860,10 +11006,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObjCRawEvent",
+            "printedName": "ObjCRawEvent",
+            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIORawEvent",
+            "mangledName": "$s16ZixflowAnalytics12ObjCRawEventP"
           }
         ]
       },
@@ -11965,31 +12132,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "ObjCRawEvent",
-            "printedName": "ObjCRawEvent",
-            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIORawEvent",
-            "mangledName": "$s16ZixflowAnalytics12ObjCRawEventP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -12000,10 +12146,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -12014,10 +12174,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObjCRawEvent",
+            "printedName": "ObjCRawEvent",
+            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIORawEvent",
+            "mangledName": "$s16ZixflowAnalytics12ObjCRawEventP"
           }
         ]
       },
@@ -13357,31 +13538,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "ObjCRawEvent",
-            "printedName": "ObjCRawEvent",
-            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIORawEvent",
-            "mangledName": "$s16ZixflowAnalytics12ObjCRawEventP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -13392,10 +13552,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -13406,10 +13580,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObjCRawEvent",
+            "printedName": "ObjCRawEvent",
+            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIORawEvent",
+            "mangledName": "$s16ZixflowAnalytics12ObjCRawEventP"
           }
         ]
       },
@@ -14631,31 +14826,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "ObjCRawEvent",
-            "printedName": "ObjCRawEvent",
-            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIORawEvent",
-            "mangledName": "$s16ZixflowAnalytics12ObjCRawEventP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -14666,10 +14840,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -14680,10 +14868,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObjCRawEvent",
+            "printedName": "ObjCRawEvent",
+            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIORawEvent",
+            "mangledName": "$s16ZixflowAnalytics12ObjCRawEventP"
           }
         ]
       },
@@ -15726,31 +15935,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "ObjCRawEvent",
-            "printedName": "ObjCRawEvent",
-            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIORawEvent",
-            "mangledName": "$s16ZixflowAnalytics12ObjCRawEventP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -15761,10 +15949,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -15775,10 +15977,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObjCRawEvent",
+            "printedName": "ObjCRawEvent",
+            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIORawEvent",
+            "mangledName": "$s16ZixflowAnalytics12ObjCRawEventP"
           }
         ]
       },
@@ -15803,6 +16026,22 @@
         "declAttributes": [
           "AccessControl",
           "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -15839,6 +16078,22 @@
         "moduleName": "ZixflowAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -16168,38 +16423,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "EventPlugin",
-            "printedName": "EventPlugin",
-            "usr": "s:16ZixflowAnalytics11EventPluginP",
-            "mangledName": "$s16ZixflowAnalytics11EventPluginP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ObjCPlugin",
-            "printedName": "ObjCPlugin",
-            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIOPlugin",
-            "mangledName": "$s16ZixflowAnalytics10ObjCPluginP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -16210,17 +16437,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -16231,10 +16458,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
             "name": "Plugin",
             "printedName": "Plugin",
             "usr": "s:16ZixflowAnalytics6PluginP",
             "mangledName": "$s16ZixflowAnalytics6PluginP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObjCPlugin",
+            "printedName": "ObjCPlugin",
+            "usr": "c:@M@ZixflowAnalytics@objc(pl)CIOPlugin",
+            "mangledName": "$s16ZixflowAnalytics10ObjCPluginP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "EventPlugin",
+            "printedName": "EventPlugin",
+            "usr": "s:16ZixflowAnalytics11EventPluginP",
+            "mangledName": "$s16ZixflowAnalytics11EventPluginP"
           }
         ]
       },
@@ -16392,6 +16661,69 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
             "name": "EventPlugin",
             "printedName": "EventPlugin",
             "usr": "s:16ZixflowAnalytics11EventPluginP",
@@ -16403,55 +16735,6 @@
             "printedName": "ObjCPlugin",
             "usr": "c:@M@ZixflowAnalytics@objc(pl)CIOPlugin",
             "mangledName": "$s16ZixflowAnalytics10ObjCPluginP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -16775,6 +17058,9 @@
             "moduleName": "ZixflowAnalytics",
             "static": true,
             "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
             "accessors": [
               {
                 "kind": "Accessor",
@@ -16819,10 +17105,24 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -17071,10 +17371,24 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -17510,6 +17824,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -18031,6 +18361,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "Plugin",
@@ -18574,6 +18918,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "EventPlugin",
             "printedName": "EventPlugin",
             "usr": "s:16ZixflowAnalytics11EventPluginP",
@@ -18602,6 +18960,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "EventPlugin",
@@ -18653,6 +19025,22 @@
         "moduleName": "ZixflowAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -18694,6 +19082,22 @@
         "moduleName": "ZixflowAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -18945,6 +19349,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Plugin",
             "printedName": "Plugin",
             "usr": "s:16ZixflowAnalytics6PluginP",
@@ -19020,6 +19438,22 @@
         "moduleName": "ZixflowAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -19298,6 +19732,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Plugin",
             "printedName": "Plugin",
             "usr": "s:16ZixflowAnalytics6PluginP",
@@ -19526,6 +19974,20 @@
         ],
         "hasMissingDesignatedInitializers": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Plugin",
@@ -19886,6 +20348,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Plugin",
@@ -20350,6 +20826,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Plugin",
             "printedName": "Plugin",
             "usr": "s:16ZixflowAnalytics6PluginP",
@@ -20397,6 +20887,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -21130,6 +21636,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -21403,6 +21925,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Plugin",
             "printedName": "Plugin",
             "usr": "s:16ZixflowAnalytics6PluginP",
@@ -21524,6 +22060,20 @@
         ],
         "hasMissingDesignatedInitializers": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "AnonymousIdGenerator",
@@ -22051,17 +22601,31 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "DestinationPlugin",
-            "printedName": "DestinationPlugin",
-            "usr": "s:16ZixflowAnalytics17DestinationPluginP",
-            "mangledName": "$s16ZixflowAnalytics17DestinationPluginP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
-            "name": "Subscriber",
-            "printedName": "Subscriber",
-            "usr": "s:6Sovran10SubscriberP",
-            "mangledName": "$s6Sovran10SubscriberP"
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "iOSLifecycle",
+            "printedName": "iOSLifecycle",
+            "usr": "s:16ZixflowAnalytics12iOSLifecycleP",
+            "mangledName": "$s16ZixflowAnalytics12iOSLifecycleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VersionedPlugin",
+            "printedName": "VersionedPlugin",
+            "usr": "s:16ZixflowAnalytics15VersionedPluginP",
+            "mangledName": "$s16ZixflowAnalytics15VersionedPluginP"
           },
           {
             "kind": "Conformance",
@@ -22086,17 +22650,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "iOSLifecycle",
-            "printedName": "iOSLifecycle",
-            "usr": "s:16ZixflowAnalytics12iOSLifecycleP",
-            "mangledName": "$s16ZixflowAnalytics12iOSLifecycleP"
+            "name": "Subscriber",
+            "printedName": "Subscriber",
+            "usr": "s:6Sovran10SubscriberP",
+            "mangledName": "$s6Sovran10SubscriberP"
           },
           {
             "kind": "Conformance",
-            "name": "VersionedPlugin",
-            "printedName": "VersionedPlugin",
-            "usr": "s:16ZixflowAnalytics15VersionedPluginP",
-            "mangledName": "$s16ZixflowAnalytics15VersionedPluginP"
+            "name": "DestinationPlugin",
+            "printedName": "DestinationPlugin",
+            "usr": "s:16ZixflowAnalytics17DestinationPluginP",
+            "mangledName": "$s16ZixflowAnalytics17DestinationPluginP"
           }
         ]
       },
@@ -23196,6 +23760,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -23210,10 +23788,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -23309,6 +23887,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -23396,6 +23990,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -23407,6 +24008,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -24870,6 +25478,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "Encodable",
@@ -26449,6 +27071,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "RawEvent",
             "printedName": "RawEvent",
             "usr": "s:16ZixflowAnalytics8RawEventP",
@@ -27956,6 +28592,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "RawEvent",
@@ -29701,6 +30351,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "RawEvent",
             "printedName": "RawEvent",
             "usr": "s:16ZixflowAnalytics8RawEventP",
@@ -31320,6 +31984,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "RawEvent",
             "printedName": "RawEvent",
             "usr": "s:16ZixflowAnalytics8RawEventP",
@@ -32828,6 +33506,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "RawEvent",
             "printedName": "RawEvent",
             "usr": "s:16ZixflowAnalytics8RawEventP",
@@ -33019,6 +33711,22 @@
           "AccessControl",
           "PropertyWrapper",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -34776,10 +35484,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -34794,6 +35502,20 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -34817,6 +35539,22 @@
         "moduleName": "ZixflowAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -34944,6 +35682,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "ExpressibleByStringLiteral",
@@ -35236,6 +35988,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -35243,10 +36002,24 @@
           },
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -35261,7 +36034,23 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -35352,6 +36141,22 @@
         "moduleName": "ZixflowAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -35368,6 +36173,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "DataTask",
@@ -35413,6 +36232,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -35754,6 +36589,22 @@
         "sugared_genericSig": "<Self.DataTaskType : ZixflowAnalytics.DataTask, Self.UploadTaskType : ZixflowAnalytics.UploadTask>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -36007,6 +36858,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -36018,6 +36876,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -36308,6 +37173,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "FlushPolicy",
             "printedName": "FlushPolicy",
             "usr": "s:16ZixflowAnalytics11FlushPolicyP",
@@ -36551,6 +37430,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -36901,6 +37796,27 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "iOSLifecycle",
+            "printedName": "iOSLifecycle",
+            "usr": "s:16ZixflowAnalytics12iOSLifecycleP",
+            "mangledName": "$s16ZixflowAnalytics12iOSLifecycleP"
+          },
+          {
+            "kind": "Conformance",
             "name": "FlushPolicy",
             "printedName": "FlushPolicy",
             "usr": "s:16ZixflowAnalytics11FlushPolicyP",
@@ -36912,13 +37828,6 @@
             "printedName": "Subscriber",
             "usr": "s:6Sovran10SubscriberP",
             "mangledName": "$s6Sovran10SubscriberP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "iOSLifecycle",
-            "printedName": "iOSLifecycle",
-            "usr": "s:16ZixflowAnalytics12iOSLifecycleP",
-            "mangledName": "$s16ZixflowAnalytics12iOSLifecycleP"
           }
         ]
       },
@@ -37288,6 +38197,22 @@
         "moduleName": "ZixflowAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -37476,10 +38401,24 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -37805,6 +38744,22 @@
         "moduleName": "ZixflowAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -38139,6 +39094,22 @@
         "moduleName": "ZixflowAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -38219,6 +39190,22 @@
             "moduleName": "ZixflowAnalytics",
             "declAttributes": [
               "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
             ]
           },
           {
@@ -38517,6 +39504,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "DataStore",
             "printedName": "DataStore",
             "children": [
@@ -38605,6 +39606,22 @@
             "moduleName": "ZixflowAnalytics",
             "declAttributes": [
               "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
             ]
           },
           {
@@ -38903,6 +39920,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "DataStore",
             "printedName": "DataStore",
             "children": [
@@ -39026,6 +40057,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -39037,6 +40075,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -39751,6 +40796,20 @@
             "printedName": "Subscriber",
             "usr": "s:6Sovran10SubscriberP",
             "mangledName": "$s6Sovran10SubscriberP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -39879,7 +40938,23 @@
         "usr": "s:SE",
         "mangledName": "$sSE",
         "moduleName": "Swift",
-        "isExternal": true
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -40374,63 +41449,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sequence",
-            "printedName": "Sequence",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Element",
-                "printedName": "Element",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(key: τ_0_0, value: τ_0_1)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "GenericTypeParam",
-                        "printedName": "τ_0_0"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "GenericTypeParam",
-                        "printedName": "τ_0_1"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Iterator",
-                "printedName": "Iterator",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Iterator",
-                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Iterator",
-                    "usr": "s:SD8IteratorV"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:ST",
-            "mangledName": "$sST"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
           },
           {
             "kind": "Conformance",
@@ -40559,6 +41581,62 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "ExpressibleByDictionaryLiteral",
             "printedName": "ExpressibleByDictionaryLiteral",
             "children": [
@@ -40592,13 +41670,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
@@ -40606,38 +41677,70 @@
           },
           {
             "kind": "Conformance",
-            "name": "_HasCustomAnyHashableRepresentation",
-            "printedName": "_HasCustomAnyHashableRepresentation",
-            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
-            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sequence",
+            "printedName": "Sequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(key: τ_0_0, value: τ_0_1)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:SD8IteratorV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:ST",
+            "mangledName": "$sST"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasCustomAnyHashableRepresentation",
+            "printedName": "_HasCustomAnyHashableRepresentation",
+            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
+            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
           },
           {
             "kind": "Conformance",
@@ -40660,13 +41763,6 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
           }
         ]
       },
@@ -40698,31 +41794,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -40733,10 +41808,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -40747,10 +41836,38 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -40790,31 +41907,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -40825,10 +41921,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -40839,10 +41949,38 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -40887,31 +42025,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -40922,10 +42039,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -40936,10 +42067,38 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -40986,8 +42145,8 @@
         "usr": "s:Sq",
         "mangledName": "$sSq",
         "moduleName": "Swift",
-        "genericSig": "<τ_0_0>",
-        "sugared_genericSig": "<Wrapped>",
+        "genericSig": "<τ_0_0 where τ_0_0 : ~Copyable, τ_0_0 : ~Escapable>",
+        "sugared_genericSig": "<Wrapped where Wrapped : ~Copyable, Wrapped : ~Escapable>",
         "declAttributes": [
           "Frozen"
         ],
@@ -40996,80 +42155,24 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "ExpressibleByNilLiteral",
-            "printedName": "ExpressibleByNilLiteral",
-            "usr": "s:s23ExpressibleByNilLiteralP",
-            "mangledName": "$ss23ExpressibleByNilLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
+            "name": "DecodableWithConfiguration",
+            "printedName": "DecodableWithConfiguration",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
+                "name": "DecodingConfiguration",
+                "printedName": "DecodingConfiguration",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "AnyObject"
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.DecodingConfiguration"
                   }
                 ]
               }
             ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
+            "usr": "s:10Foundation26DecodableWithConfigurationP",
+            "mangledName": "$s10Foundation26DecodableWithConfigurationP"
           },
           {
             "kind": "Conformance",
@@ -41094,24 +42197,205 @@
           },
           {
             "kind": "Conformance",
-            "name": "DecodableWithConfiguration",
-            "printedName": "DecodableWithConfiguration",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByNilLiteral",
+            "printedName": "ExpressibleByNilLiteral",
+            "usr": "s:s23ExpressibleByNilLiteralP",
+            "mangledName": "$ss23ExpressibleByNilLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "DecodingConfiguration",
-                "printedName": "DecodingConfiguration",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.DecodingConfiguration"
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
                   }
                 ]
               }
             ],
-            "usr": "s:10Foundation26DecodableWithConfigurationP",
-            "mangledName": "$s10Foundation26DecodableWithConfigurationP"
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Gesture",
+            "printedName": "Gesture",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Value",
+                "printedName": "Value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Value"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI7GestureP",
+            "mangledName": "$s7SwiftUI7GestureP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AttributedTextFormattingDefinition",
+            "printedName": "AttributedTextFormattingDefinition",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUICore.AttributedTextFormattingDefinition<τ_0_0.Scope>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AttributedTextFormattingDefinition",
+                        "printedName": "SwiftUICore.AttributedTextFormattingDefinition",
+                        "usr": "s:7SwiftUI34AttributedTextFormattingDefinitionP"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Scope",
+                "printedName": "Scope",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Scope"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI34AttributedTextFormattingDefinitionP",
+            "mangledName": "$s7SwiftUI34AttributedTextFormattingDefinitionP"
           }
         ]
       }
@@ -41120,791 +42404,616 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Analytics.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Analytics.swift",
       "kind": "BooleanLiteral",
       "offset": 595,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Analytics.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Analytics.swift",
       "kind": "StringLiteral",
       "offset": 676,
       "length": 14,
       "value": "\"DEADINSTANCE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Analytics.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Analytics.swift",
       "kind": "Dictionary",
       "offset": 14357,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Configuration.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Configuration.swift",
       "kind": "StringLiteral",
       "offset": 942,
       "length": 32,
       "value": "\"com.zixflow.operatingModeQueue\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Configuration.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Configuration.swift",
       "kind": "BooleanLiteral",
       "offset": 1655,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Configuration.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Configuration.swift",
       "kind": "IntegerLiteral",
       "offset": 1687,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Configuration.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Configuration.swift",
       "kind": "IntegerLiteral",
       "offset": 1732,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Configuration.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Configuration.swift",
       "kind": "BooleanLiteral",
       "offset": 1826,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Errors.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Errors.swift",
       "kind": "BooleanLiteral",
       "offset": 2172,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Errors.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Errors.swift",
       "kind": "BooleanLiteral",
       "offset": 2876,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCAnalytics.swift",
-      "kind": "StringLiteral",
-      "offset": 219,
-      "length": 13,
-      "value": "\"ZixflowAnalytics.ObjCAnalytics\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCAnalytics.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCAnalytics.swift",
       "kind": "Dictionary",
       "offset": 6486,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 194,
-      "length": 17,
-      "value": "\"ZixflowAnalytics.ObjCConfiguration\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCEvents.swift",
-      "kind": "StringLiteral",
-      "offset": 269,
-      "length": 23,
-      "value": "\"ZixflowAnalytics.ObjCDestinationMetadata\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCEvents.swift",
-      "kind": "StringLiteral",
-      "offset": 2223,
-      "length": 14,
-      "value": "\"ZixflowAnalytics.ObjCTrackEvent\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCEvents.swift",
-      "kind": "StringLiteral",
-      "offset": 3897,
-      "length": 17,
-      "value": "\"ZixflowAnalytics.ObjCIdentifyEvent\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCEvents.swift",
-      "kind": "StringLiteral",
-      "offset": 5439,
-      "length": 15,
-      "value": "\"ZixflowAnalytics.ObjCScreenEvent\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCEvents.swift",
-      "kind": "StringLiteral",
-      "offset": 7278,
-      "length": 14,
-      "value": "\"ZixflowAnalytics.ObjCGroupEvent\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCEvents.swift",
-      "kind": "StringLiteral",
-      "offset": 8940,
-      "length": 14,
-      "value": "\"ZixflowAnalytics.ObjCAliasEvent\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/ObjC\/ObjCPlugin.swift",
-      "kind": "StringLiteral",
-      "offset": 1207,
-      "length": 15,
-      "value": "\"ZixflowAnalytics.ObjCBlockPlugin\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
       "kind": "IntegerLiteral",
       "offset": 358,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
       "kind": "IntegerLiteral",
       "offset": 440,
       "length": 11,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
       "kind": "IntegerLiteral",
       "offset": 573,
       "length": 5,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
       "kind": "IntegerLiteral",
       "offset": 649,
       "length": 7,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
-      "kind": "IntegerLiteral",
-      "offset": 358,
-      "length": 10,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
-      "kind": "IntegerLiteral",
-      "offset": 440,
-      "length": 11,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
-      "kind": "IntegerLiteral",
-      "offset": 573,
-      "length": 5,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
-      "kind": "IntegerLiteral",
-      "offset": 649,
-      "length": 7,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
-      "kind": "IntegerLiteral",
-      "offset": 358,
-      "length": 10,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
-      "kind": "IntegerLiteral",
-      "offset": 440,
-      "length": 11,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
-      "kind": "IntegerLiteral",
-      "offset": 573,
-      "length": 5,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins.swift",
-      "kind": "IntegerLiteral",
-      "offset": 649,
-      "length": 7,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/Platforms\/iOS\/iOSLifecycleEvents.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/Platforms\/iOS\/iOSLifecycleEvents.swift",
       "kind": "StringLiteral",
       "offset": 284,
       "length": 15,
       "value": "\"SEGVersionKey\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/Platforms\/iOS\/iOSLifecycleEvents.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/Platforms\/iOS\/iOSLifecycleEvents.swift",
       "kind": "StringLiteral",
       "offset": 326,
       "length": 15,
       "value": "\"SEGBuildKeyV2\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/Platforms\/iOS\/iOSLifecycleEvents.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/Platforms\/iOS\/iOSLifecycleEvents.swift",
       "kind": "BooleanLiteral",
       "offset": 726,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/StartupQueue.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/StartupQueue.swift",
       "kind": "IntegerLiteral",
       "offset": 191,
       "length": 4,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/StartupQueue.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/StartupQueue.swift",
       "kind": "BooleanLiteral",
       "offset": 236,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/StartupQueue.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/StartupQueue.swift",
       "kind": "StringLiteral",
       "offset": 675,
       "length": 26,
       "value": "\"startupQueue.segment.com\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
       "kind": "StringLiteral",
       "offset": 730,
       "length": 24,
       "value": "\"Zixflow Data Pipelines\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
       "kind": "StringLiteral",
       "offset": 778,
       "length": 9,
       "value": "\"apiHost\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
       "kind": "StringLiteral",
       "offset": 810,
       "length": 8,
       "value": "\"apiKey\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
-      "kind": "StringLiteral",
-      "offset": 730,
-      "length": 24,
-      "value": "\"Zixflow Data Pipelines\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
-      "kind": "StringLiteral",
-      "offset": 778,
-      "length": 9,
-      "value": "\"apiHost\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
-      "kind": "StringLiteral",
-      "offset": 810,
-      "length": 8,
-      "value": "\"apiKey\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
       "kind": "StringLiteral",
       "offset": 1487,
       "length": 26,
       "value": "\"uploadsQueue.segment.com\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Plugins\/ZixflowDestination.swift",
       "kind": "IntegerLiteral",
       "offset": 1593,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
       "kind": "Array",
       "offset": 217,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
       "kind": "Array",
       "offset": 250,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
       "kind": "Array",
       "offset": 284,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
       "kind": "StringLiteral",
       "offset": 900,
       "length": 7,
       "value": "\"track\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
       "kind": "StringLiteral",
       "offset": 1738,
       "length": 10,
       "value": "\"identify\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
       "kind": "StringLiteral",
       "offset": 2544,
       "length": 8,
       "value": "\"screen\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
       "kind": "StringLiteral",
       "offset": 3506,
       "length": 7,
       "value": "\"group\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
       "kind": "StringLiteral",
       "offset": 4343,
       "length": 7,
       "value": "\"alias\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Types.swift",
       "kind": "StringLiteral",
       "offset": 5142,
       "length": 5,
       "value": "\"All\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/JSON.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/JSON.swift",
       "kind": "BooleanLiteral",
       "offset": 17825,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/JSON.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/JSON.swift",
       "kind": "BooleanLiteral",
       "offset": 17924,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Networking\/HTTPClient.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Networking\/HTTPClient.swift",
       "kind": "StringLiteral",
       "offset": 388,
       "length": 27,
       "value": "\"api-events.zixflow.com\/v1\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Networking\/HTTPClient.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Networking\/HTTPClient.swift",
       "kind": "StringLiteral",
       "offset": 456,
       "length": 27,
       "value": "\"api-events.zixflow.com\/v1\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Policies\/CountBasedFlushPolicy.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Policies\/CountBasedFlushPolicy.swift",
       "kind": "IntegerLiteral",
       "offset": 272,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/QueueTimer.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/QueueTimer.swift",
       "kind": "BooleanLiteral",
       "offset": 489,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/QueueTimer.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/QueueTimer.swift",
       "kind": "BooleanLiteral",
       "offset": 734,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
       "kind": "IntegerLiteral",
       "offset": 239,
       "length": 6,
       "value": "475000"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
       "kind": "StringLiteral",
       "offset": 5585,
       "length": 6,
       "value": "\"temp\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
       "kind": "StringLiteral",
       "offset": 5662,
       "length": 16,
       "value": "\"segment.userId\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
       "kind": "StringLiteral",
       "offset": 5701,
       "length": 16,
       "value": "\"segment.traits\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
       "kind": "StringLiteral",
       "offset": 5745,
       "length": 21,
       "value": "\"segment.anonymousId\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
       "kind": "StringLiteral",
       "offset": 5791,
       "length": 18,
       "value": "\"segment.settings\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
       "kind": "StringLiteral",
       "offset": 5832,
       "length": 16,
       "value": "\"segment.events\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
-      "kind": "StringLiteral",
-      "offset": 5662,
-      "length": 16,
-      "value": "\"segment.userId\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
-      "kind": "StringLiteral",
-      "offset": 5701,
-      "length": 16,
-      "value": "\"segment.traits\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
-      "kind": "StringLiteral",
-      "offset": 5745,
-      "length": 21,
-      "value": "\"segment.anonymousId\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
-      "kind": "StringLiteral",
-      "offset": 5791,
-      "length": 18,
-      "value": "\"segment.settings\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Storage.swift",
-      "kind": "StringLiteral",
-      "offset": 5832,
-      "length": 16,
-      "value": "\"segment.events\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/TransientDB.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/TransientDB.swift",
       "kind": "StringLiteral",
       "offset": 277,
       "length": 18,
       "value": "\"transientDB.sync\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/TransientDB.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/TransientDB.swift",
       "kind": "BooleanLiteral",
       "offset": 820,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Types\/DirectoryStore.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Types\/DirectoryStore.swift",
       "kind": "StringLiteral",
       "offset": 1212,
       "length": 6,
       "value": "\"temp\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Types\/DirectoryStore.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Types\/DirectoryStore.swift",
       "kind": "BooleanLiteral",
       "offset": 3318,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Utilities\/LineStream.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Utilities\/LineStream.swift",
       "kind": "StringLiteral",
       "offset": 156,
       "length": 4,
       "value": "\"\n\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Utilities\/LineStream.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Utilities\/LineStream.swift",
       "kind": "BooleanLiteral",
       "offset": 287,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Utilities\/LineStream.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Utilities\/LineStream.swift",
       "kind": "IntegerLiteral",
       "offset": 362,
       "length": 4,
       "value": "4096"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Utilities\/LineStream.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Storage\/Utilities\/LineStream.swift",
       "kind": "IntegerLiteral",
       "offset": 1840,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 532,
       "length": 9,
       "value": "\"Counter\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 1183,
       "length": 18,
       "value": "\"analytics_mobile\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 1240,
       "length": 28,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 1260,
       "length": 1,
       "value": "\".invoke\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 1313,
       "length": 34,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 1333,
       "length": 1,
       "value": "\".invoke.error\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 1391,
       "length": 40,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 1411,
       "length": 1,
       "value": "\".integration.invoke\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 1481,
       "length": 46,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 1501,
       "length": 1,
       "value": "\".integration.invoke.error\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "BooleanLiteral",
       "offset": 1916,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "BooleanLiteral",
       "offset": 2158,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "BooleanLiteral",
       "offset": 2293,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "FloatLiteral",
       "offset": 2579,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "IntegerLiteral",
       "offset": 2747,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "IntegerLiteral",
       "offset": 2787,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "IntegerLiteral",
       "offset": 2821,
       "length": 4,
       "value": "4000"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "IntegerLiteral",
       "offset": 2868,
       "length": 5,
       "value": "28000"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "IntegerLiteral",
       "offset": 3100,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "BooleanLiteral",
       "offset": 3137,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "IntegerLiteral",
       "offset": 3200,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "BooleanLiteral",
       "offset": 3245,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 3376,
       "length": 16,
       "value": "\"telemetryQueue\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "StringLiteral",
       "offset": 3445,
       "length": 13,
       "value": "\"updateQueue\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Telemetry.swift",
       "kind": "IntegerLiteral",
       "offset": 8851,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/UserAgent.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/UserAgent.swift",
       "kind": "StringLiteral",
       "offset": 1190,
       "length": 15,
       "value": "\"Mobile\/15E148\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/UserAgent.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/UserAgent.swift",
       "kind": "StringLiteral",
       "offset": 1417,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Utils.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 1344,
       "length": 8,
       "value": "\".appex\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Utils.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Utils.swift",
       "kind": "BooleanLiteral",
       "offset": 1371,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Utils.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Utilities\/Utils.swift",
       "kind": "BooleanLiteral",
       "offset": 1393,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/zixflow-ios\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Version.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/SourcePackages\/checkouts\/cdp-analytics-swift\/Sources\/Zixflow\/Version.swift",
       "kind": "StringLiteral",
       "offset": 355,
       "length": 7,
