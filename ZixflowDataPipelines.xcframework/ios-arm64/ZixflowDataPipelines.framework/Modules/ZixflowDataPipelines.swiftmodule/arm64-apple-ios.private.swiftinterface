@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowDataPipelines
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowDataPipelines
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import Foundation
 import Foundation/*.Bundle*/
 import Foundation/*.ProcessInfo*/
@@ -32,8 +32,10 @@ public class SDKConfigBuilder {
   public init(apiKey: Swift.String)
   @discardableResult
   public func region(_ region: ZixflowDataPipelines.Region) -> ZixflowDataPipelines.SDKConfigBuilder
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func autoTrackUIKitScreenViews(enabled: Swift.Bool = true, autoScreenViewBody: (() -> [Swift.String : Any])? = nil, filterAutoScreenViewEvents: ((UIKit.UIViewController) -> Swift.Bool)? = nil) -> ZixflowDataPipelines.SDKConfigBuilder
+  #endif
   @discardableResult
   public func logLevel(_ logLevel: ZixflowDataPipelines.ZixflowLogLevel) -> ZixflowDataPipelines.SDKConfigBuilder
   @discardableResult
@@ -68,14 +70,18 @@ public class SDKConfigBuilder {
     public let dataPipelineConfig: ZixflowDataPipelines.DataPipelineConfigOptions
     public let deepLinkCallback: ZixflowInternalCommon.DeepLinkCallback?
     public let modules: [any ZixflowInternalCommon.ZixflowModule]
+    #if compiler(>=5.3) && $NonescapableTypes
     public init(sdkConfig: ZixflowInternalCommon.SdkConfig, dataPipelineConfig: ZixflowDataPipelines.DataPipelineConfigOptions, deepLinkCallback: ZixflowInternalCommon.DeepLinkCallback?, modules: [any ZixflowInternalCommon.ZixflowModule] = [])
+    #endif
   }
   @objc deinit
 }
 public protocol SDKConfigBuilderResult {
   var sdkConfig: ZixflowInternalCommon.SdkConfig { get }
   var dataPipelineConfig: ZixflowDataPipelines.DataPipelineConfigOptions { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var deepLinkCallback: ZixflowInternalCommon.DeepLinkCallback? { get }
+  #endif
   var modules: [any ZixflowInternalCommon.ZixflowModule] { get }
 }
 public protocol DataPipelineInstance : ZixflowInternalCommon.ZixflowInstance, ZixflowTrackingMigration.DataPipelineMigrationAction {
@@ -85,12 +91,14 @@ public protocol DataPipelineInstance : ZixflowInternalCommon.ZixflowInstance, Zi
   public var analytics: ZixflowAnalytics.Analytics {
     get
   }
-  @ZixflowInternalCommon.Atomic<ZixflowDataPipelines.DataPipeline> public static var shared: ZixflowDataPipelines.DataPipeline {
+  @ZixflowInternalCommon.Atomic public static var shared: ZixflowDataPipelines.DataPipeline {
     get
   }
-  @ZixflowInternalCommon.Atomic<ZixflowDataPipelines.DataPipelineConfigOptions?> public static var moduleConfig: ZixflowDataPipelines.DataPipelineConfigOptions! {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZixflowInternalCommon.Atomic public static var moduleConfig: ZixflowDataPipelines.DataPipelineConfigOptions! {
     get
   }
+  #endif
   @discardableResult
   public static func initialize(moduleConfig: ZixflowDataPipelines.DataPipelineConfigOptions) -> any ZixflowDataPipelines.DataPipelineInstance
   @available(*, deprecated, message: "Use setProfileAttributes() instead")
@@ -99,8 +107,12 @@ public protocol DataPipelineInstance : ZixflowInternalCommon.ZixflowInstance, Zi
     set
   }
   public func setProfileAttributes(_ attributes: [Swift.String : Any])
+  #if compiler(>=5.3) && $NonescapableTypes
   public func identify(userId: Swift.String, traits: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func identify<RequestBody>(userId: Swift.String, traits: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
+  #endif
   public func clearIdentify()
   @available(*, deprecated, message: "Use setDeviceAttributes method instead. This property getter always returns an empty dictionary.")
   public var deviceAttributes: [Swift.String : Any] {
@@ -108,26 +120,46 @@ public protocol DataPipelineInstance : ZixflowInternalCommon.ZixflowInstance, Zi
     set
   }
   public func setDeviceAttributes(_ attributes: [Swift.String : Any])
+  #if compiler(>=5.3) && $NonescapableTypes
   public var registeredDeviceToken: Swift.String? {
     get
   }
+  #endif
   public func registerDeviceToken(_ deviceToken: Swift.String)
   public func deleteDeviceToken()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func track(name: Swift.String, properties: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func track<RequestBody>(name: Swift.String, properties: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen(title: Swift.String, properties: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen<RequestBody>(title: Swift.String, properties: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
+  #endif
   public func trackMetric(deliveryID: Swift.String, event: ZixflowDataPipelines.Metric, deviceToken: Swift.String)
   @objc deinit
 }
 extension ZixflowDataPipelines.DataPipeline {
   public func processAlreadyIdentifiedUser(identifier: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func processIdentifyFromBGQ(identifier: Swift.String, timestamp: Swift.String, body: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func processScreenEventFromBGQ(identifier: Swift.String, name: Swift.String, timestamp: Swift.String?, properties: [Swift.String : Any])
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func processEventFromBGQ(identifier: Swift.String, name: Swift.String, timestamp: Swift.String?, properties: [Swift.String : Any])
+  #endif
   public func processDeleteTokenFromBGQ(identifier: Swift.String, token: Swift.String, timestamp: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func processRegisterDeviceFromBGQ(identifier: Swift.String, token: Swift.String, timestamp: Swift.String, attributes: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func processMetricsFromBGQ(token: Swift.String?, event: Swift.String, deliveryId: Swift.String, timestamp: Swift.String, metaData: [Swift.String : Any] = [:])
+  #endif
 }
 @available(iOSApplicationExtension, unavailable)
 public class AutoTrackingScreenViews : ZixflowAnalytics.UtilityPlugin {
@@ -138,7 +170,9 @@ public class AutoTrackingScreenViews : ZixflowAnalytics.UtilityPlugin {
   }
   public var filterAutoScreenViewEvents: ((UIKit.UIViewController) -> Swift.Bool)?
   public var autoScreenViewBody: (() -> [Swift.String : Any])?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(filterAutoScreenViewEvents: ((UIKit.UIViewController) -> Swift.Bool)? = nil, autoScreenViewBody: (() -> [Swift.String : Any])? = nil)
+  #endif
   @objc deinit
 }
 public typealias Metric = ZixflowInternalCommon.Metric
@@ -149,13 +183,19 @@ extension ZixflowInternalCommon.Zixflow {
   public func track(name: Swift.String)
   @available(*, deprecated, message: "Use 'setProfileAttributes(_:)' with [String: Any] instead. Support for Codable traits will be removed in a future version.")
   public func identify<T>(traits: T) where T : Swift.Decodable, T : Swift.Encodable
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use 'screen(title:properties:)' with [String: Any] properties parameter instead. Support for Codable properties will be removed in a future version.")
   public func screen<P>(title: Swift.String, category: Swift.String? = nil, properties: P?) where P : Swift.Decodable, P : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen(title: Swift.String, category: Swift.String?)
+  #endif
   public func alias(newId: Swift.String)
 }
 extension ZixflowInternalCommon.Zixflow {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen(title: Swift.String, category: Swift.String? = nil, properties: [Swift.String : Any]? = nil)
+  #endif
 }
 extension ZixflowInternalCommon.Zixflow {
   public func apply(closure: (any ZixflowAnalytics.Plugin) -> Swift.Void)
@@ -164,9 +204,15 @@ extension ZixflowInternalCommon.Zixflow {
   @discardableResult
   public func add(enrichment: @escaping ZixflowAnalytics.EnrichmentClosure) -> any ZixflowAnalytics.Plugin
   public func remove(plugin: any ZixflowAnalytics.Plugin)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func find<T>(pluginType: T.Type) -> T? where T : ZixflowAnalytics.Plugin
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func findAll<T>(pluginType: T.Type) -> [T]? where T : ZixflowAnalytics.Plugin
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func find(key: Swift.String) -> (any ZixflowAnalytics.DestinationPlugin)?
+  #endif
 }
 extension ZixflowInternalCommon.Zixflow {
   public var enabled: Swift.Bool {
@@ -175,19 +221,25 @@ extension ZixflowInternalCommon.Zixflow {
   public var anonymousId: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var userId: Swift.String? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func flush(completion: (() -> Swift.Void)? = nil)
+  #endif
   public func reset()
 }
 extension ZixflowInternalCommon.Zixflow {
   public var hasUnsentEvents: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var pendingUploads: [Foundation.URL]? {
     get
   }
+  #endif
   public func purgeStorage()
   public func purgeStorage(fileURL: Foundation.URL)
   public func waitUntilStarted()

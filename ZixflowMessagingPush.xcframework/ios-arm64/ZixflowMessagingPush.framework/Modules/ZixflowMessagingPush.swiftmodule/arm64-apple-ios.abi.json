@@ -465,17 +465,17 @@
               },
               {
                 "kind": "Conformance",
-                "name": "Equatable",
-                "printedName": "Equatable",
-                "usr": "s:SQ",
-                "mangledName": "$sSQ"
-              },
-              {
-                "kind": "Conformance",
                 "name": "Escapable",
                 "printedName": "Escapable",
                 "usr": "s:s9EscapableP",
                 "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
               },
               {
                 "kind": "Conformance",
@@ -1343,52 +1343,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -1399,10 +1357,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -2680,52 +2680,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -2736,10 +2694,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -3326,6 +3326,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "MessagingPushInstance",
+            "printedName": "MessagingPushInstance",
+            "usr": "s:20ZixflowMessagingPush0bC8InstanceP",
+            "mangledName": "$s20ZixflowMessagingPush0bC8InstanceP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -3337,13 +3344,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "MessagingPushInstance",
-            "printedName": "MessagingPushInstance",
-            "usr": "s:20ZixflowMessagingPush0bC8InstanceP",
-            "mangledName": "$s20ZixflowMessagingPush0bC8InstanceP"
           },
           {
             "kind": "Conformance",
@@ -6356,20 +6356,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
@@ -6381,6 +6367,20 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -6408,52 +6408,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -6464,10 +6422,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -6483,182 +6483,182 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1282,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1331,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Config\/MessagingPushConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1384,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationCenterDelegatePeerRegistry.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Integration\/NotificationCenterDelegatePeerRegistry.swift",
       "kind": "Array",
       "offset": 5219,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationDeliveryGuard.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Integration\/NotificationDeliveryGuard.swift",
       "kind": "Array",
       "offset": 779,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationDeliveryGuard.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Integration\/NotificationDeliveryGuard.swift",
       "kind": "Array",
       "offset": 836,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationPeerDeliveryCoordinator.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Integration\/NotificationPeerDeliveryCoordinator.swift",
       "kind": "Dictionary",
       "offset": 1846,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationPeerDeliveryGuard.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Integration\/NotificationPeerDeliveryGuard.swift",
       "kind": "Array",
       "offset": 1584,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/NotificationPeerDeliveryGuard.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Integration\/NotificationPeerDeliveryGuard.swift",
       "kind": "Array",
       "offset": 1649,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/PeerDeliveryCompletionAggregate.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Integration\/PeerDeliveryCompletionAggregate.swift",
       "kind": "BooleanLiteral",
       "offset": 2540,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/WillPresentDeliveryContextStore.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Integration\/WillPresentDeliveryContextStore.swift",
       "kind": "Dictionary",
       "offset": 669,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/ZixflowNotificationCenterDelegate.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Integration\/ZixflowNotificationCenterDelegate.swift",
       "kind": "BooleanLiteral",
       "offset": 4645,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Integration\/ZixflowProviderAgnosticAppDelegate.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Integration\/ZixflowProviderAgnosticAppDelegate.swift",
       "kind": "Dictionary",
       "offset": 10250,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/MessagingPush.swift",
       "kind": "BooleanLiteral",
       "offset": 475,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/MessagingPush.swift",
       "kind": "StringLiteral",
       "offset": 718,
       "length": 15,
       "value": "\"MessagingPush\""
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/MessagingPush.swift",
       "kind": "BooleanLiteral",
       "offset": 1780,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/MessagingPush.swift",
       "kind": "IntegerLiteral",
       "offset": 2288,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPush.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/MessagingPush.swift",
       "kind": "StringLiteral",
       "offset": 3475,
       "length": 59,
       "value": "\"io.customer.notification-center-delegate.installing-proxy\""
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/MessagingPushImplementation.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/MessagingPushImplementation.swift",
       "kind": "Array",
       "offset": 503,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEDeliveryContinuationBox.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/PushHandling\/NSEDeliveryContinuationBox.swift",
       "kind": "BooleanLiteral",
       "offset": 1116,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinator.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinator.swift",
       "kind": "StringLiteral",
       "offset": 1530,
       "length": 6,
       "value": "\"Push\""
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinatorState.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinatorState.swift",
       "kind": "StringLiteral",
       "offset": 616,
       "length": 6,
       "value": "\"Push\""
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinatorState.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/PushHandling\/NSEPushCoordinatorState.swift",
       "kind": "BooleanLiteral",
       "offset": 846,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/RichPush\/RichPushRequest.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/RichPush\/RichPushRequest.swift",
       "kind": "BooleanLiteral",
       "offset": 836,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/RichPush\/RichPushRequestHandler.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/RichPush\/RichPushRequestHandler.swift",
       "kind": "Dictionary",
       "offset": 329,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingPush\/Util\/PushNotificationLogger.swift",
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Util\/PushNotificationLogger.swift",
       "kind": "StringLiteral",
       "offset": 1021,
       "length": 6,

@@ -10,7 +10,7 @@ Add the following to your `Package.swift` file:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/zixflow/zixflow-ios-spm.git", from: "1.3.0")
+    .package(url: "https://github.com/zixflow/zixflow-ios-spm.git", from: "1.4.0")
 ]
 ```
 
@@ -30,7 +30,7 @@ Then add the specific modules you need:
 Or add it directly in Xcode:
 1. Go to File > Add Package Dependencies
 2. Enter the repository URL: `https://github.com/zixflow/zixflow-ios-spm.git`
-3. Select the version: `1.3.0`
+3. Select the version: `1.4.0`
 4. Choose the modules you want to add to your target
 
 ## Available Modules
@@ -55,7 +55,7 @@ import ZixflowLocation
 
 ## Current Version
 
-**Latest Release:** `1.3.0`
+**Latest Release:** `1.4.0`
 
 ## Documentation
 

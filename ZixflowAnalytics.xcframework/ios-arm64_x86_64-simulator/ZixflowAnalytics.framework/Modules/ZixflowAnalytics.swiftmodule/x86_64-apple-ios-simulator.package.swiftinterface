@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowAnalytics -package-name cdp_analytics_swift
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowAnalytics -package-name cdp_analytics_swift
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import Darwin.C
 import Darwin
 import Foundation
@@ -32,9 +32,11 @@ extension ZixflowAnalytics.Analytics {
   public var anonymousId: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var userId: Swift.String? {
     get
   }
+  #endif
   public var operatingMode: ZixflowAnalytics.OperatingMode {
     get
   }
@@ -49,30 +51,42 @@ extension ZixflowAnalytics.Analytics {
   public var flushPolicies: [any ZixflowAnalytics.FlushPolicy] {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public func traits<T>() -> T? where T : Swift.Decodable, T : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func traits() -> [Swift.String : Any]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func flush(completion: (() -> Swift.Void)? = nil)
+  #endif
   public func reset()
   public func version() -> Swift.String
   public static func version() -> Swift.String
 }
 extension ZixflowAnalytics.Analytics {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func settings() -> ZixflowAnalytics.Settings?
+  #endif
   public func manuallyEnableDestination(plugin: any ZixflowAnalytics.DestinationPlugin)
 }
 extension ZixflowAnalytics.Analytics {
   public var hasUnsentEvents: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var pendingUploads: [Foundation.URL]? {
     get
   }
+  #endif
   public func purgeStorage()
   public func purgeStorage(fileURL: Foundation.URL)
   public func waitUntilStarted()
 }
 extension ZixflowAnalytics.Analytics {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func openURL<T>(_ url: Foundation.URL, options: T? = nil) where T : Swift.Decodable, T : Swift.Encodable
+  #endif
   public func openURL(_ url: Foundation.URL, options: [Swift.String : Any] = [:])
 }
 public protocol AnonymousIdGenerator : AnyObject, Swift.Decodable, Swift.Encodable {
@@ -98,16 +112,20 @@ public class Configuration {
   @objc deinit
 }
 extension ZixflowAnalytics.Configuration {
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func application(_ value: Any?) -> ZixflowAnalytics.Configuration
+  #endif
   @discardableResult
   public func trackApplicationLifecycleEvents(_ enabled: Swift.Bool) -> ZixflowAnalytics.Configuration
   @discardableResult
   public func flushAt(_ count: Swift.Int) -> ZixflowAnalytics.Configuration
   @discardableResult
   public func flushInterval(_ interval: Foundation.TimeInterval) -> ZixflowAnalytics.Configuration
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func defaultSettings(_ settings: ZixflowAnalytics.Settings?) -> ZixflowAnalytics.Configuration
+  #endif
   @discardableResult
   public func autoAddZixflowDestination(_ value: Swift.Bool) -> ZixflowAnalytics.Configuration
   @discardableResult
@@ -161,38 +179,84 @@ extension ZixflowAnalytics.Analytics {
   public static func reportInternalError(_ error: any Swift.Error, fatal: Swift.Bool = false)
 }
 extension ZixflowAnalytics.Analytics {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func track<P>(name: Swift.String, properties: P?) where P : Swift.Decodable, P : Swift.Encodable
+  #endif
   public func track(name: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func identify<T>(userId: Swift.String, traits: T?) where T : Swift.Decodable, T : Swift.Encodable
+  #endif
   public func identify<T>(traits: T) where T : Swift.Decodable, T : Swift.Encodable
   public func identify(userId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen<P>(title: Swift.String, category: Swift.String? = nil, properties: P?) where P : Swift.Decodable, P : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen(title: Swift.String, category: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func group<T>(groupId: Swift.String, traits: T?) where T : Swift.Decodable, T : Swift.Encodable
+  #endif
   public func group(groupId: Swift.String)
   public func alias(newId: Swift.String)
 }
 extension ZixflowAnalytics.Analytics {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func track(name: Swift.String, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func identify(userId: Swift.String, traits: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen(title: Swift.String, category: Swift.String? = nil, properties: [Swift.String : Any]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func group(groupId: Swift.String, traits: [Swift.String : Any]?)
+  #endif
 }
 extension ZixflowAnalytics.Analytics {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func track<P>(name: Swift.String, properties: P?, enrichments: [ZixflowAnalytics.EnrichmentClosure]?) where P : Swift.Decodable, P : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func track(name: Swift.String, enrichments: [ZixflowAnalytics.EnrichmentClosure]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func track(name: Swift.String, properties: [Swift.String : Any]?, enrichments: [ZixflowAnalytics.EnrichmentClosure]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func identify<T>(userId: Swift.String, traits: T?, enrichments: [ZixflowAnalytics.EnrichmentClosure]?) where T : Swift.Decodable, T : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func identify<T>(traits: T, enrichments: [ZixflowAnalytics.EnrichmentClosure]?) where T : Swift.Decodable, T : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func identify(userId: Swift.String, enrichments: [ZixflowAnalytics.EnrichmentClosure]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func identify(userId: Swift.String, traits: [Swift.String : Any]? = nil, enrichments: [ZixflowAnalytics.EnrichmentClosure]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen<P>(title: Swift.String, category: Swift.String? = nil, properties: P?, enrichments: [ZixflowAnalytics.EnrichmentClosure]?) where P : Swift.Decodable, P : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen(title: Swift.String, category: Swift.String? = nil, enrichments: [ZixflowAnalytics.EnrichmentClosure]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen(title: Swift.String, category: Swift.String? = nil, properties: [Swift.String : Any]?, enrichments: [ZixflowAnalytics.EnrichmentClosure]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func group<T>(groupId: Swift.String, traits: T?, enrichments: [ZixflowAnalytics.EnrichmentClosure]?) where T : Swift.Decodable, T : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func group(groupId: Swift.String, enrichments: [ZixflowAnalytics.EnrichmentClosure]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func group(groupId: Swift.String, traits: [Swift.String : Any]?, enrichments: [ZixflowAnalytics.EnrichmentClosure]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func alias(newId: Swift.String, enrichments: [ZixflowAnalytics.EnrichmentClosure]?)
+  #endif
 }
 @objc(ZixflowAnalytics) public class ObjCAnalytics : ObjectiveC.NSObject {
   final public let analytics: ZixflowAnalytics.Analytics
@@ -202,35 +266,53 @@ extension ZixflowAnalytics.Analytics {
 }
 @objc extension ZixflowAnalytics.ObjCAnalytics {
   @objc(track:) dynamic public func track(name: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(track:properties:) dynamic public func track(name: Swift.String, properties: [Swift.String : Any]?)
+  #endif
   @objc(identify:) dynamic public func identify(userId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(identify:traits:) dynamic public func identify(userId: Swift.String?, traits: [Swift.String : Any]?)
+  #endif
   @objc(screen:) dynamic public func screen(title: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(screen:category:) dynamic public func screen(title: Swift.String, category: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(screen:category:properties:) dynamic public func screen(title: Swift.String, category: Swift.String?, properties: [Swift.String : Any]?)
+  #endif
   @objc(group:) dynamic public func group(groupId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(group:traits:) dynamic public func group(groupId: Swift.String, traits: [Swift.String : Any]?)
+  #endif
   @objc(alias:) dynamic public func alias(newId: Swift.String)
 }
 @objc extension ZixflowAnalytics.ObjCAnalytics {
   @objc dynamic public var anonymousId: Swift.String {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public var userId: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func traits() -> [Swift.String : Any]?
+  #endif
   @objc dynamic public func flush()
   @objc dynamic public func reset()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func settings() -> [Swift.String : Any]?
+  #endif
   @objc dynamic public func openURL(_ url: Foundation.URL, options: [Swift.String : Any] = [:])
   @objc dynamic public func version() -> Swift.String
 }
 @objc(CIOConfiguration) public class ObjCConfiguration : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var application: Any? {
     @objc get
     @objc set(value)
   }
+  #endif
   @objc public var trackApplicationLifecycleEvents: Swift.Bool {
     @objc get
     @objc set(value)
@@ -259,10 +341,12 @@ extension ZixflowAnalytics.Analytics {
     @objc get
     @objc set(value)
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var requestFactory: ((Foundation.URLRequest) -> Foundation.URLRequest)? {
     @objc get
     @objc set(value)
   }
+  #endif
   @objc public init(writeKey: Swift.String)
   @objc deinit
 }
@@ -282,214 +366,336 @@ extension ZixflowAnalytics.Analytics {
   @objc deinit
 }
 @objc(CIORawEvent) public protocol ObjCRawEvent : ObjectiveC.NSObjectProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var type: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var messageId: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var timestamp: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var anonymousId: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var userId: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var context: [Swift.String : Any]? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var integrations: [Swift.String : Any]? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var metadata: ZixflowAnalytics.ObjCDestinationMetadata? { get set }
+  #endif
 }
 @_hasMissingDesignatedInitializers @objc(CIOTrackEvent) public class ObjCTrackEvent : ObjectiveC.NSObject, ZixflowAnalytics.ObjCRawEvent {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var type: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var messageId: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var timestamp: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var anonymousId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var userId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var context: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var integrations: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var metadata: ZixflowAnalytics.ObjCDestinationMetadata? {
     @objc get
     @objc set(v)
   }
+  #endif
   @objc public var event: Swift.String {
     @objc get
     @objc set(v)
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var properties: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(name: Swift.String, properties: [Swift.String : Any]? = nil)
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc(CIOIdentifyEvent) public class ObjCIdentifyEvent : ObjectiveC.NSObject, ZixflowAnalytics.ObjCRawEvent {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var type: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var messageId: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var timestamp: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var anonymousId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var userId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var context: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var integrations: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var metadata: ZixflowAnalytics.ObjCDestinationMetadata? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var traits: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(userId: Swift.String, traits: [Swift.String : Any]? = nil)
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc(CIOScreenEvent) public class ObjCScreenEvent : ObjectiveC.NSObject, ZixflowAnalytics.ObjCRawEvent {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var type: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var messageId: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var timestamp: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var anonymousId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var userId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var context: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var integrations: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var metadata: ZixflowAnalytics.ObjCDestinationMetadata? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var name: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var category: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var properties: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(name: Swift.String, category: Swift.String?, properties: [Swift.String : Any]? = nil)
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc(CIOGroupEvent) public class ObjCGroupEvent : ObjectiveC.NSObject, ZixflowAnalytics.ObjCRawEvent {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var type: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var messageId: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var timestamp: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var anonymousId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var userId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var context: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var integrations: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var metadata: ZixflowAnalytics.ObjCDestinationMetadata? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var groupId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var traits: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(groupId: Swift.String?, traits: [Swift.String : Any]? = nil)
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc(CIOAliasEvent) public class ObjCAliasEvent : ObjectiveC.NSObject, ZixflowAnalytics.ObjCRawEvent {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var type: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var messageId: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var timestamp: Swift.String? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var anonymousId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var userId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var context: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var integrations: [Swift.String : Any]? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var metadata: ZixflowAnalytics.ObjCDestinationMetadata? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var previousId: Swift.String? {
     @objc get
     @objc set(v)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(newId: Swift.String?)
+  #endif
   @objc deinit
 }
 @objc(CIOPlugin) public protocol ObjCPlugin {
@@ -500,19 +706,31 @@ public protocol ObjCPluginShim {
 @_inheritsConvenienceInitializers @objc(CIOEventPlugin) public class ObjCEventPlugin : ObjectiveC.NSObject, ZixflowAnalytics.EventPlugin, ZixflowAnalytics.ObjCPlugin {
   public var type: ZixflowAnalytics.PluginType
   weak public var analytics: ZixflowAnalytics.Analytics?
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(executeEvent:) public func execute(event: (any ZixflowAnalytics.ObjCRawEvent)?) -> (any ZixflowAnalytics.ObjCRawEvent)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
 @objc(CIOBlockPlugin) public class ObjCBlockPlugin : ZixflowAnalytics.ObjCEventPlugin {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(executeEvent:) override public func execute(event: (any ZixflowAnalytics.ObjCRawEvent)?) -> (any ZixflowAnalytics.ObjCRawEvent)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(initWithBlock:) public init(block: @escaping ((any ZixflowAnalytics.ObjCRawEvent)?) -> (any ZixflowAnalytics.ObjCRawEvent)?)
+  #endif
   @objc deinit
 }
 @objc extension ZixflowAnalytics.ObjCAnalytics {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(addPlugin:) dynamic public func add(plugin: (any ZixflowAnalytics.ObjCPlugin)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(addPlugin:destinationKey:) dynamic public func add(plugin: (any ZixflowAnalytics.ObjCPlugin)?, destinationKey: Swift.String)
+  #endif
 }
 public enum PluginType : Swift.Int, Swift.CaseIterable {
   case before
@@ -520,7 +738,9 @@ public enum PluginType : Swift.Int, Swift.CaseIterable {
   case destination
   case after
   case utility
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias AllCases = [ZixflowAnalytics.PluginType]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [ZixflowAnalytics.PluginType] {
@@ -541,18 +761,32 @@ public enum UpdateType {
 }
 public protocol Plugin : AnyObject {
   var type: ZixflowAnalytics.PluginType { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var analytics: ZixflowAnalytics.Analytics? { get set }
+  #endif
   func configure(analytics: ZixflowAnalytics.Analytics)
   func update(settings: ZixflowAnalytics.Settings, type: ZixflowAnalytics.UpdateType)
+  #if compiler(>=5.3) && $NonescapableTypes
   func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
   func shutdown()
 }
 public protocol EventPlugin : ZixflowAnalytics.Plugin {
+  #if compiler(>=5.3) && $NonescapableTypes
   func identify(event: ZixflowAnalytics.IdentifyEvent) -> ZixflowAnalytics.IdentifyEvent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func track(event: ZixflowAnalytics.TrackEvent) -> ZixflowAnalytics.TrackEvent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func group(event: ZixflowAnalytics.GroupEvent) -> ZixflowAnalytics.GroupEvent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func alias(event: ZixflowAnalytics.AliasEvent) -> ZixflowAnalytics.AliasEvent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func screen(event: ZixflowAnalytics.ScreenEvent) -> ZixflowAnalytics.ScreenEvent?
+  #endif
   func reset()
   func flush()
 }
@@ -575,7 +809,9 @@ public typealias EnrichmentClosure = (_ event: (any ZixflowAnalytics.RawEvent)?)
 @_hasMissingDesignatedInitializers public class ClosureEnrichment : ZixflowAnalytics.Plugin {
   public var type: ZixflowAnalytics.PluginType
   weak public var analytics: ZixflowAnalytics.Analytics?
+  #if compiler(>=5.3) && $NonescapableTypes
   public func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
   @objc deinit
 }
 extension ZixflowAnalytics.Plugin {
@@ -589,8 +825,12 @@ extension ZixflowAnalytics.DestinationPlugin {
   @discardableResult
   public func add(enrichment: @escaping ZixflowAnalytics.EnrichmentClosure) -> any ZixflowAnalytics.Plugin
   public func remove(plugin: any ZixflowAnalytics.Plugin)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func find<T>(pluginType: T.Type) -> T? where T : ZixflowAnalytics.Plugin
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func findAll<T>(pluginType: T.Type) -> [T]? where T : ZixflowAnalytics.Plugin
+  #endif
 }
 extension ZixflowAnalytics.Analytics {
   public func apply(closure: (any ZixflowAnalytics.Plugin) -> Swift.Void)
@@ -599,9 +839,15 @@ extension ZixflowAnalytics.Analytics {
   @discardableResult
   public func add(enrichment: @escaping ZixflowAnalytics.EnrichmentClosure) -> any ZixflowAnalytics.Plugin
   public func remove(plugin: any ZixflowAnalytics.Plugin)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func find<T>(pluginType: T.Type) -> T? where T : ZixflowAnalytics.Plugin
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func findAll<T>(pluginType: T.Type) -> [T]? where T : ZixflowAnalytics.Plugin
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func find(key: Swift.String) -> (any ZixflowAnalytics.DestinationPlugin)?
+  #endif
 }
 public protocol OpeningURLs {
   func openURL(_ url: Foundation.URL, options: [Swift.String : Any])
@@ -609,14 +855,20 @@ public protocol OpeningURLs {
 @_hasMissingDesignatedInitializers public class Context {
   final public let type: ZixflowAnalytics.PluginType
   weak public var analytics: ZixflowAnalytics.Analytics?
+  #if compiler(>=5.3) && $NonescapableTypes
   public func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func insertOrigin(event: (any ZixflowAnalytics.RawEvent)?, data: [Swift.String : Any]) -> (any ZixflowAnalytics.RawEvent)?
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class DestinationMetadataPlugin : ZixflowAnalytics.Plugin {
   final public let type: ZixflowAnalytics.PluginType
   weak public var analytics: ZixflowAnalytics.Analytics?
+  #if compiler(>=5.3) && $NonescapableTypes
   public func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
   @objc deinit
 }
 public class DeviceToken {
@@ -624,7 +876,9 @@ public class DeviceToken {
   weak public var analytics: ZixflowAnalytics.Analytics?
   public var token: Swift.String?
   required public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
   @objc deinit
 }
 extension ZixflowAnalytics.Analytics {
@@ -633,21 +887,27 @@ extension ZixflowAnalytics.Analytics {
 public protocol RemoteNotifications : ZixflowAnalytics.Plugin {
   func declinedRemoteNotifications()
   func registeredForRemoteNotifications(deviceToken: Foundation.Data)
+  #if compiler(>=5.3) && $NonescapableTypes
   func failedToRegisterForRemoteNotification(error: (any Swift.Error)?)
+  #endif
   func receivedRemoteNotification(userInfo: [Swift.AnyHashable : Any])
   func handleAction(identifier: Swift.String, userInfo: [Swift.String : Any])
 }
 extension ZixflowAnalytics.RemoteNotifications {
   public func declinedRemoteNotifications()
   public func registeredForRemoteNotifications(deviceToken: Foundation.Data)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func failedToRegisterForRemoteNotification(error: (any Swift.Error)?)
+  #endif
   public func receivedRemoteNotification(userInfo: [Swift.AnyHashable : Any])
   public func handleAction(identifier: Swift.String, userInfo: [Swift.String : Any])
 }
 extension ZixflowAnalytics.Analytics {
   public func declinedRemoteNotifications()
   public func registeredForRemoteNotifications(deviceToken: Foundation.Data)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func failedToRegisterForRemoteNotification(error: (any Swift.Error)?)
+  #endif
   public func receivedRemoteNotification(userInfo: [Swift.AnyHashable : Any])
   public func handleAction(identifier: Swift.String, userInfo: [Swift.String : Any])
 }
@@ -659,37 +919,81 @@ extension ZixflowAnalytics.Analytics {
   public func openURL(_ url: Foundation.URL, options: [UIKit.UIApplication.OpenURLOptionsKey : Any])
 }
 public protocol iOSLifecycle {
+  #if compiler(>=5.3) && $NonescapableTypes
   func applicationDidEnterBackground(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func applicationWillEnterForeground(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func application(_ application: UIKit.UIApplication?, didFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func applicationDidBecomeActive(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func applicationWillResignActive(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func applicationDidReceiveMemoryWarning(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func applicationWillTerminate(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func applicationSignificantTimeChange(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func applicationBackgroundRefreshDidChange(application: UIKit.UIApplication?, refreshStatus: UIKit.UIBackgroundRefreshStatus)
+  #endif
 }
 extension ZixflowAnalytics.iOSLifecycle {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationDidEnterBackground(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationWillEnterForeground(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func application(_ application: UIKit.UIApplication?, didFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationDidBecomeActive(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationWillResignActive(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationDidReceiveMemoryWarning(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationWillTerminate(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationSignificantTimeChange(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationBackgroundRefreshDidChange(application: UIKit.UIApplication?, refreshStatus: UIKit.UIBackgroundRefreshStatus)
+  #endif
 }
 extension ZixflowAnalytics.ZixflowDestination : ZixflowAnalytics.iOSLifecycle {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationWillEnterForeground(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationDidEnterBackground(application: UIKit.UIApplication?)
+  #endif
 }
 extension ZixflowAnalytics.IntervalBasedFlushPolicy : ZixflowAnalytics.iOSLifecycle {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationWillEnterForeground(application: UIKit.UIApplication?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func applicationDidEnterBackground(application: UIKit.UIApplication?)
+  #endif
 }
 @_hasMissingDesignatedInitializers public class StartupQueue : ZixflowAnalytics.Plugin, Sovran.Subscriber {
-  @ZixflowAnalytics.Atomic<Swift.Bool> public var running: Swift.Bool {
+  @ZixflowAnalytics.Atomic public var running: Swift.Bool {
     get
   }
   final public let type: ZixflowAnalytics.PluginType
@@ -697,7 +1001,9 @@ extension ZixflowAnalytics.IntervalBasedFlushPolicy : ZixflowAnalytics.iOSLifecy
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class ZixflowAnonymousId : ZixflowAnalytics.AnonymousIdGenerator {
@@ -716,7 +1022,9 @@ open class ZixflowDestination : ZixflowAnalytics.DestinationPlugin, Sovran.Subsc
     set
   }
   public func update(settings: ZixflowAnalytics.Settings, type: ZixflowAnalytics.UpdateType)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
   public func flush()
   public func flush(group: Dispatch.DispatchGroup)
   @objc deinit
@@ -734,11 +1042,21 @@ public struct Settings : Swift.Codable {
   public init(writeKey: Swift.String, apiHost: Swift.String)
   public init(writeKey: Swift.String)
   public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func load(from url: Foundation.URL?) -> ZixflowAnalytics.Settings?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func load(resource: Swift.String, bundle: Foundation.Bundle = Bundle.main) -> ZixflowAnalytics.Settings?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func integrationSettings(forKey key: Swift.String) -> [Swift.String : Any]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func integrationSettings<T>(forKey key: Swift.String) -> T? where T : Swift.Decodable, T : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func integrationSettings<T>(forPlugin plugin: any ZixflowAnalytics.DestinationPlugin) -> T? where T : Swift.Decodable, T : Swift.Encodable
+  #endif
   public func hasIntegrationSettings(forPlugin plugin: any ZixflowAnalytics.DestinationPlugin) -> Swift.Bool
   public func hasIntegrationSettings(key: Swift.String) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
@@ -753,45 +1071,83 @@ public class Timeline {
   @objc deinit
 }
 extension ZixflowAnalytics.Plugin {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
   public func update(settings: ZixflowAnalytics.Settings, type: ZixflowAnalytics.UpdateType)
   public func shutdown()
 }
 extension ZixflowAnalytics.EventPlugin {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func identify(event: ZixflowAnalytics.IdentifyEvent) -> ZixflowAnalytics.IdentifyEvent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func track(event: ZixflowAnalytics.TrackEvent) -> ZixflowAnalytics.TrackEvent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func screen(event: ZixflowAnalytics.ScreenEvent) -> ZixflowAnalytics.ScreenEvent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func group(event: ZixflowAnalytics.GroupEvent) -> ZixflowAnalytics.GroupEvent?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func alias(event: ZixflowAnalytics.AliasEvent) -> ZixflowAnalytics.AliasEvent?
+  #endif
   public func flush()
   public func reset()
 }
 extension ZixflowAnalytics.DestinationPlugin {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func execute<T>(event: T?) -> T? where T : ZixflowAnalytics.RawEvent
+  #endif
 }
 public struct DestinationMetadata : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol RawEvent : Swift.Decodable, Swift.Encodable {
+  #if compiler(>=5.3) && $NonescapableTypes
   var enrichments: [ZixflowAnalytics.EnrichmentClosure]? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var type: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var anonymousId: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var messageId: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var userId: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var timestamp: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var context: ZixflowAnalytics.JSON? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var integrations: ZixflowAnalytics.JSON? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var metrics: [ZixflowAnalytics.JSON]? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var _metadata: ZixflowAnalytics.DestinationMetadata? { get set }
+  #endif
 }
 public struct TrackEvent : ZixflowAnalytics.RawEvent {
-  @ZixflowAnalytics.Noncodable<[ZixflowAnalytics.EnrichmentClosure]> public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZixflowAnalytics.Noncodable public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
     get
     set
     _modify
   }
+  #endif
   public var type: Swift.String?
   public var anonymousId: Swift.String?
   public var messageId: Swift.String?
@@ -803,17 +1159,21 @@ public struct TrackEvent : ZixflowAnalytics.RawEvent {
   public var _metadata: ZixflowAnalytics.DestinationMetadata?
   public var event: Swift.String
   public var properties: ZixflowAnalytics.JSON?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(event: Swift.String, properties: ZixflowAnalytics.JSON?)
+  #endif
   public init(existing: ZixflowAnalytics.TrackEvent)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct IdentifyEvent : ZixflowAnalytics.RawEvent {
-  @ZixflowAnalytics.Noncodable<[ZixflowAnalytics.EnrichmentClosure]> public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZixflowAnalytics.Noncodable public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
     get
     set
     _modify
   }
+  #endif
   public var type: Swift.String?
   public var anonymousId: Swift.String?
   public var messageId: Swift.String?
@@ -824,17 +1184,21 @@ public struct IdentifyEvent : ZixflowAnalytics.RawEvent {
   public var metrics: [ZixflowAnalytics.JSON]?
   public var _metadata: ZixflowAnalytics.DestinationMetadata?
   public var traits: ZixflowAnalytics.JSON?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(userId: Swift.String? = nil, traits: ZixflowAnalytics.JSON? = nil)
+  #endif
   public init(existing: ZixflowAnalytics.IdentifyEvent)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct ScreenEvent : ZixflowAnalytics.RawEvent {
-  @ZixflowAnalytics.Noncodable<[ZixflowAnalytics.EnrichmentClosure]> public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZixflowAnalytics.Noncodable public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
     get
     set
     _modify
   }
+  #endif
   public var type: Swift.String?
   public var anonymousId: Swift.String?
   public var messageId: Swift.String?
@@ -847,17 +1211,21 @@ public struct ScreenEvent : ZixflowAnalytics.RawEvent {
   public var name: Swift.String?
   public var category: Swift.String?
   public var properties: ZixflowAnalytics.JSON?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(title: Swift.String? = nil, category: Swift.String?, properties: ZixflowAnalytics.JSON? = nil)
+  #endif
   public init(existing: ZixflowAnalytics.ScreenEvent)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct GroupEvent : ZixflowAnalytics.RawEvent {
-  @ZixflowAnalytics.Noncodable<[ZixflowAnalytics.EnrichmentClosure]> public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZixflowAnalytics.Noncodable public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
     get
     set
     _modify
   }
+  #endif
   public var type: Swift.String?
   public var anonymousId: Swift.String?
   public var messageId: Swift.String?
@@ -869,17 +1237,21 @@ public struct GroupEvent : ZixflowAnalytics.RawEvent {
   public var _metadata: ZixflowAnalytics.DestinationMetadata?
   public var groupId: Swift.String?
   public var traits: ZixflowAnalytics.JSON?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(groupId: Swift.String? = nil, traits: ZixflowAnalytics.JSON? = nil)
+  #endif
   public init(existing: ZixflowAnalytics.GroupEvent)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct AliasEvent : ZixflowAnalytics.RawEvent {
-  @ZixflowAnalytics.Noncodable<[ZixflowAnalytics.EnrichmentClosure]> public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @ZixflowAnalytics.Noncodable public var enrichments: [ZixflowAnalytics.EnrichmentClosure]? {
     get
     set
     _modify
   }
+  #endif
   public var type: Swift.String?
   public var anonymousId: Swift.String?
   public var messageId: Swift.String?
@@ -890,14 +1262,20 @@ public struct AliasEvent : ZixflowAnalytics.RawEvent {
   public var _metadata: ZixflowAnalytics.DestinationMetadata?
   public var userId: Swift.String?
   public var previousId: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(newId: Swift.String?, previousId: Swift.String? = nil)
+  #endif
   public init(existing: ZixflowAnalytics.AliasEvent)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 extension ZixflowAnalytics.RawEvent {
+  #if compiler(>=5.3) && $NonescapableTypes
   public mutating func disableCloudIntegrations(exceptKeys: [Swift.String]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public mutating func enableCloudIntegrations(exceptKeys: [Swift.String]? = nil)
+  #endif
   public mutating func disableIntegration(key: Swift.String)
   public mutating func enableIntegration(key: Swift.String)
 }
@@ -918,7 +1296,9 @@ public enum JSON : Swift.Equatable {
   case array([ZixflowAnalytics.JSON])
   case object([Swift.String : ZixflowAnalytics.JSON])
   public init(_ object: [Swift.String : Any]) throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(nilOrObject object: [Swift.String : Any]?) throws
+  #endif
   public init<T>(with value: T) throws where T : Swift.Decodable, T : Swift.Encodable
   public init(_ value: Any) throws
   public static func == (a: ZixflowAnalytics.JSON, b: ZixflowAnalytics.JSON) -> Swift.Bool
@@ -933,55 +1313,95 @@ extension Swift.Encodable {
   public func toString(pretty: Swift.Bool) -> Swift.String
 }
 extension ZixflowAnalytics.JSON {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func codableValue<T>() -> T? where T : Swift.Decodable, T : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var boolValue: Swift.Bool? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var decimalValue: Foundation.Decimal? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var intValue: Swift.Int? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var uintValue: Swift.UInt? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var floatValue: Swift.Float? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var doubleValue: Swift.Double? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var stringValue: Swift.String? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var arrayValue: [Any]? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var dictionaryValue: [Swift.String : Any]? {
     get
   }
+  #endif
 }
 extension ZixflowAnalytics.JSON {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func mapTransform(_ keys: [Swift.String : Swift.String], valueTransform: ((_ key: Swift.String, _ value: Any) -> Any)? = nil) throws -> ZixflowAnalytics.JSON
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func add(value: Any) throws -> ZixflowAnalytics.JSON?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func add(value: Any, forKey key: Swift.String) throws -> ZixflowAnalytics.JSON?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func remove(key: Swift.String) throws -> ZixflowAnalytics.JSON?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public subscript(index: Swift.Int) -> ZixflowAnalytics.JSON? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public subscript(key: Swift.String) -> ZixflowAnalytics.JSON? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public subscript<T>(keyPath keyPath: ZixflowAnalytics.KeyPath) -> T? where T : Swift.Decodable, T : Swift.Encodable {
     get
     set(newValue)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func value<T>(forKeyPath keyPath: ZixflowAnalytics.KeyPath) -> T? where T : Swift.Decodable, T : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public mutating func setValue<T>(_ value: T?, forKeyPath keyPath: ZixflowAnalytics.KeyPath) where T : Swift.Decodable, T : Swift.Encodable
+  #endif
 }
 extension Swift.Dictionary where Key == Swift.String, Value == Any {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func mapTransform(_ keys: [Swift.String : Swift.String], valueTransform: ((_ key: Key, _ value: Value) -> Any)? = nil) throws -> [Key : Value]
+  #endif
 }
 public struct BasicHandler {
 }
@@ -997,15 +1417,21 @@ extension ZixflowAnalytics.KeyPath : Swift.ExpressibleByStringLiteral {
   public typealias UnicodeScalarLiteralType = Swift.String
 }
 extension Swift.Dictionary where Key : Swift.StringProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
   public subscript(keyPath keyPath: ZixflowAnalytics.KeyPath) -> Any? {
     get
     set
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public subscript(keyPath keyPath: ZixflowAnalytics.KeyPath, reference reference: Any?) -> Any? {
     get
     set
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func exists(keyPath: ZixflowAnalytics.KeyPath, reference: Any? = nil) -> Swift.Bool
+  #endif
 }
 extension ZixflowAnalytics.Analytics {
   public func log(message: Swift.String)
@@ -1041,14 +1467,22 @@ public enum HTTPSessions {
 public protocol HTTPSession {
   associatedtype DataTaskType : ZixflowAnalytics.DataTask
   associatedtype UploadTaskType : ZixflowAnalytics.UploadTask
+  #if compiler(>=5.3) && $NonescapableTypes
   func uploadTask(with request: Foundation.URLRequest, fromFile file: Foundation.URL, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void) -> Self.UploadTaskType
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func uploadTask(with request: Foundation.URLRequest, from bodyData: Foundation.Data?, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void) -> Self.UploadTaskType
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func dataTask(with request: Foundation.URLRequest, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void) -> Self.DataTaskType
+  #endif
   func finishTasksAndInvalidate()
 }
 @propertyWrapper public struct Noncodable<T> : Swift.Codable {
   public var wrappedValue: T?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(wrappedValue: T?)
+  #endif
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -1063,7 +1497,9 @@ public class CountBasedFlushPolicy : ZixflowAnalytics.FlushPolicy {
   @objc deinit
 }
 public protocol FlushPolicy : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   var analytics: ZixflowAnalytics.Analytics? { get set }
+  #endif
   func configure(analytics: ZixflowAnalytics.Analytics)
   func shouldFlush() -> Swift.Bool
   func updateState(event: any ZixflowAnalytics.RawEvent)
@@ -1074,7 +1510,9 @@ extension ZixflowAnalytics.Analytics {
   public func remove(flushPolicy: any ZixflowAnalytics.FlushPolicy)
   public func remove<T>(flushPolicy: T.Type) where T : ZixflowAnalytics.FlushPolicy
   public func removeAllFlushPolicies()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func find<T>(flushPolicy: T.Type) -> (any ZixflowAnalytics.FlushPolicy)? where T : ZixflowAnalytics.FlushPolicy
+  #endif
 }
 public class IntervalBasedFlushPolicy : ZixflowAnalytics.FlushPolicy, Sovran.Subscriber {
   weak public var analytics: ZixflowAnalytics.Analytics?
@@ -1090,8 +1528,12 @@ public struct DataResult {
   public let data: Foundation.Data?
   public let dataFiles: [Foundation.URL]?
   public let removable: [any Swift.Equatable]?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(data: Foundation.Data?, removable: [any Swift.Equatable]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(dataFiles: [Foundation.URL]?, removable: [any Swift.Equatable]?)
+  #endif
 }
 public enum DataTransactionType {
   case data
@@ -1111,7 +1553,9 @@ public protocol DataStore {
   init(configuration: Self.StoreConfiguration)
   func reset()
   func append(data: any ZixflowAnalytics.RawEvent)
+  #if compiler(>=5.3) && $NonescapableTypes
   func fetch(count: Swift.Int?, maxBytes: Swift.Int?) -> ZixflowAnalytics.DataResult?
+  #endif
   func remove(data: [Self.ItemID])
 }
 public class TransientDB {
@@ -1127,7 +1571,9 @@ public class TransientDB {
   public init(store: any ZixflowAnalytics.DataStore, asyncAppend: Swift.Bool = true)
   public func reset()
   public func append(data: any ZixflowAnalytics.RawEvent)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func fetch(count: Swift.Int? = nil, maxBytes: Swift.Int? = nil) -> ZixflowAnalytics.DataResult?
+  #endif
   public func remove(data: [any Swift.Equatable])
   @objc deinit
 }
@@ -1148,7 +1594,9 @@ public class DirectoryStore : ZixflowAnalytics.DataStore {
   required public init(configuration: ZixflowAnalytics.DirectoryStore.Configuration)
   public func reset()
   public func append(data: any ZixflowAnalytics.RawEvent)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func fetch(count: Swift.Int?, maxBytes: Swift.Int?) -> ZixflowAnalytics.DataResult?
+  #endif
   public func remove(data: [any Swift.Equatable])
   @objc deinit
 }
@@ -1169,7 +1617,9 @@ public class MemoryStore : ZixflowAnalytics.DataStore {
   required public init(configuration: ZixflowAnalytics.MemoryStore.Configuration)
   public func reset()
   public func append(data: any ZixflowAnalytics.RawEvent)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func fetch(count: Swift.Int?, maxBytes: Swift.Int?) -> ZixflowAnalytics.DataResult?
+  #endif
   public func remove(data: [any Swift.Equatable])
   @objc deinit
 }
