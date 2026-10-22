@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowInternalCommon
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowInternalCommon
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import Dispatch
 import Foundation
 import Swift
@@ -15,9 +15,7 @@ import os
 public typealias ModifyQueueResult = (success: Swift.Bool, queueStatus: ZixflowInternalCommon.QueueStatus)
 public protocol Queue : ZixflowInternalCommon.AutoMockable {
   func getAllStoredTasks(siteId: Swift.String) -> [ZixflowInternalCommon.QueueTaskMetadata]
-  #if compiler(>=5.3) && $NonescapableTypes
   func getTaskDetail(_ task: ZixflowInternalCommon.QueueTaskMetadata, siteId: Swift.String) -> ZixflowInternalCommon.TaskDetail?
-  #endif
   func deleteProcessedTask(_ task: ZixflowInternalCommon.QueueTaskMetadata, siteId: Swift.String)
 }
 public struct TaskDetail {
@@ -27,25 +25,19 @@ public struct TaskDetail {
 }
 @_hasMissingDesignatedInitializers public class ZixflowQueue : ZixflowInternalCommon.Queue {
   public func getAllStoredTasks(siteId: Swift.String) -> [ZixflowInternalCommon.QueueTaskMetadata]
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getTaskDetail(_ task: ZixflowInternalCommon.QueueTaskMetadata, siteId: Swift.String) -> ZixflowInternalCommon.TaskDetail?
-  #endif
   public func deleteProcessedTask(_ task: ZixflowInternalCommon.QueueTaskMetadata, siteId: Swift.String)
   @objc deinit
 }
 public protocol QueueStorage : ZixflowInternalCommon.AutoMockable {
   func getInventory(siteId: Swift.String) -> [ZixflowInternalCommon.QueueTaskMetadata]
-  #if compiler(>=5.3) && $NonescapableTypes
   func get(storageId: Swift.String, siteId: Swift.String) -> ZixflowInternalCommon.QueueTask?
-  #endif
   func delete(storageId: Swift.String, siteId: Swift.String) -> Swift.Bool
 }
 @_hasMissingDesignatedInitializers public class FileManagerQueueStorage : ZixflowInternalCommon.QueueStorage {
   public func getInventory(siteId: Swift.String) -> [ZixflowInternalCommon.QueueTaskMetadata]
   public func saveInventory(_ newInventory: [ZixflowInternalCommon.QueueTaskMetadata], siteId: Swift.String) -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   public func get(storageId: Swift.String, siteId: Swift.String) -> ZixflowInternalCommon.QueueTask?
-  #endif
   public func delete(storageId: Swift.String, siteId: Swift.String) -> Swift.Bool
   @objc deinit
 }
@@ -67,18 +59,14 @@ public struct DeletePushNotificationQueueTaskData : Swift.Codable {
 public struct IdentifyProfileQueueTaskData : Swift.Codable {
   public let identifier: Swift.String
   public let attributesJsonString: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(identifier: Swift.String, attributesJsonString: Swift.String?)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct RegisterPushNotificationQueueTaskData : Swift.Codable {
   public let profileIdentifier: Swift.String
   public let attributesJsonString: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(profileIdentifier: Swift.String, attributesJsonString: Swift.String?)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -128,9 +116,7 @@ public enum QueueTaskType : Swift.String {
   case registerPushToken
   case deletePushToken
   case trackPushMetric
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -240,9 +226,7 @@ public struct TrackGeofenceMetricEvent : ZixflowInternalCommon.EventRepresentabl
   public let userId: Swift.String
   public let geosetId: Swift.String?
   public let metadata: [Swift.String : ZixflowInternalCommon.GeofenceMetadataValue]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(storageId: Swift.String = UUID().uuidString, geofenceId: Swift.String, transition: ZixflowInternalCommon.GeofenceTransition, timestamp: Foundation.Date = Date(), name: Swift.String?, transitionId: Swift.String, userId: Swift.String, geosetId: Swift.String? = nil, metadata: [Swift.String : ZixflowInternalCommon.GeofenceMetadataValue]? = nil, params: [Swift.String : Swift.String] = [:])
-  #endif
   public static func == (a: ZixflowInternalCommon.TrackGeofenceMetricEvent, b: ZixflowInternalCommon.TrackGeofenceMetricEvent) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -304,18 +288,14 @@ public protocol EventCache : ZixflowInternalCommon.AutoMockable {
 }
 public protocol EventStorage : ZixflowInternalCommon.AutoMockable {
   func store(event: ZixflowInternalCommon.AnyEventRepresentable) async throws
-  #if compiler(>=5.3) && $NonescapableTypes
   func retrieve(eventType: Swift.String, storageId: Swift.String) async throws -> ZixflowInternalCommon.AnyEventRepresentable?
-  #endif
   func loadEvents(ofType type: Swift.String) async throws -> [ZixflowInternalCommon.AnyEventRepresentable]
   func remove(ofType eventType: Swift.String, withStorageId storageId: Swift.String) async
   func removeAll() async
 }
 extension ZixflowInternalCommon.DIGraphShared {
-  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   final public func registerPendingPushDeliveryStore(appGroupId: Swift.String?) -> any ZixflowInternalCommon.PendingPushDeliveryStore
-  #endif
   final public var pendingPushDeliveryStore: any ZixflowInternalCommon.PendingPushDeliveryStore {
     get
   }
@@ -323,12 +303,8 @@ extension ZixflowInternalCommon.DIGraphShared {
 @_hasMissingDesignatedInitializers final public class DIGraphShared : @unchecked Swift.Sendable {
   public static let shared: ZixflowInternalCommon.DIGraphShared
   final public func override<T>(value: T, forType type: T.Type)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getOverriddenInstance<T>() -> T?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getOptional<T>(_ type: T.Type = T.self) -> T?
-  #endif
   final public func register<T>(_ value: T, forType type: T.Type)
   final public func getSingletonOrCreate<T>(of type: T.Type = T.self, with factory: () -> T) -> T
   final public func reset()
@@ -349,41 +325,29 @@ extension ZixflowInternalCommon.ZixflowInstance {
   public func track(name: Swift.String)
   @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'track(name:properties:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func track(name: Swift.String, data: [Swift.String : Any])
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'track(name:properties:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func track<RequestBody>(name: Swift.String, data: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  #endif
   @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'screen(title:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func screen(name: Swift.String)
   @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'screen(title:properties:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func screen(name: Swift.String, data: [Swift.String : Any])
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, unavailable, message: "ZixflowTracking module is no longer supported. Use 'screen(title:properties:)' from 'ZixflowDataPipelines' for improved features. See documentation for migration details.")
   public func screen<RequestBody>(name: Swift.String, data: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  #endif
 }
 extension Swift.Array {
-  #if compiler(>=5.3) && $NonescapableTypes
   public mutating func removeFirstOrNil() -> Element?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func mapNonNil<T>() -> [T] where Element == T?
-  #endif
 }
 extension Foundation.Data {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var string: Swift.String? {
     get
   }
-  #endif
 }
 public enum DateFormat : Swift.String {
   case hourMinuteSecond
   case iso8601noMilliseconds
   case iso8601WithMilliseconds
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -391,9 +355,7 @@ public enum DateFormat : Swift.String {
 }
 extension Foundation.Date {
   public func string(format: ZixflowInternalCommon.DateFormat) -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func fromIso8601WithMilliseconds(_ string: Swift.String) -> Foundation.Date?
-  #endif
   public var millisecondsSince1970: Swift.Double {
     get
   }
@@ -407,24 +369,18 @@ extension Swift.Dictionary where Key == Swift.String, Value == Any {
   public func mergeWith(_ other: [Swift.String : Any]) -> [Swift.String : Any]
 }
 extension Foundation.LocalizedError where Self : Swift.CustomStringConvertible {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
 }
 extension Swift.String {
   public init(apnDeviceToken: Foundation.Data)
-  #if compiler(>=5.3) && $NonescapableTypes
   public var data: Foundation.Data! {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var url: Foundation.URL? {
     get
   }
-  #endif
   public static var abcLetters: Swift.String {
     get
   }
@@ -448,35 +404,27 @@ extension UIKit.UIApplication {
   @_Concurrency.MainActor @preconcurrency public func open(url: Foundation.URL)
 }
 extension UIKit.UIViewController {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var bundleIdOfView: Swift.String? {
     get
   }
-  #endif
 }
 open class ModuleTopLevelObject<ImplementationClass> {
   public var hasBeenInitialized: Swift.Bool {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  @ZixflowInternalCommon.Atomic public var _implementation: ImplementationClass? {
+  @ZixflowInternalCommon.Atomic<ImplementationClass?> public var _implementation: ImplementationClass? {
     get
     set
     _modify
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var implementation: ImplementationClass? {
     get
   }
-  #endif
   final public let moduleName: Swift.String
   open var logger: any ZixflowInternalCommon.Logger {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(moduleName: Swift.String, implementation: ImplementationClass? = nil)
-  #endif
   public func initializeModuleIfNotAlready(_ blockToInitializeModule: () -> ImplementationClass)
   @objc deinit
 }
@@ -489,14 +437,10 @@ public protocol ZixflowModule {
 public protocol DataPipelineTracking : AnyObject {
   var isUserIdentified: Swift.Bool { get }
   func track(name: Swift.String, properties: [Swift.String : Any])
-  #if compiler(>=5.3) && $NonescapableTypes
   func trackDeliveryEvent(token: Swift.String?, event: Swift.String, deliveryId: Swift.String, timestamp: Swift.String)
-  #endif
 }
 public protocol ProfileEnrichmentProvider : AnyObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   func getProfileEnrichmentAttributes() -> [Swift.String : Any]?
-  #endif
   func resetContext()
 }
 extension ZixflowInternalCommon.ProfileEnrichmentProvider {
@@ -525,20 +469,14 @@ public struct BackgroundTrackRequest {
   public let userId: Swift.String
   public let properties: [Swift.String : Any]
   public let timestamp: Foundation.Date?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(eventName: Swift.String, userId: Swift.String, properties: [Swift.String : Any] = [:], timestamp: Foundation.Date? = nil)
-  #endif
 }
 public protocol BackgroundDeliveryHttpClient : Swift.Sendable, ZixflowInternalCommon.AutoMockable {
-  #if compiler(>=5.3) && $NonescapableTypes
   func sendTrackEvent(_ request: ZixflowInternalCommon.BackgroundTrackRequest, completion: @escaping (Swift.Result<Swift.Void, ZixflowInternalCommon.BackgroundDeliveryHttpError>) -> Swift.Void)
-  #endif
 }
 @_hasMissingDesignatedInitializers final public class BackgroundDeliveryHttpClientImpl : ZixflowInternalCommon.BackgroundDeliveryHttpClient, @unchecked Swift.Sendable {
   convenience public init(contextStore: ZixflowInternalCommon.BackgroundDeliveryContextStore, requestRunner: any ZixflowInternalCommon.HttpRequestRunner, logger: any ZixflowInternalCommon.Logger, requestTimeout: Foundation.TimeInterval = 15, resourceTimeout: Foundation.TimeInterval = 20)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func sendTrackEvent(_ request: ZixflowInternalCommon.BackgroundTrackRequest, completion: @escaping (Swift.Result<Swift.Void, ZixflowInternalCommon.BackgroundDeliveryHttpError>) -> Swift.Void)
-  #endif
   @objc deinit
 }
 public enum BackgroundDeliveryHttp {
@@ -567,12 +505,8 @@ public enum DownloadFileType {
 }
 public typealias HttpHeaders = [Swift.String : Swift.String]
 public protocol HttpClient : ZixflowInternalCommon.AutoMockable {
-  #if compiler(>=5.3) && $NonescapableTypes
   func request(_ params: ZixflowInternalCommon.HttpRequestParams, onComplete: @escaping (Swift.Result<Foundation.Data, ZixflowInternalCommon.HttpRequestError>) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func downloadFile(url: Foundation.URL, fileType: ZixflowInternalCommon.DownloadFileType, onComplete: @escaping (Foundation.URL?) -> Swift.Void)
-  #endif
   func cancel(finishTasks: Swift.Bool)
 }
 public enum HttpRequestError : Swift.Error {
@@ -595,36 +529,22 @@ public struct HttpRequestParams {
   public let url: Foundation.URL
   public let headers: ZixflowInternalCommon.HttpHeaders?
   public let body: Foundation.Data?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(endpoint: ZixflowInternalCommon.ZixflowApiEndpoint, baseUrl: Swift.String, headers: ZixflowInternalCommon.HttpHeaders?, body: Foundation.Data?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(method: Swift.String, url: Foundation.URL, headers: ZixflowInternalCommon.HttpHeaders?, body: Foundation.Data?)
-  #endif
 }
 public protocol HttpRequestRunner : ZixflowInternalCommon.AutoMockable {
-  #if compiler(>=5.3) && $NonescapableTypes
   func request(params: ZixflowInternalCommon.HttpRequestParams, session: Foundation.URLSession, onComplete: @escaping (Foundation.Data?, Foundation.HTTPURLResponse?, (any Swift.Error)?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func downloadFile(url: Foundation.URL, fileType: ZixflowInternalCommon.DownloadFileType, session: Foundation.URLSession, onComplete: @escaping (Foundation.URL?) -> Swift.Void)
-  #endif
 }
 @_hasMissingDesignatedInitializers public class UrlRequestHttpRequestRunner : ZixflowInternalCommon.HttpRequestRunner {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func request(params: ZixflowInternalCommon.HttpRequestParams, session: Foundation.URLSession, onComplete: @escaping (Foundation.Data?, Foundation.HTTPURLResponse?, (any Swift.Error)?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func downloadFile(url: Foundation.URL, fileType: ZixflowInternalCommon.DownloadFileType, session: Foundation.URLSession, onComplete: @escaping (Foundation.URL?) -> Swift.Void)
-  #endif
   @objc deinit
 }
 public enum AppGroupIdentifier {
   public static let cioSuffix: Swift.String
   public static func identifier(forMainAppBundleId mainAppBundleId: Swift.String) -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func identifier(forProcessBundleIdentifier bundleIdentifier: Swift.String?) -> Swift.String?
-  #endif
 }
 public struct PendingPushDeliveryMetric : Swift.Codable, Swift.Equatable, Swift.Sendable {
   public let id: Foundation.UUID
@@ -643,9 +563,7 @@ public enum PendingPushDeliveryQueueRead : Swift.Equatable {
   public static func == (a: ZixflowInternalCommon.PendingPushDeliveryQueueRead, b: ZixflowInternalCommon.PendingPushDeliveryQueueRead) -> Swift.Bool
 }
 public protocol PendingPushDeliveryStore : ZixflowInternalCommon.AutoMockable {
-  #if compiler(>=5.3) && $NonescapableTypes
   var appGroupSuiteName: Swift.String? { get }
-  #endif
   func append(_ metric: ZixflowInternalCommon.PendingPushDeliveryMetric) -> Swift.Bool
   func loadAll() -> [ZixflowInternalCommon.PendingPushDeliveryMetric]
   func read() -> ZixflowInternalCommon.PendingPushDeliveryQueueRead
@@ -669,9 +587,7 @@ public struct EmptyRequestBody : Swift.Codable {
 public enum InAppMetric : Swift.String, Swift.Codable {
   case opened
   case clicked
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -690,18 +606,14 @@ public enum Metric : Swift.String, Swift.Codable, Swift.Sendable {
   case delivered
   case opened
   case converted
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
 extension ZixflowInternalCommon.Metric {
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func getEvent(from metricStr: Swift.String) -> ZixflowInternalCommon.Metric?
-  #endif
 }
 public struct TrackDeliveryEventRequestBody : Swift.Codable {
   public let payload: ZixflowInternalCommon.DeliveryPayload
@@ -758,114 +670,78 @@ public enum ZixflowApiEndpoint {
   }
 }
 extension ZixflowInternalCommon.ZixflowApiEndpoint {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getUrl(baseUrl: Swift.String) -> Foundation.URL?
-  #endif
   public func getUrlString(baseUrl: Swift.String) -> Swift.String
 }
 public struct BackgroundDeliveryContext : Swift.Codable, Swift.Equatable, Swift.Sendable {
   public var userId: Swift.String?
   public var apiHost: Swift.String?
   public var cdpApiKey: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(userId: Swift.String? = nil, apiHost: Swift.String? = nil, cdpApiKey: Swift.String? = nil)
-  #endif
   public static func == (a: ZixflowInternalCommon.BackgroundDeliveryContext, b: ZixflowInternalCommon.BackgroundDeliveryContext) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol BackgroundDeliveryCdpApiKeyProvider : AnyObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   var cdpApiKey: Swift.String? { get }
-  #endif
 }
 @_hasMissingDesignatedInitializers final public class BackgroundDeliveryContextStore : @unchecked Swift.Sendable {
   convenience public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   final public var currentUserId: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public var currentApiHost: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public var currentCdpApiKey: Swift.String? {
     get
   }
-  #endif
   final public var hasLiveCdpApiKeyProvider: Swift.Bool {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func setCdpApiKeyProvider(_ provider: (any ZixflowInternalCommon.BackgroundDeliveryCdpApiKeyProvider)?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func setUserId(_ userId: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func setApiHost(_ apiHost: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func setCdpApiKey(_ key: Swift.String?)
-  #endif
   final public func clearUserId()
   final public func reset()
   @objc deinit
 }
 public protocol GlobalDataStore : ZixflowInternalCommon.AutoMockable {
-  #if compiler(>=5.3) && $NonescapableTypes
   var pushDeviceToken: Swift.String? { get set }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   var lastTrackedDeviceFingerprint: Swift.String? { get set }
-  #endif
   func deleteAll()
 }
 public class ZixflowSharedDataStore : ZixflowInternalCommon.GlobalDataStore {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var pushDeviceToken: Swift.String? {
     get
     set
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var lastTrackedDeviceFingerprint: Swift.String? {
     get
     set
   }
-  #endif
   public init(keyValueStorage: any ZixflowInternalCommon.SharedKeyValueStorage)
   public func deleteAll()
   @objc deinit
 }
 public protocol ProfileStore : ZixflowInternalCommon.AutoMockable {
-  #if compiler(>=5.3) && $NonescapableTypes
   func getProfileId(siteId: Swift.String) -> Swift.String?
-  #endif
   func deleteProfileId(siteId: Swift.String)
 }
 @_hasMissingDesignatedInitializers public class ZixflowProfileStore : ZixflowInternalCommon.ProfileStore {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getProfileId(siteId: Swift.String) -> Swift.String?
-  #endif
   public func deleteProfileId(siteId: Swift.String)
   @objc deinit
 }
 public struct SdkConfig {
   public enum Factory {
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func create(logLevel: ZixflowInternalCommon.ZixflowLogLevel? = nil) -> ZixflowInternalCommon.SdkConfig
-    #endif
     public static func create(from dictionary: [Swift.String : Any]) -> ZixflowInternalCommon.SdkConfig
   }
   public enum Keys : Swift.String {
     case logLevel
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
-    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -915,28 +791,20 @@ extension ZixflowInternalCommon.Synchronized where T : Swift.Comparable {
 public protocol DictionaryProtocol {
   associatedtype Key : Swift.Hashable
   associatedtype Value
-  #if compiler(>=5.3) && $NonescapableTypes
   subscript(key: Self.Key) -> Self.Value? { get set }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   mutating func removeValue(forKey key: Self.Key) -> Self.Value?
-  #endif
 }
 extension Swift.Dictionary : ZixflowInternalCommon.DictionaryProtocol {
 }
 extension ZixflowInternalCommon.Synchronized : ZixflowInternalCommon.DictionaryProtocol where T : ZixflowInternalCommon.DictionaryProtocol {
   public typealias Key = T.Key
   public typealias Value = T.Value
-  #if compiler(>=5.3) && $NonescapableTypes
   final public subscript(key: ZixflowInternalCommon.Synchronized<T>.Key) -> ZixflowInternalCommon.Synchronized<T>.Value? {
     get
     set
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   final public func removeValue(forKey key: ZixflowInternalCommon.Synchronized<T>.Key) -> ZixflowInternalCommon.Synchronized<T>.Value?
-  #endif
 }
 extension ZixflowInternalCommon.Synchronized : Swift.Equatable where T : Swift.Equatable {
   public static func == (lhs: ZixflowInternalCommon.Synchronized<T>, rhs: ZixflowInternalCommon.Synchronized<T>) -> Swift.Bool
@@ -978,16 +846,10 @@ public protocol GeofenceMetric {
   var geofenceId: Swift.String { get }
   var transition: ZixflowInternalCommon.GeofenceTransition { get }
   var timestamp: Foundation.Date { get }
-  #if compiler(>=5.3) && $NonescapableTypes
   var name: Swift.String? { get }
-  #endif
   var transitionId: Swift.String { get }
-  #if compiler(>=5.3) && $NonescapableTypes
   var geosetId: Swift.String? { get }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   var metadata: [Swift.String : ZixflowInternalCommon.GeofenceMetadataValue]? { get }
-  #endif
 }
 extension ZixflowInternalCommon.GeofenceMetric {
   public var trackEventName: Swift.String {
@@ -1000,9 +862,7 @@ extension ZixflowInternalCommon.GeofenceMetric {
 public enum GeofenceTransition : Swift.String, Swift.Codable, Swift.Sendable {
   case enter
   case exit
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1019,9 +879,7 @@ public struct LocationData : Swift.Codable, Swift.Sendable, Swift.Equatable {
 public enum Region : Swift.String, Swift.Equatable {
   case US
   case EU
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1033,12 +891,8 @@ extension ZixflowInternalCommon.Region {
 public enum ScreenView : Swift.String {
   case all
   case inApp
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func getScreenView(_ screenView: Swift.String?, fallback: ZixflowInternalCommon.ScreenView = .all) -> ZixflowInternalCommon.ScreenView
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1101,15 +955,9 @@ public class DeepLinkUtilImpl : ZixflowInternalCommon.DeepLinkUtil {
 }
 public protocol DeviceInfo : ZixflowInternalCommon.AutoMockable {
   var deviceManufacturer: Swift.String { get }
-  #if compiler(>=5.3) && $NonescapableTypes
   var deviceModel: Swift.String? { get }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   var osVersion: Swift.String? { get }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   var osName: Swift.String? { get }
-  #endif
   var customerAppName: Swift.String { get }
   var customerAppVersion: Swift.String { get }
   var customerBundleId: Swift.String { get }
@@ -1118,21 +966,15 @@ public protocol DeviceInfo : ZixflowInternalCommon.AutoMockable {
 }
 @_hasMissingDesignatedInitializers public class ZixflowDeviceInfo : ZixflowInternalCommon.DeviceInfo {
   public var deviceManufacturer: Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public var deviceModel: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var osVersion: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var osName: Swift.String? {
     get
   }
-  #endif
   public var customerAppName: Swift.String {
     get
   }
@@ -1149,12 +991,8 @@ public protocol DeviceInfo : ZixflowInternalCommon.AutoMockable {
   @objc deinit
 }
 public protocol FileStorage : ZixflowInternalCommon.AutoMockable {
-  #if compiler(>=5.3) && $NonescapableTypes
   func save(siteId: Swift.String, type: ZixflowInternalCommon.FileType, contents: Foundation.Data, fileId: Swift.String?) -> Swift.Bool
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func get(siteId: Swift.String, type: ZixflowInternalCommon.FileType, fileId: Swift.String?) -> Foundation.Data?
-  #endif
   func delete(siteId: Swift.String, type: ZixflowInternalCommon.FileType, fileId: Swift.String) -> Swift.Bool
 }
 public enum FileType {
@@ -1167,126 +1005,56 @@ public enum FileType {
   }
 }
 @_hasMissingDesignatedInitializers public class FileManagerFileStorage : ZixflowInternalCommon.FileStorage {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func save(siteId: Swift.String, type: ZixflowInternalCommon.FileType, contents: Foundation.Data, fileId: Swift.String?) -> Swift.Bool
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func get(siteId: Swift.String, type: ZixflowInternalCommon.FileType, fileId: Swift.String?) -> Foundation.Data?
-  #endif
   public func delete(siteId: Swift.String, type: ZixflowInternalCommon.FileType, fileId: Swift.String) -> Swift.Bool
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class JsonAdapter {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func fromDictionary<T>(_ dictionary: [Swift.AnyHashable : Any]) -> T? where T : Swift.Decodable
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func fromDictionary<T>(_ dictionary: [[Swift.AnyHashable : Any]]) -> T? where T : Swift.Decodable
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func fromDictionary(_ dictionary: [Swift.AnyHashable : Any]) -> Foundation.Data?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func fromDictionary(_ dictionary: [[Swift.AnyHashable : Any]]) -> Foundation.Data?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func toDictionary<T>(_ obj: T) -> [Swift.AnyHashable : Any]? where T : Swift.Encodable
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func fromJsonString(_ jsonString: Swift.String) -> [Swift.String : Any]?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func fromJson<T>(_ json: Foundation.Data, logErrors: Swift.Bool = true) -> T? where T : Swift.Decodable
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func toJson<T>(_ obj: T) -> Foundation.Data? where T : Swift.Encodable
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func toJsonString<T>(_ obj: T, nilIfEmpty: Swift.Bool = true) -> Swift.String? where T : Swift.Encodable
-  #endif
   @objc deinit
 }
 public protocol SharedKeyValueStorage {
-  #if compiler(>=5.3) && $NonescapableTypes
   func integer(_ key: ZixflowInternalCommon.KeyValueStorageKey) -> Swift.Int?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func setInt(_ value: Swift.Int?, forKey key: ZixflowInternalCommon.KeyValueStorageKey)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func double(_ key: ZixflowInternalCommon.KeyValueStorageKey) -> Swift.Double?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func setDouble(_ value: Swift.Double?, forKey key: ZixflowInternalCommon.KeyValueStorageKey)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func string(_ key: ZixflowInternalCommon.KeyValueStorageKey) -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func setString(_ value: Swift.String?, forKey key: ZixflowInternalCommon.KeyValueStorageKey)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func date(_ key: ZixflowInternalCommon.KeyValueStorageKey) -> Foundation.Date?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func setDate(_ value: Foundation.Date?, forKey key: ZixflowInternalCommon.KeyValueStorageKey)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func data(_ key: ZixflowInternalCommon.KeyValueStorageKey) -> Foundation.Data?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func setData(_ value: Foundation.Data?, forKey key: ZixflowInternalCommon.KeyValueStorageKey)
-  #endif
   func deleteAll()
 }
 public protocol SandboxedSiteIdKeyValueStorage {
-  #if compiler(>=5.3) && $NonescapableTypes
   func string(_ key: ZixflowInternalCommon.KeyValueStorageKey, siteId: Swift.String) -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func setString(_ value: Swift.String?, forKey key: ZixflowInternalCommon.KeyValueStorageKey, siteId: Swift.String)
-  #endif
 }
 @_hasMissingDesignatedInitializers public class UserDefaultsSandboxedSiteIdKVStore : ZixflowInternalCommon.SandboxedSiteIdKeyValueStorage {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func string(_ key: ZixflowInternalCommon.KeyValueStorageKey, siteId: Swift.String) -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setString(_ value: Swift.String?, forKey key: ZixflowInternalCommon.KeyValueStorageKey, siteId: Swift.String)
-  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class UserDefaultsSharedKeyValueStorage : ZixflowInternalCommon.SharedKeyValueStorage {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func integer(_ key: ZixflowInternalCommon.KeyValueStorageKey) -> Swift.Int?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setInt(_ value: Swift.Int?, forKey key: ZixflowInternalCommon.KeyValueStorageKey)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func double(_ key: ZixflowInternalCommon.KeyValueStorageKey) -> Swift.Double?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setDouble(_ value: Swift.Double?, forKey key: ZixflowInternalCommon.KeyValueStorageKey)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func string(_ key: ZixflowInternalCommon.KeyValueStorageKey) -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setString(_ value: Swift.String?, forKey key: ZixflowInternalCommon.KeyValueStorageKey)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func date(_ key: ZixflowInternalCommon.KeyValueStorageKey) -> Foundation.Date?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setDate(_ value: Foundation.Date?, forKey key: ZixflowInternalCommon.KeyValueStorageKey)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func data(_ key: ZixflowInternalCommon.KeyValueStorageKey) -> Foundation.Data?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setData(_ value: Foundation.Data?, forKey key: ZixflowInternalCommon.KeyValueStorageKey)
-  #endif
   public func deleteAll()
   @objc deinit
 }
@@ -1304,9 +1072,7 @@ public enum KeyValueStorageKey : Swift.String {
   case inboxEnabledFlag
   case liveActivityRegistrations
   case liveActivityDeliveries
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1326,9 +1092,7 @@ public enum LockReference : Swift.String {
   case queueStorage
   case pushHistory
   case autoTrackScreenViewStore
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1336,19 +1100,11 @@ public enum LockReference : Swift.String {
 }
 public protocol Logger : ZixflowInternalCommon.AutoMockable {
   var logLevel: ZixflowInternalCommon.ZixflowLogLevel { get }
-  #if compiler(>=5.3) && $NonescapableTypes
   func setLogDispatcher(_ dispatcher: ((ZixflowInternalCommon.ZixflowLogLevel, Swift.String) -> Swift.Void)?)
-  #endif
   func setLogLevel(_ level: ZixflowInternalCommon.ZixflowLogLevel)
-  #if compiler(>=5.3) && $NonescapableTypes
   func debug(_ message: Swift.String, _ tag: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func info(_ message: Swift.String, _ tag: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func error(_ message: Swift.String, _ tag: Swift.String?, _ throwable: (any Swift.Error)?)
-  #endif
 }
 extension ZixflowInternalCommon.Logger {
   public func debug(_ message: Swift.String)
@@ -1360,9 +1116,7 @@ public enum ZixflowLogLevel : Swift.String, Swift.CaseIterable {
   case error
   case info
   case debug
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [ZixflowInternalCommon.ZixflowLogLevel]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [ZixflowInternalCommon.ZixflowLogLevel] {
@@ -1375,24 +1129,14 @@ public enum ZixflowLogLevel : Swift.String, Swift.CaseIterable {
 @_hasMissingDesignatedInitializers public class LoggerImpl : ZixflowInternalCommon.Logger {
   public var logLevel: ZixflowInternalCommon.ZixflowLogLevel
   public func setLogLevel(_ level: ZixflowInternalCommon.ZixflowLogLevel)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setLogDispatcher(_ dispatcher: ((ZixflowInternalCommon.ZixflowLogLevel, Swift.String) -> Swift.Void)?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func debug(_ message: Swift.String, _ tag: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func info(_ message: Swift.String, _ tag: Swift.String? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func error(_ message: Swift.String, _ tag: Swift.String?, _ error: (any Swift.Error)?)
-  #endif
   @objc deinit
 }
 extension ZixflowInternalCommon.ZixflowLogLevel {
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func getLogLevel(for value: Swift.String) -> ZixflowInternalCommon.ZixflowLogLevel?
-  #endif
 }
 final public class MockCollection : @unchecked Swift.Sendable {
   public init()
@@ -1494,43 +1238,29 @@ public protocol ZixflowInstance : ZixflowInternalCommon.AutoMockable {
   @available(*, deprecated, message: "Use setProfileAttributes() instead")
   var profileAttributes: [Swift.String : Any] { get set }
   func setProfileAttributes(_ attributes: [Swift.String : Any])
-  #if compiler(>=5.3) && $NonescapableTypes
   func identify(userId: Swift.String, traits: [Swift.String : Any]?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use 'identify(userId:traits:)' with [String: Any] traits parameter instead. Support for Codable traits will be removed in a future version.")
   func identify<RequestBody>(userId: Swift.String, traits: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  #endif
   func clearIdentify()
   @available(*, deprecated, message: "Use setDeviceAttributes method instead. This property getter always returns an empty dictionary.")
   var deviceAttributes: [Swift.String : Any] { get set }
   func setDeviceAttributes(_ attributes: [Swift.String : Any])
-  #if compiler(>=5.3) && $NonescapableTypes
   var registeredDeviceToken: Swift.String? { get }
-  #endif
   func registerDeviceToken(_ deviceToken: Swift.String)
   func deleteDeviceToken()
-  #if compiler(>=5.3) && $NonescapableTypes
   func track(name: Swift.String, properties: [Swift.String : Any]?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use 'track(name:properties:)' with [String: Any] properties parameter instead. Support for Codable properties will be removed in a future version.")
   func track<RequestBody>(name: Swift.String, properties: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func screen(title: Swift.String, properties: [Swift.String : Any]?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use 'screen(title:properties:)' with [String: Any] properties parameter instead. Support for Codable properties will be removed in a future version.")
   func screen<RequestBody>(title: Swift.String, properties: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  #endif
   func trackMetric(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)
 }
 @_hasMissingDesignatedInitializers public class Zixflow : ZixflowInternalCommon.ZixflowInstance {
   public static var version: Swift.String {
     get
   }
-  @ZixflowInternalCommon.Atomic public static var shared: ZixflowInternalCommon.Zixflow {
+  @ZixflowInternalCommon.Atomic<ZixflowInternalCommon.Zixflow> public static var shared: ZixflowInternalCommon.Zixflow {
     get
   }
   public var implementation: (any ZixflowInternalCommon.ZixflowInstance)?
@@ -1541,40 +1271,26 @@ public protocol ZixflowInstance : ZixflowInternalCommon.AutoMockable {
     set
   }
   public func setProfileAttributes(_ attributes: [Swift.String : Any])
-  #if compiler(>=5.3) && $NonescapableTypes
   public func identify(userId: Swift.String, traits: [Swift.String : Any]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use 'identify(userId:traits:)' with [String: Any] traits parameter instead. Support for Codable traits will be removed in a future version.")
   public func identify<RequestBody>(userId: Swift.String, traits: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  #endif
   public func clearIdentify()
   public var deviceAttributes: [Swift.String : Any] {
     get
     set
   }
   public func setDeviceAttributes(_ attributes: [Swift.String : Any])
-  #if compiler(>=5.3) && $NonescapableTypes
   public var registeredDeviceToken: Swift.String? {
     get
   }
-  #endif
   public func registerDeviceToken(_ deviceToken: Swift.String)
   public func deleteDeviceToken()
-  #if compiler(>=5.3) && $NonescapableTypes
   public func track(name: Swift.String, properties: [Swift.String : Any]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use 'track(name:properties:)' with [String: Any] properties parameter instead. Support for Codable properties will be removed in a future version.")
   public func track<RequestBody>(name: Swift.String, properties: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func screen(title: Swift.String, properties: [Swift.String : Any]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use 'screen(title:properties:)' with [String: Any] properties parameter instead. Support for Codable properties will be removed in a future version.")
   public func screen<RequestBody>(title: Swift.String, properties: RequestBody?) where RequestBody : Swift.Decodable, RequestBody : Swift.Encodable
-  #endif
   public func trackMetric(deliveryID: Swift.String, event: ZixflowInternalCommon.Metric, deviceToken: Swift.String)
   @objc deinit
 }

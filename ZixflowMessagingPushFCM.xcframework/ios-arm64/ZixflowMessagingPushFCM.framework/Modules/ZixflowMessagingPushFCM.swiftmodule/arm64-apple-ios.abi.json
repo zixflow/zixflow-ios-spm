@@ -737,52 +737,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "FirebaseServiceDelegate",
-            "printedName": "FirebaseServiceDelegate",
-            "usr": "s:23ZixflowMessagingPushFCM23FirebaseServiceDelegateP",
-            "mangledName": "$s23ZixflowMessagingPushFCM23FirebaseServiceDelegateP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -793,17 +751,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -814,10 +772,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SendableMetatype",
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "FirebaseServiceDelegate",
+            "printedName": "FirebaseServiceDelegate",
+            "usr": "s:23ZixflowMessagingPushFCM23FirebaseServiceDelegateP",
+            "mangledName": "$s23ZixflowMessagingPushFCM23FirebaseServiceDelegateP"
           }
         ]
       },
@@ -998,52 +998,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "FirebaseServiceDelegate",
-            "printedName": "FirebaseServiceDelegate",
-            "usr": "s:23ZixflowMessagingPushFCM23FirebaseServiceDelegateP",
-            "mangledName": "$s23ZixflowMessagingPushFCM23FirebaseServiceDelegateP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -1054,17 +1012,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -1075,10 +1033,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SendableMetatype",
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "FirebaseServiceDelegate",
+            "printedName": "FirebaseServiceDelegate",
+            "usr": "s:23ZixflowMessagingPushFCM23FirebaseServiceDelegateP",
+            "mangledName": "$s23ZixflowMessagingPushFCM23FirebaseServiceDelegateP"
           }
         ]
       },
@@ -2012,20 +2012,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "MessagingPushInstance",
-            "printedName": "MessagingPushInstance",
-            "usr": "s:20ZixflowMessagingPush0bC8InstanceP",
-            "mangledName": "$s20ZixflowMessagingPush0bC8InstanceP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "AutoMockable",
-            "printedName": "AutoMockable",
-            "usr": "s:21ZixflowInternalCommon12AutoMockableP",
-            "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -2037,6 +2023,20 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AutoMockable",
+            "printedName": "AutoMockable",
+            "usr": "s:21ZixflowInternalCommon12AutoMockableP",
+            "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "MessagingPushInstance",
+            "printedName": "MessagingPushInstance",
+            "usr": "s:20ZixflowMessagingPush0bC8InstanceP",
+            "mangledName": "$s20ZixflowMessagingPush0bC8InstanceP"
           },
           {
             "kind": "Conformance",
@@ -2052,30 +2052,30 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushFCM.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushFCM.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 295,
+      "offset": 307,
       "length": 33,
       "value": "\"Zixflow_ZixflowMessagingPushFCM\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushFCM.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushFCM.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "Array",
-      "offset": 975,
+      "offset": 987,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushFCM.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushFCM.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 1502,
+      "offset": 1514,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushFCM.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphoneos\/ZixflowMessagingPushFCM.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 1654,
+      "offset": 1666,
       "length": 61,
       "value": "\"unable to find bundle named Zixflow_ZixflowMessagingPushFCM\""
     }

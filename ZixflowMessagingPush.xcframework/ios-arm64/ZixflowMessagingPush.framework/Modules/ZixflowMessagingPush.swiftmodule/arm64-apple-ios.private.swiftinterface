@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowMessagingPush
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name ZixflowMessagingPush
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import Foundation
 import Swift
 import UIKit
@@ -44,9 +44,7 @@ extension ZixflowMessagingPush.MessagingPushConfigBuilder {
     case autoTrackPushEvents
     case showPushAppInForeground
     case appGroupId
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
-    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -66,23 +64,17 @@ public struct MessagingPushConfigOptions {
 }
 @objc @_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
 open class ZixflowNotificationCenterDelegate : ObjectiveC.NSObject, UserNotifications.UNUserNotificationCenterDelegate {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(messagingPush: any ZixflowMessagingPush.MessagingPushInstance, config: ZixflowMessagingPush.ConfigInstance?, wrappedDelegate: (any UserNotifications.UNUserNotificationCenterDelegate)?)
-  #endif
   @objc open func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification, withCompletionHandler completionHandler: @escaping (UserNotifications.UNNotificationPresentationOptions) -> Swift.Void)
   @objc open func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, openSettingsFor notification: UserNotifications.UNNotification?)
-  #endif
   @objc deinit
 }
 public typealias ZixflowAppDelegateType = ObjectiveC.NSObject & UIKit.UIApplicationDelegate
 public typealias ConfigInstance = () -> ZixflowMessagingPush.MessagingPushConfigOptions
 public typealias UserNotificationCenterInstance = () -> any ZixflowMessagingPush.UserNotificationCenterIntegration
 public protocol UserNotificationCenterIntegration {
-  #if compiler(>=5.3) && $NonescapableTypes
   var delegate: (any UserNotifications.UNUserNotificationCenterDelegate)? { get set }
-  #endif
 }
 extension UserNotifications.UNUserNotificationCenter : ZixflowMessagingPush.UserNotificationCenterIntegration {
 }
@@ -93,41 +85,29 @@ extension UserNotifications.UNUserNotificationCenter : ZixflowMessagingPush.User
   @_spi(Internal) @_Concurrency.MainActor @preconcurrency public var implementedOptionalMethods: Swift.Set<ObjectiveC.Selector>
   @_spi(Internal) @_Concurrency.MainActor @preconcurrency public var config: ZixflowMessagingPush.ConfigInstance?
   @_Concurrency.MainActor @preconcurrency @objc override convenience dynamic public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(messagingPush: any ZixflowMessagingPush.MessagingPushInstance, userNotificationCenter: ZixflowMessagingPush.UserNotificationCenterInstance?, appDelegate: (any ObjectiveC.NSObject & UIKit.UIApplicationDelegate)? = nil, config: ZixflowMessagingPush.ConfigInstance? = nil, logger: any ZixflowInternalCommon.Logger)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc open func application(_ application: UIKit.UIApplication, didFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?) -> Swift.Bool
-  #endif
   @_Concurrency.MainActor @preconcurrency @objc open func application(_ application: UIKit.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Foundation.Data)
   @_Concurrency.MainActor @preconcurrency @objc open func application(_ application: UIKit.UIApplication, didFailToRegisterForRemoteNotificationsWithError error: any Swift.Error)
   @_Concurrency.MainActor @preconcurrency @objc open func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification, withCompletionHandler completionHandler: @escaping (UserNotifications.UNNotificationPresentationOptions) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency @objc open func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func conforms(to aProtocol: ObjectiveC.`Protocol`) -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func responds(to aSelector: ObjectiveC.Selector!) -> Swift.Bool
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func forwardingTarget(for aSelector: ObjectiveC.Selector!) -> Any?
-  #endif
   @objc deinit
 }
 @available(iOSApplicationExtension, unavailable)
 extension ZixflowMessagingPush.ZixflowProviderAgnosticAppDelegate {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, openSettingsFor notification: UserNotifications.UNNotification?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func application(_ application: UIKit.UIApplication, continue userActivity: Foundation.NSUserActivity, restorationHandler: @escaping ([any UIKit.UIUserActivityRestoring]?) -> Swift.Void) -> Swift.Bool
-  #endif
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func application(_ app: UIKit.UIApplication, open url: Foundation.URL, options: [UIKit.UIApplication.OpenURLOptionsKey : Any] = [:]) -> Swift.Bool
 }
 @_hasMissingDesignatedInitializers public class MessagingPush : ZixflowInternalCommon.ModuleTopLevelObject<any ZixflowMessagingPush.MessagingPushInstance>, ZixflowMessagingPush.MessagingPushInstance {
   @_spi(Internal) public static var appDelegateIntegratedExplicitly: Swift.Bool
-  @ZixflowInternalCommon.Atomic public static var shared: ZixflowMessagingPush.MessagingPush {
+  @ZixflowInternalCommon.Atomic<ZixflowMessagingPush.MessagingPush> public static var shared: ZixflowMessagingPush.MessagingPush {
     get
   }
-  @ZixflowInternalCommon.Atomic public static var moduleConfig: ZixflowMessagingPush.MessagingPushConfigOptions {
+  @ZixflowInternalCommon.Atomic<ZixflowMessagingPush.MessagingPushConfigOptions> public static var moduleConfig: ZixflowMessagingPush.MessagingPushConfigOptions {
     get
   }
   @discardableResult
@@ -162,25 +142,17 @@ public protocol MessagingPushInstance : ZixflowInternalCommon.AutoMockable {
 @available(iOSApplicationExtension, unavailable)
 extension ZixflowMessagingPush.MessagingPush {
   public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void) -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse) -> ZixflowMessagingPush.ZixflowParsedPushPayload?
-  #endif
 }
 @_hasMissingDesignatedInitializers public class RichPushHttpClient : ZixflowInternalCommon.HttpClient {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func request(_ params: ZixflowInternalCommon.HttpRequestParams, onComplete: @escaping (Swift.Result<Foundation.Data, ZixflowInternalCommon.HttpRequestError>) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func downloadFile(url: Foundation.URL, fileType: ZixflowInternalCommon.DownloadFileType, onComplete: @escaping (Foundation.URL?) -> Swift.Void)
-  #endif
   public func cancel(finishTasks: Swift.Bool)
   @objc deinit
 }
 public protocol PushNotification {
   var pushId: Swift.String { get }
-  #if compiler(>=5.3) && $NonescapableTypes
   var deliveryDate: Foundation.Date? { get }
-  #endif
   var title: Swift.String { get set }
   var body: Swift.String { get set }
   var data: [Swift.AnyHashable : Any] { get set }
@@ -194,49 +166,37 @@ extension ZixflowMessagingPush.PushNotification {
   public var zixflowAttachmentsPrefix: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var zixflowDelivery: (id: Swift.String, token: Swift.String)? {
     get
   }
-  #endif
   public var isPushSentFromZixflow: Swift.Bool {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var zixflowImage: Swift.String? {
     get
     set
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var zixflowDeepLink: Swift.String? {
     get
     set
   }
-  #endif
   public var zixflowAttachments: [ZixflowMessagingPush.PushAttachment] {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var zixflowRichPushImageFile: Foundation.URL? {
     get
     set
   }
-  #endif
 }
 public typealias ZixflowParsedPushPayload = ZixflowMessagingPush.UNNotificationWrapper
 extension ZixflowMessagingPush.UNNotificationWrapper {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var deepLink: Foundation.URL? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var image: Foundation.URL? {
     get
   }
-  #endif
 }
 public struct UNNotificationWrapper : ZixflowMessagingPush.PushNotification {
   public var notificationContent: UserNotifications.UNNotificationContent {
@@ -247,11 +207,9 @@ public struct UNNotificationWrapper : ZixflowMessagingPush.PushNotification {
   public var pushId: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var deliveryDate: Foundation.Date? {
     get
   }
-  #endif
   public var title: Swift.String {
     get
     set

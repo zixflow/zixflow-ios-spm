@@ -3396,13 +3396,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "DataPipelineInstance",
-            "printedName": "DataPipelineInstance",
-            "usr": "s:20ZixflowDataPipelines0B16PipelineInstanceP",
-            "mangledName": "$s20ZixflowDataPipelines0B16PipelineInstanceP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -3414,6 +3407,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "DataPipelineInstance",
+            "printedName": "DataPipelineInstance",
+            "usr": "s:20ZixflowDataPipelines0B16PipelineInstanceP",
+            "mangledName": "$s20ZixflowDataPipelines0B16PipelineInstanceP"
           },
           {
             "kind": "Conformance",
@@ -5424,20 +5424,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "ZixflowInstance",
-            "printedName": "ZixflowInstance",
-            "usr": "s:21ZixflowInternalCommon0A8InstanceP",
-            "mangledName": "$s21ZixflowInternalCommon0A8InstanceP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "AutoMockable",
-            "printedName": "AutoMockable",
-            "usr": "s:21ZixflowInternalCommon12AutoMockableP",
-            "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -5449,6 +5435,20 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AutoMockable",
+            "printedName": "AutoMockable",
+            "usr": "s:21ZixflowInternalCommon12AutoMockableP",
+            "mangledName": "$s21ZixflowInternalCommon12AutoMockableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ZixflowInstance",
+            "printedName": "ZixflowInstance",
+            "usr": "s:21ZixflowInternalCommon0A8InstanceP",
+            "mangledName": "$s21ZixflowInternalCommon0A8InstanceP"
           }
         ]
       }
@@ -5457,161 +5457,161 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 295,
+      "offset": 307,
       "length": 30,
       "value": "\"Zixflow_ZixflowDataPipelines\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "Array",
-      "offset": 972,
+      "offset": 984,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 1499,
+      "offset": 1511,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowDataPipelines.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 1651,
+      "offset": 1663,
       "length": 58,
       "value": "\"unable to find bundle named Zixflow_ZixflowDataPipelines\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 919,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 1377,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 1421,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1474,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1636,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1691,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 1825,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "Array",
       "offset": 1995,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 3758,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Config\/SDKConfigBuilder.swift",
       "kind": "Array",
       "offset": 10379,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/DataPipeline.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/DataPipeline.swift",
       "kind": "StringLiteral",
       "offset": 1658,
       "length": 14,
       "value": "\"DataPipeline\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/DataPipeline.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/DataPipeline.swift",
       "kind": "Dictionary",
       "offset": 7442,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
       "kind": "Dictionary",
       "offset": 13970,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
       "kind": "BooleanLiteral",
       "offset": 13999,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/DataPipelineImplementation.swift",
       "kind": "Dictionary",
       "offset": 18664,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Plugins\/AutoTrackingScreenViews.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Plugins\/AutoTrackingScreenViews.swift",
       "kind": "StringLiteral",
       "offset": 689,
       "length": 37,
       "value": "\"AutoTrackingScreenViewsNotification\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Plugins\/AutoTrackingScreenViews.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Plugins\/AutoTrackingScreenViews.swift",
       "kind": "StringLiteral",
       "offset": 759,
       "length": 6,
       "value": "\"name\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Plugins\/Context.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Plugins\/Context.swift",
       "kind": "Dictionary",
       "offset": 315,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/DataPipeline\/Util\/DataPipelinesLogger.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/DataPipeline\/Util\/DataPipelinesLogger.swift",
       "kind": "StringLiteral",
       "offset": 618,
       "length": 6,

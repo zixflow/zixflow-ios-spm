@@ -14,7 +14,9 @@ let package = Package(
         .library(name: "Location", targets: ["Location"]),
         .library(name: "MessagingInbox", targets: ["MessagingInbox"]),
         // Jist (Visual Inbox renderer) — also published here by zixflow/jist's ios/release.sh.
-        .library(name: "Jist", targets: ["Jist"])
+        .library(name: "Jist", targets: ["Jist"]),
+        // Zixflow Analytics (cdp-analytics-swift, also published as the AnalyticsSwiftZixflow binary pod)
+        .library(name: "ZixflowAnalytics", targets: ["Analytics"])
     ],
     targets: [
         // Wrapper targets (with dependencies)
@@ -82,6 +84,16 @@ let package = Package(
                 .process("Resources/ZixflowInboxAssets.xcassets"),
                 .process("Resources/PrivacyInfo.xcprivacy")
             ]
+        ),
+
+        .target(
+            name: "Analytics",
+            dependencies: [
+                "ZixflowAnalytics",
+                "JSONSafeEncoding",
+                "Sovran"
+            ],
+            path: "Sources/Analytics"
         ),
 
         // Binary XCFrameworks

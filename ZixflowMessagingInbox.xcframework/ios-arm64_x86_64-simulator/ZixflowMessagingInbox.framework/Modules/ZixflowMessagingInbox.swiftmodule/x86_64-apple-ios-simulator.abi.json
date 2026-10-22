@@ -871,231 +871,231 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 295,
+      "offset": 307,
       "length": 31,
       "value": "\"Zixflow_ZixflowMessagingInbox\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "Array",
-      "offset": 973,
+      "offset": 985,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 1500,
+      "offset": 1512,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowMessagingInbox.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
-      "offset": 1652,
+      "offset": 1664,
       "length": 59,
       "value": "\"unable to find bundle named Zixflow_ZixflowMessagingInbox\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/InboxBellPosition.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/InboxBellPosition.swift",
       "kind": "StringLiteral",
       "offset": 574,
       "length": 14,
       "value": "\"bottom-right\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/InboxBellPosition.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/InboxBellPosition.swift",
       "kind": "StringLiteral",
       "offset": 611,
       "length": 13,
       "value": "\"bottom-left\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/InboxBellPosition.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/InboxBellPosition.swift",
       "kind": "StringLiteral",
       "offset": 645,
       "length": 11,
       "value": "\"top-right\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/InboxBellPosition.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/InboxBellPosition.swift",
       "kind": "StringLiteral",
       "offset": 676,
       "length": 10,
       "value": "\"top-left\""
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/NotificationInboxBell.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxBell.swift",
       "kind": "BooleanLiteral",
       "offset": 2627,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/NotificationInboxOverlay.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxOverlay.swift",
       "kind": "BooleanLiteral",
       "offset": 1485,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/NotificationInboxOverlay.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxOverlay.swift",
       "kind": "BooleanLiteral",
       "offset": 1771,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
       "kind": "BooleanLiteral",
       "offset": 2482,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
       "kind": "BooleanLiteral",
       "offset": 4004,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
       "kind": "BooleanLiteral",
       "offset": 4047,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
       "kind": "IntegerLiteral",
       "offset": 8816,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
       "kind": "IntegerLiteral",
       "offset": 8973,
       "length": 2,
       "value": "50"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/NotificationInboxView.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/NotificationInboxView.swift",
       "kind": "FloatLiteral",
       "offset": 9032,
       "length": 4,
       "value": "0.22"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
       "kind": "BooleanLiteral",
       "offset": 2408,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
       "kind": "BooleanLiteral",
       "offset": 10778,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
       "kind": "BooleanLiteral",
       "offset": 10827,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
       "kind": "IntegerLiteral",
       "offset": 19857,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/Vendor\/SVGPath\/SVGPath.swift",
       "kind": "IntegerLiteral",
       "offset": 19863,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
       "kind": "Array",
       "offset": 1201,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
       "kind": "IntegerLiteral",
       "offset": 1332,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
       "kind": "Dictionary",
       "offset": 1573,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
       "kind": "Dictionary",
       "offset": 1719,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
       "kind": "Dictionary",
       "offset": 2995,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
       "kind": "Array",
       "offset": 3870,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
       "kind": "Array",
       "offset": 5837,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
       "kind": "BooleanLiteral",
       "offset": 6189,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
       "kind": "Array",
       "offset": 6443,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingInbox\/VisualInboxModel.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/Sources\/MessagingInbox\/VisualInboxModel.swift",
       "kind": "Array",
       "offset": 6687,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowMessagingInbox.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/zf\/zixflow-ios\/build\/DerivedData\/Build\/Intermediates.noindex\/Zixflow.build\/Release-iphonesimulator\/ZixflowMessagingInbox.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 747,
       "length": 20,

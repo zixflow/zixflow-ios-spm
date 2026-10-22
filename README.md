@@ -1,66 +1,44 @@
-# Zixflow iOS SDK - SPM Distribution
+# Zixflow iOS SDK
 
-This repository contains the pre-built XCFrameworks for the Zixflow iOS SDK, distributed via Swift Package Manager.
+Prebuilt XCFrameworks for the Zixflow iOS SDK, distributed with Swift Package Manager and CocoaPods.
 
-## Installation
+**Latest release:** `1.5.0`
 
-### Swift Package Manager
+## Swift Package Manager
 
-Add the following to your `Package.swift` file:
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/zixflow/zixflow-ios-spm.git", from: "1.4.0")
-]
-```
-
-Then add the specific modules you need:
+In Xcode: File > Add Package Dependencies, enter `https://github.com/zixflow/zixflow-ios-spm.git`, choose version `1.5.0`,
+then add the products you need. Or in `Package.swift`:
 
 ```swift
-.target(
-    name: "YourApp",
-    dependencies: [
-        .product(name: "DataPipelines", package: "zixflow-ios-spm"),
-        .product(name: "MessagingPushAPN", package: "zixflow-ios-spm"),
-        // Add other modules as needed
-    ]
-)
+.package(url: "https://github.com/zixflow/zixflow-ios-spm.git", from: "1.5.0")
 ```
 
-Or add it directly in Xcode:
-1. Go to File > Add Package Dependencies
-2. Enter the repository URL: `https://github.com/zixflow/zixflow-ios-spm.git`
-3. Select the version: `1.4.0`
-4. Choose the modules you want to add to your target
+| Product | Import |
+| --- | --- |
+| `DataPipelines` | `import ZixflowDataPipelines` |
+| `MessagingPushAPN` | `import ZixflowMessagingPushAPN` |
+| `MessagingPushFCM` | `import ZixflowMessagingPushFCM` |
+| `MessagingInApp` | `import ZixflowMessagingInApp` |
+| `MessagingInbox` | `import ZixflowMessagingInbox` |
+| `Location` | `import ZixflowLocation` |
+| `ZixflowAnalytics` | `import ZixflowAnalytics` (analytics client on its own) |
+| `Jist` | `import Jist` (installed with MessagingInbox) |
 
-## Available Modules
+## CocoaPods
 
-- **DataPipelines** - Customer identification and event tracking
-- **MessagingPushAPN** - Apple Push Notification support
-- **MessagingPushFCM** - Firebase Cloud Messaging support
-- **MessagingInApp** - In-app messaging functionality
-- **Location** - Location tracking functionality
-- **MessagingInbox** - Visual Notification Inbox (renders with Jist)
-- **Jist** - Jist renderer (installed automatically with MessagingInbox)
-
-## Usage
-
-Import the modules you need:
-
-```swift
-import ZixflowDataPipelines
-import ZixflowMessagingPushAPN
-import ZixflowLocation
+```ruby
+pod 'Zixflow/DataPipelines', '1.5.0'
+pod 'Zixflow/MessagingPushAPN', '1.5.0'
+# also: Zixflow/MessagingPushFCM, Zixflow/MessagingInApp, Zixflow/MessagingInbox, Zixflow/Location
 ```
 
-## Current Version
+Each `Zixflow/<Module>` subspec installs the `Zixflow<Module>` binary pod, which downloads its
+XCFramework from this repository's `1.5.0` tag.
 
-**Latest Release:** `1.4.0`
+## Requirements
 
-## Documentation
-
-For full documentation, example apps, and usage guides, please visit the [main repository](https://github.com/zixflow/zixflow-ios).
+iOS 13+, Xcode 16+.
 
 ## License
 
-See the [main repository](https://github.com/zixflow/zixflow-ios) for license information.
+MIT — see [LICENSE](LICENSE).
