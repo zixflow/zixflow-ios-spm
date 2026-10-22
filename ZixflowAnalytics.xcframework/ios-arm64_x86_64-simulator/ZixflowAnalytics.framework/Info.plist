@@ -2,25 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleExecutable</key>
-    <string>ZixflowAnalytics</string>
-    <key>CFBundleIdentifier</key>
-    <string>com.zixflow.ZixflowAnalytics</string>
-    <key>CFBundleInfoDictionaryVersion</key>
-    <string>6.0</string>
-    <key>CFBundleName</key>
-    <string>ZixflowAnalytics</string>
-    <key>CFBundlePackageType</key>
-    <string>FMWK</string>
-    <key>CFBundleShortVersionString</key>
-    <string>1.0</string>
-    <key>CFBundleVersion</key>
-    <string>1</string>
-    <key>CFBundleSupportedPlatforms</key>
-    <array>
-        <string>iPhoneSimulator</string>
-    </array>
-    <key>MinimumOSVersion</key>
-    <string>13.0</string>
+    <key>CFBundleExecutable</key><string>ZixflowAnalytics</string>
+    <key>CFBundleIdentifier</key><string>com.zixflow.ZixflowAnalytics</string>
+    <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+    <key>CFBundleName</key><string>ZixflowAnalytics</string>
+    <key>CFBundlePackageType</key><string>FMWK</string>
+    <key>CFBundleShortVersionString</key><string>1.1.4</string>
+    <key>CFBundleVersion</key><string>1.1.4</string>
+    <key>MinimumOSVersion</key><string>13.0</string>
 </dict>
 </plist>
