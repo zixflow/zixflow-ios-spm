@@ -2,15 +2,15 @@
 
 Prebuilt XCFrameworks for the Zixflow iOS SDK, distributed with Swift Package Manager and CocoaPods.
 
-**Latest release:** `1.5.0`
+**Latest release:** `1.5.1`
 
 ## Swift Package Manager
 
-In Xcode: File > Add Package Dependencies, enter `https://github.com/zixflow/zixflow-ios-spm.git`, choose version `1.5.0`,
+In Xcode: File > Add Package Dependencies, enter `https://github.com/zixflow/zixflow-ios-spm.git`, choose version `1.5.1`,
 then add the products you need. Or in `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/zixflow/zixflow-ios-spm.git", from: "1.5.0")
+.package(url: "https://github.com/zixflow/zixflow-ios-spm.git", from: "1.5.1")
 ```
 
 | Product | Import |
@@ -27,13 +27,13 @@ then add the products you need. Or in `Package.swift`:
 ## CocoaPods
 
 ```ruby
-pod 'Zixflow/DataPipelines', '1.5.0'
-pod 'Zixflow/MessagingPushAPN', '1.5.0'
+pod 'Zixflow/DataPipelines', '1.5.1'
+pod 'Zixflow/MessagingPushAPN', '1.5.1'
 # also: Zixflow/MessagingPushFCM, Zixflow/MessagingInApp, Zixflow/MessagingInbox, Zixflow/Location
 ```
 
 Each `Zixflow/<Module>` subspec installs the `Zixflow<Module>` binary pod, which downloads its
-XCFramework from this repository's `1.5.0` tag.
+XCFramework from this repository's `1.5.1` tag.
 
 ## Requirements
 

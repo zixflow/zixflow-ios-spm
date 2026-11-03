@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.3 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -O -enable-experimental-feature DebugDescriptionMacro -user-module-version 0.2.0 -module-name Jist -package-name jist
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+// swift-compiler-version: Apple Swift version 6.2 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -user-module-version 0.2.0 -module-name Jist -package-name jist
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import CoreGraphics
 import Foundation
 import Swift
@@ -17,24 +17,36 @@ public enum JistValue : Swift.Equatable, Swift.Sendable {
   case object([Swift.String : Jist.JistValue])
   case array([Jist.JistValue])
   case null
+  #if compiler(>=5.3) && $NonescapableTypes
   public var stringValue: Swift.String? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var numberValue: Swift.Double? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var objectValue: [Swift.String : Jist.JistValue]? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var boolValue: Swift.Bool? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var arrayValue: [Jist.JistValue]? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public subscript(key: Swift.String) -> Jist.JistValue? {
     get
   }
+  #endif
   public static func == (a: Jist.JistValue, b: Jist.JistValue) -> Swift.Bool
 }
 extension Jist.JistValue : Swift.Decodable {
@@ -44,7 +56,9 @@ extension Jist.JistValue : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 @_Concurrency.MainActor @preconcurrency public struct JistView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(name: Swift.String, templates: [Swift.String : [Jist.JistTemplate]], data: [Swift.String : Jist.JistValue], theme: [Swift.String : Jist.JistValue], mode: Jist.JistMode = .auto, formatDate: ((Swift.String, Swift.String) -> Swift.String)? = nil, onAction: ((Jist.JistActionEvent) -> Swift.Void)? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
@@ -168,34 +182,54 @@ public struct JistActionEvent : Swift.Sendable {
   public let name: Swift.String
   public let data: Jist.JistValue?
   public let meta: [Swift.String : Jist.JistValue]?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(component: Swift.String, name: Swift.String, data: Jist.JistValue?, meta: [Swift.String : Jist.JistValue]?)
+  #endif
 }
 public enum JistMode : Swift.String, Swift.Sendable {
   case auto
   case light
   case dark
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
 extension SwiftUICore.EnvironmentValues {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var jistImageProvider: (@_Concurrency.MainActor @Sendable (Foundation.URL) -> SwiftUICore.Image?)? {
     get
     set
   }
+  #endif
 }
 public struct JistThemeResolver {
   public let isDark: Swift.Bool
   public init(theme: [Swift.String : Jist.JistValue], isDark: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func resolve(type: Swift.String, variant: Swift.String? = nil, group: Swift.String, property: Swift.String, state: Swift.String? = nil) -> Jist.JistValue?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func resolve(type: Swift.String, variant: Swift.String? = nil, property: Swift.String) -> Jist.JistValue?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func resolveColor(type: Swift.String, variant: Swift.String? = nil, group: Swift.String, property: Swift.String, state: Swift.String? = nil, fallback: SwiftUICore.Color) -> SwiftUICore.Color
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func resolveNumber(type: Swift.String, variant: Swift.String? = nil, group: Swift.String, property: Swift.String, state: Swift.String? = nil, fallback: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func resolveNumber(type: Swift.String, variant: Swift.String? = nil, property: Swift.String, fallback: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func resolveFont(type: Swift.String, variant: Swift.String? = nil, group: Swift.String, state: Swift.String? = nil, size: CoreFoundation.CGFloat, weight: SwiftUICore.Font.Weight) -> SwiftUICore.Font
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func resolveInt(type: Swift.String, variant: Swift.String? = nil, group: Swift.String, property: Swift.String) -> Swift.Int?
+  #endif
 }
 extension Jist.JistView : Swift.Sendable {}
 extension Jist.JistMode : Swift.Equatable {}
