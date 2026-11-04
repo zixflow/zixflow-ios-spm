@@ -3983,6 +3983,389 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ZixflowActionButton",
+        "printedName": "ZixflowActionButton",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20ZixflowMessagingPush0A12ActionButtonV4nameSSvp",
+            "mangledName": "$s20ZixflowMessagingPush0A12ActionButtonV4nameSSvp",
+            "moduleName": "ZixflowMessagingPush",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20ZixflowMessagingPush0A12ActionButtonV4nameSSvg",
+                "mangledName": "$s20ZixflowMessagingPush0A12ActionButtonV4nameSSvg",
+                "moduleName": "ZixflowMessagingPush",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "deeplink",
+            "printedName": "deeplink",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20ZixflowMessagingPush0A12ActionButtonV8deeplinkSSvp",
+            "mangledName": "$s20ZixflowMessagingPush0A12ActionButtonV8deeplinkSSvp",
+            "moduleName": "ZixflowMessagingPush",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20ZixflowMessagingPush0A12ActionButtonV8deeplinkSSvg",
+                "mangledName": "$s20ZixflowMessagingPush0A12ActionButtonV8deeplinkSSvg",
+                "moduleName": "ZixflowMessagingPush",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZixflowActionButton",
+                "printedName": "ZixflowMessagingPush.ZixflowActionButton",
+                "usr": "s:20ZixflowMessagingPush0A12ActionButtonV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20ZixflowMessagingPush0A12ActionButtonV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s20ZixflowMessagingPush0A12ActionButtonV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ZixflowMessagingPush",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20ZixflowMessagingPush0A12ActionButtonV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s20ZixflowMessagingPush0A12ActionButtonV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ZixflowMessagingPush",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZixflowActionButton",
+                "printedName": "ZixflowMessagingPush.ZixflowActionButton",
+                "usr": "s:20ZixflowMessagingPush0A12ActionButtonV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZixflowActionButton",
+                "printedName": "ZixflowMessagingPush.ZixflowActionButton",
+                "usr": "s:20ZixflowMessagingPush0A12ActionButtonV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20ZixflowMessagingPush0A12ActionButtonV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s20ZixflowMessagingPush0A12ActionButtonV2eeoiySbAC_ACtFZ",
+            "moduleName": "ZixflowMessagingPush",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20ZixflowMessagingPush0A12ActionButtonV",
+        "mangledName": "$s20ZixflowMessagingPush0A12ActionButtonV",
+        "moduleName": "ZixflowMessagingPush",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZixflowPushActionCategory",
+        "printedName": "ZixflowPushActionCategory",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "identifier",
+            "printedName": "identifier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20ZixflowMessagingPush0aC14ActionCategoryO10identifierSSvpZ",
+            "mangledName": "$s20ZixflowMessagingPush0aC14ActionCategoryO10identifierSSvpZ",
+            "moduleName": "ZixflowMessagingPush",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20ZixflowMessagingPush0aC14ActionCategoryO10identifierSSvgZ",
+                "mangledName": "$s20ZixflowMessagingPush0aC14ActionCategoryO10identifierSSvgZ",
+                "moduleName": "ZixflowMessagingPush",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxActionButtons",
+            "printedName": "maxActionButtons",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20ZixflowMessagingPush0aC14ActionCategoryO03maxD7ButtonsSivpZ",
+            "mangledName": "$s20ZixflowMessagingPush0aC14ActionCategoryO03maxD7ButtonsSivpZ",
+            "moduleName": "ZixflowMessagingPush",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20ZixflowMessagingPush0aC14ActionCategoryO03maxD7ButtonsSivgZ",
+                "mangledName": "$s20ZixflowMessagingPush0aC14ActionCategoryO03maxD7ButtonsSivgZ",
+                "moduleName": "ZixflowMessagingPush",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "actionIdentifier",
+            "printedName": "actionIdentifier(forIndex:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20ZixflowMessagingPush0aC14ActionCategoryO16actionIdentifier8forIndexSSSi_tFZ",
+            "mangledName": "$s20ZixflowMessagingPush0aC14ActionCategoryO16actionIdentifier8forIndexSSSi_tFZ",
+            "moduleName": "ZixflowMessagingPush",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20ZixflowMessagingPush0aC14ActionCategoryO",
+        "mangledName": "$s20ZixflowMessagingPush0aC14ActionCategoryO",
+        "moduleName": "ZixflowMessagingPush",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZixflowMessagingPush"
+      },
+      {
+        "kind": "TypeDecl",
         "name": "PushNotification",
         "printedName": "PushNotification",
         "children": [
@@ -4910,6 +5293,104 @@
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "zixflowActionButtons",
+            "printedName": "zixflowActionButtons",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ZixflowMessagingPush.ZixflowActionButton]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZixflowActionButton",
+                    "printedName": "ZixflowMessagingPush.ZixflowActionButton",
+                    "usr": "s:20ZixflowMessagingPush0A12ActionButtonV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20ZixflowMessagingPush0C12NotificationPAAE20zixflowActionButtonsSayAA0aF6ButtonVGvp",
+            "mangledName": "$s20ZixflowMessagingPush0C12NotificationPAAE20zixflowActionButtonsSayAA0aF6ButtonVGvp",
+            "moduleName": "ZixflowMessagingPush",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ZixflowMessagingPush.ZixflowActionButton]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZixflowActionButton",
+                        "printedName": "ZixflowMessagingPush.ZixflowActionButton",
+                        "usr": "s:20ZixflowMessagingPush0A12ActionButtonV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20ZixflowMessagingPush0C12NotificationPAAE20zixflowActionButtonsSayAA0aF6ButtonVGvg",
+                "mangledName": "$s20ZixflowMessagingPush0C12NotificationPAAE20zixflowActionButtonsSayAA0aF6ButtonVGvg",
+                "moduleName": "ZixflowMessagingPush",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPush.PushNotification>",
+                "sugared_genericSig": "<Self where Self : ZixflowMessagingPush.PushNotification>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "zixflowActionButton",
+            "printedName": "zixflowActionButton(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZixflowMessagingPush.ZixflowActionButton?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZixflowActionButton",
+                    "printedName": "ZixflowMessagingPush.ZixflowActionButton",
+                    "usr": "s:20ZixflowMessagingPush0A12ActionButtonV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20ZixflowMessagingPush0C12NotificationPAAE19zixflowActionButton3forAA0afG0VSgSS_tF",
+            "mangledName": "$s20ZixflowMessagingPush0C12NotificationPAAE19zixflowActionButton3forAA0afG0VSgSS_tF",
+            "moduleName": "ZixflowMessagingPush",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZixflowMessagingPush.PushNotification>",
+            "sugared_genericSig": "<Self where Self : ZixflowMessagingPush.PushNotification>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Var",
@@ -6656,6 +7137,27 @@
       "offset": 329,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Type\/PushActionButton.swift",
+      "kind": "StringLiteral",
+      "offset": 819,
+      "length": 9,
+      "value": "\"ZX_2BTN\""
+    },
+    {
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Type\/PushActionButton.swift",
+      "kind": "IntegerLiteral",
+      "offset": 870,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Type\/PushActionButton.swift",
+      "kind": "StringLiteral",
+      "offset": 920,
+      "length": 9,
+      "value": "\"ACTION_\""
     },
     {
       "filePath": "\/Users\/soundwave2847\/StudioProjects\/zixflow-pr\/zixflow-ios-fresh\/Sources\/MessagingPush\/Util\/PushNotificationLogger.swift",

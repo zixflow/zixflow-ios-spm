@@ -171,6 +171,18 @@ extension ZixflowMessagingPush.MessagingPush {
   public func cancel(finishTasks: Swift.Bool)
   @objc deinit
 }
+public struct ZixflowActionButton : Swift.Codable, Swift.Equatable {
+  public let name: Swift.String
+  public let deeplink: Swift.String
+  public static func == (a: ZixflowMessagingPush.ZixflowActionButton, b: ZixflowMessagingPush.ZixflowActionButton) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ZixflowPushActionCategory {
+  public static let identifier: Swift.String
+  public static let maxActionButtons: Swift.Int
+  public static func actionIdentifier(forIndex index: Swift.Int) -> Swift.String
+}
 public protocol PushNotification {
   var pushId: Swift.String { get }
   #if compiler(>=5.3) && $NonescapableTypes
@@ -208,6 +220,12 @@ extension ZixflowMessagingPush.PushNotification {
     get
     set
   }
+  #endif
+  public var zixflowActionButtons: [ZixflowMessagingPush.ZixflowActionButton] {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func zixflowActionButton(for actionIdentifier: Swift.String) -> ZixflowMessagingPush.ZixflowActionButton?
   #endif
   public var zixflowAttachments: [ZixflowMessagingPush.PushAttachment] {
     get
